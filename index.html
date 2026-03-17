@@ -488,13 +488,13 @@ async function callGemini(prompt, vision=false, b64=null, mime=null) {
     : [{ text: prompt }];
   const res = await fetch(url, {
     method:'POST', headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({ contents:[{parts}], generationConfig:{temperature:.85,maxOutputTokens:1400} })
+    body: JSON.stringify({ contents:[{parts}], generationConfig:{temperature:.85,maxOutputTokens:800} })
   });
   if (!res.ok) { const e=await res.json().catch(()=>({})); throw new Error(e?.error?.message||`HTTP ${res.status}`); }
   const d = await res.json();
   return d.candidates?.[0]?.content?.parts?.[0]?.text || '';
 }
-function pj(t){ return JSON.parse(t.replace(/```json\s*/gi,'').replace(/```/g,'').trim()); }
+function pj(t){ let s=t.replace(/```json\s*/gi,'').replace(/```/g,'').trim(); try{return JSON.parse(s);}catch(e){while(s.length>0){try{return JSON.parse(s+'"}}')}catch(e2){s=s.slice(0,-1);}} throw new Error('Spróbuj ponownie.'); }
 
 // ── ZNAJDŹ PRZEPIS ──
 async function findRecipe() {
