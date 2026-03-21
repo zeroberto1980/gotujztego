@@ -326,9 +326,23 @@ function parseJSON(t) {
   let s = t.replace(/```json\s*/gi, '').replace(/```/g, '').trim();
   const start = s.indexOf('{');
   const end = s.lastIndexOf('}');
-  if (start !== -1 && end !== -1) s = s.slice(start, end + 1);
-  try { return JSON.parse(s); }
-  catch(e) { throw new Error('Błąd odpowiedzi AI. Spróbuj ponownie.'); }
+  if (start !== -1 && end !== -1) { s = s.slice(start, end + 1); }
+  try { return JSON.parse(s); } catch(e1) {}
+  // Napraw ucięty JSON
+  try {
+    let fixed = s;
+    let depth = 0, inStr = false, escape = false;
+    for (let i = 0; i < fixed.length; i++) {
+      const c = fixed[i];
+      if (escape) { escape = false; continue; }
+      if (c === '\\') { escape = true; continue; }
+      if (c === '"') { inStr = !inStr; continue; }
+      if (!inStr) { if (c==='{' || c==='[') depth++; else if (c==='}' || c===']') depth--; }
+    }
+    if (inStr) fixed += '"';
+    while (depth > 0) { fixed += '}'; depth--; }
+    return JSON.parse(fixed);
+  } catch(e2) { throw new Error('Spróbuj ponownie.'); }
 }
 
 // ══════════════════════════════════════
