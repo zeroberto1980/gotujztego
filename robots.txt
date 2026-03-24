@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /przepisy.json
 
 Sitemap: https://gotujztego.pl/sitemap.xml

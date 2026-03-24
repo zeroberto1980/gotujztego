@@ -1,1 +1,689 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GotujZtego – Przepisy z tego co masz w lodówce</title>
+  <meta name="description" content="Wpisz składniki z lodówki – znajdziemy przepis na obiad. Ponad 50 sprawdzonych polskich przepisów."/>
+  <link rel="canonical" href="https://gotujztego.pl/"/>
+  <meta property="og:title" content="GotujZtego – Gotuj z tego co masz w lodówce"/>
+  <meta property="og:description" content="Wpisz składniki – znajdziemy przepis!"/>
+  <meta property="og:url" content="https://gotujztego.pl/"/>
+  <meta property="og:type" content="website"/>
 
+  <!-- Google AdSense – wstaw swój kod gdy dostaniesz zatwierdzenie -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--cream:#fdf8f0;--warm:#f5ede0;--accent:#e8633a;--accent2:#f0a500;--green:#2d7a4f;--dark:#1a1208;--mid:#6b5744;--card:#fff;--shadow:0 4px 24px rgba(26,18,8,.09);--r:16px;--t:.22s ease}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:200;background:rgba(253,248,240,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,99,58,.1);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--accent);text-decoration:none}
+    .logo span{color:var(--green)}
+    /* ADS LEADERBOARD TOP */
+    .ad-leaderboard{background:#f0f0f0;text-align:center;padding:8px;font-size:.75rem;color:#999;min-height:60px;display:flex;align-items:center;justify-content:center}
+    /* HERO */
+    .hero{text-align:center;padding:48px 16px 32px;position:relative}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(232,99,58,.09),transparent 68%);pointer-events:none}
+    .badge{display:inline-block;background:rgba(232,99,58,.12);color:var(--accent);font-size:.73rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.13;max-width:660px;margin:0 auto 14px}
+    h1 em{font-style:normal;color:var(--accent)}
+    .hero-sub{color:var(--mid);font-size:.97rem;max-width:480px;margin:0 auto 32px}
+    /* TABS */
+    .tabs{display:flex;max-width:720px;margin:0 auto;border-radius:14px 14px 0 0;overflow:hidden;border:2px solid rgba(232,99,58,.12);border-bottom:none;background:var(--warm)}
+    .tab{flex:1;padding:13px 10px;text-align:center;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--mid);transition:all var(--t);border:none;background:transparent;font-family:'DM Sans',sans-serif;border-bottom:3px solid transparent;display:flex;align-items:center;justify-content:center;gap:6px}
+    .tab:hover{background:rgba(232,99,58,.07);color:var(--accent)}
+    .tab.active{background:var(--card);color:var(--accent);border-bottom:3px solid var(--accent)}
+    /* CARD */
+    .card{max-width:720px;margin:0 auto;background:var(--card);border-radius:0 0 20px 20px;box-shadow:var(--shadow);border:2px solid rgba(232,99,58,.1);border-top:none;padding:24px}
+    .panel{display:none}
+    .panel.active{display:block}
+    /* SEARCH */
+    .lbl{font-weight:600;font-size:.86rem;color:var(--mid);margin-bottom:8px;display:block}
+    textarea{width:100%;min-height:90px;border:2px solid rgba(232,99,58,.18);border-radius:12px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:.96rem;color:var(--dark);background:var(--warm);resize:vertical;outline:none;transition:border-color var(--t)}
+    textarea:focus{border-color:var(--accent)}
+    textarea::placeholder{color:#b8a898}
+    .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+    .tag{background:rgba(232,99,58,.09);color:var(--accent);border:1px solid rgba(232,99,58,.18);border-radius:100px;padding:4px 11px;font-size:.79rem;font-weight:500;cursor:pointer;transition:background var(--t)}
+    .tag:hover{background:rgba(232,99,58,.17)}
+    .filters{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0}
+    .fc{padding:5px 13px;border-radius:100px;border:2px solid rgba(232,99,58,.2);background:transparent;color:var(--mid);font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;transition:all var(--t)}
+    .fc:hover,.fc.on{background:var(--accent);border-color:var(--accent);color:#fff}
+    .actions{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.93rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t)}
+    .btn-p{background:var(--accent);color:#fff;box-shadow:0 4px 12px rgba(232,99,58,.28)}
+    .btn-p:hover{background:#d05530;transform:translateY(-2px)}
+    .btn-g{background:var(--warm);color:var(--mid);border:1px solid rgba(107,87,68,.16)}
+    .btn-g:hover{background:#ede4d4}
+    .btn-sm{padding:7px 14px;font-size:.82rem}
+    /* RESULTS */
+    #res-wrap{max-width:720px;margin:20px auto 0}
+    .res-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:7px}
+    .res-cnt{font-size:.83rem;color:var(--mid)}
+    .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+    .rc{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;text-decoration:none;color:inherit;transition:transform var(--t),box-shadow var(--t);display:block;cursor:pointer}
+    .rc:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(26,18,8,.12)}
+    .rc-img{width:100%;height:120px;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
+    .rc-body{padding:13px}
+    .rc-title{font-family:'Playfair Display',serif;font-size:.96rem;margin-bottom:4px;font-weight:700}
+    .rc-desc{font-size:.78rem;color:var(--mid);margin-bottom:7px}
+    .pills{display:flex;gap:4px;flex-wrap:wrap}
+    .pill{background:var(--warm);border-radius:100px;padding:2px 8px;font-size:.7rem;color:var(--mid)}
+    .pill.g{background:rgba(45,122,79,.1);color:var(--green)}
+    .pill.o{background:rgba(232,99,58,.1);color:var(--accent)}
+    .no-res{text-align:center;padding:36px 16px;color:var(--mid);grid-column:1/-1}
+    .no-res span{font-size:2.8rem;display:block;margin-bottom:10px}
+    /* AD BOX inline */
+    .ad-inline{background:#f5f5f5;border:1px dashed #ccc;border-radius:10px;text-align:center;padding:12px;font-size:.73rem;color:#aaa;min-height:90px;display:flex;align-items:center;justify-content:center;margin:16px 0}
+    /* MODAL PRZEPIS */
+    .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;padding:16px}
+    .modal-bg.open{display:flex}
+    .modal{background:var(--card);border-radius:20px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+    .modal-head{background:linear-gradient(135deg,var(--accent),#c94e28);color:#fff;padding:22px 22px 16px;border-radius:20px 20px 0 0}
+    .modal-head h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:6px}
+    .modal-meta{display:flex;gap:14px;font-size:.83rem;opacity:.9;flex-wrap:wrap}
+    .modal-body{padding:22px}
+    .modal-sec{margin-bottom:20px}
+    .modal-sec h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:10px}
+    .ing-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px}
+    .ing-list li{background:var(--warm);border-radius:8px;padding:6px 11px;font-size:.88rem;display:flex;align-items:center;gap:5px}
+    .ing-list li::before{content:'🥄';font-size:.78rem}
+    .steps-list{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:10px}
+    .steps-list li{counter-increment:s;display:flex;gap:11px;align-items:flex-start}
+    .steps-list li::before{content:counter(s);min-width:27px;height:27px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;margin-top:2px}
+    .steps-list li p{font-size:.9rem;line-height:1.55}
+    .tip-box{background:rgba(240,165,0,.1);color:#7a5e00;border-radius:9px;padding:9px 12px;font-size:.84rem;margin-bottom:12px}
+    .safety-box{background:rgba(229,57,53,.07);color:#8b1a1a;border-radius:9px;padding:9px 12px;font-size:.82rem;margin-top:8px}
+    .modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.25);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:1.1rem;color:#fff;display:flex;align-items:center;justify-content:center}
+    /* LODÓWKA */
+    .fridge-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:9px}
+    .fridge-top h2{font-family:'Playfair Display',serif;font-size:1.3rem}
+    .sync-badge{font-size:.74rem;padding:3px 10px;border-radius:100px;background:rgba(45,122,79,.1);color:var(--green)}
+    .sync-badge.err{background:rgba(229,57,53,.1);color:#e53935}
+    .sync-badge.warn{background:rgba(240,165,0,.1);color:#7a5e00}
+    .add-box{background:var(--warm);border-radius:14px;padding:16px;margin-bottom:16px}
+    .add-box h3{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:12px;color:var(--accent)}
+    .row3{display:grid;grid-template-columns:1fr 70px 90px;gap:7px;margin-bottom:7px}
+    .inp{border:2px solid rgba(232,99,58,.18);border-radius:9px;padding:9px 11px;font-family:'DM Sans',sans-serif;font-size:.88rem;background:#fff;outline:none;transition:border-color var(--t);color:var(--dark);width:100%}
+    .inp:focus{border-color:var(--accent)}
+    .bc-row{display:flex;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+    .bc-row .inp{flex:1;min-width:120px}
+    #scan-wrap{display:none;margin:9px 0;border-radius:12px;overflow:hidden;position:relative}
+    #scan-video{width:100%;max-height:220px;object-fit:cover;display:block}
+    #scan-line{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+    #scan-line::before{content:'';width:65%;height:35%;border:3px solid var(--accent);border-radius:6px;box-shadow:0 0 0 9999px rgba(0,0,0,.45)}
+    .scan-close{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:100px;padding:4px 11px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.78rem}
+    .low-bar{background:rgba(255,152,0,.12);border:1px solid rgba(255,152,0,.3);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.83rem;color:#7a4f00;display:none}
+    .prod-list{display:flex;flex-direction:column;gap:7px}
+    .prod-item{background:#fff;border:1px solid rgba(232,99,58,.12);border-radius:11px;padding:10px 12px;display:flex;align-items:center;gap:9px;transition:box-shadow var(--t)}
+    .prod-item:hover{box-shadow:var(--shadow)}
+    .prod-item.low{border-color:#ff9800;background:#fffbf0}
+    .prod-item.empty{border-color:#e53935;background:#fff5f5;opacity:.7}
+    .prod-emoji{font-size:1.5rem;flex-shrink:0}
+    .prod-info{flex:1;min-width:0}
+    .prod-name{font-weight:600;font-size:.88rem;margin-bottom:1px}
+    .prod-meta{font-size:.71rem;color:var(--mid)}
+    .prod-ctrl{display:flex;align-items:center;gap:5px;flex-shrink:0}
+    .qbtn{width:26px;height:26px;border-radius:50%;border:2px solid rgba(232,99,58,.25);background:transparent;font-size:.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);transition:all var(--t)}
+    .qbtn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .qdsp{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;min-width:34px;text-align:center}
+    .dbtn{width:24px;height:24px;border-radius:50%;border:none;background:rgba(229,57,53,.1);color:#e53935;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:background var(--t);margin-left:2px}
+    .dbtn:hover{background:#e53935;color:#fff}
+    .cook-btn{width:100%;padding:12px;border-radius:100px;background:linear-gradient(135deg,var(--green),#1e5c38);color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:.96rem;font-weight:600;cursor:pointer;margin-top:14px;display:flex;align-items:center;justify-content:center;gap:7px;transition:opacity var(--t)}
+    .cook-btn:hover:not(:disabled){opacity:.88}
+    .cook-btn:disabled{opacity:.5;cursor:not-allowed}
+    .empty-box{text-align:center;padding:28px 16px;color:var(--mid)}
+    .empty-box span{font-size:2.8rem;display:block;margin-bottom:8px}
+    /* FOOTER */
+    footer{background:var(--dark);color:rgba(255,255,255,.42);text-align:center;padding:24px 16px;font-size:.79rem;margin-top:48px}
+    footer a{color:var(--accent);text-decoration:none}
+    .footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+    .footer-links a{color:rgba(255,255,255,.45);font-size:.76rem}
+    /* POLITYKA */
+    .policy-wrap{max-width:720px;margin:0 auto;padding:0 16px 40px}
+    .policy-wrap h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin:28px 0 10px}
+    .policy-wrap p,.policy-wrap li{font-size:.88rem;line-height:1.65;color:var(--mid);margin-bottom:8px}
+    .policy-wrap ul{padding-left:18px}
+    @media(max-width:580px){
+      nav{padding:10px 12px}
+      .hero{padding:36px 12px 24px}
+      .card{padding:14px}
+      .actions{flex-direction:column}
+      .actions .btn{width:100%;justify-content:center}
+      .row3{grid-template-columns:1fr 60px 80px;gap:5px}
+      .tab{font-size:.8rem;padding:11px 6px}
+      .res-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Gotuj<span>Z</span>tego</a>
+</nav>
+
+<!-- REKLAMA LEADERBOARD GÓRNA -->
+<div class="ad-leaderboard">
+  <!-- AdSense: 728x90 lub responsywna -->
+  Miejsce na reklamę
+</div>
+
+<section class="hero">
+  <div class="badge">🍽️ 50+ sprawdzonych przepisów</div>
+  <h1>Gotuj z tego co masz<br>w <em>lodówce</em></h1>
+  <p class="hero-sub">Wpisz składniki – znajdziemy przepis. Zarządzaj stanem swojej lodówki!</p>
+
+  <div class="tabs">
+    <button class="tab active" id="tab-s" onclick="switchTab('s')">🔍 Składniki</button>
+    <button class="tab" id="tab-f" onclick="switchTab('f')">🧊 Moja lodówka</button>
+  </div>
+
+  <div class="card">
+
+    <!-- PANEL SKŁADNIKI -->
+    <div class="panel active" id="panel-s">
+      <label class="lbl">Jakie składniki masz w domu?</label>
+      <textarea id="ing" placeholder="np. jajka, ziemniaki, mąka...&#10;Wpisz kilka składników oddzielonych przecinkiem"></textarea>
+      <div class="tags">
+        <span style="font-size:.77rem;color:var(--mid);align-self:center">Przykłady:</span>
+        <span class="tag" onclick="setIng('ziemniaki, jajko, mąka')">🥔 ziemniaki</span>
+        <span class="tag" onclick="setIng('kurczak, cebula, czosnek')">🍗 kurczak</span>
+        <span class="tag" onclick="setIng('makaron, passata, mięso mielone')">🍝 makaron</span>
+        <span class="tag" onclick="setIng('jajko, mleko, mąka')">🥞 jajka</span>
+        <span class="tag" onclick="setIng('ryż, marchew, cebula')">🍚 ryż</span>
+      </div>
+      <div style="margin-top:12px">
+        <label class="lbl" style="margin-bottom:6px">Kategoria:</label>
+        <div class="filters">
+          <button class="fc" onclick="toggleF('zupa',this)">🍲 Zupy</button>
+          <button class="fc" onclick="toggleF('obiad',this)">🍽️ Obiady</button>
+          <button class="fc" onclick="toggleF('śniadanie',this)">🌅 Śniadania</button>
+          <button class="fc" onclick="toggleF('szybkie',this)">⚡ Szybkie</button>
+          <button class="fc" onclick="toggleF('wegetariańskie',this)">🌿 Wegetariańskie</button>
+          <button class="fc" onclick="toggleF('tradycyjne',this)">🇵🇱 Tradycyjne</button>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-p" onclick="search()">🔍 Znajdź przepisy</button>
+        <button class="btn btn-g" onclick="clearSearch()">✕ Wyczyść</button>
+      </div>
+    </div>
+
+    <!-- PANEL LODÓWKA -->
+    <div class="panel" id="panel-f">
+      <div class="fridge-top">
+        <h2>🧊 Moja lodówka</h2>
+        <span class="sync-badge warn" id="sync">💾 Lokalnie</span>
+      </div>
+      <div class="low-bar" id="low-bar">⚠️ Kończy się: <span id="low-list"></span></div>
+      <div class="add-box">
+        <h3>➕ Dodaj produkt</h3>
+        <div class="bc-row">
+          <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN..."/>
+          <button class="btn btn-p btn-sm" onclick="startScan()">📷 Skanuj</button>
+          <button class="btn btn-g btn-sm" onclick="lookupBC()">🔍 Szukaj</button>
+        </div>
+        <div id="scan-wrap">
+          <video id="scan-video" autoplay playsinline></video>
+          <div id="scan-line"></div>
+          <button class="scan-close" onclick="stopScan()">✕ Zamknij</button>
+        </div>
+        <div class="row3">
+          <input type="text" id="pn" class="inp" placeholder="Nazwa produktu"/>
+          <input type="number" id="pq" class="inp" value="1" min="0.1" step="0.1"/>
+          <select id="pu" class="inp">
+            <option value="szt">szt.</option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="ml">ml</option>
+            <option value="l">l</option>
+            <option value="opak">opak.</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap">
+          <input type="number" id="pm" class="inp" placeholder="Min. ilość (alert)" min="0" step="0.1" style="flex:1"/>
+          <button class="btn btn-p" onclick="addProd()" style="flex:1">✓ Dodaj</button>
+        </div>
+      </div>
+      <div id="prod-list" class="prod-list">
+        <div class="empty-box"><span>🧊</span><p>Lodówka jest pusta!</p><p style="font-size:.82rem;margin-top:4px">Dodaj produkty ręcznie lub zeskanuj kod kreskowy</p></div>
+      </div>
+      <button class="cook-btn" id="cook-btn" onclick="cookFridge()" disabled>
+        🍳 Znajdź przepis z zawartości lodówki
+      </button>
+    </div>
+
+  </div>
+
+  <!-- WYNIKI -->
+  <div id="res-wrap" style="display:none">
+    <div class="res-hdr">
+      <span class="res-cnt" id="res-cnt"></span>
+      <button class="btn btn-g btn-sm" onclick="clearSearch()">✕ Wyczyść</button>
+    </div>
+    <!-- Miejsce na reklamę między wynikami -->
+    <div class="ad-inline">Miejsce na reklamę AdSense</div>
+    <div class="res-grid" id="res-grid"></div>
+  </div>
+
+</section>
+
+<!-- MODAL PRZEPIS -->
+<div class="modal-bg" id="modal" onclick="closeModal(event)">
+  <div class="modal" id="modal-inner">
+    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- REKLAMA PROSTOKĄT ŚRODKOWY -->
+<div style="max-width:720px;margin:0 auto;padding:0 16px">
+  <div class="ad-inline">Miejsce na reklamę AdSense (300x250)</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Strona główna</a>
+    <a href="#polityka" onclick="showPolicy()">Polityka prywatności</a>
+    <a href="#regulamin" onclick="showRegulamin()">Regulamin</a>
+  </div>
+  <p>© 2026 GotujZtego – Gotuj z tego co masz w lodówce</p>
+  <p style="margin-top:4px;font-size:.73rem">Przepisy opracowane własnie. Strona zawiera reklamy Google AdSense.</p>
+</footer>
+
+<!-- MODAL POLITYKA / REGULAMIN -->
+<div class="modal-bg" id="modal-policy" onclick="document.getElementById('modal-policy').classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" style="color:#333;background:rgba(0,0,0,.08)" onclick="document.getElementById('modal-policy').classList.remove('open')">✕</button>
+    <div class="policy-wrap" id="policy-content"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+//  DANE – przepisy z lokalnego JSON
+// ═══════════════════════════════════════
+let RECIPES = [];
+let activeFilters = [];
+
+// Załaduj przepisy
+fetch('przepisy.json')
+  .then(r => r.json())
+  .then(d => { RECIPES = d; })
+  .catch(e => console.error('Błąd ładowania przepisów:', e));
+
+// ═══════════════════════════════════════
+//  TABS
+// ═══════════════════════════════════════
+function switchTab(n) {
+  ['s','f'].forEach(t => {
+    document.getElementById('tab-'+t).classList.remove('active');
+    document.getElementById('panel-'+t).classList.remove('active');
+  });
+  document.getElementById('tab-'+n).classList.add('active');
+  document.getElementById('panel-'+n).classList.add('active');
+  if (n !== 'f') stopScan();
+}
+
+// ═══════════════════════════════════════
+//  WYSZUKIWARKA
+// ═══════════════════════════════════════
+function search() {
+  const input = document.getElementById('ing').value.trim().toLowerCase();
+  const kw = input ? input.split(/[,\s]+/).filter(k => k.length > 1) : [];
+  let results = [...RECIPES];
+  // Filtr kategorii
+  if (activeFilters.length > 0) {
+    results = results.filter(r => activeFilters.some(f => r.tagi.includes(f)));
+  }
+  // Filtr składników
+  if (kw.length > 0) {
+    results = results.map(r => {
+      const ingText = r.skladniki.map(s => s.p.toLowerCase()).join(' ');
+      const score = kw.filter(k => ingText.includes(k) || r.nazwa.toLowerCase().includes(k)).length;
+      return {...r, _score: score};
+    }).filter(r => r._score > 0).sort((a,b) => b._score - a._score);
+  }
+  showResults(results, kw);
+}
+
+function toggleF(cat, btn) {
+  btn.classList.toggle('on');
+  if (activeFilters.includes(cat)) activeFilters = activeFilters.filter(f => f !== cat);
+  else activeFilters.push(cat);
+  if (document.getElementById('ing').value.trim() || activeFilters.length > 0) search();
+}
+
+function showResults(results, kw) {
+  const wrap = document.getElementById('res-wrap');
+  const grid = document.getElementById('res-grid');
+  const cnt = document.getElementById('res-cnt');
+  if (results.length === 0) {
+    grid.innerHTML = `<div class="no-res"><span>🤔</span><p>Nie znaleziono przepisów.<br>Spróbuj innych składników.</p></div>`;
+    cnt.textContent = 'Brak wyników';
+  } else {
+    cnt.textContent = `Znaleziono ${results.length} przepis${results.length===1?'':'ów'}`;
+    grid.innerHTML = results.map(r => recipeCard(r)).join('');
+  }
+  wrap.style.display = 'block';
+  setTimeout(() => wrap.scrollIntoView({behavior:'smooth',block:'nearest'}), 80);
+}
+
+const EMOJI_MAP = {zupa:'🍲',obiad:'🍽️',śniadanie:'🌅',mięso:'🥩',ryba:'🐟',wegetariańskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',sałatka:'🥗'};
+const BG_MAP = {zupa:'#fff3e0',obiad:'#fff8e1',śniadanie:'#e8f5e9',mięso:'#fce4ec',ryba:'#e3f2fd',wegetariańskie:'#f1f8e9',makaron:'#f3e5f5',sałatka:'#e8f5e9'};
+
+function recipeCard(r) {
+  const tag = r.tagi[0] || 'obiad';
+  const emoji = EMOJI_MAP[tag] || '🍽️';
+  const bg = BG_MAP[tag] || '#f5f5f5';
+  const timeLabel = r.czas < 20 ? `⚡ ${r.czas} min` : `⏱ ${r.czas} min`;
+  return `<div class="rc" onclick="openRecipe('${r.id}')">
+    <div class="rc-img" style="background:${bg}">${emoji}</div>
+    <div class="rc-body">
+      <div class="rc-title">${r.nazwa}</div>
+      <div class="pills">
+        <span class="pill g">${timeLabel}</span>
+        <span class="pill">${r.poziom}</span>
+        <span class="pill">${r.porcje} porcje</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════
+//  MODAL PRZEPIS
+// ═══════════════════════════════════════
+function openRecipe(id) {
+  const r = RECIPES.find(x => x.id === id);
+  if (!r) return;
+  const tag = r.tagi[0] || 'obiad';
+  const emoji = EMOJI_MAP[tag] || '🍽️';
+  const tipy = r.tipy ? r.tipy.map(t => `<li>${t}</li>`).join('') : '';
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-head">
+      <h2>${emoji} ${r.nazwa}</h2>
+      <div class="modal-meta">
+        <span>⏱ ${r.czas} min</span>
+        <span>👥 ${r.porcje} porcje</span>
+        <span>📊 ${r.poziom}</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec">
+        <h3>📋 Składniki</h3>
+        <ul class="ing-list">${r.skladniki.map(s=>`<li>${s.p} – ${s.i} ${s.u}</li>`).join('')}</ul>
+      </div>
+      <div class="modal-sec">
+        <h3>👨‍🍳 Przygotowanie</h3>
+        <ol class="steps-list">${r.kroki.map(k=>`<li><p>${k}</p></li>`).join('')}</ol>
+      </div>
+      ${tipy ? `<div class="tip-box">💡 <strong>Wskazówki:</strong><ul style="padding-left:16px;margin-top:6px">${tipy}</ul></div>` : ''}
+      ${r.safety ? `<div class="safety-box">🛡️ <strong>Bezpieczeństwo:</strong> ${r.safety}</div>` : ''}
+    </div>`;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal')) {
+    document.getElementById('modal').classList.remove('open');
+  }
+}
+
+function clearSearch() {
+  document.getElementById('ing').value = '';
+  document.getElementById('res-wrap').style.display = 'none';
+  activeFilters = [];
+  document.querySelectorAll('.fc').forEach(c => c.classList.remove('on'));
+}
+
+function setIng(t) { document.getElementById('ing').value = t; }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modal').classList.remove('open'); });
+
+// ═══════════════════════════════════════
+//  LODÓWKA – ciasteczka + JSONbin
+// ═══════════════════════════════════════
+// JSONbin konfiguracja – uzupełnij po rejestracji na jsonbin.io
+const JSONBIN_ID = '';    // np. '64abc123def456'
+const JSONBIN_KEY = '';   // klucz X-Access-Key z jsonbin.io
+
+function saveCookie(data) {
+  const str = JSON.stringify(data);
+  document.cookie = `fridge=${encodeURIComponent(str)};max-age=31536000;path=/;SameSite=Lax`;
+}
+
+function loadCookie() {
+  const m = document.cookie.match(/fridge=([^;]+)/);
+  if (!m) return {};
+  try { return JSON.parse(decodeURIComponent(m[1])); } catch { return {}; }
+}
+
+async function saveToCloud(data) {
+  if (!JSONBIN_ID || !JSONBIN_KEY) return;
+  try {
+    await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'X-Access-Key': JSONBIN_KEY },
+      body: JSON.stringify(data)
+    });
+    setSyncBadge(true, '☁️ Zsynchronizowano');
+  } catch { setSyncBadge(false, '⚠️ Błąd chmury'); }
+}
+
+async function loadFromCloud() {
+  if (!JSONBIN_ID || !JSONBIN_KEY) { FP = loadCookie(); renderFridge(FP); return; }
+  try {
+    const r = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}/latest`, {
+      headers: { 'X-Access-Key': JSONBIN_KEY }
+    });
+    const d = await r.json();
+    FP = d.record || {};
+    saveCookie(FP);
+    renderFridge(FP);
+    setSyncBadge(true, '☁️ Zsynchronizowano');
+  } catch {
+    FP = loadCookie();
+    renderFridge(FP);
+    setSyncBadge(false, '💾 Lokalnie');
+  }
+}
+
+function setSyncBadge(ok, msg) {
+  const e = document.getElementById('sync');
+  e.textContent = msg;
+  e.className = 'sync-badge ' + (ok ? '' : JSONBIN_ID ? 'err' : 'warn');
+}
+
+let FP = {};
+loadFromCloud();
+
+async function saveFP() {
+  saveCookie(FP);
+  await saveToCloud(FP);
+}
+
+// ═══════════════════════════════════════
+//  DODAJ/USUŃ PRODUKT
+// ═══════════════════════════════════════
+const EMO={jajka:'🥚',jajko:'🥚',mleko:'🥛',masło:'🧈',ser:'🧀',chleb:'🍞',mąka:'🌾',ryż:'🍚',makaron:'🍝',ziemniaki:'🥔',marchew:'🥕',cebula:'🧅',czosnek:'🧄',pomidor:'🍅',ogórek:'🥒',papryka:'🫑',kurczak:'🍗',wołowina:'🥩',wieprzowina:'🥩',kiełbasa:'🌭',ryba:'🐟',jabłko:'🍎',banan:'🍌',jogurt:'🥛',olej:'🫙',oliwa:'🫙',sól:'🧂',pieprz:'🌶️',fasola:'🫘',grzyby:'🍄',kapusta:'🥬',schab:'🥩',śmietana:'🥛',twaróg:'🧀',mięso:'🥩'};
+function getEmo(n){const l=n.toLowerCase();for(const[k,e]of Object.entries(EMO))if(l.includes(k))return e;return'🥫'}
+
+async function addProd() {
+  const name = document.getElementById('pn').value.trim();
+  const qty = parseFloat(document.getElementById('pq').value) || 1;
+  const unit = document.getElementById('pu').value;
+  const minQty = parseFloat(document.getElementById('pm').value) || 0;
+  if (!name) { alert('Wpisz nazwę produktu!'); return; }
+  const id = Date.now().toString();
+  FP[id] = { id, name, qty, unit, minQty, emoji: getEmo(name), addedAt: new Date().toISOString() };
+  document.getElementById('pn').value = '';
+  document.getElementById('pq').value = '1';
+  document.getElementById('pm').value = '';
+  document.getElementById('bc').value = '';
+  await saveFP();
+  renderFridge(FP);
+}
+
+async function chgQty(id, cur, step, dir) {
+  const newQ = Math.max(0, Math.round((cur + step * dir) * 10) / 10);
+  FP[id].qty = newQ;
+  await saveFP();
+  renderFridge(FP);
+}
+
+async function delProd(id, name) {
+  if (!confirm(`Usunąć "${name}" z lodówki?`)) return;
+  delete FP[id];
+  await saveFP();
+  renderFridge(FP);
+}
+
+function renderFridge(prods) {
+  const c = document.getElementById('prod-list');
+  const cb = document.getElementById('cook-btn');
+  const items = Object.values(prods);
+  const low = items.filter(p => p.minQty > 0 && p.qty <= p.minQty && p.qty > 0);
+  const empty = items.filter(p => p.qty <= 0);
+  const lb = document.getElementById('low-bar');
+  if (low.length || empty.length) {
+    lb.style.display = 'block';
+    document.getElementById('low-list').textContent = [...low,...empty].map(p=>`${p.emoji} ${p.name}`).join(', ');
+  } else lb.style.display = 'none';
+  if (!items.length) {
+    c.innerHTML = '<div class="empty-box"><span>🧊</span><p>Lodówka jest pusta!</p><p style="font-size:.82rem;margin-top:4px">Dodaj produkty ręcznie lub zeskanuj kod kreskowy</p></div>';
+    cb.disabled = true; return;
+  }
+  cb.disabled = false;
+  items.sort((a,b) => {
+    const av = a.qty<=0?2:(a.minQty>0&&a.qty<=a.minQty?1:0);
+    const bv = b.qty<=0?2:(b.minQty>0&&b.qty<=b.minQty?1:0);
+    return bv-av;
+  });
+  c.innerHTML = items.map(p => {
+    const isLow = p.minQty>0&&p.qty<=p.minQty&&p.qty>0;
+    const isEmpty = p.qty<=0;
+    const cls = isEmpty?'empty':isLow?'low':'';
+    const warn = isEmpty?' 🔴':isLow?' ⚠️':'';
+    const step = (p.unit==='g'||p.unit==='ml') ? 50 : 1;
+    return `<div class="prod-item ${cls}">
+      <div class="prod-emoji">${p.emoji}</div>
+      <div class="prod-info"><div class="prod-name">${p.name}${warn}</div><div class="prod-meta">Min: ${p.minQty||'—'} ${p.unit}</div></div>
+      <div class="prod-ctrl">
+        <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},-1)">−</button>
+        <div class="qdsp">${p.qty}<small style="font-size:.58rem;font-weight:400"> ${p.unit}</small></div>
+        <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},1)">+</button>
+        <button class="dbtn" onclick="delProd('${p.id}','${p.name}')">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function cookFridge() {
+  const items = Object.values(FP).filter(p => p.qty > 0);
+  if (!items.length) return;
+  document.getElementById('ing').value = items.map(p => p.name).join(', ');
+  switchTab('s');
+  search();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ═══════════════════════════════════════
+//  SKANER KODÓW KRESKOWYCH
+// ═══════════════════════════════════════
+let scanStr = null, scanCR = null;
+async function startScan() {
+  const w = document.getElementById('scan-wrap');
+  w.style.display = 'block';
+  try {
+    scanStr = await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
+    document.getElementById('scan-video').srcObject = scanStr;
+    // Prosta detekcja kodu przez canvas (bez zewnętrznej biblioteki)
+    const video = document.getElementById('scan-video');
+    video.addEventListener('loadeddata', () => {
+      scanInterval = setInterval(() => decodeFrame(video), 500);
+    });
+  } catch(e) {
+    alert('Brak dostępu do kamery. Wpisz kod ręcznie.');
+    w.style.display = 'none';
+  }
+}
+
+let scanInterval = null;
+function decodeFrame(video) {
+  // Fallback – poproś o ręczny wpis jeśli brak biblioteki
+  // Gdy ZXing dostępny użyj go
+  if (typeof ZXing !== 'undefined' && !scanCR) {
+    scanCR = new ZXing.BrowserMultiFormatReader();
+    scanCR.decodeFromVideoDevice(null, 'scan-video', (r) => {
+      if (r) { document.getElementById('bc').value = r.getText(); stopScan(); lookupBC(); }
+    });
+  }
+}
+
+function stopScan() {
+  if (scanInterval) { clearInterval(scanInterval); scanInterval = null; }
+  if (scanStr) { scanStr.getTracks().forEach(t=>t.stop()); scanStr = null; }
+  if (scanCR) { try { scanCR.reset(); } catch {} scanCR = null; }
+  document.getElementById('scan-wrap').style.display = 'none';
+}
+
+async function lookupBC() {
+  const bc = document.getElementById('bc').value.trim();
+  if (!bc) { alert('Wpisz kod!'); return; }
+  try {
+    const r = await fetch(`https://world.openfoodfacts.org/api/v0/product/${bc}.json`);
+    const d = await r.json();
+    if (d.status===1 && d.product) {
+      document.getElementById('pn').value = d.product.product_name_pl || d.product.product_name || 'Produkt';
+      const q = d.product.quantity || '';
+      if (q.includes('g')) document.getElementById('pu').value = 'g';
+      else if (q.includes('ml')) document.getElementById('pu').value = 'ml';
+      else if (q.includes('l')) document.getElementById('pu').value = 'l';
+    } else alert('Nie znaleziono produktu. Wpisz nazwę ręcznie.');
+  } catch { alert('Błąd wyszukiwania.'); }
+}
+
+// ═══════════════════════════════════════
+//  POLITYKA PRYWATNOŚCI
+// ═══════════════════════════════════════
+function showPolicy() {
+  document.getElementById('policy-content').innerHTML = `
+    <h2>Polityka prywatności</h2>
+    <p>Strona GotujZtego.pl dba o Twoją prywatność.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">1. Dane osobowe (RODO)</h3>
+    <p>GotujZtego.pl <strong>nie zbiera danych osobowych</strong> użytkowników. Nie wymagamy rejestracji ani podawania imienia, emaila ani adresu IP.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">2. Ciasteczka (cookies)</h3>
+    <p>Używamy ciasteczek wyłącznie do:</p>
+    <ul><li>Przechowywania stanu Twojej lodówki lokalnie w przeglądarce</li><li>Obsługi reklam Google AdSense (pliki cookie stron trzecich)</li></ul>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">3. Google AdSense</h3>
+    <p>Strona wyświetla reklamy Google AdSense. Google może używać plików cookie do personalizacji reklam. Więcej informacji: <a href="https://policies.google.com/privacy" target="_blank">polityka prywatności Google</a>.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">4. JSONbin.io</h3>
+    <p>Stan lodówki może być synchronizowany z serwisem JSONbin.io. Dane nie zawierają informacji osobowych – tylko nazwy produktów i ilości.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">5. Kontakt</h3>
+    <p>W sprawach prywatności: kontakt przez domenę gotujztego.pl</p>`;
+  document.getElementById('modal-policy').classList.add('open');
+}
+
+function showRegulamin() {
+  document.getElementById('policy-content').innerHTML = `
+    <h2>Regulamin</h2>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">1. Postanowienia ogólne</h3>
+    <p>Serwis GotujZtego.pl udostępnia bezpłatnie bazę przepisów kulinarnych oraz narzędzie do zarządzania stanem lodówki.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">2. Przepisy</h3>
+    <p>Przepisy zamieszczone w serwisie są opracowane własnoręcznie. Stanowią one treści informacyjne. Autor nie ponosi odpowiedzialności za ewentualne błędy.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">3. Bezpieczeństwo żywności</h3>
+    <p>Użytkownik jest odpowiedzialny za przestrzeganie zasad higieny żywności. Należy zawsze sprawdzać świeżość składników i stosować właściwą obróbkę termiczną.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">4. Reklamy</h3>
+    <p>Serwis wyświetla reklamy Google AdSense. Treść reklam jest zarządzana przez Google i nie stanowi rekomendacji serwisu.</p>
+    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">5. Zmiany regulaminu</h3>
+    <p>Administrator zastrzega prawo do zmiany regulaminu. Zmiany obowiązują od daty publikacji.</p>`;
+  document.getElementById('modal-policy').classList.add('open');
+}
+</script>
+</body>
+</html>

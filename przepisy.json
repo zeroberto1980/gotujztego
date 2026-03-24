@@ -1,0 +1,2416 @@
+[
+  {
+    "id": "PL-001",
+    "nazwa": "Pierogi Ruskie",
+    "czas": 90,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "tradycyjne",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Woda ciepła",
+        "i": 250,
+        "u": "ml"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Twaróg półtłusty",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ziemniaki w osolonej wodzie (20 min), ostudź i przeciśnij przez praskę.",
+      "Cebulę pokrój i zeszklij na maśle.",
+      "Wymieszaj ziemniaki, twaróg i cebulę, dopraw solą i pieprzem.",
+      "Zagnieć ciasto z mąki, wody i soli (10 min).",
+      "Odstaw ciasto na 15 min.",
+      "Rozwałkuj cienko, wycinaj krążki.",
+      "Nakładaj farsz i lep pierogi.",
+      "Gotuj do wypłynięcia + 2 min."
+    ],
+    "tipy": [
+      "Ciasto przykrywaj, żeby nie wyschło.",
+      "Dodaj podsmażoną cebulkę na wierzch."
+    ],
+    "safety": "Świeży twaróg. Higiena przy lepieniu."
+  },
+  {
+    "id": "PL-002",
+    "nazwa": "Kotlet Schabowy",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "klasyczne"
+    ],
+    "skladniki": [
+      {
+        "p": "Schab",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bułka tarta",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Olej",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Rozbij schab tłuczkiem na cienkie plastry.",
+      "Dopraw solą i pieprzem.",
+      "Obtocz w mące, potem w jajku i bułce.",
+      "Rozgrzej olej na patelni.",
+      "Smaż 3–4 minuty z każdej strony.",
+      "Odsącz na papierze."
+    ],
+    "tipy": [
+      "Dodaj odrobinę mleka do jajka.",
+      "Nie smaż na zbyt zimnym tłuszczu."
+    ],
+    "safety": "Temp. wewnętrzna min. 71°C."
+  },
+  {
+    "id": "PL-003",
+    "nazwa": "Żurek Staropolski",
+    "czas": 60,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Zakwas żytni",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Biała kiełbasa",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Ugotuj kiełbasę w 1,5 l wody.",
+      "Dodaj czosnek i przyprawy.",
+      "Wlej zakwas i zagotuj.",
+      "Zahartuj śmietanę i dodaj do zupy.",
+      "Gotuj jeszcze 5 minut."
+    ],
+    "tipy": [
+      "Dodaj majeranek na końcu.",
+      "Nie gotuj długo po dodaniu śmietany."
+    ],
+    "safety": "Zakwas bez pleśni."
+  },
+  {
+    "id": "PL-004",
+    "nazwa": "Placki Ziemniaczane",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 40,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Zetrzyj ziemniaki na tarce.",
+      "Odciśnij nadmiar wody.",
+      "Dodaj jajko i mąkę.",
+      "Dopraw solą i pieprzem.",
+      "Smaż na złoty kolor z obu stron."
+    ],
+    "tipy": [
+      "Dodaj cebulę dla smaku.",
+      "Smaż na dobrze rozgrzanym tłuszczu."
+    ],
+    "safety": "Uważaj na pryskający olej."
+  },
+  {
+    "id": "PL-005",
+    "nazwa": "Bigos",
+    "czas": 180,
+    "poziom": "średnie",
+    "porcje": 6,
+    "tagi": [
+      "obiad",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Kapusta kiszona",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Mięso wieprzowe",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa",
+        "i": 300,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Pokrój mięso i podsmaż.",
+      "Dodaj kapustę i kiełbasę.",
+      "Zalej niewielką ilością wody.",
+      "Duś 2–3 godziny.",
+      "Mieszaj co 20 minut."
+    ],
+    "tipy": [
+      "Najlepszy na drugi dzień.",
+      "Dodaj śliwki dla smaku."
+    ],
+    "safety": "Uważaj na przypalenie."
+  },
+  {
+    "id": "PL-006",
+    "nazwa": "Kotlety Mielone",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Mięso mielone",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bułka namoczona",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Wymieszaj mięso z jajkiem i bułką.",
+      "Dopraw solą i pieprzem.",
+      "Formuj kotlety.",
+      "Smaż 5 min z każdej strony."
+    ],
+    "tipy": [
+      "Dodaj czosnek.",
+      "Nie rób za grubych kotletów."
+    ],
+    "safety": "Temp. wewnętrzna 75°C."
+  },
+  {
+    "id": "PL-007",
+    "nazwa": "Zupa Pomidorowa",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa"
+    ],
+    "skladniki": [
+      {
+        "p": "Wywar",
+        "i": 1500,
+        "u": "ml"
+      },
+      {
+        "p": "Passata",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Podgrzej wywar.",
+      "Dodaj passatę.",
+      "Gotuj 10 minut.",
+      "Dodaj zahartowaną śmietanę."
+    ],
+    "tipy": [
+      "Dodaj cukier dla równowagi.",
+      "Podawaj z makaronem."
+    ],
+    "safety": "Hartuj śmietanę."
+  },
+  {
+    "id": "PL-008",
+    "nazwa": "Gulasz Wieprzowy",
+    "czas": 120,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad"
+    ],
+    "skladniki": [
+      {
+        "p": "Wieprzowina",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Koncentrat pomidorowy",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      }
+    ],
+    "kroki": [
+      "Podsmaż mięso na złoto.",
+      "Dodaj cebulę i czosnek.",
+      "Dodaj paprykę i koncentrat.",
+      "Zalej wodą.",
+      "Duś 1,5 godziny na małym ogniu."
+    ],
+    "tipy": [
+      "Dodaj paprykę wędzoną.",
+      "Gotuj długo dla miękkości."
+    ],
+    "safety": "Długie duszenie mięsa."
+  },
+  {
+    "id": "PL-009",
+    "nazwa": "Naleśniki",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mleko",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Mąka",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 2,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Wymieszaj składniki na gładkie ciasto.",
+      "Odstaw na 10 minut.",
+      "Smaż cienkie naleśniki na maśle.",
+      "Przewracaj po 1 min z każdej strony."
+    ],
+    "tipy": [
+      "Odstaw ciasto na 10 min.",
+      "Smaż na maśle."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "PL-010",
+    "nazwa": "Rosół",
+    "czas": 120,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Kurczak",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pietruszka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Seler",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Zalej mięso zimną wodą.",
+      "Powoli zagotuj i zetrzyj szumowiny.",
+      "Dodaj warzywa.",
+      "Gotuj 2 godziny na małym ogniu.",
+      "Dopraw solą i podawaj z makaronem."
+    ],
+    "tipy": [
+      "Nie mieszaj rosołu.",
+      "Gotuj bardzo powoli."
+    ],
+    "safety": "Usuń szumowiny."
+  },
+  {
+    "id": "PL-011",
+    "nazwa": "Zupa Ogórkowa",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa"
+    ],
+    "skladniki": [
+      {
+        "p": "Ogórki kiszone",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Wywar",
+        "i": 1500,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Zetrzyj ogórki na tarce.",
+      "Ugotuj ziemniaki i marchew w wywarze.",
+      "Dodaj ogórki i gotuj 10 minut.",
+      "Zahartuj śmietanę i dodaj.",
+      "Dopraw solą i koperkiem."
+    ],
+    "tipy": [
+      "Użyj kiszonych, nie konserwowych.",
+      "Dodaj koperek na końcu."
+    ],
+    "safety": "Zahartuj śmietanę przed dodaniem."
+  },
+  {
+    "id": "PL-012",
+    "nazwa": "Barszcz Czerwony",
+    "czas": 60,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "tradycyjne",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Buraki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Ocet",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Ugotuj buraki i zetrzyj lub pokrój.",
+      "Podgotuj warzywa na wywar.",
+      "Dodaj buraki do wywaru.",
+      "Dopraw czosnkiem, octem, solą i cukrem.",
+      "Przecedź i podawaj gorący."
+    ],
+    "tipy": [
+      "Ocet zachowuje kolor.",
+      "Nie gotuj zbyt długo po dodaniu buraków."
+    ],
+    "safety": "Świeże buraki."
+  },
+  {
+    "id": "PL-013",
+    "nazwa": "Spaghetti Bolognese",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "makaron"
+    ],
+    "skladniki": [
+      {
+        "p": "Mięso mielone",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Passata",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Spaghetti",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę i czosnek.",
+      "Dodaj mięso i smaż do zrumienienia.",
+      "Dodaj passatę i przyprawy.",
+      "Duś 30 minut.",
+      "Ugotuj spaghetti al dente i wymieszaj z sosem."
+    ],
+    "tipy": [
+      "Dodaj odrobinę wina do sosu.",
+      "Posyp parmezanem."
+    ],
+    "safety": "Mięso dobrze podsmaż."
+  },
+  {
+    "id": "PL-014",
+    "nazwa": "Makaron Carbonara",
+    "czas": 20,
+    "poziom": "średnie",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Spaghetti",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Boczek",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 1,
+        "u": "ząbek"
+      }
+    ],
+    "kroki": [
+      "Ugotuj makaron al dente.",
+      "Podsmaż boczek z czosnkiem.",
+      "Wymieszaj jajka z parmezanem.",
+      "Zdejmij makaron z ognia i szybko wymieszaj z masą jajeczną.",
+      "Dodaj boczek i mieszaj."
+    ],
+    "tipy": [
+      "Sos nie może się ściąć – zdejmij z ognia!",
+      "Nie używaj śmietany."
+    ],
+    "safety": "Jajka z pewnego źródła."
+  },
+  {
+    "id": "PL-015",
+    "nazwa": "Zupa Krem z Dyni",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Dynia",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Dynię obierz i pokrój w kostkę.",
+      "Podsmaż cebulę i czosnek.",
+      "Dodaj dynię i zalej bulionem.",
+      "Gotuj 20 min, zmiksuj.",
+      "Dodaj mleko kokosowe i imbir."
+    ],
+    "tipy": [
+      "Dodaj pestkidyni do dekoracji.",
+      "Kurkuma wzmocni kolor."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "PL-016",
+    "nazwa": "Kurczak w Sosie Śmietanowym",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Pokrój kurczaka w kawałki i dopraw.",
+      "Podsmaż na maśle do złota.",
+      "Dodaj cebulę i czosnek.",
+      "Wlej śmietanę i duś 10 min.",
+      "Dopraw i podawaj z ryżem."
+    ],
+    "tipy": [
+      "Śmietana 30% nie zwarzy się.",
+      "Dodaj tymianek lub bazylia."
+    ],
+    "safety": "Kurczak w pełni ugotowany."
+  },
+  {
+    "id": "PL-017",
+    "nazwa": "Ryż z Warzywami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Groszek",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Kukurydza",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Podsmaż marchew.",
+      "Dodaj groszek i kukurydzę.",
+      "Wymieszaj z ryżem.",
+      "Dopraw sosem sojowym."
+    ],
+    "tipy": [
+      "Dodaj jajko sadzone na wierzch.",
+      "Użyj ryżu z poprzedniego dnia."
+    ],
+    "safety": "Świeże warzywa."
+  },
+  {
+    "id": "PL-018",
+    "nazwa": "Omlet",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajko",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Mleko",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 10,
+        "u": "g"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Roztrzep jajka z mlekiem i solą.",
+      "Rozgrzej masło na patelni.",
+      "Wlej masę jajeczną.",
+      "Nie mieszaj – poczekaj aż brzegi się zetną.",
+      "Złóż na pół i zdejmij z ognia."
+    ],
+    "tipy": [
+      "Dodaj ser lub szynkę do środka.",
+      "Nie przesmażaj."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "PL-019",
+    "nazwa": "Sałatka Grecka",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidor",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ser feta",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Oliwki",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Pokrój ogórka i pomidory w kostkę.",
+      "Pokrusz fetę.",
+      "Dodaj oliwki.",
+      "Skrop oliwą i oregano.",
+      "Wymieszaj delikatnie."
+    ],
+    "tipy": [
+      "Użyj dojrzałych pomidorów.",
+      "Nie mieszaj zbyt mocno fety."
+    ],
+    "safety": "Świeże warzywa."
+  },
+  {
+    "id": "PL-020",
+    "nazwa": "Zupa Grochowa",
+    "czas": 90,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Groch żółty",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Boczek wędzony",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Majeranek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Namocz groch na noc.",
+      "Gotuj groch w wywarze z boczkiem.",
+      "Dodaj warzywa i gotuj do miękkości.",
+      "Dodaj majeranek.",
+      "Zmiksuj część zupy dla kremowości."
+    ],
+    "tipy": [
+      "Majeranek to must-have.",
+      "Namocz groch – skróci czas gotowania."
+    ],
+    "safety": "Groch musi być dobrze ugotowany."
+  },
+  {
+    "id": "PL-021",
+    "nazwa": "Leczo",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Papryka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      }
+    ],
+    "kroki": [
+      "Pokrój paprykę i cebulę.",
+      "Podsmaż kiełbasę.",
+      "Dodaj warzywa i czosnek.",
+      "Dodaj pomidory i duś 20 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Dodaj ostrą paprykę.",
+      "Podawaj z pieczywem."
+    ],
+    "safety": "Świeże warzywa."
+  },
+  {
+    "id": "PL-022",
+    "nazwa": "Jajecznica",
+    "czas": 8,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajko",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 10,
+        "u": "g"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 5,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Roztrzep jajka.",
+      "Rozgrzej masło na patelni.",
+      "Wlej jajka i mieszaj.",
+      "Zdejmij z ognia zanim będą suche.",
+      "Posyp szczypiorkiem."
+    ],
+    "tipy": [
+      "Zdejmij z ognia trochę wcześniej.",
+      "Smaż na małym ogniu."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "PL-023",
+    "nazwa": "Kurczak Pieczony",
+    "czas": 90,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Kurczak",
+        "i": 1500,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Natrzyj kurczaka solą i pieprzem.",
+      "Wymieszaj masło z czosnkiem i rozmarynem.",
+      "Natrzyj kurczaka masłem pod skórą.",
+      "Piecz w 200°C przez 75 min.",
+      "Polej sosem co 20 minut."
+    ],
+    "tipy": [
+      "Wstaw cytrynę do środka.",
+      "Polej sokiem spod pieczenia."
+    ],
+    "safety": "Temp. wewnętrzna 82°C."
+  },
+  {
+    "id": "PL-024",
+    "nazwa": "Zupa Brokułowa",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Brokuł",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę i czosnek.",
+      "Dodaj brokuła i bulion.",
+      "Gotuj 15 min.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę i dopraw."
+    ],
+    "tipy": [
+      "Zostaw kilka różyczek do dekoracji.",
+      "Dodaj ser żółty."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "PL-025",
+    "nazwa": "Makaron z Pesto",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Pesto bazyliowe",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Ugotuj makaron al dente.",
+      "Zachowaj szklankę wody z gotowania.",
+      "Odcedź makaron.",
+      "Wymieszaj z pesto.",
+      "Dodaj wodę jeśli zbyt suchy, posyp parmezanem."
+    ],
+    "tipy": [
+      "Woda z makaronu zagęszcza sos.",
+      "Użyj świeżego pesto."
+    ],
+    "safety": "Sprawdź datę przydatności pesto."
+  },
+  {
+    "id": "PL-026",
+    "nazwa": "Zupa Minestrone",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola biała",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Makaron drobny",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę i czosnek.",
+      "Dodaj marchew i cukinię.",
+      "Dodaj pomidory i fasolę.",
+      "Wlej bulion i gotuj 20 min.",
+      "Dodaj makaron i gotuj 8 min."
+    ],
+    "tipy": [
+      "Dodaj parmezan przed podaniem.",
+      "Używaj fasoli z puszki dla szybkości."
+    ],
+    "safety": "Sprawdź datę fasoli z puszki."
+  },
+  {
+    "id": "PL-027",
+    "nazwa": "Kurczak Curry",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Pasta curry",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ryż",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Pokrój kurczaka i podsmaż.",
+      "Dodaj cebulę i pastę curry.",
+      "Wlej mleko kokosowe.",
+      "Duś 15 minut.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Dodaj szpinak na końcu.",
+      "Skrop sokiem z limonki."
+    ],
+    "safety": "Kurczak w pełni ugotowany."
+  },
+  {
+    "id": "PL-028",
+    "nazwa": "Sałatka Cezar",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "sałatka",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Sałata romańska",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pierś kurczaka",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Grzanki",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Sos cezar",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj lub usmaż kurczaka.",
+      "Pokrój sałatę.",
+      "Wymieszaj z sosem.",
+      "Dodaj kurczaka i grzanki.",
+      "Posyp parmezanem."
+    ],
+    "tipy": [
+      "Nie polewaj sosem zbyt wcześnie.",
+      "Grzanki z chleba tostowego."
+    ],
+    "safety": "Przechowuj sos w chłodzie."
+  },
+  {
+    "id": "PL-029",
+    "nazwa": "Tost z Awokado",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb pszenny",
+        "i": 2,
+        "u": "kromki"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Cytryna",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Opiecz chleb w tosterze.",
+      "Rozgnieć awokado z solą i cytryną.",
+      "Usmaż jajko sadzone.",
+      "Posmaruj chleb awokado.",
+      "Połóż jajko na wierzchu."
+    ],
+    "tipy": [
+      "Dojrzałe awokado – miękkie pod palcem.",
+      "Dodaj płatki chili."
+    ],
+    "safety": "Dojrzałe awokado."
+  },
+  {
+    "id": "PL-030",
+    "nazwa": "Zupa Cebulowa",
+    "czas": 50,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "zupa"
+    ],
+    "skladniki": [
+      {
+        "p": "Cebula",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Bulion wołowy",
+        "i": 1000,
+        "u": "ml"
+      },
+      {
+        "p": "Grzanki",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 100,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę na maśle przez 30 min aż będzie złota.",
+      "Dodaj bulion i gotuj 15 min.",
+      "Dopraw solą i pieprzem.",
+      "Nalej do żaroodpornych misek.",
+      "Połóż grzankę i ser, zapiecz pod grillem 5 min."
+    ],
+    "tipy": [
+      "Długie smażenie cebuli to klucz.",
+      "Użyj ementalera lub gruyere."
+    ],
+    "safety": "Ostrożnie z gorącą miską."
+  },
+  {
+    "id": "PL-031",
+    "nazwa": "Łosoś z Warzywami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet łososia",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Natryj łososia solą, pieprzem i cytryną.",
+      "Pokrój warzywa.",
+      "Rozgrzej patelnię z oliwą.",
+      "Smaż łososia 4 min z każdej strony.",
+      "Podsmaż warzywa i podawaj razem."
+    ],
+    "tipy": [
+      "Nie przesmaż łososia.",
+      "Dodaj koper do łososia."
+    ],
+    "safety": "Świeża ryba, temp. wewnętrzna 63°C."
+  },
+  {
+    "id": "PL-032",
+    "nazwa": "Pizza Domowa",
+    "czas": 60,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Drożdże",
+        "i": 7,
+        "u": "g"
+      },
+      {
+        "p": "Passata",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Mozzarella",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Zagnieć ciasto z mąki, drożdży, wody i soli.",
+      "Odstaw na 30 min.",
+      "Rozwałkuj ciasto.",
+      "Posmaruj passatą.",
+      "Dodaj ser i składniki, piecz 12 min w 250°C."
+    ],
+    "tipy": [
+      "Im wyższa temperatura tym lepsza pizza.",
+      "Ciasto musi wyrosnąć."
+    ],
+    "safety": "Gotowe ciasto w środku."
+  },
+  {
+    "id": "PL-033",
+    "nazwa": "Noodles z Warzywami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron ryżowy",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej sezamowy",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Namocz makaron w gorącej wodzie.",
+      "Podsmaż warzywa na dużym ogniu.",
+      "Dodaj makaron.",
+      "Polej sosem sojowym i olejem sezamowym.",
+      "Posyp sezamem."
+    ],
+    "tipy": [
+      "Duży ogień dla wok-efektu.",
+      "Dodaj tofu lub krewetki."
+    ],
+    "safety": "Świeże warzywa."
+  },
+  {
+    "id": "PL-034",
+    "nazwa": "Gołąbki",
+    "czas": 120,
+    "poziom": "trudne",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Kapusta biała",
+        "i": 1,
+        "u": "główka"
+      },
+      {
+        "p": "Mięso mielone",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Ryż",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Passata",
+        "i": 400,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Zblanszuj liście kapusty.",
+      "Ugotuj ryż do połowy.",
+      "Wymieszaj mięso z ryżem i cebulą.",
+      "Zawijaj farsz w liście.",
+      "Gotuj w sosie pomidorowym 60 min."
+    ],
+    "tipy": [
+      "Liście muszą być elastyczne.",
+      "Gotuj na małym ogniu."
+    ],
+    "safety": "Kapusta i mięso w pełni ugotowane."
+  },
+  {
+    "id": "PL-035",
+    "nazwa": "Kopytka",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Ugotuj i przepuść ziemniaki przez praskę.",
+      "Ostudź i dodaj mąkę, jajko i sól.",
+      "Zagnieć ciasto.",
+      "Formuj kopytka.",
+      "Gotuj w osolonej wodzie do wypłynięcia + 2 min."
+    ],
+    "tipy": [
+      "Ciasto nie może być zbyt klejące.",
+      "Podawaj z bułką tartą."
+    ],
+    "safety": "Świeże ciasto gotuj od razu."
+  },
+  {
+    "id": "PL-036",
+    "nazwa": "Zrazy Wołowe",
+    "czas": 90,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Wołowina",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Boczek",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Ogórek kiszony",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Musztarda",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Rozbij plastry wołowiny.",
+      "Posmaruj musztardą, dodaj boczek i ogórek.",
+      "Zawiń i spnij wykałaczką.",
+      "Podsmaż ze wszystkich stron.",
+      "Duś w sosie 60 min."
+    ],
+    "tipy": [
+      "Rozbijaj cienko.",
+      "Duś długo dla miękkości."
+    ],
+    "safety": "Mięso w pełni ugotowane."
+  },
+  {
+    "id": "PL-037",
+    "nazwa": "Kasza Gryczana z Warzywami",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza gryczana",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 200,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj kaszę.",
+      "Podsmaż cebulę.",
+      "Dodaj marchew i pieczarki.",
+      "Wymieszaj z kaszą.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Prażona kasza ma lepszy smak.",
+      "Dodaj masło na końcu."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "PL-038",
+    "nazwa": "Zupa Fasolowa",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Boczek",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Koncentrat pomidorowy",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Namocz fasolę na noc.",
+      "Gotuj fasolę z boczkiem.",
+      "Dodaj warzywa.",
+      "Dodaj koncentrat i gotuj 20 min.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Fasola z puszki skróci czas.",
+      "Dodaj majeranek."
+    ],
+    "safety": "Fasola musi być miękka."
+  },
+  {
+    "id": "PL-039",
+    "nazwa": "Kotlet z Indyka",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet z indyka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bułka tarta",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Olej",
+        "i": 80,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Rozbij filet tłuczkiem.",
+      "Dopraw solą i pieprzem.",
+      "Obtocz w mące, jajku i bułce.",
+      "Smaż 3-4 min z każdej strony.",
+      "Odsącz na papierze."
+    ],
+    "tipy": [
+      "Indyk jest delikatniejszy niż kurczak.",
+      "Nie przesmaż."
+    ],
+    "safety": "Temp. wewnętrzna 74°C."
+  },
+  {
+    "id": "PL-040",
+    "nazwa": "Risotto z Grzybami",
+    "czas": 45,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Grzyby leśne",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Białe wino",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę i grzyby.",
+      "Dodaj ryż i podpraż.",
+      "Wlej wino.",
+      "Dodawaj bulion partiami mieszając.",
+      "Gotuj 18 min, dodaj masło i parmezan."
+    ],
+    "tipy": [
+      "Ciągłe mieszanie to klucz.",
+      "Bulion musi być gorący."
+    ],
+    "safety": "Sprawdź grzyby – tylko jadalne."
+  },
+  {
+    "id": "PL-041",
+    "nazwa": "Jajka Sadzone",
+    "czas": 5,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajko",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 10,
+        "u": "g"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej masło na małym ogniu.",
+      "Wbij jajka.",
+      "Smaż do ścięcia białka.",
+      "Żółtko może zostać płynne.",
+      "Dopraw solą."
+    ],
+    "tipy": [
+      "Smaż na małym ogniu.",
+      "Przykryj patelnię dla ścięcia białka."
+    ],
+    "safety": "Świeże jajka."
+  },
+  {
+    "id": "PL-042",
+    "nazwa": "Filet z Dorsza",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet dorsza",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Osusz filet papierowym ręcznikiem.",
+      "Obtocz w mące.",
+      "Smaż na maśle 3-4 min z każdej strony.",
+      "Skrop cytryną.",
+      "Podawaj z ziemniakami."
+    ],
+    "tipy": [
+      "Nie kładź zimnej ryby na patelnię.",
+      "Nie przesmaż."
+    ],
+    "safety": "Świeża ryba, temp. 63°C."
+  },
+  {
+    "id": "PL-043",
+    "nazwa": "Krupnik",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza gryczana",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Wywar",
+        "i": 1500,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Podgrzej wywar.",
+      "Dodaj marchew i ziemniaki.",
+      "Gotuj 15 min.",
+      "Dodaj kaszę.",
+      "Gotuj jeszcze 20 min."
+    ],
+    "tipy": [
+      "Dodaj natarkę pietruszki.",
+      "Możesz dodać mięso."
+    ],
+    "safety": "Kasza musi być miękka."
+  },
+  {
+    "id": "PL-044",
+    "nazwa": "Tortilla z Kurczakiem",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Tortilla",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pierś kurczaka",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Sałata",
+        "i": 1,
+        "u": "garść"
+      },
+      {
+        "p": "Ser",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Sos",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Usmaż lub ugotuj kurczaka.",
+      "Pokrój w paski.",
+      "Ułóż składniki na tortilli.",
+      "Zawiń.",
+      "Opcjonalnie podgrzej na patelni."
+    ],
+    "tipy": [
+      "Dodaj awokado.",
+      "Podgrzana tortilla jest lepsza."
+    ],
+    "safety": "Kurczak w pełni ugotowany."
+  },
+  {
+    "id": "PL-045",
+    "nazwa": "Zupa Ziemniaczana",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Koperek",
+        "i": 1,
+        "u": "pęczek"
+      }
+    ],
+    "kroki": [
+      "Pokrój ziemniaki i marchew.",
+      "Gotuj w wywarze 20 min.",
+      "Zahartuj śmietanę i dodaj.",
+      "Dopraw solą i pieprzem.",
+      "Posyp koperkiem."
+    ],
+    "tipy": [
+      "Rozgnieć część ziemniaków.",
+      "Koperek doda świeżości."
+    ],
+    "safety": "Zahartuj śmietanę."
+  },
+  {
+    "id": "PL-046",
+    "nazwa": "Sałatka z Kurczakiem",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "sałatka",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Sałata",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidor",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sos winegret",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Ugotuj lub usmaż kurczaka.",
+      "Pokrój warzywa.",
+      "Wymieszaj sałatę z warzywami.",
+      "Dodaj kurczaka.",
+      "Polej winegret."
+    ],
+    "tipy": [
+      "Polej sosem tuż przed podaniem.",
+      "Dodaj pestki słonecznika."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "PL-047",
+    "nazwa": "Makaron Bolognese z Indykiem",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "makaron"
+    ],
+    "skladniki": [
+      {
+        "p": "Mięso mielone z indyka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Passata",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Makaron",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę.",
+      "Dodaj mięso z indyka.",
+      "Dodaj passatę i duś 20 min.",
+      "Ugotuj makaron.",
+      "Wymieszaj z sosem."
+    ],
+    "tipy": [
+      "Indyk jest chudszy niż wieprzowina.",
+      "Dodaj bazylię."
+    ],
+    "safety": "Mięso dobrze podsmaż."
+  },
+  {
+    "id": "PL-048",
+    "nazwa": "Kanapki z Łososiem",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb",
+        "i": 4,
+        "u": "kromki"
+      },
+      {
+        "p": "Łosoś wędzony",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Ser śmietankowy",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Ogórek",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Posmaruj chleb serem.",
+      "Połóż łososia.",
+      "Dodaj plasterki ogórka.",
+      "Opcjonalnie dodaj kapary.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Dobry ser śmietankowy to podstawa.",
+      "Dodaj odrobinę cytryny."
+    ],
+    "safety": "Świeży łosoś wędzony."
+  },
+  {
+    "id": "PL-049",
+    "nazwa": "Pierś z Kurczaka z Ryżem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ryż",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Zioła prowansalskie",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Natryj kurczaka czosnkiem i ziołami.",
+      "Smaż na patelni 6 min z każdej strony.",
+      "Odstaw na 3 min.",
+      "Pokrój i podawaj z ryżem."
+    ],
+    "tipy": [
+      "Nie krój od razu po smażeniu.",
+      "Marynuj wcześniej."
+    ],
+    "safety": "Kurczak w pełni ugotowany."
+  },
+  {
+    "id": "PL-050",
+    "nazwa": "Zupa Soczewicowa",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Soczewica czerwona",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Kurkuma",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Kminek",
+        "i": 0.5,
+        "u": "łyżeczki"
+      }
+    ],
+    "kroki": [
+      "Podsmaż cebulę z kurkumą i kminem.",
+      "Dodaj marchew i soczewicę.",
+      "Zalej bulionem.",
+      "Gotuj 20 min.",
+      "Zmiksuj do pożądanej konsystencji."
+    ],
+    "tipy": [
+      "Soczewica nie wymaga namaczania.",
+      "Dodaj sok z cytryny."
+    ],
+    "safety": "Soczewica musi być miękka."
+  }
+]
