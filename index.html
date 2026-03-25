@@ -3,411 +3,872 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GotujZtego – Przepisy z tego co masz w lodówce</title>
+  <title>GotujZtego – Gotuj z tego co masz w lodówce</title>
   <meta name="description" content="Wpisz składniki z lodówki – znajdziemy przepis na obiad. Ponad 50 sprawdzonych polskich przepisów."/>
   <link rel="canonical" href="https://gotujztego.pl/"/>
   <meta property="og:title" content="GotujZtego – Gotuj z tego co masz w lodówce"/>
   <meta property="og:description" content="Wpisz składniki – znajdziemy przepis!"/>
   <meta property="og:url" content="https://gotujztego.pl/"/>
   <meta property="og:type" content="website"/>
-
-  <!-- Google AdSense – wstaw swój kod gdy dostaniesz zatwierdzenie -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
-
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
-    :root{--cream:#fdf8f0;--warm:#f5ede0;--accent:#e8633a;--accent2:#f0a500;--green:#2d7a4f;--dark:#1a1208;--mid:#6b5744;--card:#fff;--shadow:0 4px 24px rgba(26,18,8,.09);--r:16px;--t:.22s ease}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
-    /* NAV */
-    nav{position:sticky;top:0;z-index:200;background:rgba(253,248,240,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,99,58,.1);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--accent);text-decoration:none}
-    .logo span{color:var(--green)}
-    /* ADS LEADERBOARD TOP */
-    .ad-leaderboard{background:#f0f0f0;text-align:center;padding:8px;font-size:.75rem;color:#999;min-height:60px;display:flex;align-items:center;justify-content:center}
-    /* HERO */
-    .hero{text-align:center;padding:48px 16px 32px;position:relative}
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(232,99,58,.09),transparent 68%);pointer-events:none}
-    .badge{display:inline-block;background:rgba(232,99,58,.12);color:var(--accent);font-size:.73rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
-    h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.13;max-width:660px;margin:0 auto 14px}
-    h1 em{font-style:normal;color:var(--accent)}
-    .hero-sub{color:var(--mid);font-size:.97rem;max-width:480px;margin:0 auto 32px}
-    /* TABS */
-    .tabs{display:flex;max-width:720px;margin:0 auto;border-radius:14px 14px 0 0;overflow:hidden;border:2px solid rgba(232,99,58,.12);border-bottom:none;background:var(--warm)}
-    .tab{flex:1;padding:13px 10px;text-align:center;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--mid);transition:all var(--t);border:none;background:transparent;font-family:'DM Sans',sans-serif;border-bottom:3px solid transparent;display:flex;align-items:center;justify-content:center;gap:6px}
-    .tab:hover{background:rgba(232,99,58,.07);color:var(--accent)}
-    .tab.active{background:var(--card);color:var(--accent);border-bottom:3px solid var(--accent)}
-    /* CARD */
-    .card{max-width:720px;margin:0 auto;background:var(--card);border-radius:0 0 20px 20px;box-shadow:var(--shadow);border:2px solid rgba(232,99,58,.1);border-top:none;padding:24px}
-    .panel{display:none}
-    .panel.active{display:block}
-    /* SEARCH */
-    .lbl{font-weight:600;font-size:.86rem;color:var(--mid);margin-bottom:8px;display:block}
-    textarea{width:100%;min-height:90px;border:2px solid rgba(232,99,58,.18);border-radius:12px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:.96rem;color:var(--dark);background:var(--warm);resize:vertical;outline:none;transition:border-color var(--t)}
-    textarea:focus{border-color:var(--accent)}
-    textarea::placeholder{color:#b8a898}
-    .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
-    .tag{background:rgba(232,99,58,.09);color:var(--accent);border:1px solid rgba(232,99,58,.18);border-radius:100px;padding:4px 11px;font-size:.79rem;font-weight:500;cursor:pointer;transition:background var(--t)}
-    .tag:hover{background:rgba(232,99,58,.17)}
-    .filters{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0}
-    .fc{padding:5px 13px;border-radius:100px;border:2px solid rgba(232,99,58,.2);background:transparent;color:var(--mid);font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;transition:all var(--t)}
-    .fc:hover,.fc.on{background:var(--accent);border-color:var(--accent);color:#fff}
-    .actions{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.93rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t)}
-    .btn-p{background:var(--accent);color:#fff;box-shadow:0 4px 12px rgba(232,99,58,.28)}
-    .btn-p:hover{background:#d05530;transform:translateY(-2px)}
-    .btn-g{background:var(--warm);color:var(--mid);border:1px solid rgba(107,87,68,.16)}
-    .btn-g:hover{background:#ede4d4}
-    .btn-sm{padding:7px 14px;font-size:.82rem}
-    /* RESULTS */
-    #res-wrap{max-width:720px;margin:20px auto 0}
-    .res-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:7px}
-    .res-cnt{font-size:.83rem;color:var(--mid)}
-    .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-    .rc{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;text-decoration:none;color:inherit;transition:transform var(--t),box-shadow var(--t);display:block;cursor:pointer}
-    .rc:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(26,18,8,.12)}
-    .rc-img{width:100%;height:120px;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
-    .rc-body{padding:13px}
-    .rc-title{font-family:'Playfair Display',serif;font-size:.96rem;margin-bottom:4px;font-weight:700}
-    .rc-desc{font-size:.78rem;color:var(--mid);margin-bottom:7px}
-    .pills{display:flex;gap:4px;flex-wrap:wrap}
-    .pill{background:var(--warm);border-radius:100px;padding:2px 8px;font-size:.7rem;color:var(--mid)}
-    .pill.g{background:rgba(45,122,79,.1);color:var(--green)}
-    .pill.o{background:rgba(232,99,58,.1);color:var(--accent)}
-    .no-res{text-align:center;padding:36px 16px;color:var(--mid);grid-column:1/-1}
-    .no-res span{font-size:2.8rem;display:block;margin-bottom:10px}
-    /* AD BOX inline */
-    .ad-inline{background:#f5f5f5;border:1px dashed #ccc;border-radius:10px;text-align:center;padding:12px;font-size:.73rem;color:#aaa;min-height:90px;display:flex;align-items:center;justify-content:center;margin:16px 0}
-    /* MODAL PRZEPIS */
-    .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;padding:16px}
-    .modal-bg.open{display:flex}
-    .modal{background:var(--card);border-radius:20px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
-    .modal-head{background:linear-gradient(135deg,var(--accent),#c94e28);color:#fff;padding:22px 22px 16px;border-radius:20px 20px 0 0}
-    .modal-head h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:6px}
-    .modal-meta{display:flex;gap:14px;font-size:.83rem;opacity:.9;flex-wrap:wrap}
-    .modal-body{padding:22px}
-    .modal-sec{margin-bottom:20px}
-    .modal-sec h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:10px}
-    .ing-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px}
-    .ing-list li{background:var(--warm);border-radius:8px;padding:6px 11px;font-size:.88rem;display:flex;align-items:center;gap:5px}
-    .ing-list li::before{content:'🥄';font-size:.78rem}
-    .steps-list{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:10px}
-    .steps-list li{counter-increment:s;display:flex;gap:11px;align-items:flex-start}
-    .steps-list li::before{content:counter(s);min-width:27px;height:27px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;margin-top:2px}
-    .steps-list li p{font-size:.9rem;line-height:1.55}
-    .tip-box{background:rgba(240,165,0,.1);color:#7a5e00;border-radius:9px;padding:9px 12px;font-size:.84rem;margin-bottom:12px}
-    .safety-box{background:rgba(229,57,53,.07);color:#8b1a1a;border-radius:9px;padding:9px 12px;font-size:.82rem;margin-top:8px}
-    .modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.25);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:1.1rem;color:#fff;display:flex;align-items:center;justify-content:center}
-    /* LODÓWKA */
-    .fridge-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:9px}
-    .fridge-top h2{font-family:'Playfair Display',serif;font-size:1.3rem}
-    .sync-badge{font-size:.74rem;padding:3px 10px;border-radius:100px;background:rgba(45,122,79,.1);color:var(--green)}
-    .sync-badge.err{background:rgba(229,57,53,.1);color:#e53935}
-    .sync-badge.warn{background:rgba(240,165,0,.1);color:#7a5e00}
-    .add-box{background:var(--warm);border-radius:14px;padding:16px;margin-bottom:16px}
-    .add-box h3{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:12px;color:var(--accent)}
-    .row3{display:grid;grid-template-columns:1fr 70px 90px;gap:7px;margin-bottom:7px}
-    .inp{border:2px solid rgba(232,99,58,.18);border-radius:9px;padding:9px 11px;font-family:'DM Sans',sans-serif;font-size:.88rem;background:#fff;outline:none;transition:border-color var(--t);color:var(--dark);width:100%}
-    .inp:focus{border-color:var(--accent)}
-    .bc-row{display:flex;gap:7px;margin-bottom:7px;flex-wrap:wrap}
-    .bc-row .inp{flex:1;min-width:120px}
-    #scan-wrap{display:none;margin:9px 0;border-radius:12px;overflow:hidden;position:relative}
-    #scan-video{width:100%;max-height:220px;object-fit:cover;display:block}
-    #scan-line{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-    #scan-line::before{content:'';width:65%;height:35%;border:3px solid var(--accent);border-radius:6px;box-shadow:0 0 0 9999px rgba(0,0,0,.45)}
-    .scan-close{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:100px;padding:4px 11px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.78rem}
-    .low-bar{background:rgba(255,152,0,.12);border:1px solid rgba(255,152,0,.3);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.83rem;color:#7a4f00;display:none}
-    .prod-list{display:flex;flex-direction:column;gap:7px}
-    .prod-item{background:#fff;border:1px solid rgba(232,99,58,.12);border-radius:11px;padding:10px 12px;display:flex;align-items:center;gap:9px;transition:box-shadow var(--t)}
-    .prod-item:hover{box-shadow:var(--shadow)}
-    .prod-item.low{border-color:#ff9800;background:#fffbf0}
-    .prod-item.empty{border-color:#e53935;background:#fff5f5;opacity:.7}
-    .prod-emoji{font-size:1.5rem;flex-shrink:0}
-    .prod-info{flex:1;min-width:0}
-    .prod-name{font-weight:600;font-size:.88rem;margin-bottom:1px}
-    .prod-meta{font-size:.71rem;color:var(--mid)}
-    .prod-ctrl{display:flex;align-items:center;gap:5px;flex-shrink:0}
-    .qbtn{width:26px;height:26px;border-radius:50%;border:2px solid rgba(232,99,58,.25);background:transparent;font-size:.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);transition:all var(--t)}
-    .qbtn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .qdsp{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;min-width:34px;text-align:center}
-    .dbtn{width:24px;height:24px;border-radius:50%;border:none;background:rgba(229,57,53,.1);color:#e53935;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:background var(--t);margin-left:2px}
-    .dbtn:hover{background:#e53935;color:#fff}
-    .cook-btn{width:100%;padding:12px;border-radius:100px;background:linear-gradient(135deg,var(--green),#1e5c38);color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:.96rem;font-weight:600;cursor:pointer;margin-top:14px;display:flex;align-items:center;justify-content:center;gap:7px;transition:opacity var(--t)}
-    .cook-btn:hover:not(:disabled){opacity:.88}
-    .cook-btn:disabled{opacity:.5;cursor:not-allowed}
-    .empty-box{text-align:center;padding:28px 16px;color:var(--mid)}
-    .empty-box span{font-size:2.8rem;display:block;margin-bottom:8px}
+    /* ══════════════════════════════════════
+       RESET & VARIABLES
+    ══════════════════════════════════════ */
+    :root {
+      --white: #fafaf8;
+      --off: #f4f2ee;
+      --red: #c0392b;
+      --red-dark: #96281b;
+      --dark: #1a1410;
+      --mid: #6b6560;
+      --light: #d4cfc8;
+      --card: #ffffff;
+      --t: .3s ease;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+      font-weight: 400;
+    }
+
+    /* ══════════════════════════════════════
+       NAV
+    ══════════════════════════════════════ */
+    nav {
+      position: sticky; top: 0; z-index: 300;
+      background: rgba(250,250,248,.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--light);
+      padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--dark); text-decoration: none;
+      letter-spacing: -.5px;
+    }
+    .logo em { font-style: italic; color: var(--red); }
+    .nav-right {
+      display: flex; align-items: center; gap: 32px;
+    }
+    .nav-tab {
+      font-size: .78rem; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--mid);
+      cursor: pointer; border: none; background: none;
+      font-family: var(--sans); padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: all var(--t);
+    }
+    .nav-tab:hover { color: var(--dark); }
+    .nav-tab.active { color: var(--red); border-bottom-color: var(--red); }
+
+    /* ══════════════════════════════════════
+       AD LEADERBOARD
+    ══════════════════════════════════════ */
+    .ad-top {
+      background: var(--off);
+      border-bottom: 1px solid var(--light);
+      text-align: center; padding: 10px;
+      font-size: .7rem; color: var(--light);
+      letter-spacing: .1em; text-transform: uppercase;
+      min-height: 50px; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 88vh;
+      overflow: hidden;
+    }
+    .hero-left {
+      padding: 80px 60px 60px;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute; right: 0; top: 10%; bottom: 10%;
+      width: 1px; background: var(--light);
+    }
+    .hero-kicker {
+      font-size: .7rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+    }
+    .hero-kicker::before {
+      content: ''; width: 24px; height: 1px; background: var(--red);
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5.5vw, 5.5rem);
+      font-weight: 600; line-height: 1.05;
+      letter-spacing: -.02em;
+      margin-bottom: 28px;
+    }
+    .hero-h1 em {
+      font-style: italic; color: var(--red);
+    }
+    .hero-sub {
+      font-size: .92rem; color: var(--mid); line-height: 1.7;
+      max-width: 380px; margin-bottom: 48px;
+    }
+    .hero-right {
+      background: var(--off);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 60px 40px;
+    }
+    /* Dekoracyjne duże litery w tle */
+    .hero-bg-letter {
+      position: absolute;
+      font-family: var(--serif);
+      font-size: 28vw; font-weight: 700; font-style: italic;
+      color: rgba(192,57,43,.06);
+      right: -2vw; top: 50%; transform: translateY(-50%);
+      pointer-events: none; line-height: 1;
+      user-select: none;
+    }
+    /* Ilustracja – składniki jako emoji */
+    .ingredients-visual {
+      position: relative; width: 320px; height: 320px;
+    }
+    .ing-circle {
+      position: absolute;
+      width: 90px; height: 90px;
+      background: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+      transition: transform var(--t);
+      animation: float linear infinite;
+    }
+    .ing-circle:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); animation-duration: 6s; animation-delay: 0s; }
+    .ing-circle:nth-child(2) { top: 30%; right: 0; animation-duration: 7s; animation-delay: -2s; }
+    .ing-circle:nth-child(3) { bottom: 10%; right: 10%; animation-duration: 5.5s; animation-delay: -1s; }
+    .ing-circle:nth-child(4) { bottom: 0; left: 20%; animation-duration: 6.5s; animation-delay: -3s; }
+    .ing-circle:nth-child(5) { top: 30%; left: 0; animation-duration: 8s; animation-delay: -1.5s; }
+    .ing-circle:nth-child(6) { top: 50%; left: 50%; transform: translate(-50%,-50%); width: 110px; height: 110px; font-size: 3rem; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .ing-circle:nth-child(1) { animation-name: float1; }
+    @keyframes float1 { 0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)} }
+
+    /* ══════════════════════════════════════
+       MAIN CONTENT
+    ══════════════════════════════════════ */
+    .main {
+      max-width: 1100px; margin: 0 auto; padding: 0 40px 80px;
+    }
+
+    /* PANEL TOGGLE */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* ══════════════════════════════════════
+       SEARCH SECTION
+    ══════════════════════════════════════ */
+    .search-section {
+      padding: 64px 0 0;
+    }
+    .section-label {
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--mid);
+      margin-bottom: 32px; display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--light);
+    }
+    .search-grid {
+      display: grid; grid-template-columns: 1fr 280px; gap: 40px;
+    }
+    .search-left {}
+    .field-lbl {
+      font-family: var(--serif); font-size: 1.05rem;
+      margin-bottom: 12px; display: block; font-weight: 600;
+    }
+    textarea {
+      width: 100%; min-height: 120px;
+      border: 1px solid var(--light);
+      border-radius: 2px;
+      padding: 16px 18px;
+      font-family: var(--sans); font-size: .9rem;
+      color: var(--dark); background: var(--card);
+      resize: vertical; outline: none;
+      transition: border-color var(--t);
+      line-height: 1.6;
+    }
+    textarea:focus { border-color: var(--red); }
+    textarea::placeholder { color: var(--light); }
+    .example-tags {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;
+    }
+    .etag {
+      font-size: .72rem; padding: 5px 12px;
+      border: 1px solid var(--light); border-radius: 100px;
+      color: var(--mid); cursor: pointer; background: transparent;
+      font-family: var(--sans); font-weight: 500;
+      transition: all var(--t);
+    }
+    .etag:hover { border-color: var(--red); color: var(--red); }
+    .search-right {}
+    .filter-box {
+      background: var(--off);
+      padding: 24px; border-radius: 2px;
+    }
+    .filter-title {
+      font-size: .68rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
+    }
+    .filter-list { display: flex; flex-direction: column; gap: 8px; }
+    .fitem {
+      display: flex; align-items: center; gap: 10px;
+      cursor: pointer; padding: 6px 0;
+      border-bottom: 1px solid var(--light);
+    }
+    .fitem:last-child { border-bottom: none; }
+    .fcheck {
+      width: 16px; height: 16px;
+      border: 1.5px solid var(--light); border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all var(--t);
+    }
+    .fitem.on .fcheck { background: var(--red); border-color: var(--red); }
+    .fitem.on .fcheck::after { content: '✓'; color: white; font-size: .65rem; font-weight: 700; }
+    .fitem-label { font-size: .82rem; color: var(--mid); }
+    .fitem.on .fitem-label { color: var(--dark); font-weight: 500; }
+    .search-actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 14px 32px; background: var(--red); color: white;
+      border: none; font-family: var(--sans); font-size: .78rem;
+      font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      cursor: pointer; transition: background var(--t);
+      border-radius: 1px;
+    }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-secondary {
+      padding: 14px 24px; background: transparent; color: var(--mid);
+      border: 1px solid var(--light); font-family: var(--sans);
+      font-size: .78rem; font-weight: 500; cursor: pointer;
+      transition: all var(--t); border-radius: 1px;
+    }
+    .btn-secondary:hover { border-color: var(--mid); color: var(--dark); }
+
+    /* ══════════════════════════════════════
+       RESULTS
+    ══════════════════════════════════════ */
+    #res-wrap { padding-top: 56px; display: none; }
+    .res-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 1px solid var(--light); padding-bottom: 16px; margin-bottom: 32px;
+    }
+    .res-title {
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 600;
+    }
+    .res-count { font-size: .8rem; color: var(--mid); }
+    /* AD inline */
+    .ad-inline {
+      border: 1px dashed var(--light); padding: 20px;
+      text-align: center; font-size: .7rem; color: var(--light);
+      letter-spacing: .1em; text-transform: uppercase;
+      margin-bottom: 32px; min-height: 80px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1px; background: var(--light);
+    }
+    .rc {
+      background: var(--white); cursor: pointer;
+      padding: 28px 24px;
+      transition: background var(--t);
+      position: relative; overflow: hidden;
+    }
+    .rc:hover { background: var(--off); }
+    .rc-emoji { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .rc-title {
+      font-family: var(--serif); font-size: 1.15rem;
+      font-weight: 600; margin-bottom: 8px; line-height: 1.2;
+    }
+    .rc-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .rpill {
+      font-size: .67rem; letter-spacing: .08em; text-transform: uppercase;
+      padding: 3px 8px; border: 1px solid var(--light); color: var(--mid);
+      border-radius: 100px;
+    }
+    .rpill.red { border-color: rgba(192,57,43,.3); color: var(--red); }
+    .no-res {
+      text-align: center; padding: 80px 20px; color: var(--mid);
+      grid-column: 1 / -1;
+    }
+    .no-res-icon { font-size: 3rem; margin-bottom: 16px; }
+
+    /* ══════════════════════════════════════
+       MODAL
+    ══════════════════════════════════════ */
+    .overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(26,20,16,.7);
+      z-index: 500; align-items: center; justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+    .overlay.open { display: flex; }
+    .modal {
+      background: var(--white); max-width: 680px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+      position: relative;
+      animation: slideUp .3s ease;
+    }
+    @keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .modal-hero {
+      background: var(--off); padding: 48px 48px 36px;
+      border-bottom: 1px solid var(--light);
+      position: relative;
+    }
+    .modal-kicker {
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 12px;
+    }
+    .modal-title {
+      font-family: var(--serif); font-size: 2.2rem;
+      font-weight: 600; line-height: 1.1; margin-bottom: 20px;
+    }
+    .modal-meta {
+      display: flex; gap: 24px; font-size: .78rem;
+      color: var(--mid); letter-spacing: .05em;
+    }
+    .modal-meta span::before { margin-right: 5px; }
+    .modal-close {
+      position: absolute; top: 20px; right: 20px;
+      background: none; border: 1px solid var(--light);
+      width: 36px; height: 36px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem; color: var(--mid);
+      transition: all var(--t);
+    }
+    .modal-close:hover { background: var(--dark); color: white; border-color: var(--dark); }
+    .modal-body { padding: 40px 48px; }
+    .modal-sec { margin-bottom: 36px; }
+    .modal-sec-title {
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--mid);
+      margin-bottom: 20px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--light);
+    }
+    .ing-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .ing-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px; background: var(--off);
+    }
+    .ing-name { font-size: .88rem; font-weight: 500; }
+    .ing-qty { font-size: .78rem; color: var(--mid); }
+    .steps-ol { list-style: none; counter-reset: s; }
+    .steps-ol li {
+      counter-increment: s;
+      display: flex; gap: 20px; padding: 16px 0;
+      border-bottom: 1px solid var(--light);
+    }
+    .steps-ol li:last-child { border-bottom: none; }
+    .step-num {
+      font-family: var(--serif); font-size: 1.4rem;
+      font-weight: 600; color: var(--red); flex-shrink: 0;
+      width: 28px; line-height: 1.4;
+    }
+    .step-num::before { content: counter(s); }
+    .step-text { font-size: .88rem; line-height: 1.65; padding-top: 4px; }
+    .tip-strip {
+      background: var(--off); border-left: 3px solid var(--red);
+      padding: 14px 18px; margin-top: 24px;
+    }
+    .tip-strip p { font-size: .84rem; color: var(--mid); line-height: 1.6; }
+    .tip-strip strong { color: var(--dark); }
+    .safety-strip {
+      background: rgba(192,57,43,.05); border: 1px solid rgba(192,57,43,.15);
+      padding: 12px 16px; margin-top: 12px; font-size: .8rem;
+      color: var(--red-dark); line-height: 1.5;
+    }
+
+    /* ══════════════════════════════════════
+       LODÓWKA
+    ══════════════════════════════════════ */
+    .fridge-section { padding: 64px 0 0; }
+    .fridge-head {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .fridge-title {
+      font-family: var(--serif); font-size: 2rem; font-weight: 600;
+    }
+    .sync-pill {
+      font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 12px; border: 1px solid var(--light); color: var(--mid);
+    }
+    .sync-pill.ok { border-color: #2ecc71; color: #27ae60; }
+    .sync-pill.err { border-color: var(--red); color: var(--red); }
+    .low-strip {
+      background: rgba(192,57,43,.06); border: 1px solid rgba(192,57,43,.2);
+      padding: 12px 16px; font-size: .82rem; color: var(--red-dark);
+      margin-bottom: 24px; display: none;
+    }
+    /* ADD BOX */
+    .add-wrap {
+      display: grid; grid-template-columns: 1fr 280px; gap: 40px;
+      margin-bottom: 48px;
+    }
+    .add-left {}
+    .add-right {
+      background: var(--off); padding: 24px;
+    }
+    .add-right h3 {
+      font-family: var(--serif); font-size: 1.1rem;
+      margin-bottom: 16px; font-weight: 600;
+    }
+    .inp-group { margin-bottom: 12px; }
+    .inp-lbl { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--mid); display: block; margin-bottom: 6px; }
+    .inp {
+      border: 1px solid var(--light); border-radius: 1px;
+      padding: 10px 12px; font-family: var(--sans); font-size: .87rem;
+      background: white; outline: none; width: 100%;
+      transition: border-color var(--t); color: var(--dark);
+    }
+    .inp:focus { border-color: var(--red); }
+    .inp-row { display: grid; grid-template-columns: 1fr 80px 90px; gap: 8px; }
+    .bc-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+    .bc-row .inp { flex: 1; min-width: 100px; }
+    #scan-wrap { display: none; margin: 12px 0; position: relative; border-radius: 2px; overflow: hidden; }
+    #scan-video { width: 100%; max-height: 220px; object-fit: cover; display: block; }
+    #scan-line { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+    #scan-line::before { content: ''; width: 65%; height: 35%; border: 2px solid var(--red); box-shadow: 0 0 0 9999px rgba(0,0,0,.45); }
+    .scan-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,.6); color: white; border: none; padding: 4px 10px; cursor: pointer; font-family: var(--sans); font-size: .75rem; }
+    /* PRODUCT LIST */
+    .prod-list { display: flex; flex-direction: column; }
+    .prod-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 0; border-bottom: 1px solid var(--light);
+      transition: background var(--t);
+    }
+    .prod-item:first-child { border-top: 1px solid var(--light); }
+    .prod-item.low { background: rgba(255,152,0,.04); }
+    .prod-item.empty { opacity: .55; }
+    .prod-emoji { font-size: 1.6rem; width: 40px; text-align: center; }
+    .prod-info { flex: 1; }
+    .prod-name { font-weight: 500; font-size: .9rem; margin-bottom: 2px; }
+    .prod-sub { font-size: .72rem; color: var(--mid); letter-spacing: .04em; }
+    .prod-ctrl { display: flex; align-items: center; gap: 8px; }
+    .qbtn {
+      width: 30px; height: 30px; border: 1px solid var(--light);
+      background: white; cursor: pointer; font-size: 1rem; font-weight: 600;
+      color: var(--mid); display: flex; align-items: center; justify-content: center;
+      transition: all var(--t);
+    }
+    .qbtn:hover { border-color: var(--red); color: var(--red); }
+    .qdsp {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 600;
+      min-width: 50px; text-align: center;
+    }
+    .dbtn {
+      width: 28px; height: 28px; border: 1px solid var(--light);
+      background: none; cursor: pointer; color: var(--light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; transition: all var(--t);
+    }
+    .dbtn:hover { border-color: var(--red); color: var(--red); background: rgba(192,57,43,.05); }
+    .cook-btn {
+      margin-top: 32px; width: 100%; padding: 16px;
+      background: var(--dark); color: white; border: none;
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
+      transition: background var(--t);
+    }
+    .cook-btn:hover:not(:disabled) { background: var(--red); }
+    .cook-btn:disabled { opacity: .4; cursor: not-allowed; }
+    .empty-fridge {
+      padding: 60px 20px; text-align: center; color: var(--mid);
+    }
+    .empty-fridge-icon { font-size: 3rem; margin-bottom: 16px; }
+
+    /* POLICY MODAL */
+    .policy-wrap { padding: 40px 48px; max-height: 80vh; overflow-y: auto; }
+    .policy-wrap h2 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 20px; }
+    .policy-wrap h3 { font-family: var(--serif); font-size: 1.1rem; margin: 20px 0 8px; }
+    .policy-wrap p, .policy-wrap li { font-size: .86rem; line-height: 1.7; color: var(--mid); margin-bottom: 8px; }
+    .policy-wrap ul { padding-left: 18px; }
+    .policy-wrap a { color: var(--red); }
+
     /* FOOTER */
-    footer{background:var(--dark);color:rgba(255,255,255,.42);text-align:center;padding:24px 16px;font-size:.79rem;margin-top:48px}
-    footer a{color:var(--accent);text-decoration:none}
-    .footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
-    .footer-links a{color:rgba(255,255,255,.45);font-size:.76rem}
-    /* POLITYKA */
-    .policy-wrap{max-width:720px;margin:0 auto;padding:0 16px 40px}
-    .policy-wrap h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin:28px 0 10px}
-    .policy-wrap p,.policy-wrap li{font-size:.88rem;line-height:1.65;color:var(--mid);margin-bottom:8px}
-    .policy-wrap ul{padding-left:18px}
-    @media(max-width:580px){
-      nav{padding:10px 12px}
-      .hero{padding:36px 12px 24px}
-      .card{padding:14px}
-      .actions{flex-direction:column}
-      .actions .btn{width:100%;justify-content:center}
-      .row3{grid-template-columns:1fr 60px 80px;gap:5px}
-      .tab{font-size:.8rem;padding:11px 6px}
-      .res-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.4);
+      padding: 40px 40px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo { font-family: var(--serif); font-size: 1.3rem; color: rgba(255,255,255,.7); }
+    .footer-logo em { color: var(--red); font-style: italic; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; transition: color var(--t); cursor: pointer; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-copy { font-size: .72rem; width: 100%; text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); margin-top: 16px; }
+
+    /* AD rectangle */
+    .ad-rect {
+      border: 1px dashed var(--light); min-height: 90px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .68rem; color: var(--light); letter-spacing: .1em;
+      text-transform: uppercase; margin: 32px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-right { gap: 16px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 48px 20px 36px; }
+      .hero-left::after { display: none; }
+      .hero-right { display: none; }
+      .main { padding: 0 20px 60px; }
+      .search-grid { grid-template-columns: 1fr; gap: 24px; }
+      .add-wrap { grid-template-columns: 1fr; gap: 24px; }
+      .ing-grid { grid-template-columns: 1fr; }
+      .modal-hero, .modal-body { padding: 28px 24px; }
+      .modal-title { font-size: 1.6rem; }
+      .policy-wrap { padding: 28px 24px; }
+      footer { padding: 28px 20px; flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .inp-row { grid-template-columns: 1fr 70px 80px; gap: 6px; }
     }
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="/" class="logo">Gotuj<span>Z</span>tego</a>
+  <a href="/" class="logo">Gotuj<em>Z</em>tego</a>
+  <div class="nav-right">
+    <button class="nav-tab active" id="ntab-s" onclick="switchTab('s')">Składniki</button>
+    <button class="nav-tab" id="ntab-f" onclick="switchTab('f')">Lodówka</button>
+  </div>
 </nav>
 
-<!-- REKLAMA LEADERBOARD GÓRNA -->
-<div class="ad-leaderboard">
-  <!-- AdSense: 728x90 lub responsywna -->
-  Miejsce na reklamę
-</div>
+<!-- REKLAMA TOP -->
+<div class="ad-top">Reklama Google AdSense · 728×90</div>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="badge">🍽️ 50+ sprawdzonych przepisów</div>
-  <h1>Gotuj z tego co masz<br>w <em>lodówce</em></h1>
-  <p class="hero-sub">Wpisz składniki – znajdziemy przepis. Zarządzaj stanem swojej lodówki!</p>
-
-  <div class="tabs">
-    <button class="tab active" id="tab-s" onclick="switchTab('s')">🔍 Składniki</button>
-    <button class="tab" id="tab-f" onclick="switchTab('f')">🧊 Moja lodówka</button>
-  </div>
-
-  <div class="card">
-
-    <!-- PANEL SKŁADNIKI -->
-    <div class="panel active" id="panel-s">
-      <label class="lbl">Jakie składniki masz w domu?</label>
-      <textarea id="ing" placeholder="np. jajka, ziemniaki, mąka...&#10;Wpisz kilka składników oddzielonych przecinkiem"></textarea>
-      <div class="tags">
-        <span style="font-size:.77rem;color:var(--mid);align-self:center">Przykłady:</span>
-        <span class="tag" onclick="setIng('ziemniaki, jajko, mąka')">🥔 ziemniaki</span>
-        <span class="tag" onclick="setIng('kurczak, cebula, czosnek')">🍗 kurczak</span>
-        <span class="tag" onclick="setIng('makaron, passata, mięso mielone')">🍝 makaron</span>
-        <span class="tag" onclick="setIng('jajko, mleko, mąka')">🥞 jajka</span>
-        <span class="tag" onclick="setIng('ryż, marchew, cebula')">🍚 ryż</span>
-      </div>
-      <div style="margin-top:12px">
-        <label class="lbl" style="margin-bottom:6px">Kategoria:</label>
-        <div class="filters">
-          <button class="fc" onclick="toggleF('zupa',this)">🍲 Zupy</button>
-          <button class="fc" onclick="toggleF('obiad',this)">🍽️ Obiady</button>
-          <button class="fc" onclick="toggleF('śniadanie',this)">🌅 Śniadania</button>
-          <button class="fc" onclick="toggleF('szybkie',this)">⚡ Szybkie</button>
-          <button class="fc" onclick="toggleF('wegetariańskie',this)">🌿 Wegetariańskie</button>
-          <button class="fc" onclick="toggleF('tradycyjne',this)">🇵🇱 Tradycyjne</button>
-        </div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-p" onclick="search()">🔍 Znajdź przepisy</button>
-        <button class="btn btn-g" onclick="clearSearch()">✕ Wyczyść</button>
-      </div>
+  <div class="hero-left">
+    <div class="hero-kicker">Kuchnia domowa</div>
+    <h1 class="hero-h1">Gotuj z tego<br>co masz<br>w <em>lodówce</em></h1>
+    <p class="hero-sub">Wpisz składniki które masz w domu – znajdziemy dla Ciebie przepis na pyszny obiad z bazy ponad 50 sprawdzonych receptur.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn-primary" onclick="document.querySelector('.search-section').scrollIntoView({behavior:'smooth'})">Znajdź przepis</button>
+      <button class="btn-secondary" onclick="switchTab('f');document.querySelector('.fridge-section').scrollIntoView({behavior:'smooth'})">Moja lodówka</button>
     </div>
-
-    <!-- PANEL LODÓWKA -->
-    <div class="panel" id="panel-f">
-      <div class="fridge-top">
-        <h2>🧊 Moja lodówka</h2>
-        <span class="sync-badge warn" id="sync">💾 Lokalnie</span>
-      </div>
-      <div class="low-bar" id="low-bar">⚠️ Kończy się: <span id="low-list"></span></div>
-      <div class="add-box">
-        <h3>➕ Dodaj produkt</h3>
-        <div class="bc-row">
-          <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN..."/>
-          <button class="btn btn-p btn-sm" onclick="startScan()">📷 Skanuj</button>
-          <button class="btn btn-g btn-sm" onclick="lookupBC()">🔍 Szukaj</button>
-        </div>
-        <div id="scan-wrap">
-          <video id="scan-video" autoplay playsinline></video>
-          <div id="scan-line"></div>
-          <button class="scan-close" onclick="stopScan()">✕ Zamknij</button>
-        </div>
-        <div class="row3">
-          <input type="text" id="pn" class="inp" placeholder="Nazwa produktu"/>
-          <input type="number" id="pq" class="inp" value="1" min="0.1" step="0.1"/>
-          <select id="pu" class="inp">
-            <option value="szt">szt.</option>
-            <option value="g">g</option>
-            <option value="kg">kg</option>
-            <option value="ml">ml</option>
-            <option value="l">l</option>
-            <option value="opak">opak.</option>
-          </select>
-        </div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap">
-          <input type="number" id="pm" class="inp" placeholder="Min. ilość (alert)" min="0" step="0.1" style="flex:1"/>
-          <button class="btn btn-p" onclick="addProd()" style="flex:1">✓ Dodaj</button>
-        </div>
-      </div>
-      <div id="prod-list" class="prod-list">
-        <div class="empty-box"><span>🧊</span><p>Lodówka jest pusta!</p><p style="font-size:.82rem;margin-top:4px">Dodaj produkty ręcznie lub zeskanuj kod kreskowy</p></div>
-      </div>
-      <button class="cook-btn" id="cook-btn" onclick="cookFridge()" disabled>
-        🍳 Znajdź przepis z zawartości lodówki
-      </button>
-    </div>
-
   </div>
-
-  <!-- WYNIKI -->
-  <div id="res-wrap" style="display:none">
-    <div class="res-hdr">
-      <span class="res-cnt" id="res-cnt"></span>
-      <button class="btn btn-g btn-sm" onclick="clearSearch()">✕ Wyczyść</button>
+  <div class="hero-right">
+    <div class="hero-bg-letter">G</div>
+    <div class="ingredients-visual">
+      <div class="ing-circle">🥚</div>
+      <div class="ing-circle">🥕</div>
+      <div class="ing-circle">🧅</div>
+      <div class="ing-circle">🥔</div>
+      <div class="ing-circle">🍗</div>
+      <div class="ing-circle" style="background:var(--off)">🍳</div>
     </div>
-    <!-- Miejsce na reklamę między wynikami -->
-    <div class="ad-inline">Miejsce na reklamę AdSense</div>
-    <div class="res-grid" id="res-grid"></div>
   </div>
-
 </section>
 
-<!-- MODAL PRZEPIS -->
-<div class="modal-bg" id="modal" onclick="closeModal(event)">
+<!-- MAIN -->
+<main class="main">
+
+  <!-- ── PANEL: SKŁADNIKI ── -->
+  <div class="panel active" id="panel-s">
+    <section class="search-section">
+      <div class="section-label">Wyszukaj przepis</div>
+      <div class="search-grid">
+        <div class="search-left">
+          <label class="field-lbl" for="ing">Jakie składniki masz w domu?</label>
+          <textarea id="ing" placeholder="np. ziemniaki, jajka, mąka, cebula...&#10;Wpisz kilka składników oddzielonych przecinkiem"></textarea>
+          <div class="example-tags">
+            <span style="font-size:.69rem;color:var(--light);letter-spacing:.08em;text-transform:uppercase;align-self:center">Przykłady</span>
+            <button class="etag" onclick="setIng('ziemniaki, jajko, mąka')">ziemniaki, jajko</button>
+            <button class="etag" onclick="setIng('kurczak, cebula, czosnek')">kurczak, czosnek</button>
+            <button class="etag" onclick="setIng('makaron, passata, mięso mielone')">makaron, mięso</button>
+            <button class="etag" onclick="setIng('ryż, marchew, cebula')">ryż, marchew</button>
+            <button class="etag" onclick="setIng('jajko, mleko, mąka')">jajko, mleko</button>
+          </div>
+          <div class="search-actions">
+            <button class="btn-primary" onclick="search()">Szukaj przepisów</button>
+            <button class="btn-secondary" onclick="clearSearch()">Wyczyść</button>
+          </div>
+        </div>
+        <div class="search-right">
+          <div class="filter-box">
+            <div class="filter-title">Kategoria</div>
+            <div class="filter-list">
+              <div class="fitem" onclick="toggleF('zupa',this)" data-f="zupa">
+                <div class="fcheck"></div><span class="fitem-label">🍲 Zupy</span>
+              </div>
+              <div class="fitem" onclick="toggleF('obiad',this)" data-f="obiad">
+                <div class="fcheck"></div><span class="fitem-label">🍽️ Obiady</span>
+              </div>
+              <div class="fitem" onclick="toggleF('śniadanie',this)" data-f="śniadanie">
+                <div class="fcheck"></div><span class="fitem-label">🌅 Śniadania</span>
+              </div>
+              <div class="fitem" onclick="toggleF('szybkie',this)" data-f="szybkie">
+                <div class="fcheck"></div><span class="fitem-label">⚡ Szybkie (≤20 min)</span>
+              </div>
+              <div class="fitem" onclick="toggleF('wegetariańskie',this)" data-f="wegetariańskie">
+                <div class="fcheck"></div><span class="fitem-label">🌿 Wegetariańskie</span>
+              </div>
+              <div class="fitem" onclick="toggleF('tradycyjne',this)" data-f="tradycyjne">
+                <div class="fcheck"></div><span class="fitem-label">🇵🇱 Tradycyjne</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WYNIKI -->
+    <div id="res-wrap">
+      <div class="res-header">
+        <span class="res-title" id="res-title">Przepisy</span>
+        <span class="res-count" id="res-count"></span>
+      </div>
+      <div class="ad-inline">Reklama AdSense · 728×90</div>
+      <div class="recipes-grid" id="res-grid"></div>
+    </div>
+  </div>
+
+  <!-- ── PANEL: LODÓWKA ── -->
+  <div class="panel" id="panel-f">
+    <section class="fridge-section">
+      <div class="fridge-head">
+        <h2 class="fridge-title">Moja lodówka</h2>
+        <span class="sync-pill" id="sync">💾 Lokalnie</span>
+      </div>
+      <div class="low-strip" id="low-bar">
+        ⚠️ Kończy się: <span id="low-list"></span>
+      </div>
+      <div class="add-wrap">
+        <div class="add-left">
+          <div class="section-label">Dodaj produkt</div>
+          <div class="bc-row">
+            <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN (opcjonalnie)"/>
+            <button class="btn-secondary" style="padding:10px 16px;font-size:.74rem;white-space:nowrap" onclick="startScan()">📷 Skanuj</button>
+            <button class="btn-secondary" style="padding:10px 16px;font-size:.74rem;white-space:nowrap" onclick="lookupBC()">Szukaj</button>
+          </div>
+          <div id="scan-wrap">
+            <video id="scan-video" autoplay playsinline></video>
+            <div id="scan-line"></div>
+            <button class="scan-close" onclick="stopScan()">✕ Zamknij</button>
+          </div>
+          <div class="inp-row inp-group">
+            <div>
+              <label class="inp-lbl">Nazwa produktu</label>
+              <input type="text" id="pn" class="inp" placeholder="np. Jajka"/>
+            </div>
+            <div>
+              <label class="inp-lbl">Ilość</label>
+              <input type="number" id="pq" class="inp" value="1" min="0.1" step="0.1"/>
+            </div>
+            <div>
+              <label class="inp-lbl">Jednostka</label>
+              <select id="pu" class="inp">
+                <option value="szt">szt.</option>
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+                <option value="ml">ml</option>
+                <option value="l">l</option>
+                <option value="opak">opak.</option>
+              </select>
+            </div>
+          </div>
+          <div class="inp-group" style="display:flex;gap:10px;align-items:flex-end">
+            <div style="flex:1">
+              <label class="inp-lbl">Min. ilość (alert gdy mniej)</label>
+              <input type="number" id="pm" class="inp" placeholder="np. 2" min="0" step="0.1"/>
+            </div>
+            <button class="btn-primary" onclick="addProd()" style="white-space:nowrap">Dodaj do lodówki</button>
+          </div>
+        </div>
+        <div class="add-right">
+          <h3>Jak używać lodówki?</h3>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.7;margin-bottom:12px">
+            Dodawaj produkty ręcznie lub skanując kod kreskowy. Ustaw minimalną ilość – dostaniesz alert gdy produkt się kończy.
+          </p>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.7;margin-bottom:12px">
+            Kliknij <strong>– / +</strong> żeby zdejmować lub dodawać do stanu. Stan zapisywany jest w przeglądarce.
+          </p>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.7">
+            Kliknij <strong>„Gotuj z lodówki"</strong> żeby znaleźć przepis ze swoich produktów.
+          </p>
+        </div>
+      </div>
+      <!-- LISTA -->
+      <div id="prod-list" class="prod-list">
+        <div class="empty-fridge">
+          <div class="empty-fridge-icon">🧊</div>
+          <p style="font-weight:500;margin-bottom:6px">Lodówka jest pusta</p>
+          <p style="font-size:.82rem;color:var(--mid)">Dodaj produkty powyżej lub zeskanuj kod kreskowy</p>
+        </div>
+      </div>
+      <div class="ad-rect">Reklama AdSense · 300×250</div>
+      <button class="cook-btn" id="cook-btn" onclick="cookFridge()" disabled>
+        Gotuj z zawartości lodówki →
+      </button>
+    </section>
+  </div>
+
+</main>
+
+<!-- MODAL: PRZEPIS -->
+<div class="overlay" id="modal" onclick="closeModal(event)">
   <div class="modal" id="modal-inner">
-    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
     <div id="modal-content"></div>
   </div>
 </div>
 
-<!-- REKLAMA PROSTOKĄT ŚRODKOWY -->
-<div style="max-width:720px;margin:0 auto;padding:0 16px">
-  <div class="ad-inline">Miejsce na reklamę AdSense (300x250)</div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="/">Strona główna</a>
-    <a href="#polityka" onclick="showPolicy()">Polityka prywatności</a>
-    <a href="#regulamin" onclick="showRegulamin()">Regulamin</a>
-  </div>
-  <p>© 2026 GotujZtego – Gotuj z tego co masz w lodówce</p>
-  <p style="margin-top:4px;font-size:.73rem">Przepisy opracowane własnie. Strona zawiera reklamy Google AdSense.</p>
-</footer>
-
-<!-- MODAL POLITYKA / REGULAMIN -->
-<div class="modal-bg" id="modal-policy" onclick="document.getElementById('modal-policy').classList.remove('open')">
+<!-- MODAL: POLITYKA -->
+<div class="overlay" id="modal-p" onclick="document.getElementById('modal-p').classList.remove('open')">
   <div class="modal">
-    <button class="modal-close" style="color:#333;background:rgba(0,0,0,.08)" onclick="document.getElementById('modal-policy').classList.remove('open')">✕</button>
     <div class="policy-wrap" id="policy-content"></div>
   </div>
 </div>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Gotuj<em>Z</em>tego</div>
+  <div class="footer-links">
+    <a onclick="showPolicy()">Polityka prywatności</a>
+    <a onclick="showReg()">Regulamin</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 GotujZtego.pl · Strona zawiera reklamy Google AdSense · Przepisy opracowane własnoręcznie
+  </div>
+</footer>
+
 <script>
-// ═══════════════════════════════════════
-//  DANE – przepisy z lokalnego JSON
-// ═══════════════════════════════════════
+// ══════════════════════════════════════
+//  DANE
+// ══════════════════════════════════════
 let RECIPES = [];
 let activeFilters = [];
+fetch('przepisy.json').then(r=>r.json()).then(d=>{RECIPES=d;}).catch(e=>console.error(e));
 
-// Załaduj przepisy
-fetch('przepisy.json')
-  .then(r => r.json())
-  .then(d => { RECIPES = d; })
-  .catch(e => console.error('Błąd ładowania przepisów:', e));
-
-// ═══════════════════════════════════════
+// ══════════════════════════════════════
 //  TABS
-// ═══════════════════════════════════════
+// ══════════════════════════════════════
 function switchTab(n) {
-  ['s','f'].forEach(t => {
-    document.getElementById('tab-'+t).classList.remove('active');
+  ['s','f'].forEach(t=>{
+    document.getElementById('ntab-'+t).classList.remove('active');
     document.getElementById('panel-'+t).classList.remove('active');
   });
-  document.getElementById('tab-'+n).classList.add('active');
+  document.getElementById('ntab-'+n).classList.add('active');
   document.getElementById('panel-'+n).classList.add('active');
-  if (n !== 'f') stopScan();
+  if(n!=='f') stopScan();
 }
 
-// ═══════════════════════════════════════
-//  WYSZUKIWARKA
-// ═══════════════════════════════════════
+// ══════════════════════════════════════
+//  SEARCH
+// ══════════════════════════════════════
 function search() {
   const input = document.getElementById('ing').value.trim().toLowerCase();
-  const kw = input ? input.split(/[,\s]+/).filter(k => k.length > 1) : [];
+  const kw = input ? input.split(/[,\s]+/).filter(k=>k.length>1) : [];
   let results = [...RECIPES];
-  // Filtr kategorii
-  if (activeFilters.length > 0) {
-    results = results.filter(r => activeFilters.some(f => r.tagi.includes(f)));
+  if(activeFilters.length>0) results=results.filter(r=>activeFilters.some(f=>r.tagi.includes(f)));
+  if(kw.length>0) {
+    results = results.map(r=>{
+      const ingText = r.skladniki.map(s=>s.p.toLowerCase()).join(' ');
+      const score = kw.filter(k=>ingText.includes(k)||r.nazwa.toLowerCase().includes(k)).length;
+      return{...r,_score:score};
+    }).filter(r=>r._score>0).sort((a,b)=>b._score-a._score);
   }
-  // Filtr składników
-  if (kw.length > 0) {
-    results = results.map(r => {
-      const ingText = r.skladniki.map(s => s.p.toLowerCase()).join(' ');
-      const score = kw.filter(k => ingText.includes(k) || r.nazwa.toLowerCase().includes(k)).length;
-      return {...r, _score: score};
-    }).filter(r => r._score > 0).sort((a,b) => b._score - a._score);
-  }
-  showResults(results, kw);
+  renderResults(results);
 }
 
-function toggleF(cat, btn) {
-  btn.classList.toggle('on');
-  if (activeFilters.includes(cat)) activeFilters = activeFilters.filter(f => f !== cat);
+function toggleF(cat, el) {
+  el.classList.toggle('on');
+  if(activeFilters.includes(cat)) activeFilters=activeFilters.filter(f=>f!==cat);
   else activeFilters.push(cat);
-  if (document.getElementById('ing').value.trim() || activeFilters.length > 0) search();
+  if(document.getElementById('ing').value.trim()||activeFilters.length>0) search();
 }
 
-function showResults(results, kw) {
+const EMOJI={zupa:'🍲',obiad:'🍽️',śniadanie:'🌅',mięso:'🥩',ryba:'🐟',wegetariańskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',sałatka:'🥗',szybkie:'⚡'};
+
+function renderResults(results) {
   const wrap = document.getElementById('res-wrap');
   const grid = document.getElementById('res-grid');
-  const cnt = document.getElementById('res-cnt');
-  if (results.length === 0) {
-    grid.innerHTML = `<div class="no-res"><span>🤔</span><p>Nie znaleziono przepisów.<br>Spróbuj innych składników.</p></div>`;
-    cnt.textContent = 'Brak wyników';
-  } else {
-    cnt.textContent = `Znaleziono ${results.length} przepis${results.length===1?'':'ów'}`;
-    grid.innerHTML = results.map(r => recipeCard(r)).join('');
-  }
+  const cnt = document.getElementById('res-count');
+  const title = document.getElementById('res-title');
   wrap.style.display = 'block';
-  setTimeout(() => wrap.scrollIntoView({behavior:'smooth',block:'nearest'}), 80);
-}
-
-const EMOJI_MAP = {zupa:'🍲',obiad:'🍽️',śniadanie:'🌅',mięso:'🥩',ryba:'🐟',wegetariańskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',sałatka:'🥗'};
-const BG_MAP = {zupa:'#fff3e0',obiad:'#fff8e1',śniadanie:'#e8f5e9',mięso:'#fce4ec',ryba:'#e3f2fd',wegetariańskie:'#f1f8e9',makaron:'#f3e5f5',sałatka:'#e8f5e9'};
-
-function recipeCard(r) {
-  const tag = r.tagi[0] || 'obiad';
-  const emoji = EMOJI_MAP[tag] || '🍽️';
-  const bg = BG_MAP[tag] || '#f5f5f5';
-  const timeLabel = r.czas < 20 ? `⚡ ${r.czas} min` : `⏱ ${r.czas} min`;
-  return `<div class="rc" onclick="openRecipe('${r.id}')">
-    <div class="rc-img" style="background:${bg}">${emoji}</div>
-    <div class="rc-body">
+  if(!results.length) {
+    title.textContent='Brak wyników';
+    cnt.textContent='';
+    grid.innerHTML=`<div class="no-res"><div class="no-res-icon">🔍</div><p>Nie znaleziono przepisów dla tych składników.<br>Spróbuj innych kombinacji.</p></div>`;
+    return;
+  }
+  title.textContent='Znalezione przepisy';
+  cnt.textContent=results.length+' przepis'+(results.length===1?'':'ów');
+  grid.innerHTML=results.map(r=>{
+    const tag=r.tagi[0]||'obiad';
+    const em=EMOJI[tag]||'🍽️';
+    const fast=r.czas<=20?`<span class="rpill red">⚡ ${r.czas} min</span>`:`<span class="rpill">⏱ ${r.czas} min</span>`;
+    return`<div class="rc" onclick="openRecipe('${r.id}')">
+      <span class="rc-emoji">${em}</span>
       <div class="rc-title">${r.nazwa}</div>
-      <div class="pills">
-        <span class="pill g">${timeLabel}</span>
-        <span class="pill">${r.poziom}</span>
-        <span class="pill">${r.porcje} porcje</span>
-      </div>
-    </div>
-  </div>`;
+      <div class="rc-pills">${fast}<span class="rpill">${r.poziom}</span><span class="rpill">${r.porcje} porcje</span></div>
+    </div>`;
+  }).join('');
+  setTimeout(()=>wrap.scrollIntoView({behavior:'smooth',block:'nearest'}),80);
 }
 
-// ═══════════════════════════════════════
+function clearSearch() {
+  document.getElementById('ing').value='';
+  document.getElementById('res-wrap').style.display='none';
+  activeFilters=[];
+  document.querySelectorAll('.fitem').forEach(el=>el.classList.remove('on'));
+}
+function setIng(t){document.getElementById('ing').value=t;}
+document.getElementById('ing').addEventListener('keydown',e=>{if(e.key==='Enter')search();});
+
+// ══════════════════════════════════════
 //  MODAL PRZEPIS
-// ═══════════════════════════════════════
+// ══════════════════════════════════════
 function openRecipe(id) {
-  const r = RECIPES.find(x => x.id === id);
-  if (!r) return;
-  const tag = r.tagi[0] || 'obiad';
-  const emoji = EMOJI_MAP[tag] || '🍽️';
-  const tipy = r.tipy ? r.tipy.map(t => `<li>${t}</li>`).join('') : '';
-  document.getElementById('modal-content').innerHTML = `
-    <div class="modal-head">
-      <h2>${emoji} ${r.nazwa}</h2>
+  const r = RECIPES.find(x=>x.id===id);
+  if(!r) return;
+  const tag=r.tagi[0]||'obiad';
+  const em=EMOJI[tag]||'🍽️';
+  const tipy=r.tipy?r.tipy.map(t=>`<li>${t}</li>`).join(''):'';
+  document.getElementById('modal-content').innerHTML=`
+    <div class="modal-hero">
+      <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+      <div class="modal-kicker">${em} ${r.tagi.join(' · ')}</div>
+      <h2 class="modal-title">${r.nazwa}</h2>
       <div class="modal-meta">
         <span>⏱ ${r.czas} min</span>
         <span>👥 ${r.porcje} porcje</span>
@@ -416,274 +877,112 @@ function openRecipe(id) {
     </div>
     <div class="modal-body">
       <div class="modal-sec">
-        <h3>📋 Składniki</h3>
-        <ul class="ing-list">${r.skladniki.map(s=>`<li>${s.p} – ${s.i} ${s.u}</li>`).join('')}</ul>
+        <div class="modal-sec-title">Składniki</div>
+        <div class="ing-grid">${r.skladniki.map(s=>`<div class="ing-item"><span class="ing-name">${s.p}</span><span class="ing-qty">${s.i} ${s.u}</span></div>`).join('')}</div>
       </div>
       <div class="modal-sec">
-        <h3>👨‍🍳 Przygotowanie</h3>
-        <ol class="steps-list">${r.kroki.map(k=>`<li><p>${k}</p></li>`).join('')}</ol>
+        <div class="modal-sec-title">Przygotowanie</div>
+        <ol class="steps-ol">${r.kroki.map(k=>`<li><div class="step-num"></div><div class="step-text">${k}</div></li>`).join('')}</ol>
       </div>
-      ${tipy ? `<div class="tip-box">💡 <strong>Wskazówki:</strong><ul style="padding-left:16px;margin-top:6px">${tipy}</ul></div>` : ''}
-      ${r.safety ? `<div class="safety-box">🛡️ <strong>Bezpieczeństwo:</strong> ${r.safety}</div>` : ''}
+      ${tipy?`<div class="tip-strip"><p><strong>Wskazówki:</strong></p><ul style="padding-left:16px;margin-top:6px;font-size:.83rem;color:var(--mid);line-height:1.7">${tipy}</ul></div>`:''}
+      ${r.safety?`<div class="safety-strip">🛡️ ${r.safety}</div>`:''}
     </div>`;
   document.getElementById('modal').classList.add('open');
 }
+function closeModal(e){if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('modal').classList.remove('open');document.getElementById('modal-p').classList.remove('open');}});
 
-function closeModal(e) {
-  if (e.target === document.getElementById('modal')) {
-    document.getElementById('modal').classList.remove('open');
-  }
-}
+// ══════════════════════════════════════
+//  LODÓWKA
+// ══════════════════════════════════════
+const JSONBIN_ID='';
+const JSONBIN_KEY='';
+let FP={};
 
-function clearSearch() {
-  document.getElementById('ing').value = '';
-  document.getElementById('res-wrap').style.display = 'none';
-  activeFilters = [];
-  document.querySelectorAll('.fc').forEach(c => c.classList.remove('on'));
-}
+function saveCookie(d){document.cookie=`fridge=${encodeURIComponent(JSON.stringify(d))};max-age=31536000;path=/;SameSite=Lax`;}
+function loadCookie(){const m=document.cookie.match(/fridge=([^;]+)/);if(!m)return{};try{return JSON.parse(decodeURIComponent(m[1]));}catch{return{};}}
+async function saveCloud(d){if(!JSONBIN_ID||!JSONBIN_KEY)return;try{await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Access-Key':JSONBIN_KEY},body:JSON.stringify(d)});setSP(true,'☁️ Zsync.');}catch{setSP(false,'⚠️ Błąd');}}
+async function loadCloud(){if(!JSONBIN_ID||!JSONBIN_KEY){FP=loadCookie();renderFridge(FP);return;}try{const r=await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}/latest`,{headers:{'X-Access-Key':JSONBIN_KEY}});const d=await r.json();FP=d.record||{};saveCookie(FP);renderFridge(FP);setSP(true,'☁️ Zsync.');}catch{FP=loadCookie();renderFridge(FP);setSP(false,'💾 Lokalnie');}}
+function setSP(ok,msg){const e=document.getElementById('sync');e.textContent=msg;e.className='sync-pill'+(ok?' ok':' err');}
+loadCloud();
+async function saveAll(){saveCookie(FP);await saveCloud(FP);}
 
-function setIng(t) { document.getElementById('ing').value = t; }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modal').classList.remove('open'); });
-
-// ═══════════════════════════════════════
-//  LODÓWKA – ciasteczka + JSONbin
-// ═══════════════════════════════════════
-// JSONbin konfiguracja – uzupełnij po rejestracji na jsonbin.io
-const JSONBIN_ID = '';    // np. '64abc123def456'
-const JSONBIN_KEY = '';   // klucz X-Access-Key z jsonbin.io
-
-function saveCookie(data) {
-  const str = JSON.stringify(data);
-  document.cookie = `fridge=${encodeURIComponent(str)};max-age=31536000;path=/;SameSite=Lax`;
-}
-
-function loadCookie() {
-  const m = document.cookie.match(/fridge=([^;]+)/);
-  if (!m) return {};
-  try { return JSON.parse(decodeURIComponent(m[1])); } catch { return {}; }
-}
-
-async function saveToCloud(data) {
-  if (!JSONBIN_ID || !JSONBIN_KEY) return;
-  try {
-    await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json', 'X-Access-Key': JSONBIN_KEY },
-      body: JSON.stringify(data)
-    });
-    setSyncBadge(true, '☁️ Zsynchronizowano');
-  } catch { setSyncBadge(false, '⚠️ Błąd chmury'); }
-}
-
-async function loadFromCloud() {
-  if (!JSONBIN_ID || !JSONBIN_KEY) { FP = loadCookie(); renderFridge(FP); return; }
-  try {
-    const r = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}/latest`, {
-      headers: { 'X-Access-Key': JSONBIN_KEY }
-    });
-    const d = await r.json();
-    FP = d.record || {};
-    saveCookie(FP);
-    renderFridge(FP);
-    setSyncBadge(true, '☁️ Zsynchronizowano');
-  } catch {
-    FP = loadCookie();
-    renderFridge(FP);
-    setSyncBadge(false, '💾 Lokalnie');
-  }
-}
-
-function setSyncBadge(ok, msg) {
-  const e = document.getElementById('sync');
-  e.textContent = msg;
-  e.className = 'sync-badge ' + (ok ? '' : JSONBIN_ID ? 'err' : 'warn');
-}
-
-let FP = {};
-loadFromCloud();
-
-async function saveFP() {
-  saveCookie(FP);
-  await saveToCloud(FP);
-}
-
-// ═══════════════════════════════════════
-//  DODAJ/USUŃ PRODUKT
-// ═══════════════════════════════════════
 const EMO={jajka:'🥚',jajko:'🥚',mleko:'🥛',masło:'🧈',ser:'🧀',chleb:'🍞',mąka:'🌾',ryż:'🍚',makaron:'🍝',ziemniaki:'🥔',marchew:'🥕',cebula:'🧅',czosnek:'🧄',pomidor:'🍅',ogórek:'🥒',papryka:'🫑',kurczak:'🍗',wołowina:'🥩',wieprzowina:'🥩',kiełbasa:'🌭',ryba:'🐟',jabłko:'🍎',banan:'🍌',jogurt:'🥛',olej:'🫙',oliwa:'🫙',sól:'🧂',pieprz:'🌶️',fasola:'🫘',grzyby:'🍄',kapusta:'🥬',schab:'🥩',śmietana:'🥛',twaróg:'🧀',mięso:'🥩'};
-function getEmo(n){const l=n.toLowerCase();for(const[k,e]of Object.entries(EMO))if(l.includes(k))return e;return'🥫'}
+function getEmo(n){const l=n.toLowerCase();for(const[k,e]of Object.entries(EMO))if(l.includes(k))return e;return'🥫';}
 
-async function addProd() {
-  const name = document.getElementById('pn').value.trim();
-  const qty = parseFloat(document.getElementById('pq').value) || 1;
-  const unit = document.getElementById('pu').value;
-  const minQty = parseFloat(document.getElementById('pm').value) || 0;
-  if (!name) { alert('Wpisz nazwę produktu!'); return; }
-  const id = Date.now().toString();
-  FP[id] = { id, name, qty, unit, minQty, emoji: getEmo(name), addedAt: new Date().toISOString() };
-  document.getElementById('pn').value = '';
-  document.getElementById('pq').value = '1';
-  document.getElementById('pm').value = '';
-  document.getElementById('bc').value = '';
-  await saveFP();
-  renderFridge(FP);
+async function addProd(){
+  const name=document.getElementById('pn').value.trim();
+  const qty=parseFloat(document.getElementById('pq').value)||1;
+  const unit=document.getElementById('pu').value;
+  const minQty=parseFloat(document.getElementById('pm').value)||0;
+  if(!name){alert('Wpisz nazwę produktu!');return;}
+  const id=Date.now().toString();
+  FP[id]={id,name,qty,unit,minQty,emoji:getEmo(name),addedAt:new Date().toISOString()};
+  document.getElementById('pn').value='';document.getElementById('pq').value='1';document.getElementById('pm').value='';document.getElementById('bc').value='';
+  await saveAll();renderFridge(FP);
 }
+async function chgQty(id,cur,step,dir){FP[id].qty=Math.max(0,Math.round((cur+step*dir)*10)/10);await saveAll();renderFridge(FP);}
+async function delProd(id,name){if(!confirm(`Usunąć "${name}"?`))return;delete FP[id];await saveAll();renderFridge(FP);}
 
-async function chgQty(id, cur, step, dir) {
-  const newQ = Math.max(0, Math.round((cur + step * dir) * 10) / 10);
-  FP[id].qty = newQ;
-  await saveFP();
-  renderFridge(FP);
-}
-
-async function delProd(id, name) {
-  if (!confirm(`Usunąć "${name}" z lodówki?`)) return;
-  delete FP[id];
-  await saveFP();
-  renderFridge(FP);
-}
-
-function renderFridge(prods) {
-  const c = document.getElementById('prod-list');
-  const cb = document.getElementById('cook-btn');
-  const items = Object.values(prods);
-  const low = items.filter(p => p.minQty > 0 && p.qty <= p.minQty && p.qty > 0);
-  const empty = items.filter(p => p.qty <= 0);
-  const lb = document.getElementById('low-bar');
-  if (low.length || empty.length) {
-    lb.style.display = 'block';
-    document.getElementById('low-list').textContent = [...low,...empty].map(p=>`${p.emoji} ${p.name}`).join(', ');
-  } else lb.style.display = 'none';
-  if (!items.length) {
-    c.innerHTML = '<div class="empty-box"><span>🧊</span><p>Lodówka jest pusta!</p><p style="font-size:.82rem;margin-top:4px">Dodaj produkty ręcznie lub zeskanuj kod kreskowy</p></div>';
-    cb.disabled = true; return;
-  }
-  cb.disabled = false;
-  items.sort((a,b) => {
-    const av = a.qty<=0?2:(a.minQty>0&&a.qty<=a.minQty?1:0);
-    const bv = b.qty<=0?2:(b.minQty>0&&b.qty<=b.minQty?1:0);
-    return bv-av;
-  });
-  c.innerHTML = items.map(p => {
-    const isLow = p.minQty>0&&p.qty<=p.minQty&&p.qty>0;
-    const isEmpty = p.qty<=0;
-    const cls = isEmpty?'empty':isLow?'low':'';
-    const warn = isEmpty?' 🔴':isLow?' ⚠️':'';
-    const step = (p.unit==='g'||p.unit==='ml') ? 50 : 1;
-    return `<div class="prod-item ${cls}">
+function renderFridge(prods){
+  const c=document.getElementById('prod-list');
+  const cb=document.getElementById('cook-btn');
+  const items=Object.values(prods);
+  const low=items.filter(p=>p.minQty>0&&p.qty<=p.minQty&&p.qty>0);
+  const empty=items.filter(p=>p.qty<=0);
+  const lb=document.getElementById('low-bar');
+  if(low.length||empty.length){lb.style.display='block';document.getElementById('low-list').textContent=[...low,...empty].map(p=>`${p.emoji} ${p.name}`).join(', ');}
+  else lb.style.display='none';
+  if(!items.length){c.innerHTML='<div class="empty-fridge"><div class="empty-fridge-icon">🧊</div><p style="font-weight:500;margin-bottom:6px">Lodówka jest pusta</p><p style="font-size:.82rem;color:var(--mid)">Dodaj produkty powyżej lub zeskanuj kod kreskowy</p></div>';cb.disabled=true;return;}
+  cb.disabled=false;
+  items.sort((a,b)=>{const av=a.qty<=0?2:(a.minQty>0&&a.qty<=a.minQty?1:0);const bv=b.qty<=0?2:(b.minQty>0&&b.qty<=b.minQty?1:0);return bv-av;});
+  c.innerHTML=items.map(p=>{
+    const isLow=p.minQty>0&&p.qty<=p.minQty&&p.qty>0;
+    const isEmpty=p.qty<=0;
+    const cls=isEmpty?'empty':isLow?'low':'';
+    const warn=isEmpty?' · <span style="color:var(--red);font-size:.7rem">BRAK</span>':isLow?' · <span style="color:#e67e22;font-size:.7rem">MAŁO</span>':'';
+    const step=(p.unit==='g'||p.unit==='ml')?50:1;
+    return`<div class="prod-item ${cls}">
       <div class="prod-emoji">${p.emoji}</div>
-      <div class="prod-info"><div class="prod-name">${p.name}${warn}</div><div class="prod-meta">Min: ${p.minQty||'—'} ${p.unit}</div></div>
+      <div class="prod-info"><div class="prod-name">${p.name}${warn}</div><div class="prod-sub">Min: ${p.minQty||'—'} ${p.unit}</div></div>
       <div class="prod-ctrl">
         <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},-1)">−</button>
-        <div class="qdsp">${p.qty}<small style="font-size:.58rem;font-weight:400"> ${p.unit}</small></div>
+        <div class="qdsp">${p.qty} <span style="font-size:.65rem;font-weight:400;color:var(--mid)">${p.unit}</span></div>
         <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},1)">+</button>
-        <button class="dbtn" onclick="delProd('${p.id}','${p.name}')">🗑</button>
+        <button class="dbtn" onclick="delProd('${p.id}','${p.name}')">✕</button>
       </div>
     </div>`;
   }).join('');
 }
 
-function cookFridge() {
-  const items = Object.values(FP).filter(p => p.qty > 0);
-  if (!items.length) return;
-  document.getElementById('ing').value = items.map(p => p.name).join(', ');
-  switchTab('s');
-  search();
+function cookFridge(){
+  const items=Object.values(FP).filter(p=>p.qty>0);
+  if(!items.length)return;
+  document.getElementById('ing').value=items.map(p=>p.name).join(', ');
+  switchTab('s');search();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// ═══════════════════════════════════════
-//  SKANER KODÓW KRESKOWYCH
-// ═══════════════════════════════════════
-let scanStr = null, scanCR = null;
-async function startScan() {
-  const w = document.getElementById('scan-wrap');
-  w.style.display = 'block';
-  try {
-    scanStr = await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
-    document.getElementById('scan-video').srcObject = scanStr;
-    // Prosta detekcja kodu przez canvas (bez zewnętrznej biblioteki)
-    const video = document.getElementById('scan-video');
-    video.addEventListener('loadeddata', () => {
-      scanInterval = setInterval(() => decodeFrame(video), 500);
-    });
-  } catch(e) {
-    alert('Brak dostępu do kamery. Wpisz kod ręcznie.');
-    w.style.display = 'none';
-  }
+// SKANER
+let scanStr=null,scanCR=null,scanIv=null;
+async function startScan(){
+  const w=document.getElementById('scan-wrap');w.style.display='block';
+  try{scanStr=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
+  document.getElementById('scan-video').srcObject=scanStr;
+  if(typeof ZXing!=='undefined'){scanCR=new ZXing.BrowserMultiFormatReader();scanCR.decodeFromVideoDevice(null,'scan-video',(r)=>{if(r){document.getElementById('bc').value=r.getText();stopScan();lookupBC();}});}
+  }catch(e){alert('Brak dostępu do kamery.');w.style.display='none';}
+}
+function stopScan(){if(scanStr){scanStr.getTracks().forEach(t=>t.stop());scanStr=null;}if(scanCR){try{scanCR.reset();}catch{}scanCR=null;}document.getElementById('scan-wrap').style.display='none';}
+async function lookupBC(){
+  const bc=document.getElementById('bc').value.trim();if(!bc){alert('Wpisz kod!');return;}
+  try{const r=await fetch(`https://world.openfoodfacts.org/api/v0/product/${bc}.json`);const d=await r.json();
+  if(d.status===1&&d.product){document.getElementById('pn').value=d.product.product_name_pl||d.product.product_name||'Produkt';}
+  else alert('Nie znaleziono. Wpisz ręcznie.');}catch{alert('Błąd wyszukiwania.');}
 }
 
-let scanInterval = null;
-function decodeFrame(video) {
-  // Fallback – poproś o ręczny wpis jeśli brak biblioteki
-  // Gdy ZXing dostępny użyj go
-  if (typeof ZXing !== 'undefined' && !scanCR) {
-    scanCR = new ZXing.BrowserMultiFormatReader();
-    scanCR.decodeFromVideoDevice(null, 'scan-video', (r) => {
-      if (r) { document.getElementById('bc').value = r.getText(); stopScan(); lookupBC(); }
-    });
-  }
-}
-
-function stopScan() {
-  if (scanInterval) { clearInterval(scanInterval); scanInterval = null; }
-  if (scanStr) { scanStr.getTracks().forEach(t=>t.stop()); scanStr = null; }
-  if (scanCR) { try { scanCR.reset(); } catch {} scanCR = null; }
-  document.getElementById('scan-wrap').style.display = 'none';
-}
-
-async function lookupBC() {
-  const bc = document.getElementById('bc').value.trim();
-  if (!bc) { alert('Wpisz kod!'); return; }
-  try {
-    const r = await fetch(`https://world.openfoodfacts.org/api/v0/product/${bc}.json`);
-    const d = await r.json();
-    if (d.status===1 && d.product) {
-      document.getElementById('pn').value = d.product.product_name_pl || d.product.product_name || 'Produkt';
-      const q = d.product.quantity || '';
-      if (q.includes('g')) document.getElementById('pu').value = 'g';
-      else if (q.includes('ml')) document.getElementById('pu').value = 'ml';
-      else if (q.includes('l')) document.getElementById('pu').value = 'l';
-    } else alert('Nie znaleziono produktu. Wpisz nazwę ręcznie.');
-  } catch { alert('Błąd wyszukiwania.'); }
-}
-
-// ═══════════════════════════════════════
-//  POLITYKA PRYWATNOŚCI
-// ═══════════════════════════════════════
-function showPolicy() {
-  document.getElementById('policy-content').innerHTML = `
-    <h2>Polityka prywatności</h2>
-    <p>Strona GotujZtego.pl dba o Twoją prywatność.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">1. Dane osobowe (RODO)</h3>
-    <p>GotujZtego.pl <strong>nie zbiera danych osobowych</strong> użytkowników. Nie wymagamy rejestracji ani podawania imienia, emaila ani adresu IP.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">2. Ciasteczka (cookies)</h3>
-    <p>Używamy ciasteczek wyłącznie do:</p>
-    <ul><li>Przechowywania stanu Twojej lodówki lokalnie w przeglądarce</li><li>Obsługi reklam Google AdSense (pliki cookie stron trzecich)</li></ul>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">3. Google AdSense</h3>
-    <p>Strona wyświetla reklamy Google AdSense. Google może używać plików cookie do personalizacji reklam. Więcej informacji: <a href="https://policies.google.com/privacy" target="_blank">polityka prywatności Google</a>.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">4. JSONbin.io</h3>
-    <p>Stan lodówki może być synchronizowany z serwisem JSONbin.io. Dane nie zawierają informacji osobowych – tylko nazwy produktów i ilości.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">5. Kontakt</h3>
-    <p>W sprawach prywatności: kontakt przez domenę gotujztego.pl</p>`;
-  document.getElementById('modal-policy').classList.add('open');
-}
-
-function showRegulamin() {
-  document.getElementById('policy-content').innerHTML = `
-    <h2>Regulamin</h2>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">1. Postanowienia ogólne</h3>
-    <p>Serwis GotujZtego.pl udostępnia bezpłatnie bazę przepisów kulinarnych oraz narzędzie do zarządzania stanem lodówki.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">2. Przepisy</h3>
-    <p>Przepisy zamieszczone w serwisie są opracowane własnoręcznie. Stanowią one treści informacyjne. Autor nie ponosi odpowiedzialności za ewentualne błędy.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">3. Bezpieczeństwo żywności</h3>
-    <p>Użytkownik jest odpowiedzialny za przestrzeganie zasad higieny żywności. Należy zawsze sprawdzać świeżość składników i stosować właściwą obróbkę termiczną.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">4. Reklamy</h3>
-    <p>Serwis wyświetla reklamy Google AdSense. Treść reklam jest zarządzana przez Google i nie stanowi rekomendacji serwisu.</p>
-    <h3 style="margin:16px 0 8px;font-family:'Playfair Display',serif">5. Zmiany regulaminu</h3>
-    <p>Administrator zastrzega prawo do zmiany regulaminu. Zmiany obowiązują od daty publikacji.</p>`;
-  document.getElementById('modal-policy').classList.add('open');
-}
+// POLITYKA
+function showPolicy(){document.getElementById('policy-content').innerHTML=`<h2>Polityka prywatności</h2><h3>1. Dane osobowe (RODO)</h3><p>GotujZtego.pl nie zbiera danych osobowych. Nie wymagamy rejestracji ani podawania imienia, emaila ani żadnych danych identyfikacyjnych.</p><h3>2. Ciasteczka (cookies)</h3><p>Używamy ciasteczek wyłącznie do przechowywania stanu lodówki lokalnie w przeglądarce oraz do obsługi reklam Google AdSense.</p><h3>3. Google AdSense</h3><p>Strona wyświetla reklamy Google AdSense. Google może używać plików cookie do personalizacji reklam. <a href="https://policies.google.com/privacy" target="_blank">Polityka prywatności Google</a>.</p><h3>4. JSONbin.io</h3><p>Stan lodówki może być synchronizowany z JSONbin.io. Dane nie zawierają informacji osobowych.</p>`;document.getElementById('modal-p').classList.add('open');}
+function showReg(){document.getElementById('policy-content').innerHTML=`<h2>Regulamin</h2><h3>1. Postanowienia ogólne</h3><p>GotujZtego.pl udostępnia bezpłatnie bazę przepisów i narzędzie do zarządzania stanem lodówki.</p><h3>2. Przepisy</h3><p>Przepisy są opracowane własnoręcznie. Autor nie ponosi odpowiedzialności za ewentualne błędy.</p><h3>3. Bezpieczeństwo żywności</h3><p>Użytkownik odpowiada za przestrzeganie zasad higieny. Sprawdzaj świeżość składników i stosuj właściwą obróbkę termiczną.</p><h3>4. Reklamy</h3><p>Serwis wyświetla reklamy Google AdSense zarządzane przez Google.</p>`;document.getElementById('modal-p').classList.add('open');}
 </script>
 </body>
 </html>
