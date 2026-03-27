@@ -13,7 +13,7 @@
   <!-- Google AdSense -->
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
   <!-- ZXing – skanowanie kodów kreskowych -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxing-js/0.19.1/zxing.min.js"></script>
+  <script src="https://unpkg.com/@zxing/library@0.18.6/umd/index.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
@@ -181,8 +181,8 @@
     }
 
     /* PANEL TOGGLE */
-    .panel { display: none !important; }
-    .panel.active { display: block !important; }
+    .panel { display: none; }
+    .panel.active { display: block; }
 
     /* ══════════════════════════════════════
        SEARCH SECTION
@@ -785,17 +785,11 @@ fetch('przepisy.json').then(r=>r.json()).then(d=>{RECIPES=d;}).catch(e=>console.
 //  TABS
 // ══════════════════════════════════════
 function switchTab(n) {
-  ['s','f'].forEach(t=>{
-    document.getElementById('ntab-'+t).classList.remove('active');
-    const p=document.getElementById('panel-'+t);
-    p.classList.remove('active');
-    p.style.display='none';
-  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-'+n).classList.add('active');
   document.getElementById('ntab-'+n).classList.add('active');
-  const active=document.getElementById('panel-'+n);
-  active.classList.add('active');
-  active.style.display='block';
-  if(n!=='f') stopScan();
+  if(n !== 'f') stopScan();
 }
 
 // ══════════════════════════════════════
@@ -994,58 +988,64 @@ function cookFridge(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// SKANER
-let scanStr=null,scanCR=null;
-async function startScan(){
-  const w=document.getElementById('scan-wrap');
-  w.style.display='block';
-  try{
-    scanStr=await navigator.mediaDevices.getUserMedia({
-      video:{facingMode:'environment',width:{ideal:1280},height:{ideal:720}}
-    });
-    const video=document.getElementById('scan-video');
-    video.srcObject=scanStr;
-    await video.play();
-    // Czekaj az ZXing sie zaladuje
-    let attempts=0;
-    const tryZXing=setInterval(()=>{
-      attempts++;
-      if(typeof ZXing!=='undefined'){
-        clearInterval(tryZXing);
-        try{
-          const hints=new Map();
-          const formats=[
-            ZXing.BarcodeFormat.EAN_13,
-            ZXing.BarcodeFormat.EAN_8,
-            ZXing.BarcodeFormat.CODE_128,
-            ZXing.BarcodeFormat.UPC_A,
-            ZXing.BarcodeFormat.UPC_E
-          ];
-          hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS,formats);
-          hints.set(ZXing.DecodeHintType.TRY_HARDER,true);
-          scanCR=new ZXing.BrowserMultiFormatReader(hints);
-          scanCR.decodeFromVideoDevice(null,'scan-video',(result,err)=>{
-            if(result){
-              document.getElementById('bc').value=result.getText();
-              stopScan();
-              lookupBC();
-            }
-          });
-        }catch(e){console.error('ZXing error:',e);}
+// SKANER KODÓW KRESKOWYCH
+let scanStr = null;
+let codeReader = null;
+
+async function startScan() {
+  const wrap = document.getElementById('scan-wrap');
+  wrap.style.display = 'block';
+
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    alert('Twoja przeglądarka nie obsługuje kamery. Wpisz kod ręcznie.');
+    wrap.style.display = 'none';
+    return;
+  }
+
+  try {
+    // Zatrzymaj poprzednią sesję jeśli była
+    stopScan();
+    wrap.style.display = 'block';
+
+    if (typeof ZXing === 'undefined') {
+      alert('Biblioteka skanera nie załadowała się. Wpisz kod ręcznie.');
+      wrap.style.display = 'none';
+      return;
+    }
+
+    codeReader = new ZXing.BrowserMultiFormatReader();
+    await codeReader.decodeFromConstraints(
+      { video: { facingMode: 'environment' } },
+      'scan-video',
+      (result, error) => {
+        if (result) {
+          document.getElementById('bc').value = result.getText();
+          stopScan();
+          lookupBC();
+        }
       }
-      if(attempts>20)clearInterval(tryZXing);
-    },200);
-  }catch(e){
-    console.error('Camera error:',e);
-    alert('Brak dostępu do kamery. Wpisz kod ręcznie.');
-    w.style.display='none';
+    );
+  } catch(e) {
+    console.error('Scanner error:', e);
+    alert('Błąd kamery: ' + e.message + '\nWpisz kod ręcznie.');
+    wrap.style.display = 'none';
   }
 }
-function stopScan(){
-  if(scanCR){try{scanCR.reset();}catch(e){}scanCR=null;}
-  if(scanStr){scanStr.getTracks().forEach(t=>t.stop());scanStr=null;}
-  document.getElementById('scan-wrap').style.display='none';
+
+function stopScan() {
+  if (codeReader) {
+    try { codeReader.reset(); } catch(e) {}
+    codeReader = null;
+  }
+  const video = document.getElementById('scan-video');
+  if (video && video.srcObject) {
+    video.srcObject.getTracks().forEach(t => t.stop());
+    video.srcObject = null;
+  }
+  document.getElementById('scan-wrap').style.display = 'none';
 }
+
+
 async function lookupBC(){
   const bc=document.getElementById('bc').value.trim();if(!bc){alert('Wpisz kod!');return;}
   try{const r=await fetch(`https://world.openfoodfacts.org/api/v0/product/${bc}.json`);const d=await r.json();
