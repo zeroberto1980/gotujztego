@@ -298,22 +298,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
 
 // ZAKŁADKI
 function showTab(name) {
-  var ps = document.getElementById('panel-s');
-  var pf = document.getElementById('panel-f');
-  var ts = document.getElementById('ntab-s');
-  var tf = document.getElementById('ntab-f');
-  if (name === 's') {
-    ps.style.display = 'block';
-    pf.style.display = 'none';
-    ts.classList.add('on');
-    tf.classList.remove('on');
-    stopScan();
-  } else {
-    ps.style.display = 'none';
-    pf.style.display = 'block';
-    ts.classList.remove('on');
-    tf.classList.add('on');
-  }
+  try {
+    document.getElementById('panel-s').style.display = (name === 's') ? 'block' : 'none';
+    document.getElementById('panel-f').style.display = (name === 'f') ? 'block' : 'none';
+    document.getElementById('ntab-s').className = 'ntab' + (name === 's' ? ' on' : '');
+    document.getElementById('ntab-f').className = 'ntab' + (name === 'f' ? ' on' : '');
+    if (name !== 'f') { try { stopScan(); } catch(e) {} }
+  } catch(e) { console.error('showTab error:', e); }
 }
 
 // PRZEPISY
@@ -474,12 +465,16 @@ async function loadCloud() {
     var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID + '/latest', {
       headers: {'X-Access-Key':JBKEY,'X-Bin-Meta':'false'}
     });
+    if (!r.ok) { throw new Error('HTTP ' + r.status); }
     var txt = await r.text();
     try { var d = JSON.parse(txt); FP = d.record || d || {}; } catch(e) { FP = {}; }
     saveCookie(FP); renderFridge(FP); setSP(true, '☁️ Zsync.');
-  } catch(e) { FP = loadCookie(); renderFridge(FP); setSP(false, '💾 Lokalnie'); }
+  } catch(e) {
+    console.log('JSONbin niedostepny:', e.message);
+    FP = loadCookie(); renderFridge(FP); setSP(false, '💾 Lokalnie');
+  }
 }
-loadCloud();
+try { loadCloud(); } catch(e) { FP = loadCookie(); renderFridge(FP); setSP(false, '💾 Lokalnie'); }
 async function saveAll() { saveCookie(FP); await saveCloud(FP); }
 
 var EDICT = {jajka:'🥚',jajko:'🥚',mleko:'🥛',maslo:'🧈',ser:'🧀',chleb:'🍞',maka:'🌾',ryz:'🍚',makaron:'🍝',ziemniaki:'🥔',marchew:'🥕',cebula:'🧅',czosnek:'🧄',pomidor:'🍅',ogurek:'🥒',papryka:'🫑',kurczak:'🍗',wolowina:'🥩',wieprzowina:'🥩',kielbasa:'🌭',ryba:'🐟',jablko:'🍎',banan:'🍌',jogurt:'🥛',olej:'🫙',oliwa:'🫙',sol:'🧂',pieprz:'🌶️',fasola:'🫘',grzyby:'🍄',kapusta:'🥬',schab:'🥩',smietana:'🥛',twarog:'🧀',mieso:'🥩'};
