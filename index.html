@@ -722,7 +722,10 @@ async function deleteProd(id) {
 function renderFridge(prods) {
   var c = document.getElementById('prodlist');
   var cb = document.getElementById('cookbtn');
-  var items = Object.values(prods);
+  // Filtruj tylko prawidlowe produkty - z nazwa i id
+  var items = Object.values(prods).filter(function(p) {
+    return p && p.id && p.name && typeof p.name === 'string' && p.name.trim() !== '';
+  });
   var low = items.filter(function(p) { return p.minQty > 0 && p.qty <= p.minQty && p.qty > 0; });
   var emp = items.filter(function(p) { return p.qty <= 0; });
   var lb = document.getElementById('lowbar');
@@ -798,6 +801,7 @@ function cookFridge() {
 // SKANER
 // ═══════════════════════════════
 var codeReader = null;
+var scanInterval = null;
 
 function startScan() {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
@@ -811,9 +815,17 @@ function startScan() {
   stopScan();
   document.getElementById('scanwrap').style.display = 'block';
   try {
-    codeReader = new ZXing.BrowserMultiFormatReader();
-    // Bezposrednio decodeFromVideoDevice z undefined = domyslna kamera
-    // ZXing 0.18.6 - ta metoda dziala
+    var hints = new Map();
+    hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
+    hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, [
+      ZXing.BarcodeFormat.EAN_13,
+      ZXing.BarcodeFormat.EAN_8,
+      ZXing.BarcodeFormat.CODE_128,
+      ZXing.BarcodeFormat.UPC_A,
+      ZXing.BarcodeFormat.UPC_E,
+      ZXing.BarcodeFormat.CODE_39
+    ]);
+    codeReader = new ZXing.BrowserMultiFormatReader(hints);
     codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
       if (result) {
         document.getElementById('bc').value = result.getText();
