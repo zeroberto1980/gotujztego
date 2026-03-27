@@ -1,1023 +1,669 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GotujZtego – Gotuj z tego co masz w lodówce</title>
-  <meta name="description" content="Wpisz składniki z lodówki – znajdziemy przepis na obiad. Ponad 50 sprawdzonych polskich przepisów."/>
-  <link rel="canonical" href="https://gotujztego.pl/"/>
-  <meta property="og:title" content="GotujZtego – Gotuj z tego co masz w lodówce"/>
-  <meta property="og:description" content="Wpisz składniki – znajdziemy przepis!"/>
-  <meta property="og:url" content="https://gotujztego.pl/"/>
-  <meta property="og:type" content="website"/>
-  <!-- Google AdSense -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
-  <!-- ZXing – skanowanie kodów kreskowych -->
-  <script src="https://unpkg.com/@zxing/library@0.18.6/umd/index.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
-    /* ══════════════════════════════════════
-       RESET & VARIABLES
-    ══════════════════════════════════════ */
-    :root {
-      --white: #fafaf8;
-      --off: #f4f2ee;
-      --red: #c0392b;
-      --red-dark: #96281b;
-      --dark: #1a1410;
-      --mid: #6b6560;
-      --light: #d4cfc8;
-      --card: #ffffff;
-      --t: .3s ease;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Jost', system-ui, sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--white);
-      color: var(--dark);
-      overflow-x: hidden;
-      font-weight: 400;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GotujZtego – Gotuj z tego co masz w lodówce</title>
+<meta name="description" content="Wpisz skladniki z lodowki – znajdziemy przepis na obiad."/>
+<link rel="canonical" href="https://gotujztego.pl/"/>
+<script src="https://unpkg.com/@zxing/library@0.18.6/umd/index.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --w:#fafaf8;--off:#f4f2ee;--red:#c0392b;--redd:#96281b;
+  --dark:#1a1410;--mid:#6b6560;--line:#d4cfc8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--w);color:var(--dark);overflow-x:hidden}
 
-    /* ══════════════════════════════════════
-       NAV
-    ══════════════════════════════════════ */
-    nav {
-      position: sticky; top: 0; z-index: 300;
-      background: rgba(250,250,248,.96);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--light);
-      padding: 0 40px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
-      font-family: var(--serif);
-      font-size: 1.6rem; font-weight: 700;
-      color: var(--dark); text-decoration: none;
-      letter-spacing: -.5px;
-    }
-    .logo em { font-style: italic; color: var(--red); }
-    .nav-right {
-      display: flex; align-items: center; gap: 32px;
-    }
-    .nav-tab {
-      font-size: .78rem; font-weight: 500; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--mid);
-      cursor: pointer; border: none; background: none;
-      font-family: var(--sans); padding: 4px 0;
-      border-bottom: 2px solid transparent;
-      transition: all var(--t);
-    }
-    .nav-tab:hover { color: var(--dark); }
-    .nav-tab.active { color: var(--red); border-bottom-color: var(--red); }
+nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--dark);text-decoration:none}
+.logo em{font-style:italic;color:var(--red)}
+.ntabs{display:flex;gap:6px}
+.ntab{font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);cursor:pointer;border:none;background:none;font-family:var(--sans);padding:8px 16px;transition:all .2s}
+.ntab:hover{color:var(--dark);background:var(--off)}
+.ntab.on{background:var(--red);color:#fff}
 
-    /* ══════════════════════════════════════
-       AD LEADERBOARD
-    ══════════════════════════════════════ */
-    .ad-top {
-      background: var(--off);
-      border-bottom: 1px solid var(--light);
-      text-align: center; padding: 10px;
-      font-size: .7rem; color: var(--light);
-      letter-spacing: .1em; text-transform: uppercase;
-      min-height: 50px; display: flex; align-items: center; justify-content: center;
-    }
+.ad-top{background:var(--off);border-bottom:1px solid var(--line);text-align:center;padding:10px;font-size:.67rem;color:var(--line);letter-spacing:.1em;text-transform:uppercase;min-height:50px;display:flex;align-items:center;justify-content:center}
 
-    /* ══════════════════════════════════════
-       HERO
-    ══════════════════════════════════════ */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 88vh;
-      overflow: hidden;
-    }
-    .hero-left {
-      padding: 80px 60px 60px;
-      display: flex; flex-direction: column; justify-content: center;
-      position: relative;
-    }
-    .hero-left::after {
-      content: '';
-      position: absolute; right: 0; top: 10%; bottom: 10%;
-      width: 1px; background: var(--light);
-    }
-    .hero-kicker {
-      font-size: .7rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--red);
-      margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
-    }
-    .hero-kicker::before {
-      content: ''; width: 24px; height: 1px; background: var(--red);
-    }
-    .hero-h1 {
-      font-family: var(--serif);
-      font-size: clamp(3rem, 5.5vw, 5.5rem);
-      font-weight: 600; line-height: 1.05;
-      letter-spacing: -.02em;
-      margin-bottom: 28px;
-    }
-    .hero-h1 em {
-      font-style: italic; color: var(--red);
-    }
-    .hero-sub {
-      font-size: .92rem; color: var(--mid); line-height: 1.7;
-      max-width: 380px; margin-bottom: 48px;
-    }
-    .hero-right {
-      background: var(--off);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-      padding: 60px 40px;
-    }
-    /* Dekoracyjne duże litery w tle */
-    .hero-bg-letter {
-      position: absolute;
-      font-family: var(--serif);
-      font-size: 28vw; font-weight: 700; font-style: italic;
-      color: rgba(192,57,43,.06);
-      right: -2vw; top: 50%; transform: translateY(-50%);
-      pointer-events: none; line-height: 1;
-      user-select: none;
-    }
-    /* Ilustracja – składniki jako emoji */
-    .ingredients-visual {
-      position: relative; width: 320px; height: 320px;
-    }
-    .ing-circle {
-      position: absolute;
-      width: 90px; height: 90px;
-      background: white;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.4rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,.08);
-      transition: transform var(--t);
-      animation: float linear infinite;
-    }
-    .ing-circle:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); animation-duration: 6s; animation-delay: 0s; }
-    .ing-circle:nth-child(2) { top: 30%; right: 0; animation-duration: 7s; animation-delay: -2s; }
-    .ing-circle:nth-child(3) { bottom: 10%; right: 10%; animation-duration: 5.5s; animation-delay: -1s; }
-    .ing-circle:nth-child(4) { bottom: 0; left: 20%; animation-duration: 6.5s; animation-delay: -3s; }
-    .ing-circle:nth-child(5) { top: 30%; left: 0; animation-duration: 8s; animation-delay: -1.5s; }
-    .ing-circle:nth-child(6) { top: 50%; left: 50%; transform: translate(-50%,-50%); width: 110px; height: 110px; font-size: 3rem; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .ing-circle:nth-child(1) { animation-name: float1; }
-    @keyframes float1 { 0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)} }
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:82vh}
+.hl{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
+.kicker{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:'';width:20px;height:1px;background:var(--red)}
+.h1{font-family:var(--serif);font-size:clamp(3rem,5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px}
+.h1 em{font-style:italic;color:var(--red)}
+.sub{font-size:.9rem;color:var(--mid);line-height:1.7;max-width:380px;margin-bottom:44px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.hr{background:var(--off);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px}
+.bgl{position:absolute;font-family:var(--serif);font-size:28vw;font-weight:700;font-style:italic;color:rgba(192,57,43,.05);right:-2vw;top:50%;transform:translateY(-50%);pointer-events:none;user-select:none;line-height:1}
+.ivs{position:relative;width:300px;height:300px}
+.ic{position:absolute;width:85px;height:85px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.ic:nth-child(1){top:0;left:50%;transform:translateX(-50%)}
+.ic:nth-child(2){top:28%;right:0}
+.ic:nth-child(3){bottom:8%;right:8%}
+.ic:nth-child(4){bottom:0;left:18%}
+.ic:nth-child(5){top:28%;left:0}
+.ic:nth-child(6){top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;font-size:2.6rem;background:var(--off)}
 
-    /* ══════════════════════════════════════
-       MAIN CONTENT
-    ══════════════════════════════════════ */
-    .main {
-      max-width: 1100px; margin: 0 auto; padding: 0 40px 80px;
-    }
+/* PANELE */
+#panel-s{display:block}
+#panel-f{display:none}
 
-    /* PANEL TOGGLE */
-    .panel { display: none; }
-    .panel.active { display: block; }
+.main{max-width:1100px;margin:0 auto;padding:0 40px 80px}
+.slbl{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.slbl::after{content:'';flex:1;height:1px;background:var(--line)}
 
-    /* ══════════════════════════════════════
-       SEARCH SECTION
-    ══════════════════════════════════════ */
-    .search-section {
-      padding: 64px 0 0;
-    }
-    .section-label {
-      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--mid);
-      margin-bottom: 32px; display: flex; align-items: center; gap: 12px;
-    }
-    .section-label::after {
-      content: ''; flex: 1; height: 1px; background: var(--light);
-    }
-    .search-grid {
-      display: grid; grid-template-columns: 1fr 280px; gap: 40px;
-    }
-    .search-left {}
-    .field-lbl {
-      font-family: var(--serif); font-size: 1.05rem;
-      margin-bottom: 12px; display: block; font-weight: 600;
-    }
-    textarea {
-      width: 100%; min-height: 120px;
-      border: 1px solid var(--light);
-      border-radius: 2px;
-      padding: 16px 18px;
-      font-family: var(--sans); font-size: .9rem;
-      color: var(--dark); background: var(--card);
-      resize: vertical; outline: none;
-      transition: border-color var(--t);
-      line-height: 1.6;
-    }
-    textarea:focus { border-color: var(--red); }
-    textarea::placeholder { color: var(--light); }
-    .example-tags {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;
-    }
-    .etag {
-      font-size: .72rem; padding: 5px 12px;
-      border: 1px solid var(--light); border-radius: 100px;
-      color: var(--mid); cursor: pointer; background: transparent;
-      font-family: var(--sans); font-weight: 500;
-      transition: all var(--t);
-    }
-    .etag:hover { border-color: var(--red); color: var(--red); }
-    .search-right {}
-    .filter-box {
-      background: var(--off);
-      padding: 24px; border-radius: 2px;
-    }
-    .filter-title {
-      font-size: .68rem; font-weight: 600; letter-spacing: .15em;
-      text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
-    }
-    .filter-list { display: flex; flex-direction: column; gap: 8px; }
-    .fitem {
-      display: flex; align-items: center; gap: 10px;
-      cursor: pointer; padding: 6px 0;
-      border-bottom: 1px solid var(--light);
-    }
-    .fitem:last-child { border-bottom: none; }
-    .fcheck {
-      width: 16px; height: 16px;
-      border: 1.5px solid var(--light); border-radius: 2px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; transition: all var(--t);
-    }
-    .fitem.on .fcheck { background: var(--red); border-color: var(--red); }
-    .fitem.on .fcheck::after { content: '✓'; color: white; font-size: .65rem; font-weight: 700; }
-    .fitem-label { font-size: .82rem; color: var(--mid); }
-    .fitem.on .fitem-label { color: var(--dark); font-weight: 500; }
-    .search-actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
-    .btn-primary {
-      padding: 14px 32px; background: var(--red); color: white;
-      border: none; font-family: var(--sans); font-size: .78rem;
-      font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-      cursor: pointer; transition: background var(--t);
-      border-radius: 1px;
-    }
-    .btn-primary:hover { background: var(--red-dark); }
-    .btn-secondary {
-      padding: 14px 24px; background: transparent; color: var(--mid);
-      border: 1px solid var(--light); font-family: var(--sans);
-      font-size: .78rem; font-weight: 500; cursor: pointer;
-      transition: all var(--t); border-radius: 1px;
-    }
-    .btn-secondary:hover { border-color: var(--mid); color: var(--dark); }
+/* SZUKAJ */
+.ssec{padding:60px 0 0}
+.sgrid{display:grid;grid-template-columns:1fr 260px;gap:40px}
+.flbl{font-family:var(--serif);font-size:1.05rem;font-weight:600;margin-bottom:12px;display:block}
+textarea{width:100%;min-height:110px;border:1px solid var(--line);padding:14px 16px;font-family:var(--sans);font-size:.9rem;color:var(--dark);background:#fff;resize:vertical;outline:none;transition:border-color .2s;line-height:1.6}
+textarea:focus{border-color:var(--red)}
+textarea::placeholder{color:var(--line)}
+.etags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.etag{font-size:.71rem;padding:4px 11px;border:1px solid var(--line);color:var(--mid);cursor:pointer;background:transparent;font-family:var(--sans);font-weight:500;transition:all .2s;border-radius:100px}
+.etag:hover{border-color:var(--red);color:var(--red)}
+.fbox{background:var(--off);padding:22px}
+.ftitle{font-size:.66rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:14px}
+.fi{display:flex;align-items:center;gap:10px;cursor:pointer;padding:7px 0;border-bottom:1px solid var(--line)}
+.fi:last-child{border-bottom:none}
+.fck{width:15px;height:15px;border:1.5px solid var(--line);flex-shrink:0;transition:all .2s;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:transparent}
+.fi.on .fck{background:var(--red);border-color:var(--red);color:#fff}
+.fl{font-size:.82rem;color:var(--mid)}
+.fi.on .fl{color:var(--dark);font-weight:500}
+.sact{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 
-    /* ══════════════════════════════════════
-       RESULTS
-    ══════════════════════════════════════ */
-    #res-wrap { padding-top: 56px; display: none; }
-    .res-header {
-      display: flex; align-items: baseline; justify-content: space-between;
-      border-bottom: 1px solid var(--light); padding-bottom: 16px; margin-bottom: 32px;
-    }
-    .res-title {
-      font-family: var(--serif); font-size: 1.8rem; font-weight: 600;
-    }
-    .res-count { font-size: .8rem; color: var(--mid); }
-    /* AD inline */
-    .ad-inline {
-      border: 1px dashed var(--light); padding: 20px;
-      text-align: center; font-size: .7rem; color: var(--light);
-      letter-spacing: .1em; text-transform: uppercase;
-      margin-bottom: 32px; min-height: 80px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .recipes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1px; background: var(--light);
-    }
-    .rc {
-      background: var(--white); cursor: pointer;
-      padding: 28px 24px;
-      transition: background var(--t);
-      position: relative; overflow: hidden;
-    }
-    .rc:hover { background: var(--off); }
-    .rc-emoji { font-size: 2.4rem; margin-bottom: 16px; display: block; }
-    .rc-title {
-      font-family: var(--serif); font-size: 1.15rem;
-      font-weight: 600; margin-bottom: 8px; line-height: 1.2;
-    }
-    .rc-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-    .rpill {
-      font-size: .67rem; letter-spacing: .08em; text-transform: uppercase;
-      padding: 3px 8px; border: 1px solid var(--light); color: var(--mid);
-      border-radius: 100px;
-    }
-    .rpill.red { border-color: rgba(192,57,43,.3); color: var(--red); }
-    .no-res {
-      text-align: center; padding: 80px 20px; color: var(--mid);
-      grid-column: 1 / -1;
-    }
-    .no-res-icon { font-size: 3rem; margin-bottom: 16px; }
+.bp{padding:13px 28px;background:var(--red);color:#fff;border:none;font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.bp:hover{background:var(--redd)}
+.bs{padding:13px 20px;background:transparent;color:var(--mid);border:1px solid var(--line);font-family:var(--sans);font-size:.76rem;font-weight:500;cursor:pointer;transition:all .2s}
+.bs:hover{border-color:var(--mid);color:var(--dark)}
+.bsm{padding:9px 14px;font-size:.73rem}
 
-    /* ══════════════════════════════════════
-       MODAL
-    ══════════════════════════════════════ */
-    .overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(26,20,16,.7);
-      z-index: 500; align-items: center; justify-content: center;
-      padding: 24px;
-      backdrop-filter: blur(4px);
-    }
-    .overlay.open { display: flex; }
-    .modal {
-      background: var(--white); max-width: 680px; width: 100%;
-      max-height: 90vh; overflow-y: auto;
-      position: relative;
-      animation: slideUp .3s ease;
-    }
-    @keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-    .modal-hero {
-      background: var(--off); padding: 48px 48px 36px;
-      border-bottom: 1px solid var(--light);
-      position: relative;
-    }
-    .modal-kicker {
-      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--red);
-      margin-bottom: 12px;
-    }
-    .modal-title {
-      font-family: var(--serif); font-size: 2.2rem;
-      font-weight: 600; line-height: 1.1; margin-bottom: 20px;
-    }
-    .modal-meta {
-      display: flex; gap: 24px; font-size: .78rem;
-      color: var(--mid); letter-spacing: .05em;
-    }
-    .modal-meta span::before { margin-right: 5px; }
-    .modal-close {
-      position: absolute; top: 20px; right: 20px;
-      background: none; border: 1px solid var(--light);
-      width: 36px; height: 36px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .9rem; color: var(--mid);
-      transition: all var(--t);
-    }
-    .modal-close:hover { background: var(--dark); color: white; border-color: var(--dark); }
-    .modal-body { padding: 40px 48px; }
-    .modal-sec { margin-bottom: 36px; }
-    .modal-sec-title {
-      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--mid);
-      margin-bottom: 20px; padding-bottom: 10px;
-      border-bottom: 1px solid var(--light);
-    }
-    .ing-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .ing-item {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 10px 14px; background: var(--off);
-    }
-    .ing-name { font-size: .88rem; font-weight: 500; }
-    .ing-qty { font-size: .78rem; color: var(--mid); }
-    .steps-ol { list-style: none; counter-reset: s; }
-    .steps-ol li {
-      counter-increment: s;
-      display: flex; gap: 20px; padding: 16px 0;
-      border-bottom: 1px solid var(--light);
-    }
-    .steps-ol li:last-child { border-bottom: none; }
-    .step-num {
-      font-family: var(--serif); font-size: 1.4rem;
-      font-weight: 600; color: var(--red); flex-shrink: 0;
-      width: 28px; line-height: 1.4;
-    }
-    .step-num::before { content: counter(s); }
-    .step-text { font-size: .88rem; line-height: 1.65; padding-top: 4px; }
-    .tip-strip {
-      background: var(--off); border-left: 3px solid var(--red);
-      padding: 14px 18px; margin-top: 24px;
-    }
-    .tip-strip p { font-size: .84rem; color: var(--mid); line-height: 1.6; }
-    .tip-strip strong { color: var(--dark); }
-    .safety-strip {
-      background: rgba(192,57,43,.05); border: 1px solid rgba(192,57,43,.15);
-      padding: 12px 16px; margin-top: 12px; font-size: .8rem;
-      color: var(--red-dark); line-height: 1.5;
-    }
+#rw{padding-top:48px;display:none}
+.rhdr{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:28px}
+.rh{font-family:var(--serif);font-size:1.8rem;font-weight:600}
+.rc-cnt{font-size:.78rem;color:var(--mid)}
+.adi{border:1px dashed var(--line);padding:16px;text-align:center;font-size:.67rem;color:var(--line);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;min-height:70px;display:flex;align-items:center;justify-content:center}
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--line)}
+.rc{background:var(--w);cursor:pointer;padding:26px 22px;transition:background .2s}
+.rc:hover{background:var(--off)}
+.rce{font-size:2.2rem;margin-bottom:14px;display:block}
+.rct{font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:8px;line-height:1.2}
+.rcp{display:flex;gap:5px;flex-wrap:wrap}
+.rpp{font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line);color:var(--mid);border-radius:100px}
+.rpp.r{border-color:rgba(192,57,43,.3);color:var(--red)}
+.nores{text-align:center;padding:70px 20px;color:var(--mid);grid-column:1/-1}
 
-    /* ══════════════════════════════════════
-       LODÓWKA
-    ══════════════════════════════════════ */
-    .fridge-section { padding: 64px 0 0; }
-    .fridge-head {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 40px;
-    }
-    .fridge-title {
-      font-family: var(--serif); font-size: 2rem; font-weight: 600;
-    }
-    .sync-pill {
-      font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
-      padding: 5px 12px; border: 1px solid var(--light); color: var(--mid);
-    }
-    .sync-pill.ok { border-color: #2ecc71; color: #27ae60; }
-    .sync-pill.err { border-color: var(--red); color: var(--red); }
-    .low-strip {
-      background: rgba(192,57,43,.06); border: 1px solid rgba(192,57,43,.2);
-      padding: 12px 16px; font-size: .82rem; color: var(--red-dark);
-      margin-bottom: 24px; display: none;
-    }
-    /* ADD BOX */
-    .add-wrap {
-      display: grid; grid-template-columns: 1fr 280px; gap: 40px;
-      margin-bottom: 48px;
-    }
-    .add-left {}
-    .add-right {
-      background: var(--off); padding: 24px;
-    }
-    .add-right h3 {
-      font-family: var(--serif); font-size: 1.1rem;
-      margin-bottom: 16px; font-weight: 600;
-    }
-    .inp-group { margin-bottom: 12px; }
-    .inp-lbl { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--mid); display: block; margin-bottom: 6px; }
-    .inp {
-      border: 1px solid var(--light); border-radius: 1px;
-      padding: 10px 12px; font-family: var(--sans); font-size: .87rem;
-      background: white; outline: none; width: 100%;
-      transition: border-color var(--t); color: var(--dark);
-    }
-    .inp:focus { border-color: var(--red); }
-    .inp-row { display: grid; grid-template-columns: 1fr 80px 90px; gap: 8px; }
-    .bc-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-    .bc-row .inp { flex: 1; min-width: 100px; }
-    #scan-wrap { display: none; margin: 12px 0; position: relative; border-radius: 2px; overflow: hidden; }
-    #scan-video { width: 100%; max-height: 220px; object-fit: cover; display: block; }
-    #scan-line { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
-    #scan-line::before { content: ''; width: 65%; height: 35%; border: 2px solid var(--red); box-shadow: 0 0 0 9999px rgba(0,0,0,.45); }
-    .scan-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,.6); color: white; border: none; padding: 4px 10px; cursor: pointer; font-family: var(--sans); font-size: .75rem; }
-    /* PRODUCT LIST */
-    .prod-list { display: flex; flex-direction: column; }
-    .prod-item {
-      display: flex; align-items: center; gap: 16px;
-      padding: 16px 0; border-bottom: 1px solid var(--light);
-      transition: background var(--t);
-    }
-    .prod-item:first-child { border-top: 1px solid var(--light); }
-    .prod-item.low { background: rgba(255,152,0,.04); }
-    .prod-item.empty { opacity: .55; }
-    .prod-emoji { font-size: 1.6rem; width: 40px; text-align: center; }
-    .prod-info { flex: 1; }
-    .prod-name { font-weight: 500; font-size: .9rem; margin-bottom: 2px; }
-    .prod-sub { font-size: .72rem; color: var(--mid); letter-spacing: .04em; }
-    .prod-ctrl { display: flex; align-items: center; gap: 8px; }
-    .qbtn {
-      width: 30px; height: 30px; border: 1px solid var(--light);
-      background: white; cursor: pointer; font-size: 1rem; font-weight: 600;
-      color: var(--mid); display: flex; align-items: center; justify-content: center;
-      transition: all var(--t);
-    }
-    .qbtn:hover { border-color: var(--red); color: var(--red); }
-    .qdsp {
-      font-family: var(--serif); font-size: 1.05rem; font-weight: 600;
-      min-width: 50px; text-align: center;
-    }
-    .dbtn {
-      width: 28px; height: 28px; border: 1px solid var(--light);
-      background: none; cursor: pointer; color: var(--light);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .8rem; transition: all var(--t);
-    }
-    .dbtn:hover { border-color: var(--red); color: var(--red); background: rgba(192,57,43,.05); }
-    .cook-btn {
-      margin-top: 32px; width: 100%; padding: 16px;
-      background: var(--dark); color: white; border: none;
-      font-family: var(--sans); font-size: .78rem; font-weight: 600;
-      letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
-      transition: background var(--t);
-    }
-    .cook-btn:hover:not(:disabled) { background: var(--red); }
-    .cook-btn:disabled { opacity: .4; cursor: not-allowed; }
-    .empty-fridge {
-      padding: 60px 20px; text-align: center; color: var(--mid);
-    }
-    .empty-fridge-icon { font-size: 3rem; margin-bottom: 16px; }
+/* MODAL */
+.ov{display:none;position:fixed;inset:0;background:rgba(26,20,16,.72);z-index:500;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.ov.open{display:flex}
+.modal{background:var(--w);max-width:660px;width:100%;max-height:92vh;overflow-y:auto}
+.mh{background:var(--off);padding:44px;border-bottom:1px solid var(--line);position:relative}
+.mk{font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.mt{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1.1;margin-bottom:18px}
+.mm{display:flex;gap:20px;font-size:.78rem;color:var(--mid)}
+.mcl{position:absolute;top:16px;right:16px;background:none;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:.85rem;color:var(--mid);transition:all .2s;display:flex;align-items:center;justify-content:center}
+.mcl:hover{background:var(--dark);color:#fff;border-color:var(--dark)}
+.mb{padding:36px 44px}
+.ms{margin-bottom:32px}
+.mst{font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ii{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--off)}
+.in{font-size:.86rem;font-weight:500}
+.iq{font-size:.76rem;color:var(--mid)}
+.sol{list-style:none;counter-reset:s}
+.sol li{counter-increment:s;display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.sol li:last-child{border-bottom:none}
+.sn{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--red);flex-shrink:0;width:24px;line-height:1.4}
+.sn::before{content:counter(s)}
+.st{font-size:.87rem;line-height:1.65;padding-top:3px}
+.tips{background:var(--off);border-left:3px solid var(--red);padding:12px 16px;margin-top:20px}
+.tips p{font-size:.83rem;color:var(--mid);line-height:1.6}
+.safe{background:rgba(192,57,43,.05);border:1px solid rgba(192,57,43,.15);padding:10px 14px;margin-top:10px;font-size:.78rem;color:var(--redd)}
 
-    /* POLICY MODAL */
-    .policy-wrap { padding: 40px 48px; max-height: 80vh; overflow-y: auto; }
-    .policy-wrap h2 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 20px; }
-    .policy-wrap h3 { font-family: var(--serif); font-size: 1.1rem; margin: 20px 0 8px; }
-    .policy-wrap p, .policy-wrap li { font-size: .86rem; line-height: 1.7; color: var(--mid); margin-bottom: 8px; }
-    .policy-wrap ul { padding-left: 18px; }
-    .policy-wrap a { color: var(--red); }
+/* LODÓWKA */
+.fsec{padding:60px 0 0}
+.fhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+.fttl{font-family:var(--serif);font-size:2rem;font-weight:600}
+.sp{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border:1px solid var(--line);color:var(--mid)}
+.sp.ok{border-color:#27ae60;color:#27ae60}
+.sp.er{border-color:var(--red);color:var(--red)}
+.lows{background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.2);padding:10px 14px;font-size:.8rem;color:var(--redd);margin-bottom:20px;display:none}
+.aw{display:grid;grid-template-columns:1fr 260px;gap:40px;margin-bottom:44px}
+.ar{background:var(--off);padding:22px}
+.ar h3{font-family:var(--serif);font-size:1.05rem;margin-bottom:12px;font-weight:600}
+.ar p{font-size:.81rem;color:var(--mid);line-height:1.65;margin-bottom:10px}
+.il{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:5px}
+.inp{border:1px solid var(--line);padding:9px 11px;font-family:var(--sans);font-size:.86rem;background:#fff;outline:none;width:100%;transition:border-color .2s;color:var(--dark)}
+.inp:focus{border-color:var(--red)}
+.ir{display:grid;grid-template-columns:1fr 75px 88px;gap:7px;margin-bottom:10px}
+.br{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
+.br .inp{flex:1;min-width:100px}
+#sw{display:none;margin:10px 0;position:relative;overflow:hidden}
+#sv{width:100%;max-height:220px;object-fit:cover;display:block}
+#sl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#sl::before{content:'';width:65%;height:35%;border:2px solid var(--red);box-shadow:0 0 0 9999px rgba(0,0,0,.45)}
+.scl{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;border:none;padding:4px 10px;cursor:pointer;font-family:var(--sans);font-size:.74rem}
+.pl{display:flex;flex-direction:column}
+.pi{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.pi:first-child{border-top:1px solid var(--line)}
+.pi.low{background:rgba(255,152,0,.04)}
+.pi.emp{opacity:.5}
+.pe{font-size:1.5rem;width:38px;text-align:center;flex-shrink:0}
+.pn{flex:1}
+.pnm{font-weight:500;font-size:.88rem;margin-bottom:1px}
+.psb{font-size:.7rem;color:var(--mid)}
+.pc{display:flex;align-items:center;gap:7px}
+.qb{width:28px;height:28px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.9rem;font-weight:600;color:var(--mid);transition:all .2s;display:flex;align-items:center;justify-content:center}
+.qb:hover{border-color:var(--red);color:var(--red)}
+.qd{font-family:var(--serif);font-size:1rem;font-weight:600;min-width:48px;text-align:center}
+.db{width:26px;height:26px;border:1px solid var(--line);background:none;cursor:pointer;color:var(--line);transition:all .2s;display:flex;align-items:center;justify-content:center;font-size:.77rem}
+.db:hover{border-color:var(--red);color:var(--red)}
+.ckb{margin-top:28px;width:100%;padding:15px;background:var(--dark);color:#fff;border:none;font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.ckb:hover:not(:disabled){background:var(--red)}
+.ckb:disabled{opacity:.4;cursor:not-allowed}
+.efr{padding:50px 20px;text-align:center;color:var(--mid)}
+.efr div{font-size:2.8rem;margin-bottom:14px}
+.adr{border:1px dashed var(--line);min-height:80px;display:flex;align-items:center;justify-content:center;font-size:.66rem;color:var(--line);letter-spacing:.1em;text-transform:uppercase;margin:28px 0}
 
-    /* FOOTER */
-    footer {
-      background: var(--dark); color: rgba(255,255,255,.4);
-      padding: 40px 40px 32px;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
-    }
-    .footer-logo { font-family: var(--serif); font-size: 1.3rem; color: rgba(255,255,255,.7); }
-    .footer-logo em { color: var(--red); font-style: italic; }
-    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-    .footer-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; transition: color var(--t); cursor: pointer; }
-    .footer-links a:hover { color: rgba(255,255,255,.8); }
-    .footer-copy { font-size: .72rem; width: 100%; text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); margin-top: 16px; }
+.pw{padding:36px 44px;max-height:80vh;overflow-y:auto}
+.pw h2{font-family:var(--serif);font-size:1.7rem;margin-bottom:18px}
+.pw h3{font-family:var(--serif);font-size:1.05rem;margin:18px 0 7px}
+.pw p,.pw li{font-size:.84rem;line-height:1.7;color:var(--mid);margin-bottom:7px}
+.pw ul{padding-left:16px}
+.pw a{color:var(--red)}
 
-    /* AD rectangle */
-    .ad-rect {
-      border: 1px dashed var(--light); min-height: 90px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .68rem; color: var(--light); letter-spacing: .1em;
-      text-transform: uppercase; margin: 32px 0;
-    }
+footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.fl2{font-family:var(--serif);font-size:1.3rem;color:rgba(255,255,255,.65)}
+.fl2 em{color:var(--red);font-style:italic}
+.fls{display:flex;gap:18px;flex-wrap:wrap}
+.fls a{color:rgba(255,255,255,.38);text-decoration:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.fls a:hover{color:rgba(255,255,255,.75)}
+.fcp{font-size:.7rem;width:100%;text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.07);margin-top:14px}
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 0 16px; }
-      .nav-right { gap: 16px; }
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 48px 20px 36px; }
-      .hero-left::after { display: none; }
-      .hero-right { display: none; }
-      .main { padding: 0 20px 60px; }
-      .search-grid { grid-template-columns: 1fr; gap: 24px; }
-      .add-wrap { grid-template-columns: 1fr; gap: 24px; }
-      .ing-grid { grid-template-columns: 1fr; }
-      .modal-hero, .modal-body { padding: 28px 24px; }
-      .modal-title { font-size: 1.6rem; }
-      .policy-wrap { padding: 28px 24px; }
-      footer { padding: 28px 20px; flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
-      .inp-row { grid-template-columns: 1fr 70px 80px; gap: 6px; }
-    }
-  </style>
+@media(max-width:768px){
+  nav{padding:0 14px}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hl{padding:44px 18px 32px;border-right:none;border-bottom:1px solid var(--line)}
+  .hr{display:none}
+  .main{padding:0 18px 60px}
+  .sgrid,.aw{grid-template-columns:1fr;gap:22px}
+  .ig{grid-template-columns:1fr}
+  .mh,.mb{padding:24px 20px}
+  .mt{font-size:1.5rem}
+  .pw{padding:24px 20px}
+  footer{padding:24px 18px;flex-direction:column;text-align:center}
+  .fls{justify-content:center}
+  .ir{grid-template-columns:1fr 65px 80px;gap:5px}
+  .hbtns{flex-direction:column}
+  .hbtns button{width:100%}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="/" class="logo">Gotuj<em>Z</em>tego</a>
-  <div class="nav-right">
-    <button class="nav-tab active" id="ntab-s" onclick="switchTab('s')">Składniki</button>
-    <button class="nav-tab" id="ntab-f" onclick="switchTab('f')">Lodówka</button>
+  <div class="ntabs">
+    <button class="ntab on" id="ntab-s" onclick="showTab('s')">🔍 Składniki</button>
+    <button class="ntab" id="ntab-f" onclick="showTab('f')">🧊 Lodówka</button>
   </div>
 </nav>
 
-<!-- REKLAMA TOP -->
-<div class="ad-top">Reklama Google AdSense · 728×90</div>
+<div class="ad-top">Reklama Google AdSense</div>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-kicker">Kuchnia domowa</div>
-    <h1 class="hero-h1">Gotuj z tego<br>co masz<br>w <em>lodówce</em></h1>
-    <p class="hero-sub">Wpisz składniki które masz w domu – znajdziemy dla Ciebie przepis na pyszny obiad z bazy ponad 50 sprawdzonych receptur.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <button class="btn-primary" onclick="document.querySelector('.search-section').scrollIntoView({behavior:'smooth'})">Znajdź przepis</button>
-      <button class="btn-secondary" onclick="switchTab('f');document.querySelector('.fridge-section').scrollIntoView({behavior:'smooth'})">Moja lodówka</button>
+  <div class="hl">
+    <div class="kicker">Kuchnia domowa</div>
+    <h1 class="h1">Gotuj z tego<br>co masz<br>w <em>lodówce</em></h1>
+    <p class="sub">Wpisz składniki które masz w domu – znajdziemy przepis z bazy 50+ sprawdzonych receptur.</p>
+    <div class="hbtns">
+      <button class="bp" onclick="document.querySelector('.ssec').scrollIntoView({behavior:'smooth'})">Znajdź przepis</button>
+      <button class="bs" onclick="showTab('f');setTimeout(()=>document.querySelector('.fsec').scrollIntoView({behavior:'smooth'}),50)">Moja lodówka</button>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-bg-letter">G</div>
-    <div class="ingredients-visual">
-      <div class="ing-circle">🥚</div>
-      <div class="ing-circle">🥕</div>
-      <div class="ing-circle">🧅</div>
-      <div class="ing-circle">🥔</div>
-      <div class="ing-circle">🍗</div>
-      <div class="ing-circle" style="background:var(--off)">🍳</div>
+  <div class="hr">
+    <div class="bgl">G</div>
+    <div class="ivs">
+      <div class="ic">🥚</div><div class="ic">🥕</div><div class="ic">🧅</div>
+      <div class="ic">🥔</div><div class="ic">🍗</div><div class="ic">🍳</div>
     </div>
   </div>
 </section>
 
-<!-- MAIN -->
 <main class="main">
 
-  <!-- ── PANEL: SKŁADNIKI ── -->
-  <div class="panel active" id="panel-s">
-    <section class="search-section">
-      <div class="section-label">Wyszukaj przepis</div>
-      <div class="search-grid">
-        <div class="search-left">
-          <label class="field-lbl" for="ing">Jakie składniki masz w domu?</label>
-          <textarea id="ing" placeholder="np. ziemniaki, jajka, mąka, cebula...&#10;Wpisz kilka składników oddzielonych przecinkiem"></textarea>
-          <div class="example-tags">
-            <span style="font-size:.69rem;color:var(--light);letter-spacing:.08em;text-transform:uppercase;align-self:center">Przykłady</span>
-            <button class="etag" onclick="setIng('ziemniaki, jajko, mąka')">ziemniaki, jajko</button>
-            <button class="etag" onclick="setIng('kurczak, cebula, czosnek')">kurczak, czosnek</button>
-            <button class="etag" onclick="setIng('makaron, passata, mięso mielone')">makaron, mięso</button>
-            <button class="etag" onclick="setIng('ryż, marchew, cebula')">ryż, marchew</button>
-            <button class="etag" onclick="setIng('jajko, mleko, mąka')">jajko, mleko</button>
-          </div>
-          <div class="search-actions">
-            <button class="btn-primary" onclick="search()">Szukaj przepisów</button>
-            <button class="btn-secondary" onclick="clearSearch()">Wyczyść</button>
-          </div>
+<div id="panel-s">
+  <section class="ssec">
+    <div class="slbl">Wyszukaj przepis</div>
+    <div class="sgrid">
+      <div>
+        <label class="flbl" for="ing">Jakie składniki masz w domu?</label>
+        <textarea id="ing" placeholder="np. ziemniaki, jajka, mąka, cebula..."></textarea>
+        <div class="etags">
+          <span style="font-size:.67rem;color:var(--line);letter-spacing:.08em;text-transform:uppercase;align-self:center">Przykłady</span>
+          <button class="etag" onclick="setIng('ziemniaki, jajko, mąka')">ziemniaki, jajko</button>
+          <button class="etag" onclick="setIng('kurczak, cebula, czosnek')">kurczak, czosnek</button>
+          <button class="etag" onclick="setIng('makaron, passata, mięso mielone')">makaron, mięso</button>
+          <button class="etag" onclick="setIng('ryż, marchew, cebula')">ryż, marchew</button>
         </div>
-        <div class="search-right">
-          <div class="filter-box">
-            <div class="filter-title">Kategoria</div>
-            <div class="filter-list">
-              <div class="fitem" onclick="toggleF('zupa',this)" data-f="zupa">
-                <div class="fcheck"></div><span class="fitem-label">🍲 Zupy</span>
-              </div>
-              <div class="fitem" onclick="toggleF('obiad',this)" data-f="obiad">
-                <div class="fcheck"></div><span class="fitem-label">🍽️ Obiady</span>
-              </div>
-              <div class="fitem" onclick="toggleF('śniadanie',this)" data-f="śniadanie">
-                <div class="fcheck"></div><span class="fitem-label">🌅 Śniadania</span>
-              </div>
-              <div class="fitem" onclick="toggleF('szybkie',this)" data-f="szybkie">
-                <div class="fcheck"></div><span class="fitem-label">⚡ Szybkie (≤20 min)</span>
-              </div>
-              <div class="fitem" onclick="toggleF('wegetariańskie',this)" data-f="wegetariańskie">
-                <div class="fcheck"></div><span class="fitem-label">🌿 Wegetariańskie</span>
-              </div>
-              <div class="fitem" onclick="toggleF('tradycyjne',this)" data-f="tradycyjne">
-                <div class="fcheck"></div><span class="fitem-label">🇵🇱 Tradycyjne</span>
-              </div>
-            </div>
+        <div class="sact">
+          <button class="bp" onclick="doSearch()">Szukaj przepisów</button>
+          <button class="bs" onclick="clearSrch()">Wyczyść</button>
+        </div>
+      </div>
+      <div>
+        <div class="fbox">
+          <div class="ftitle">Kategoria</div>
+          <div id="filters">
+            <div class="fi" onclick="tgF('zupa',this)"><div class="fck">✓</div><span class="fl">🍲 Zupy</span></div>
+            <div class="fi" onclick="tgF('obiad',this)"><div class="fck">✓</div><span class="fl">🍽️ Obiady</span></div>
+            <div class="fi" onclick="tgF('śniadanie',this)"><div class="fck">✓</div><span class="fl">🌅 Śniadania</span></div>
+            <div class="fi" onclick="tgF('szybkie',this)"><div class="fck">✓</div><span class="fl">⚡ Szybkie</span></div>
+            <div class="fi" onclick="tgF('wegetariańskie',this)"><div class="fck">✓</div><span class="fl">🌿 Wegetariańskie</span></div>
+            <div class="fi" onclick="tgF('tradycyjne',this)"><div class="fck">✓</div><span class="fl">🇵🇱 Tradycyjne</span></div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- WYNIKI -->
-    <div id="res-wrap">
-      <div class="res-header">
-        <span class="res-title" id="res-title">Przepisy</span>
-        <span class="res-count" id="res-count"></span>
-      </div>
-      <div class="ad-inline">Reklama AdSense · 728×90</div>
-      <div class="recipes-grid" id="res-grid"></div>
     </div>
+  </section>
+  <div id="rw">
+    <div class="rhdr">
+      <span class="rh" id="rh">Przepisy</span>
+      <span class="rc-cnt" id="rcnt"></span>
+    </div>
+    <div class="adi">Reklama AdSense</div>
+    <div class="rg" id="rg"></div>
   </div>
+</div>
 
-  <!-- ── PANEL: LODÓWKA ── -->
-  <div class="panel" id="panel-f">
-    <section class="fridge-section">
-      <div class="fridge-head">
-        <h2 class="fridge-title">Moja lodówka</h2>
-        <span class="sync-pill" id="sync">💾 Lokalnie</span>
-      </div>
-      <div class="low-strip" id="low-bar">
-        ⚠️ Kończy się: <span id="low-list"></span>
-      </div>
-      <div class="add-wrap">
-        <div class="add-left">
-          <div class="section-label">Dodaj produkt</div>
-          <div class="bc-row">
-            <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN (opcjonalnie)"/>
-            <button class="btn-secondary" style="padding:10px 16px;font-size:.74rem;white-space:nowrap" onclick="startScan()">📷 Skanuj</button>
-            <button class="btn-secondary" style="padding:10px 16px;font-size:.74rem;white-space:nowrap" onclick="lookupBC()">Szukaj</button>
-          </div>
-          <div id="scan-wrap">
-            <video id="scan-video" autoplay playsinline></video>
-            <div id="scan-line"></div>
-            <button class="scan-close" onclick="stopScan()">✕ Zamknij</button>
-          </div>
-          <div class="inp-row inp-group">
-            <div>
-              <label class="inp-lbl">Nazwa produktu</label>
-              <input type="text" id="pn" class="inp" placeholder="np. Jajka"/>
-            </div>
-            <div>
-              <label class="inp-lbl">Ilość</label>
-              <input type="number" id="pq" class="inp" value="1" min="0.1" step="0.1"/>
-            </div>
-            <div>
-              <label class="inp-lbl">Jednostka</label>
-              <select id="pu" class="inp">
-                <option value="szt">szt.</option>
-                <option value="g">g</option>
-                <option value="kg">kg</option>
-                <option value="ml">ml</option>
-                <option value="l">l</option>
-                <option value="opak">opak.</option>
-              </select>
-            </div>
-          </div>
-          <div class="inp-group" style="display:flex;gap:10px;align-items:flex-end">
-            <div style="flex:1">
-              <label class="inp-lbl">Min. ilość (alert gdy mniej)</label>
-              <input type="number" id="pm" class="inp" placeholder="np. 2" min="0" step="0.1"/>
-            </div>
-            <button class="btn-primary" onclick="addProd()" style="white-space:nowrap">Dodaj do lodówki</button>
+<div id="panel-f">
+  <section class="fsec">
+    <div class="fhdr">
+      <h2 class="fttl">Moja lodówka</h2>
+      <span class="sp" id="sp">💾 Lokalnie</span>
+    </div>
+    <div class="lows" id="lb">⚠️ Kończy się: <span id="ll"></span></div>
+    <div class="aw">
+      <div>
+        <div class="slbl">Dodaj produkt</div>
+        <div class="br">
+          <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN..."/>
+          <button class="bs bsm" onclick="startScan()">📷 Skanuj</button>
+          <button class="bs bsm" onclick="lookupBC()">Szukaj</button>
+        </div>
+        <div id="sw">
+          <video id="sv" autoplay playsinline muted></video>
+          <div id="sl"></div>
+          <button class="scl" onclick="stopScan()">✕ Zamknij</button>
+        </div>
+        <div class="ir">
+          <div><label class="il">Nazwa</label><input type="text" id="pn" class="inp" placeholder="np. Jajka"/></div>
+          <div><label class="il">Ilość</label><input type="number" id="pq" class="inp" value="1" min="0.1" step="0.1"/></div>
+          <div><label class="il">Jednostka</label>
+            <select id="pu" class="inp">
+              <option value="szt">szt.</option><option value="g">g</option><option value="kg">kg</option>
+              <option value="ml">ml</option><option value="l">l</option><option value="opak">opak.</option>
+            </select>
           </div>
         </div>
-        <div class="add-right">
-          <h3>Jak używać lodówki?</h3>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.7;margin-bottom:12px">
-            Dodawaj produkty ręcznie lub skanując kod kreskowy. Ustaw minimalną ilość – dostaniesz alert gdy produkt się kończy.
-          </p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.7;margin-bottom:12px">
-            Kliknij <strong>– / +</strong> żeby zdejmować lub dodawać do stanu. Stan zapisywany jest w przeglądarce.
-          </p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.7">
-            Kliknij <strong>„Gotuj z lodówki"</strong> żeby znaleźć przepis ze swoich produktów.
-          </p>
+        <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">
+          <div style="flex:1;min-width:120px"><label class="il">Min. ilość (alert)</label><input type="number" id="pm" class="inp" placeholder="np. 2" min="0" step="0.1"/></div>
+          <button class="bp" onclick="addProd()">Dodaj do lodówki</button>
         </div>
       </div>
-      <!-- LISTA -->
-      <div id="prod-list" class="prod-list">
-        <div class="empty-fridge">
-          <div class="empty-fridge-icon">🧊</div>
-          <p style="font-weight:500;margin-bottom:6px">Lodówka jest pusta</p>
-          <p style="font-size:.82rem;color:var(--mid)">Dodaj produkty powyżej lub zeskanuj kod kreskowy</p>
-        </div>
+      <div class="ar">
+        <h3>Jak używać?</h3>
+        <p>Dodawaj produkty ręcznie lub skanując kod kreskowy z opakowania.</p>
+        <p>Ustaw minimalną ilość – dostaniesz alert gdy produkt się kończy.</p>
+        <p>Kliknij <strong>Gotuj z lodówki</strong> żeby znaleźć przepis z Twoich produktów.</p>
       </div>
-      <div class="ad-rect">Reklama AdSense · 300×250</div>
-      <button class="cook-btn" id="cook-btn" onclick="cookFridge()" disabled>
-        Gotuj z zawartości lodówki →
-      </button>
-    </section>
-  </div>
+    </div>
+    <div id="pl" class="pl">
+      <div class="efr"><div>🧊</div><p style="font-weight:500;margin-bottom:5px">Lodówka jest pusta</p><p style="font-size:.81rem">Dodaj produkty lub zeskanuj kod kreskowy</p></div>
+    </div>
+    <div class="adr">Reklama AdSense 300x250</div>
+    <button class="ckb" id="ckb" onclick="cookFridge()" disabled>Gotuj z zawartości lodówki →</button>
+  </section>
+</div>
 
 </main>
 
-<!-- MODAL: PRZEPIS -->
-<div class="overlay" id="modal" onclick="closeModal(event)">
-  <div class="modal" id="modal-inner">
-    <div id="modal-content"></div>
-  </div>
+<div class="ov" id="ov" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal" id="mc"></div>
+</div>
+<div class="ov" id="ovp" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal"><div class="pw" id="pc"></div></div>
 </div>
 
-<!-- MODAL: POLITYKA -->
-<div class="overlay" id="modal-p" onclick="document.getElementById('modal-p').classList.remove('open')">
-  <div class="modal">
-    <div class="policy-wrap" id="policy-content"></div>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Gotuj<em>Z</em>tego</div>
-  <div class="footer-links">
-    <a onclick="showPolicy()">Polityka prywatności</a>
+  <div class="fl2">Gotuj<em>Z</em>tego</div>
+  <div class="fls">
+    <a onclick="showPol()">Polityka prywatności</a>
     <a onclick="showReg()">Regulamin</a>
   </div>
-  <div class="footer-copy">
-    © 2026 GotujZtego.pl · Strona zawiera reklamy Google AdSense · Przepisy opracowane własnoręcznie
-  </div>
+  <div class="fcp">© 2026 GotujZtego.pl · Przepisy opracowane własnoręcznie · Strona zawiera reklamy Google AdSense</div>
 </footer>
 
 <script>
-// ══════════════════════════════════════
-//  DANE
-// ══════════════════════════════════════
-let RECIPES = [];
-let activeFilters = [];
-fetch('przepisy.json').then(r=>r.json()).then(d=>{RECIPES=d;}).catch(e=>console.error(e));
+// ─── ZAKŁADKI ───────────────────────────────────
+// Używam bezpośrednio style.display – najprostsze i pewne rozwiązanie
+function showTab(name) {
+  var ps = document.getElementById('panel-s');
+  var pf = document.getElementById('panel-f');
+  var ts = document.getElementById('ntab-s');
+  var tf = document.getElementById('ntab-f');
 
-// ══════════════════════════════════════
-//  TABS
-// ══════════════════════════════════════
-function switchTab(n) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('panel-'+n).classList.add('active');
-  document.getElementById('ntab-'+n).classList.add('active');
-  if(n !== 'f') stopScan();
-}
-
-// ══════════════════════════════════════
-//  SEARCH
-// ══════════════════════════════════════
-function search() {
-  const input = document.getElementById('ing').value.trim().toLowerCase();
-  const kw = input ? input.split(/[,\s]+/).filter(k=>k.length>1) : [];
-  let results = [...RECIPES];
-  if(activeFilters.length>0) results=results.filter(r=>activeFilters.some(f=>r.tagi.includes(f)));
-  if(kw.length>0) {
-    results = results.map(r=>{
-      const ingText = r.skladniki.map(s=>s.p.toLowerCase()).join(' ');
-      const score = kw.filter(k=>ingText.includes(k)||r.nazwa.toLowerCase().includes(k)).length;
-      return{...r,_score:score};
-    }).filter(r=>r._score>0).sort((a,b)=>b._score-a._score);
+  if (name === 's') {
+    ps.style.display = 'block';
+    pf.style.display = 'none';
+    ts.classList.add('on');
+    tf.classList.remove('on');
+    stopScan();
+  } else {
+    ps.style.display = 'none';
+    pf.style.display = 'block';
+    ts.classList.remove('on');
+    tf.classList.add('on');
   }
-  renderResults(results);
 }
 
-function toggleF(cat, el) {
+// ─── PRZEPISY ───────────────────────────────────
+var RECIPES = [];
+var AF = [];
+
+fetch('przepisy.json')
+  .then(function(r){ return r.json(); })
+  .then(function(d){ RECIPES = d; })
+  .catch(function(e){ console.error('Blad ladowania przepisow:', e); });
+
+var EM = {zupa:'🍲',obiad:'🍽️','śniadanie':'🌅','mięso':'🥩',ryba:'🐟','wegetariańskie':'🌿',makaron:'🍝',tradycyjne:'🇵🇱','sałatka':'🥗',szybkie:'⚡'};
+
+function doSearch() {
+  var input = document.getElementById('ing').value.trim().toLowerCase();
+  var kw = input ? input.split(/[,\s]+/).filter(function(k){ return k.length > 1; }) : [];
+  var results = RECIPES.slice();
+
+  if (AF.length > 0) {
+    results = results.filter(function(r){
+      return AF.some(function(f){ return r.tagi.indexOf(f) >= 0; });
+    });
+  }
+
+  if (kw.length > 0) {
+    results = results.map(function(r){
+      var ingText = r.skladniki.map(function(s){ return s.p.toLowerCase(); }).join(' ');
+      var score = kw.filter(function(k){ return ingText.indexOf(k) >= 0 || r.nazwa.toLowerCase().indexOf(k) >= 0; }).length;
+      return Object.assign({}, r, {_score: score});
+    }).filter(function(r){ return r._score > 0; })
+      .sort(function(a,b){ return b._score - a._score; });
+  }
+
+  renderR(results);
+}
+
+function tgF(cat, el) {
   el.classList.toggle('on');
-  if(activeFilters.includes(cat)) activeFilters=activeFilters.filter(f=>f!==cat);
-  else activeFilters.push(cat);
-  if(document.getElementById('ing').value.trim()||activeFilters.length>0) search();
+  var idx = AF.indexOf(cat);
+  if (idx >= 0) AF.splice(idx, 1);
+  else AF.push(cat);
+  if (document.getElementById('ing').value.trim() || AF.length > 0) doSearch();
 }
 
-const EMOJI={zupa:'🍲',obiad:'🍽️',śniadanie:'🌅',mięso:'🥩',ryba:'🐟',wegetariańskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',sałatka:'🥗',szybkie:'⚡'};
-
-function renderResults(results) {
-  const wrap = document.getElementById('res-wrap');
-  const grid = document.getElementById('res-grid');
-  const cnt = document.getElementById('res-count');
-  const title = document.getElementById('res-title');
+function renderR(results) {
+  var wrap = document.getElementById('rw');
+  var grid = document.getElementById('rg');
+  var cnt = document.getElementById('rcnt');
+  var h = document.getElementById('rh');
   wrap.style.display = 'block';
-  if(!results.length) {
-    title.textContent='Brak wyników';
-    cnt.textContent='';
-    grid.innerHTML=`<div class="no-res"><div class="no-res-icon">🔍</div><p>Nie znaleziono przepisów dla tych składników.<br>Spróbuj innych kombinacji.</p></div>`;
+
+  if (!results.length) {
+    h.textContent = 'Brak wyników';
+    cnt.textContent = '';
+    grid.innerHTML = '<div class="nores"><div style="font-size:3rem;margin-bottom:14px">🔍</div><p>Nie znaleziono przepisów.<br>Spróbuj innych składników.</p></div>';
     return;
   }
-  title.textContent='Znalezione przepisy';
-  cnt.textContent=results.length+' przepis'+(results.length===1?'':'ów');
-  grid.innerHTML=results.map(r=>{
-    const tag=r.tagi[0]||'obiad';
-    const em=EMOJI[tag]||'🍽️';
-    const fast=r.czas<=20?`<span class="rpill red">⚡ ${r.czas} min</span>`:`<span class="rpill">⏱ ${r.czas} min</span>`;
-    return`<div class="rc" onclick="openRecipe('${r.id}')">
-      <span class="rc-emoji">${em}</span>
-      <div class="rc-title">${r.nazwa}</div>
-      <div class="rc-pills">${fast}<span class="rpill">${r.poziom}</span><span class="rpill">${r.porcje} porcje</span></div>
-    </div>`;
-  }).join('');
-  setTimeout(()=>wrap.scrollIntoView({behavior:'smooth',block:'nearest'}),80);
+
+  h.textContent = 'Znalezione przepisy';
+  cnt.textContent = results.length + ' przepis' + (results.length === 1 ? '' : 'ów');
+
+  var html = '';
+  for (var i = 0; i < results.length; i++) {
+    var r = results[i];
+    var tag = r.tagi[0] || 'obiad';
+    var em = EM[tag] || '🍽️';
+    var fast = r.czas <= 20
+      ? '<span class="rpp r">⚡ ' + r.czas + ' min</span>'
+      : '<span class="rpp">⏱ ' + r.czas + ' min</span>';
+    html += '<div class="rc" onclick="openR('' + r.id + '')">'
+      + '<span class="rce">' + em + '</span>'
+      + '<div class="rct">' + r.nazwa + '</div>'
+      + '<div class="rcp">' + fast + '<span class="rpp">' + r.poziom + '</span><span class="rpp">' + r.porcje + ' porcje</span></div>'
+      + '</div>';
+  }
+  grid.innerHTML = html;
+  setTimeout(function(){ wrap.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 80);
 }
 
-function clearSearch() {
-  document.getElementById('ing').value='';
-  document.getElementById('res-wrap').style.display='none';
-  activeFilters=[];
-  document.querySelectorAll('.fitem').forEach(el=>el.classList.remove('on'));
+function clearSrch() {
+  document.getElementById('ing').value = '';
+  document.getElementById('rw').style.display = 'none';
+  AF = [];
+  document.querySelectorAll('.fi').forEach(function(el){ el.classList.remove('on'); });
 }
-function setIng(t){document.getElementById('ing').value=t;}
-document.getElementById('ing').addEventListener('keydown',e=>{if(e.key==='Enter')search();});
+function setIng(t) { document.getElementById('ing').value = t; }
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') {
+    document.getElementById('ov').classList.remove('open');
+    document.getElementById('ovp').classList.remove('open');
+  }
+});
 
-// ══════════════════════════════════════
-//  MODAL PRZEPIS
-// ══════════════════════════════════════
-function openRecipe(id) {
-  const r = RECIPES.find(x=>x.id===id);
-  if(!r) return;
-  const tag=r.tagi[0]||'obiad';
-  const em=EMOJI[tag]||'🍽️';
-  const tipy=r.tipy?r.tipy.map(t=>`<li>${t}</li>`).join(''):'';
-  document.getElementById('modal-content').innerHTML=`
-    <div class="modal-hero">
-      <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
-      <div class="modal-kicker">${em} ${r.tagi.join(' · ')}</div>
-      <h2 class="modal-title">${r.nazwa}</h2>
-      <div class="modal-meta">
-        <span>⏱ ${r.czas} min</span>
-        <span>👥 ${r.porcje} porcje</span>
-        <span>📊 ${r.poziom}</span>
-      </div>
-    </div>
-    <div class="modal-body">
-      <div class="modal-sec">
-        <div class="modal-sec-title">Składniki</div>
-        <div class="ing-grid">${r.skladniki.map(s=>`<div class="ing-item"><span class="ing-name">${s.p}</span><span class="ing-qty">${s.i} ${s.u}</span></div>`).join('')}</div>
-      </div>
-      <div class="modal-sec">
-        <div class="modal-sec-title">Przygotowanie</div>
-        <ol class="steps-ol">${r.kroki.map(k=>`<li><div class="step-num"></div><div class="step-text">${k}</div></li>`).join('')}</ol>
-      </div>
-      ${tipy?`<div class="tip-strip"><p><strong>Wskazówki:</strong></p><ul style="padding-left:16px;margin-top:6px;font-size:.83rem;color:var(--mid);line-height:1.7">${tipy}</ul></div>`:''}
-      ${r.safety?`<div class="safety-strip">🛡️ ${r.safety}</div>`:''}
-    </div>`;
-  document.getElementById('modal').classList.add('open');
+// ─── MODAL PRZEPIS ─────────────────────────────
+function openR(id) {
+  var r = null;
+  for (var i = 0; i < RECIPES.length; i++) {
+    if (RECIPES[i].id === id) { r = RECIPES[i]; break; }
+  }
+  if (!r) return;
+
+  var tag = r.tagi[0] || 'obiad';
+  var em = EM[tag] || '🍽️';
+
+  var tips = '';
+  if (r.tipy && r.tipy.length) {
+    tips = '<div class="tips"><p><strong>Wskazówki:</strong></p><ul style="padding-left:14px;margin-top:6px">';
+    for (var j = 0; j < r.tipy.length; j++) {
+      tips += '<li style="font-size:.82rem;color:var(--mid);line-height:1.65;margin-bottom:4px">' + r.tipy[j] + '</li>';
+    }
+    tips += '</ul></div>';
+  }
+
+  var ing = '';
+  for (var k = 0; k < r.skladniki.length; k++) {
+    var s = r.skladniki[k];
+    ing += '<div class="ii"><span class="in">' + s.p + '</span><span class="iq">' + s.i + ' ' + s.u + '</span></div>';
+  }
+
+  var steps = '';
+  for (var l = 0; l < r.kroki.length; l++) {
+    steps += '<li><div class="sn"></div><div class="st">' + r.kroki[l] + '</div></li>';
+  }
+
+  document.getElementById('mc').innerHTML =
+    '<div class="mh">'
+    + '<button class="mcl" onclick="document.getElementById('ov').classList.remove('open')">✕</button>'
+    + '<div class="mk">' + em + ' ' + r.tagi.join(' · ') + '</div>'
+    + '<div class="mt">' + r.nazwa + '</div>'
+    + '<div class="mm"><span>⏱ ' + r.czas + ' min</span><span>👥 ' + r.porcje + ' porcje</span><span>📊 ' + r.poziom + '</span></div>'
+    + '</div>'
+    + '<div class="mb">'
+    + '<div class="ms"><div class="mst">Składniki</div><div class="ig">' + ing + '</div></div>'
+    + '<div class="ms"><div class="mst">Przygotowanie</div><ol class="sol">' + steps + '</ol></div>'
+    + tips
+    + (r.safety ? '<div class="safe">🛡️ ' + r.safety + '</div>' : '')
+    + '</div>';
+
+  document.getElementById('ov').classList.add('open');
 }
-function closeModal(e){if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.remove('open');}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('modal').classList.remove('open');document.getElementById('modal-p').classList.remove('open');}});
 
-// ══════════════════════════════════════
-//  LODÓWKA
-// ══════════════════════════════════════
-const JSONBIN_ID='69c45c4dc3097a1dd55dbe3f';
-const JSONBIN_KEY='$2a$10$iGnvoG3HfqhsSncDfFzPV.trXOLBlTHmE0Til0yumsEl2ctFAHc4a';
-let FP={};
+// ─── LODÓWKA ──────────────────────────────────
+var JBID = '69c45c4dc3097a1dd55dbe3f';
+var JBKEY = '$2a$10$iGnvoG3HfqhsSncDfFzPV.trXOLBlTHmE0Til0yumsEl2ctFAHc4a';
+var FP = {};
 
-function saveCookie(d){document.cookie=`fridge=${encodeURIComponent(JSON.stringify(d))};max-age=31536000;path=/;SameSite=Lax`;}
-function loadCookie(){const m=document.cookie.match(/fridge=([^;]+)/);if(!m)return{};try{return JSON.parse(decodeURIComponent(m[1]));}catch{return{};}}
-async function saveCloud(d){
-  if(!JSONBIN_ID||!JSONBIN_KEY)return;
-  try{
-    const r=await fetch('https://api.jsonbin.io/v3/b/'+JSONBIN_ID,{
-      method:'PUT',
-      headers:{'Content-Type':'application/json','X-Access-Key':JSONBIN_KEY,'X-Bin-Versioning':false},
-      body:JSON.stringify(d)
+function svCook(d) {
+  document.cookie = 'fridge=' + encodeURIComponent(JSON.stringify(d)) + ';max-age=31536000;path=/;SameSite=Lax';
+}
+function ldCook() {
+  var m = document.cookie.match(/fridge=([^;]+)/);
+  if (!m) return {};
+  try { return JSON.parse(decodeURIComponent(m[1])); } catch(e) { return {}; }
+}
+function setSP(ok, msg) {
+  var e = document.getElementById('sp');
+  e.textContent = msg;
+  e.className = 'sp' + (ok ? ' ok' : ' er');
+}
+async function svCloud(d) {
+  try {
+    var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID, {
+      method: 'PUT',
+      headers: {'Content-Type':'application/json','X-Access-Key':JBKEY,'X-Bin-Versioning':'false'},
+      body: JSON.stringify(d)
     });
-    if(r.ok)setSP(true,'☁️ Zsync.');
-    else setSP(false,'⚠️ Błąd '+r.status);
-  }catch(e){setSP(false,'⚠️ Błąd sieci');}
+    setSP(r.ok, r.ok ? '☁️ Zsync.' : '⚠️ Błąd ' + r.status);
+  } catch(e) { setSP(false, '⚠️ Offline'); }
 }
-async function loadCloud(){
-  if(!JSONBIN_ID||!JSONBIN_KEY){FP=loadCookie();renderFridge(FP);return;}
-  try{
-    const r=await fetch('https://api.jsonbin.io/v3/b/'+JSONBIN_ID+'/latest',{headers:{'X-Access-Key':JSONBIN_KEY,'X-Bin-Meta':false}});
-    const text=await r.text();
-    try{
-      const d=JSON.parse(text);
-      FP=d.record||d||{};
-    }catch{FP={};}
-    saveCookie(FP);renderFridge(FP);setSP(true,'☁️ Zsync.');
-  }catch(e){
-    console.log('Cloud error:',e);
-    FP=loadCookie();renderFridge(FP);setSP(false,'💾 Lokalnie');
+async function ldCloud() {
+  try {
+    var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID + '/latest', {
+      headers: {'X-Access-Key':JBKEY,'X-Bin-Meta':'false'}
+    });
+    var txt = await r.text();
+    try {
+      var d = JSON.parse(txt);
+      FP = d.record || d || {};
+    } catch(e) { FP = {}; }
+    svCook(FP);
+    renderF(FP);
+    setSP(true, '☁️ Zsync.');
+  } catch(e) {
+    FP = ldCook();
+    renderF(FP);
+    setSP(false, '💾 Lokalnie');
   }
 }
-function setSP(ok,msg){const e=document.getElementById('sync');e.textContent=msg;e.className='sync-pill'+(ok?' ok':' err');}
-loadCloud();
-async function saveAll(){saveCookie(FP);await saveCloud(FP);}
+ldCloud();
 
-const EMO={jajka:'🥚',jajko:'🥚',mleko:'🥛',masło:'🧈',ser:'🧀',chleb:'🍞',mąka:'🌾',ryż:'🍚',makaron:'🍝',ziemniaki:'🥔',marchew:'🥕',cebula:'🧅',czosnek:'🧄',pomidor:'🍅',ogórek:'🥒',papryka:'🫑',kurczak:'🍗',wołowina:'🥩',wieprzowina:'🥩',kiełbasa:'🌭',ryba:'🐟',jabłko:'🍎',banan:'🍌',jogurt:'🥛',olej:'🫙',oliwa:'🫙',sól:'🧂',pieprz:'🌶️',fasola:'🫘',grzyby:'🍄',kapusta:'🥬',schab:'🥩',śmietana:'🥛',twaróg:'🧀',mięso:'🥩'};
-function getEmo(n){const l=n.toLowerCase();for(const[k,e]of Object.entries(EMO))if(l.includes(k))return e;return'🥫';}
+async function svAll() { svCook(FP); await svCloud(FP); }
 
-async function addProd(){
-  const name=document.getElementById('pn').value.trim();
-  const qty=parseFloat(document.getElementById('pq').value)||1;
-  const unit=document.getElementById('pu').value;
-  const minQty=parseFloat(document.getElementById('pm').value)||0;
-  if(!name){alert('Wpisz nazwę produktu!');return;}
-  const id=Date.now().toString();
-  FP[id]={id,name,qty,unit,minQty,emoji:getEmo(name),addedAt:new Date().toISOString()};
-  document.getElementById('pn').value='';document.getElementById('pq').value='1';document.getElementById('pm').value='';document.getElementById('bc').value='';
-  await saveAll();renderFridge(FP);
-}
-async function chgQty(id,cur,step,dir){FP[id].qty=Math.max(0,Math.round((cur+step*dir)*10)/10);await saveAll();renderFridge(FP);}
-async function delProd(id,name){if(!confirm(`Usunąć "${name}"?`))return;delete FP[id];await saveAll();renderFridge(FP);}
-
-function renderFridge(prods){
-  const c=document.getElementById('prod-list');
-  const cb=document.getElementById('cook-btn');
-  const items=Object.values(prods);
-  const low=items.filter(p=>p.minQty>0&&p.qty<=p.minQty&&p.qty>0);
-  const empty=items.filter(p=>p.qty<=0);
-  const lb=document.getElementById('low-bar');
-  if(low.length||empty.length){lb.style.display='block';document.getElementById('low-list').textContent=[...low,...empty].map(p=>`${p.emoji} ${p.name}`).join(', ');}
-  else lb.style.display='none';
-  if(!items.length){c.innerHTML='<div class="empty-fridge"><div class="empty-fridge-icon">🧊</div><p style="font-weight:500;margin-bottom:6px">Lodówka jest pusta</p><p style="font-size:.82rem;color:var(--mid)">Dodaj produkty powyżej lub zeskanuj kod kreskowy</p></div>';cb.disabled=true;return;}
-  cb.disabled=false;
-  items.sort((a,b)=>{const av=a.qty<=0?2:(a.minQty>0&&a.qty<=a.minQty?1:0);const bv=b.qty<=0?2:(b.minQty>0&&b.qty<=b.minQty?1:0);return bv-av;});
-  c.innerHTML=items.map(p=>{
-    const isLow=p.minQty>0&&p.qty<=p.minQty&&p.qty>0;
-    const isEmpty=p.qty<=0;
-    const cls=isEmpty?'empty':isLow?'low':'';
-    const warn=isEmpty?' · <span style="color:var(--red);font-size:.7rem">BRAK</span>':isLow?' · <span style="color:#e67e22;font-size:.7rem">MAŁO</span>':'';
-    const step=(p.unit==='g'||p.unit==='ml')?50:1;
-    return`<div class="prod-item ${cls}">
-      <div class="prod-emoji">${p.emoji}</div>
-      <div class="prod-info"><div class="prod-name">${p.name}${warn}</div><div class="prod-sub">Min: ${p.minQty||'—'} ${p.unit}</div></div>
-      <div class="prod-ctrl">
-        <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},-1)">−</button>
-        <div class="qdsp">${p.qty} <span style="font-size:.65rem;font-weight:400;color:var(--mid)">${p.unit}</span></div>
-        <button class="qbtn" onclick="chgQty('${p.id}',${p.qty},${step},1)">+</button>
-        <button class="dbtn" onclick="delProd('${p.id}','${p.name}')">✕</button>
-      </div>
-    </div>`;
-  }).join('');
+var EDICT = {jajka:'🥚',jajko:'🥚',mleko:'🥛','masło':'🧈',ser:'🧀',chleb:'🍞','mąka':'🌾','ryż':'🍚',makaron:'🍝',ziemniaki:'🥔',marchew:'🥕',cebula:'🧅',czosnek:'🧄',pomidor:'🍅','ogórek':'🥒',papryka:'🫑',kurczak:'🍗','wołowina':'🥩',wieprzowina:'🥩','kiełbasa':'🌭',ryba:'🐟','jabłko':'🍎',banan:'🍌',jogurt:'🥛',olej:'🫙',oliwa:'🫙','sól':'🧂',pieprz:'🌶️',fasola:'🫘',grzyby:'🍄',kapusta:'🥬',schab:'🥩','śmietana':'🥛','twaróg':'🧀','mięso':'🥩'};
+function getE(n) {
+  var l = n.toLowerCase();
+  for (var k in EDICT) { if (l.indexOf(k) >= 0) return EDICT[k]; }
+  return '🥫';
 }
 
-function cookFridge(){
-  const items=Object.values(FP).filter(p=>p.qty>0);
-  if(!items.length)return;
-  document.getElementById('ing').value=items.map(p=>p.name).join(', ');
-  switchTab('s');search();
+async function addProd() {
+  var name = document.getElementById('pn').value.trim();
+  var qty = parseFloat(document.getElementById('pq').value) || 1;
+  var unit = document.getElementById('pu').value;
+  var minQty = parseFloat(document.getElementById('pm').value) || 0;
+  if (!name) { alert('Wpisz nazwę produktu!'); return; }
+  var id = Date.now().toString();
+  FP[id] = {id:id,name:name,qty:qty,unit:unit,minQty:minQty,emoji:getE(name),addedAt:new Date().toISOString()};
+  document.getElementById('pn').value = '';
+  document.getElementById('pq').value = '1';
+  document.getElementById('pm').value = '';
+  document.getElementById('bc').value = '';
+  await svAll();
+  renderF(FP);
+}
+async function chgQ(id, cur, step, dir) {
+  FP[id].qty = Math.max(0, Math.round((cur + step * dir) * 10) / 10);
+  await svAll();
+  renderF(FP);
+}
+async function delP(id, name) {
+  if (!confirm('Usunąć "' + name + '" z lodówki?')) return;
+  delete FP[id];
+  await svAll();
+  renderF(FP);
+}
+function renderF(prods) {
+  var c = document.getElementById('pl');
+  var cb = document.getElementById('ckb');
+  var items = Object.values(prods);
+  var low = items.filter(function(p){ return p.minQty > 0 && p.qty <= p.minQty && p.qty > 0; });
+  var emp = items.filter(function(p){ return p.qty <= 0; });
+  var lb = document.getElementById('lb');
+  if (low.length || emp.length) {
+    lb.style.display = 'block';
+    document.getElementById('ll').textContent = low.concat(emp).map(function(p){ return p.emoji + ' ' + p.name; }).join(', ');
+  } else lb.style.display = 'none';
+  if (!items.length) {
+    c.innerHTML = '<div class="efr"><div>🧊</div><p style="font-weight:500;margin-bottom:5px">Lodówka jest pusta</p><p style="font-size:.81rem">Dodaj produkty lub zeskanuj kod kreskowy</p></div>';
+    cb.disabled = true; return;
+  }
+  cb.disabled = false;
+  items.sort(function(a,b){
+    var av = a.qty<=0?2:(a.minQty>0&&a.qty<=a.minQty?1:0);
+    var bv = b.qty<=0?2:(b.minQty>0&&b.qty<=b.minQty?1:0);
+    return bv-av;
+  });
+  var html = '';
+  for (var i = 0; i < items.length; i++) {
+    var p = items[i];
+    var isLow = p.minQty>0&&p.qty<=p.minQty&&p.qty>0;
+    var isEmpty = p.qty<=0;
+    var cls = isEmpty?'pi emp':isLow?'pi low':'pi';
+    var warn = isEmpty?' <span style="color:var(--red);font-size:.68rem">BRAK</span>':isLow?' <span style="color:#e67e22;font-size:.68rem">MAŁO</span>':'';
+    var step = (p.unit==='g'||p.unit==='ml') ? 50 : 1;
+    html += '<div class="' + cls + '">'
+      + '<div class="pe">' + p.emoji + '</div>'
+      + '<div class="pn"><div class="pnm">' + p.name + warn + '</div><div class="psb">Min: ' + (p.minQty||'—') + ' ' + p.unit + '</div></div>'
+      + '<div class="pc">'
+      + '<button class="qb" onclick="chgQ('' + p.id + '',' + p.qty + ',' + step + ',-1)">−</button>'
+      + '<div class="qd">' + p.qty + ' <span style="font-size:.6rem;color:var(--mid)">' + p.unit + '</span></div>'
+      + '<button class="qb" onclick="chgQ('' + p.id + '',' + p.qty + ',' + step + ',1)">+</button>'
+      + '<button class="db" onclick="delP('' + p.id + '','' + p.name.replace(/'/g,"\'") + '')">✕</button>'
+      + '</div></div>';
+  }
+  c.innerHTML = html;
+}
+function cookFridge() {
+  var items = Object.values(FP).filter(function(p){ return p.qty > 0; });
+  if (!items.length) return;
+  document.getElementById('ing').value = items.map(function(p){ return p.name; }).join(', ');
+  showTab('s');
+  doSearch();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// SKANER KODÓW KRESKOWYCH
-let scanStr = null;
-let codeReader = null;
+// ─── SKANER ───────────────────────────────────
+var codeReader = null;
 
-async function startScan() {
-  const wrap = document.getElementById('scan-wrap');
-  wrap.style.display = 'block';
-
+function startScan() {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-    alert('Twoja przeglądarka nie obsługuje kamery. Wpisz kod ręcznie.');
-    wrap.style.display = 'none';
+    alert('Twoja przeglądarka nie obsługuje kamery.\nWpisz kod ręcznie.');
     return;
   }
-
+  if (typeof ZXing === 'undefined') {
+    alert('Biblioteka skanera nie załadowała się.\nOdśwież stronę lub wpisz kod ręcznie.');
+    return;
+  }
+  stopScan();
+  document.getElementById('sw').style.display = 'block';
   try {
-    // Zatrzymaj poprzednią sesję jeśli była
-    stopScan();
-    wrap.style.display = 'block';
-
-    if (typeof ZXing === 'undefined') {
-      alert('Biblioteka skanera nie załadowała się. Wpisz kod ręcznie.');
-      wrap.style.display = 'none';
-      return;
-    }
-
     codeReader = new ZXing.BrowserMultiFormatReader();
-    await codeReader.decodeFromConstraints(
-      { video: { facingMode: 'environment' } },
-      'scan-video',
-      (result, error) => {
+    codeReader.decodeFromConstraints(
+      {video: {facingMode: 'environment'}},
+      'sv',
+      function(result, err) {
         if (result) {
           document.getElementById('bc').value = result.getText();
           stopScan();
@@ -1026,9 +672,8 @@ async function startScan() {
       }
     );
   } catch(e) {
-    console.error('Scanner error:', e);
-    alert('Błąd kamery: ' + e.message + '\nWpisz kod ręcznie.');
-    wrap.style.display = 'none';
+    alert('Błąd skanera: ' + e.message + '\nWpisz kod ręcznie.');
+    document.getElementById('sw').style.display = 'none';
   }
 }
 
@@ -1037,25 +682,52 @@ function stopScan() {
     try { codeReader.reset(); } catch(e) {}
     codeReader = null;
   }
-  const video = document.getElementById('scan-video');
+  var video = document.getElementById('sv');
   if (video && video.srcObject) {
-    video.srcObject.getTracks().forEach(t => t.stop());
+    video.srcObject.getTracks().forEach(function(t){ t.stop(); });
     video.srcObject = null;
   }
-  document.getElementById('scan-wrap').style.display = 'none';
+  document.getElementById('sw').style.display = 'none';
 }
 
-
-async function lookupBC(){
-  const bc=document.getElementById('bc').value.trim();if(!bc){alert('Wpisz kod!');return;}
-  try{const r=await fetch(`https://world.openfoodfacts.org/api/v0/product/${bc}.json`);const d=await r.json();
-  if(d.status===1&&d.product){document.getElementById('pn').value=d.product.product_name_pl||d.product.product_name||'Produkt';}
-  else alert('Nie znaleziono. Wpisz ręcznie.');}catch{alert('Błąd wyszukiwania.');}
+async function lookupBC() {
+  var bc = document.getElementById('bc').value.trim();
+  if (!bc) { alert('Wpisz lub zeskanuj kod!'); return; }
+  try {
+    var r = await fetch('https://world.openfoodfacts.org/api/v0/product/' + bc + '.json');
+    var d = await r.json();
+    if (d.status === 1 && d.product) {
+      document.getElementById('pn').value = d.product.product_name_pl || d.product.product_name || 'Produkt';
+      var q = d.product.quantity || '';
+      if (q.indexOf('kg') >= 0) document.getElementById('pu').value = 'kg';
+      else if (q.indexOf('g') >= 0) document.getElementById('pu').value = 'g';
+      else if (q.indexOf('ml') >= 0) document.getElementById('pu').value = 'ml';
+      else if (q.indexOf('l') >= 0) document.getElementById('pu').value = 'l';
+    } else {
+      alert('Nie znaleziono produktu w bazie.\nWpisz nazwę ręcznie.');
+    }
+  } catch(e) {
+    alert('Błąd połączenia. Wpisz nazwę ręcznie.');
+  }
 }
 
-// POLITYKA
-function showPolicy(){document.getElementById('policy-content').innerHTML=`<h2>Polityka prywatności</h2><h3>1. Dane osobowe (RODO)</h3><p>GotujZtego.pl nie zbiera danych osobowych. Nie wymagamy rejestracji ani podawania imienia, emaila ani żadnych danych identyfikacyjnych.</p><h3>2. Ciasteczka (cookies)</h3><p>Używamy ciasteczek wyłącznie do przechowywania stanu lodówki lokalnie w przeglądarce oraz do obsługi reklam Google AdSense.</p><h3>3. Google AdSense</h3><p>Strona wyświetla reklamy Google AdSense. Google może używać plików cookie do personalizacji reklam. <a href="https://policies.google.com/privacy" target="_blank">Polityka prywatności Google</a>.</p><h3>4. JSONbin.io</h3><p>Stan lodówki może być synchronizowany z JSONbin.io. Dane nie zawierają informacji osobowych.</p>`;document.getElementById('modal-p').classList.add('open');}
-function showReg(){document.getElementById('policy-content').innerHTML=`<h2>Regulamin</h2><h3>1. Postanowienia ogólne</h3><p>GotujZtego.pl udostępnia bezpłatnie bazę przepisów i narzędzie do zarządzania stanem lodówki.</p><h3>2. Przepisy</h3><p>Przepisy są opracowane własnoręcznie. Autor nie ponosi odpowiedzialności za ewentualne błędy.</p><h3>3. Bezpieczeństwo żywności</h3><p>Użytkownik odpowiada za przestrzeganie zasad higieny. Sprawdzaj świeżość składników i stosuj właściwą obróbkę termiczną.</p><h3>4. Reklamy</h3><p>Serwis wyświetla reklamy Google AdSense zarządzane przez Google.</p>`;document.getElementById('modal-p').classList.add('open');}
+// ─── POLITYKA ──────────────────────────────────
+function showPol() {
+  document.getElementById('pc').innerHTML = '<h2>Polityka prywatności</h2>'
+    + '<h3>1. Dane osobowe (RODO)</h3><p>GotujZtego.pl nie zbiera danych osobowych. Nie wymagamy rejestracji.</p>'
+    + '<h3>2. Ciasteczka</h3><p>Używamy ciasteczek do przechowywania stanu lodówki i obsługi reklam Google AdSense.</p>'
+    + '<h3>3. Google AdSense</h3><p>Strona wyświetla reklamy Google AdSense. <a href="https://policies.google.com/privacy" target="_blank">Polityka Google</a>.</p>'
+    + '<h3>4. JSONbin.io</h3><p>Stan lodówki synchronizowany z JSONbin.io. Dane nie zawierają informacji osobowych.</p>';
+  document.getElementById('ovp').classList.add('open');
+}
+function showReg() {
+  document.getElementById('pc').innerHTML = '<h2>Regulamin</h2>'
+    + '<h3>1. Postanowienia ogólne</h3><p>GotujZtego.pl udostępnia bezpłatnie bazę przepisów i narzędzie do zarządzania lodówką.</p>'
+    + '<h3>2. Przepisy</h3><p>Przepisy opracowane własnoręcznie.</p>'
+    + '<h3>3. Bezpieczeństwo żywności</h3><p>Sprawdzaj świeżość składników i stosuj właściwą obróbkę termiczną.</p>'
+    + '<h3>4. Reklamy</h3><p>Serwis wyświetla reklamy Google AdSense zarządzane przez Google.</p>';
+  document.getElementById('ovp').classList.add('open');
+}
 </script>
 </body>
 </html>
