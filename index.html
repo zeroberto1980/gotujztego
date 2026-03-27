@@ -850,17 +850,47 @@ async function lookupBC() {
   var bc = document.getElementById('bc').value.trim();
   if (!bc) { alert('Wpisz lub zeskanuj kod!'); return; }
   try {
-    var r = await fetch('https://world.openfoodfacts.org/api/v0/product/' + bc + '.json');
-    var d = await r.json();
-    if (d.status === 1 && d.product) {
-      document.getElementById('pn').value = d.product.product_name_pl || d.product.product_name || 'Produkt';
-      var q = d.product.quantity || '';
-      if (q.indexOf('kg') >= 0) document.getElementById('pu').value = 'kg';
-      else if (q.indexOf('g') >= 0) document.getElementById('pu').value = 'g';
-      else if (q.indexOf('ml') >= 0) document.getElementById('pu').value = 'ml';
-      else if (q.indexOf('l') >= 0) document.getElementById('pu').value = 'l';
-    } else { alert('Nie znaleziono produktu. Wpisz nazwę ręcznie.'); }
-  } catch(e) { alert('Błąd połączenia. Wpisz nazwę ręcznie.'); }
+    // Uzyj polskiej wersji API - lepsza baza polskich produktow
+    var urls = [
+      'https://pl.openfoodfacts.org/api/v0/product/' + bc + '.json',
+      'https://world.openfoodfacts.org/api/v0/product/' + bc + '.json'
+    ];
+    var found = false;
+    for (var i = 0; i < urls.length; i++) {
+      try {
+        var r = await fetch(urls[i]);
+        var d = await r.json();
+        if (d.status === 1 && d.product) {
+          // Pobierz nazwe - polska, potem angielska, potem generyczna
+          var name = d.product.product_name_pl
+            || d.product.product_name_pl_PL
+            || d.product.product_name
+            || d.product.generic_name_pl
+            || d.product.generic_name
+            || '';
+          if (!name && d.product.brands) {
+            name = d.product.brands;
+          }
+          if (name) {
+            document.getElementById('pn').value = name;
+            var q = d.product.quantity || '';
+            if (q.indexOf('kg') >= 0) document.getElementById('pu').value = 'kg';
+            else if (q.indexOf('g') >= 0) document.getElementById('pu').value = 'g';
+            else if (q.indexOf('ml') >= 0) document.getElementById('pu').value = 'ml';
+            else if (q.indexOf('l') >= 0) document.getElementById('pu').value = 'l';
+            found = true;
+            break;
+          }
+        }
+      } catch(e2) { continue; }
+    }
+    if (!found) {
+      alert('Nie znaleziono produktu (kod: ' + bc + ').
+Wpisz nazwę ręcznie.');
+    }
+  } catch(e) {
+    alert('Błąd połączenia. Wpisz nazwę ręcznie.');
+  }
 }
 
 // ═══════════════════════════════
