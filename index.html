@@ -258,7 +258,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
 <nav>
   <a href="/" class="logo">Gotuj<em>Z</em>tego</a>
   <div class="ntabs">
-    <button class="ntab on" id="ntab-s" onclick="showTab('s')">&#128269; Sk&#322;adniki</button>
+    <button class="ntab on" id="ntab-s" onclick="showTab('s')">&#128269; Znajd&#378; przepis</button>
     <button class="ntab" id="ntab-f" onclick="showTab('f')">&#129744; Lod&#243;wka</button>
   </div>
 </nav>
@@ -812,17 +812,38 @@ function startScan() {
   document.getElementById('scanwrap').style.display = 'block';
   try {
     codeReader = new ZXing.BrowserMultiFormatReader();
-    codeReader.decodeFromConstraints(
-      {video: {facingMode: 'environment'}},
-      'scanvideo',
-      function(result, err) {
+    // Najpierw pobierz liste kamer
+    ZXing.BrowserMultiFormatReader.listVideoInputDevices().then(function(devices) {
+      // Wybierz tylna kamera jesli dostepna
+      var deviceId = undefined;
+      for (var i = 0; i < devices.length; i++) {
+        var label = devices[i].label.toLowerCase();
+        if (label.indexOf('back') >= 0 || label.indexOf('rear') >= 0 || label.indexOf('tylna') >= 0 || label.indexOf('environment') >= 0) {
+          deviceId = devices[i].deviceId;
+          break;
+        }
+      }
+      // Jesli nie znaleziono tylnej - uzyj ostatniej (zwykle tylna)
+      if (!deviceId && devices.length > 0) {
+        deviceId = devices[devices.length - 1].deviceId;
+      }
+      codeReader.decodeFromVideoDevice(deviceId, 'scanvideo', function(result, err) {
         if (result) {
           document.getElementById('bc').value = result.getText();
           stopScan();
           lookupBC();
         }
-      }
-    );
+      });
+    }).catch(function(e) {
+      // Fallback - bez wyboru kamery
+      codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
+        if (result) {
+          document.getElementById('bc').value = result.getText();
+          stopScan();
+          lookupBC();
+        }
+      });
+    });
   } catch(e) {
     alert('Błąd skanera: ' + e.message);
     document.getElementById('scanwrap').style.display = 'none';
