@@ -619,7 +619,7 @@ function openRecipe(id) {
 // ═══════════════════════════════
 // LODÓWKA
 // ═══════════════════════════════
-var JBID = '69c45c4dc3097a1dd55dbe3f';
+var JBID = '69c6d38cb7ec241ddcae2195';
 var JBKEY = '$2a$10$XnMuM3jGgMWO2ZTzyz2asO6UxL4DvXP7btnsNK02DygnKwy56M4gS';
 var FP = {};
 
@@ -641,7 +641,7 @@ async function saveCloud(d) {
   try {
     var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID, {
       method: 'PUT',
-      headers: {'Content-Type':'application/json','X-Master-Key':JBKEY,'X-Bin-Versioning':'false'},
+      headers: {'Content-Type':'application/json','X-Access-Key':JBKEY,'X-Bin-Versioning':'false'},
       body: JSON.stringify(d)
     });
     setSP(r.ok, r.ok ? '☁️ Zsync.' : '⚠️ Błąd');
@@ -651,7 +651,7 @@ async function saveCloud(d) {
 async function loadCloud() {
   try {
     var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID + '/latest', {
-      headers: {'X-Master-Key':JBKEY,'X-Bin-Meta':'false'}
+      headers: {'X-Access-Key':JBKEY,'X-Bin-Meta':'false'}
     });
     var txt = await r.text();
     try {
