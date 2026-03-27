@@ -901,8 +901,33 @@ let FP={};
 
 function saveCookie(d){document.cookie=`fridge=${encodeURIComponent(JSON.stringify(d))};max-age=31536000;path=/;SameSite=Lax`;}
 function loadCookie(){const m=document.cookie.match(/fridge=([^;]+)/);if(!m)return{};try{return JSON.parse(decodeURIComponent(m[1]));}catch{return{};}}
-async function saveCloud(d){if(!JSONBIN_ID||!JSONBIN_KEY)return;try{await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Access-Key':JSONBIN_KEY},body:JSON.stringify(d)});setSP(true,'☁️ Zsync.');}catch{setSP(false,'⚠️ Błąd');}}
-async function loadCloud(){if(!JSONBIN_ID||!JSONBIN_KEY){FP=loadCookie();renderFridge(FP);return;}try{const r=await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}/latest`,{headers:{'X-Access-Key':JSONBIN_KEY}});const d=await r.json();FP=d.record||{};saveCookie(FP);renderFridge(FP);setSP(true,'☁️ Zsync.');}catch{FP=loadCookie();renderFridge(FP);setSP(false,'💾 Lokalnie');}}
+async function saveCloud(d){
+  if(!JSONBIN_ID||!JSONBIN_KEY)return;
+  try{
+    const r=await fetch('https://api.jsonbin.io/v3/b/'+JSONBIN_ID,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','X-Access-Key':JSONBIN_KEY,'X-Bin-Versioning':false},
+      body:JSON.stringify(d)
+    });
+    if(r.ok)setSP(true,'☁️ Zsync.');
+    else setSP(false,'⚠️ Błąd '+r.status);
+  }catch(e){setSP(false,'⚠️ Błąd sieci');}
+}
+async function loadCloud(){
+  if(!JSONBIN_ID||!JSONBIN_KEY){FP=loadCookie();renderFridge(FP);return;}
+  try{
+    const r=await fetch('https://api.jsonbin.io/v3/b/'+JSONBIN_ID+'/latest',{headers:{'X-Access-Key':JSONBIN_KEY,'X-Bin-Meta':false}});
+    const text=await r.text();
+    try{
+      const d=JSON.parse(text);
+      FP=d.record||d||{};
+    }catch{FP={};}
+    saveCookie(FP);renderFridge(FP);setSP(true,'☁️ Zsync.');
+  }catch(e){
+    console.log('Cloud error:',e);
+    FP=loadCookie();renderFridge(FP);setSP(false,'💾 Lokalnie');
+  }
+}
 function setSP(ok,msg){const e=document.getElementById('sync');e.textContent=msg;e.className='sync-pill'+(ok?' ok':' err');}
 loadCloud();
 async function saveAll(){saveCookie(FP);await saveCloud(FP);}
