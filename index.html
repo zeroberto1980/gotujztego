@@ -812,37 +812,14 @@ function startScan() {
   document.getElementById('scanwrap').style.display = 'block';
   try {
     codeReader = new ZXing.BrowserMultiFormatReader();
-    // Najpierw pobierz liste kamer
-    ZXing.BrowserMultiFormatReader.listVideoInputDevices().then(function(devices) {
-      // Wybierz tylna kamera jesli dostepna
-      var deviceId = undefined;
-      for (var i = 0; i < devices.length; i++) {
-        var label = devices[i].label.toLowerCase();
-        if (label.indexOf('back') >= 0 || label.indexOf('rear') >= 0 || label.indexOf('tylna') >= 0 || label.indexOf('environment') >= 0) {
-          deviceId = devices[i].deviceId;
-          break;
-        }
+    // Bezposrednio decodeFromVideoDevice z undefined = domyslna kamera
+    // ZXing 0.18.6 - ta metoda dziala
+    codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
+      if (result) {
+        document.getElementById('bc').value = result.getText();
+        stopScan();
+        lookupBC();
       }
-      // Jesli nie znaleziono tylnej - uzyj ostatniej (zwykle tylna)
-      if (!deviceId && devices.length > 0) {
-        deviceId = devices[devices.length - 1].deviceId;
-      }
-      codeReader.decodeFromVideoDevice(deviceId, 'scanvideo', function(result, err) {
-        if (result) {
-          document.getElementById('bc').value = result.getText();
-          stopScan();
-          lookupBC();
-        }
-      });
-    }).catch(function(e) {
-      // Fallback - bez wyboru kamery
-      codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
-        if (result) {
-          document.getElementById('bc').value = result.getText();
-          stopScan();
-          lookupBC();
-        }
-      });
     });
   } catch(e) {
     alert('Błąd skanera: ' + e.message);
