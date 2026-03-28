@@ -467,31 +467,34 @@ fetch('przepisy.json')
 function doSearch() {
   var raw = document.getElementById('ing').value.trim().toLowerCase();
   var kw = raw ? raw.split(/[\s,]+/).filter(function(k) { return k.length > 1; }) : [];
+
+  if (kw.length === 0 && AF.length === 0) {
+    document.getElementById('reswrap').style.display = 'none';
+    return;
+  }
+
   var results = RECIPES.slice();
 
   if (AF.length > 0) {
     results = results.filter(function(r) {
       return AF.some(function(f) {
-        return r.tagi.some(function(t) {
-          return t.toLowerCase().indexOf(f) >= 0;
-        });
+        return r.tagi.some(function(t) { return t.toLowerCase().indexOf(f) >= 0; });
       });
     });
   }
 
   if (kw.length > 0) {
     results = results.map(function(r) {
-      var txt = r.skladniki.map(function(s) { return s.p.toLowerCase(); }).join(' ');
-      var score = kw.filter(function(k) {
-        return txt.indexOf(k) >= 0 || r.nazwa.toLowerCase().indexOf(k) >= 0;
-      }).length;
-      return {
-        id:r.id, nazwa:r.nazwa, czas:r.czas, poziom:r.poziom,
-        porcje:r.porcje, tagi:r.tagi, skladniki:r.skladniki,
-        kroki:r.kroki, tipy:r.tipy, safety:r.safety, _score:score
-      };
-    }).filter(function(r) { return r._score > 0; })
-      .sort(function(a, b) { return b._score - a._score; });
+      var ingText = r.skladniki.map(function(s) { return s.p.toLowerCase(); }).join(' ');
+      var ingMatches = kw.filter(function(k) { return ingText.indexOf(k) >= 0; }).length;
+      var nazwaMatches = kw.filter(function(k) { return r.nazwa.toLowerCase().indexOf(k) >= 0; }).length;
+      var score = ingMatches * 2 + nazwaMatches;
+      var out = {_score:score, _ing:ingMatches};
+      var keys = ['id','nazwa','czas','poziom','porcje','tagi','skladniki','kroki','tipy','safety'];
+      for (var i=0;i<keys.length;i++) out[keys[i]] = r[keys[i]];
+      return out;
+    }).filter(function(r) { return r._ing > 0; })
+      .sort(function(a,b) { return b._score - a._score; });
   }
 
   renderResults(results);
@@ -510,9 +513,9 @@ function renderResults(results) {
   wrap.style.display = 'block';
 
   if (!results.length) {
-    document.getElementById('rh').textContent = 'Brak wyników';
+    document.getElementById('rh').textContent = 'Brak przepisów';
     document.getElementById('rcnt').textContent = '';
-    grid.innerHTML = '<div class="nores"><div style="font-size:3rem;margin-bottom:14px">🔍</div><p>Nie znaleziono przepisów. Spróbuj innych składników.</p></div>';
+    grid.innerHTML = '<div class="nores"><div style="font-size:3rem;margin-bottom:14px">🤔</div><p style="font-size:1.1rem;font-weight:500;margin-bottom:8px">Nie znaleziono przepisów</p><p>Wybierz inne produkty lub zmień kombinację składników.</p></div>';
     return;
   }
 
@@ -619,8 +622,6 @@ function openRecipe(id) {
 // ═══════════════════════════════
 // LODÓWKA
 // ═══════════════════════════════
-var JBID = '69c6d38cb7ec241ddcae2195';
-var JBKEY = '$2a$10$XnMuM3jGgMWO2ZTzyz2asO6UxL4DvXP7btnsNK02DygnKwy56M4gS';
 var FP = {};
 
 function saveCookie(d) {
@@ -631,46 +632,18 @@ function loadCookie() {
   if (!m) return {};
   try { return JSON.parse(decodeURIComponent(m[1])); } catch(e) { return {}; }
 }
-function setSP(ok, msg) {
+function setSP(msg) {
   var e = document.getElementById('spill');
   e.textContent = msg;
-  e.className = 'spill ' + (ok ? 'ok' : 'er');
+  e.className = 'spill ok';
 }
 
-async function saveCloud(d) {
-  try {
-    var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID, {
-      method: 'PUT',
-      headers: {'Content-Type':'application/json','X-Access-Key':JBKEY,'X-Bin-Versioning':'false'},
-      body: JSON.stringify(d)
-    });
-    setSP(r.ok, r.ok ? '☁️ Zsync.' : '⚠️ Błąd');
-  } catch(e) { setSP(false, '⚠️ Offline'); }
-}
+// Zaladuj dane z ciasteczek przy starcie
+FP = loadCookie();
+renderFridge(FP);
+setSP('💾 Lokalnie');
 
-async function loadCloud() {
-  try {
-    var r = await fetch('https://api.jsonbin.io/v3/b/' + JBID + '/latest', {
-      headers: {'X-Access-Key':JBKEY,'X-Bin-Meta':'false'}
-    });
-    var txt = await r.text();
-    try {
-      var d = JSON.parse(txt);
-      FP = d.record || d || {};
-    } catch(e) { FP = {}; }
-    saveCookie(FP);
-    renderFridge(FP);
-    setSP(true, '☁️ Zsync.');
-  } catch(e) {
-    FP = loadCookie();
-    renderFridge(FP);
-    setSP(false, '💾 Lokalnie');
-  }
-}
-
-loadCloud();
-
-async function saveAll() { saveCookie(FP); await saveCloud(FP); }
+function saveAll() { saveCookie(FP); setSP('💾 Zapisano'); }
 
 var EDICT = {
   jajka:'🥚',jajko:'🥚',mleko:'🥛',maslo:'🧈',ser:'🧀',chleb:'🍞',
@@ -913,7 +886,7 @@ async function lookupBC() {
 // POLITYKA
 // ═══════════════════════════════
 function showPol() {
-  document.getElementById('pc').innerHTML = '<h2>Polityka prywatności</h2><h3>1. Dane osobowe (RODO)</h3><p>GotujZtego.pl nie zbiera danych osobowych. Nie wymagamy rejestracji.</p><h3>2. Ciasteczka</h3><p>Używamy ciasteczek do przechowywania stanu lodówki i obsługi reklam Google AdSense.</p><h3>3. Google AdSense</h3><p>Strona wyświetla reklamy Google AdSense.</p><h3>4. JSONbin.io</h3><p>Stan lodówki synchronizowany z JSONbin.io. Dane nie zawierają informacji osobowych.</p>';
+  document.getElementById('pc').innerHTML = '<h2>Polityka prywatności</h2><h3>1. Dane osobowe (RODO)</h3><p>GotujZtego.pl nie zbiera danych osobowych. Nie wymagamy rejestracji.</p><h3>2. Ciasteczka</h3><p>Używamy ciasteczek do przechowywania stanu lodówki i obsługi reklam Google AdSense.</p><h3>3. Google AdSense</h3><p>Strona wyświetla reklamy Google AdSense.</p><h3>4. Przechowywanie danych</h3><p>Stan lodówki przechowywany jest wyłącznie lokalnie w ciasteczkach Twojej przeglądarki. Dane nie są wysyłane na żaden serwer.</p>';
   document.getElementById('ovp').classList.add('open');
 }
 function showReg() {
