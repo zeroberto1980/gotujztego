@@ -347,6 +347,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
       <div class="addwrap">
         <div>
           <div class="slbl">Dodaj produkt</div>
+          <p style="font-size:.82rem;color:var(--mid);margin-bottom:14px;line-height:1.6">&#128247; Zeskanuj produkt za pomoc&#261; aparatu lub wpisz nazw&#281; r&#281;cznie poni&#380;ej.</p>
           <div class="bcrow">
             <input type="text" class="inp" id="bc" placeholder="Kod kreskowy EAN..."/>
             <button class="bs bsm" onclick="startScan()">&#128247; Skanuj</button>
@@ -473,20 +474,29 @@ function doSearch() {
     return;
   }
 
-  // Przypraway i podstawowe dodatki - ignorowane przy wyszukiwaniu
-  var IGNORUJ = ['sól','sol','pieprz','cukier','oliwa','olej','masło','maslo',
-    'woda','ocet','mąka','maka','skrobia','proszek','soda','drożdże','drozdze',
+  var IGNORUJ = ['sol','pieprz','cukier','oliwa','olej','maslo','masła',
+    'woda','ocet','maka','mąka','skrobia','proszek','soda','drozdze','drożdże',
     'majeranek','oregano','tymianek','rozmaryn','bazylia','koper','natka',
-    'cynamon','kumin','kurkuma','curry','imbir','czosnek','czosn','papryka miel',
-    'liść','lisc','ziele','pieprz ziar','kminek','gałka','galka','wanilia',
-    'ekstrakt','kolendra','mięta','mieta','szałwia','szalwia'];
+    'cynamon','kumin','kurkuma','curry','imbir','papryka miel',
+    'lisc','liść','ziele','kminek','galka','gałka','wanilia',
+    'ekstrakt','kolendra','mieta','mięta','szalwia','szałwia'];
 
-  function czyPrzyprawа(skladnik) {
-    var s = skladnik.toLowerCase();
+  function czyPrzyprawa(skladnik) {
+    var s = skladnik.toLowerCase()
+      .replace(/ą/g,'a').replace(/ę/g,'e').replace(/ó/g,'o')
+      .replace(/ś/g,'s').replace(/ł/g,'l').replace(/ż/g,'z')
+      .replace(/ź/g,'z').replace(/ć/g,'c').replace(/ń/g,'n');
     for (var i = 0; i < IGNORUJ.length; i++) {
       if (s.indexOf(IGNORUJ[i]) >= 0) return true;
     }
     return false;
+  }
+
+  function normalizuj(str) {
+    return str.toLowerCase()
+      .replace(/ą/g,'a').replace(/ę/g,'e').replace(/ó/g,'o')
+      .replace(/ś/g,'s').replace(/ł/g,'l').replace(/ż/g,'z')
+      .replace(/ź/g,'z').replace(/ć/g,'c').replace(/ń/g,'n');
   }
 
   var results = RECIPES.slice();
@@ -500,30 +510,58 @@ function doSearch() {
   }
 
   if (kw.length > 0) {
+    // Dla kazdego slowa klucz sprawdz czy jest w jakimkolwiek przepisie
+    var kwNorm = kw.map(normalizuj);
+
     results = results.map(function(r) {
-      // Bierz tylko glowne skladniki (bez przypraw)
-      var glowne = r.skladniki.filter(function(s) { return !czyPrzyprawа(s.p); });
-      var ingText = glowne.map(function(s) { return s.p.toLowerCase(); }).join(' ');
+      var glowne = r.skladniki.filter(function(s) { return !czyPrzyprawa(s.p); });
+      var ingText = normalizuj(glowne.map(function(s) { return s.p; }).join(' '));
+      var nazwaText = normalizuj(r.nazwa);
 
-      // Ile slow kluczowych uzytkownika pasuje do skladnikow przepisu
-      var pasuje = kw.filter(function(k) { return ingText.indexOf(k) >= 0; }).length;
+      var pasujace = kwNorm.filter(function(k) {
+        return ingText.indexOf(k) >= 0 || nazwaText.indexOf(k) >= 0;
+      });
 
-      var out = {_pasuje: pasuje, _total: kw.length};
+      var out = {_pasuje: pasujace.length, _total: kwNorm.length};
       var keys = ['id','nazwa','czas','poziom','porcje','tagi','skladniki','kroki','tipy','safety'];
       for (var i = 0; i < keys.length; i++) out[keys[i]] = r[keys[i]];
       return out;
-    }).filter(function(r) {
-      // WSZYSTKIE wpisane skladniki musza byc w przepisie
-      return r._pasuje === r._total;
-    }).sort(function(a, b) {
-      // Sortuj po liczbie glownych skladnikow (mniej = prostszy przepis)
-      var ag = a.skladniki.filter(function(s){ return !czyPrzyprawа(s.p); }).length;
-      var bg = b.skladniki.filter(function(s){ return !czyPrzyprawа(s.p); }).length;
-      return ag - bg;
     });
+
+    // Sprawdz ktore slowa klucz w ogole wystepuja w jakims przepisie
+    var slowaKtoreMamy = kwNorm.filter(function(k) {
+      return results.some(function(r) {
+        var glowne = r.skladniki.filter(function(s) { return !czyPrzyprawa(s.p); });
+        var ingText = normalizuj(glowne.map(function(s) { return s.p; }).join(' '));
+        var nazwaText = normalizuj(r.nazwa);
+        return ingText.indexOf(k) >= 0 || nazwaText.indexOf(k) >= 0;
+      });
+    });
+
+    // Filtruj tylko przepisy gdzie WSZYSTKIE wpisane slowa pasuja
+    var pelneWyniki = results.filter(function(r) { return r._pasuje === r._total; })
+      .sort(function(a, b) {
+        var ag = a.skladniki.filter(function(s){ return !czyPrzyprawa(s.p); }).length;
+        var bg = b.skladniki.filter(function(s){ return !czyPrzyprawa(s.p); }).length;
+        return ag - bg;
+      });
+
+    if (pelneWyniki.length > 0) {
+      // Znaleziono przepisy ze wszystkimi slowami
+      renderResults(pelneWyniki, kw, 'all');
+    } else if (slowaKtoreMamy.length > 0) {
+      // Znaleziono tylko niektore slowa - pokaz przepisy z czescia slow
+      var czesciowe = results.filter(function(r) { return r._pasuje > 0; })
+        .sort(function(a,b){ return b._pasuje - a._pasuje; });
+      renderResults(czesciowe, slowaKtoreMamy, 'partial');
+    } else {
+      // Zadne slowo nie pasuje
+      renderResults([], [], 'none');
+    }
+    return;
   }
 
-  renderResults(results);
+  renderResults(results, [], 'all');
 }
 
 function tgF(cat, el) {
@@ -533,20 +571,30 @@ function tgF(cat, el) {
   if (document.getElementById('ing').value.trim() || AF.length > 0) doSearch();
 }
 
-function renderResults(results) {
+function renderResults(results, slowa, tryb) {
   var wrap = document.getElementById('reswrap');
   var grid = document.getElementById('rg');
   wrap.style.display = 'block';
 
+  var rh = document.getElementById('rh');
+  var rcnt = document.getElementById('rcnt');
+
   if (!results.length) {
-    document.getElementById('rh').textContent = 'Brak przepisów';
-    document.getElementById('rcnt').textContent = '';
-    grid.innerHTML = '<div class="nores"><div style="font-size:3rem;margin-bottom:14px">🤔</div><p style="font-size:1.1rem;font-weight:500;margin-bottom:8px">Nie znaleziono przepisów</p><p>Wybierz inne produkty lub zmień kombinację składników.</p></div>';
+    rh.textContent = 'Brak przepisu';
+    rcnt.textContent = '';
+    grid.innerHTML = '<div class="nores"><div style="font-size:3rem;margin-bottom:14px">\u{1F615}</div><p style="font-size:1.1rem;font-weight:500;margin-bottom:8px">Brak przepisu</p><p style="font-size:.85rem">Nie mamy przepisu z tymi sk\u0142adnikami.<br>Spr\u00f3buj wpisa\u0107 inne produkty.</p></div>';
     return;
   }
 
-  document.getElementById('rh').textContent = 'Znalezione przepisy';
-  document.getElementById('rcnt').textContent = results.length + (results.length === 1 ? ' przepis' : ' przepisów');
+  var nazwaKlucz = (slowa && slowa.length > 0) ? slowa.join(', ') : '';
+  if (tryb === 'partial') {
+    rh.textContent = 'Znaleziono przepis ze s\u0142owem kluczem: ' + nazwaKlucz;
+  } else if (nazwaKlucz) {
+    rh.textContent = 'Znaleziono przepis ze s\u0142owem kluczem: ' + nazwaKlucz;
+  } else {
+    rh.textContent = 'Znalezione przepisy';
+  }
+  rcnt.textContent = results.length + (results.length === 1 ? ' przepis' : ' przepis\u00f3w');
 
   var html = '';
   for (var i = 0; i < results.length; i++) {
