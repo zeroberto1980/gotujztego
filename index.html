@@ -473,6 +473,22 @@ function doSearch() {
     return;
   }
 
+  // Przypraway i podstawowe dodatki - ignorowane przy wyszukiwaniu
+  var IGNORUJ = ['sól','sol','pieprz','cukier','oliwa','olej','masło','maslo',
+    'woda','ocet','mąka','maka','skrobia','proszek','soda','drożdże','drozdze',
+    'majeranek','oregano','tymianek','rozmaryn','bazylia','koper','natka',
+    'cynamon','kumin','kurkuma','curry','imbir','czosnek','czosn','papryka miel',
+    'liść','lisc','ziele','pieprz ziar','kminek','gałka','galka','wanilia',
+    'ekstrakt','kolendra','mięta','mieta','szałwia','szalwia'];
+
+  function czyPrzyprawа(skladnik) {
+    var s = skladnik.toLowerCase();
+    for (var i = 0; i < IGNORUJ.length; i++) {
+      if (s.indexOf(IGNORUJ[i]) >= 0) return true;
+    }
+    return false;
+  }
+
   var results = RECIPES.slice();
 
   if (AF.length > 0) {
@@ -485,16 +501,26 @@ function doSearch() {
 
   if (kw.length > 0) {
     results = results.map(function(r) {
-      var ingText = r.skladniki.map(function(s) { return s.p.toLowerCase(); }).join(' ');
-      var ingMatches = kw.filter(function(k) { return ingText.indexOf(k) >= 0; }).length;
-      var nazwaMatches = kw.filter(function(k) { return r.nazwa.toLowerCase().indexOf(k) >= 0; }).length;
-      var score = ingMatches * 2 + nazwaMatches;
-      var out = {_score:score, _ing:ingMatches};
+      // Bierz tylko glowne skladniki (bez przypraw)
+      var glowne = r.skladniki.filter(function(s) { return !czyPrzyprawа(s.p); });
+      var ingText = glowne.map(function(s) { return s.p.toLowerCase(); }).join(' ');
+
+      // Ile slow kluczowych uzytkownika pasuje do skladnikow przepisu
+      var pasuje = kw.filter(function(k) { return ingText.indexOf(k) >= 0; }).length;
+
+      var out = {_pasuje: pasuje, _total: kw.length};
       var keys = ['id','nazwa','czas','poziom','porcje','tagi','skladniki','kroki','tipy','safety'];
-      for (var i=0;i<keys.length;i++) out[keys[i]] = r[keys[i]];
+      for (var i = 0; i < keys.length; i++) out[keys[i]] = r[keys[i]];
       return out;
-    }).filter(function(r) { return r._ing > 0; })
-      .sort(function(a,b) { return b._score - a._score; });
+    }).filter(function(r) {
+      // WSZYSTKIE wpisane skladniki musza byc w przepisie
+      return r._pasuje === r._total;
+    }).sort(function(a, b) {
+      // Sortuj po liczbie glownych skladnikow (mniej = prostszy przepis)
+      var ag = a.skladniki.filter(function(s){ return !czyPrzyprawа(s.p); }).length;
+      var bg = b.skladniki.filter(function(s){ return !czyPrzyprawа(s.p); }).length;
+      return ag - bg;
+    });
   }
 
   renderResults(results);
