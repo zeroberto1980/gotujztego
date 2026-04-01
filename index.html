@@ -184,8 +184,6 @@ textarea::placeholder{color:var(--line)}
 .mt{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1.1;margin-bottom:18px}
 .mm{display:flex;gap:20px;font-size:.78rem;color:var(--mid)}
 .mcl{position:absolute;top:16px;right:16px;background:none;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:.85rem;color:var(--mid);display:flex;align-items:center;justify-content:center}
-.mshare{position:absolute;top:16px;right:58px;background:none;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:.85rem;color:var(--mid);display:flex;align-items:center;justify-content:center}
-.mshare:hover{background:var(--dark);color:#fff}
 .mcl:hover{background:var(--dark);color:#fff}
 .mb{padding:36px 44px}
 .ms{margin-bottom:32px}
@@ -222,14 +220,11 @@ textarea::placeholder{color:var(--line)}
 .inprow{display:grid;grid-template-columns:1fr 75px 88px;gap:7px;margin-bottom:10px}
 .bcrow{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
 .bcrow .inp{flex:1;min-width:100px}
-#scanwrap{display:none;position:fixed;inset:0;z-index:1000;background:#000;flex-direction:column;align-items:center;justify-content:center}
-#scanwrap.open{display:flex}
-#scanvideo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#scanwrap{display:none;margin:10px 0;position:relative;overflow:hidden}
+#scanvideo{width:100%;max-height:220px;object-fit:cover;display:block}
 #scanline{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-#scanline::before{content:'';width:70%;max-width:300px;height:200px;border:3px solid var(--red);box-shadow:0 0 0 9999px rgba(0,0,0,.55);border-radius:8px}
-#scaninfo{position:absolute;top:50%;left:50%;transform:translate(-50%,80px);color:#fff;font-size:.85rem;letter-spacing:.05em;text-align:center;z-index:2}
-.scancls{position:absolute;top:20px;right:20px;background:rgba(0,0,0,.7);color:#fff;border:2px solid rgba(255,255,255,.4);padding:10px 18px;cursor:pointer;font-family:var(--sans);font-size:.82rem;border-radius:4px;z-index:2}
-.scancls:hover{background:rgba(255,255,255,.2)}
+#scanline::before{content:'';width:65%;height:35%;border:2px solid var(--red);box-shadow:0 0 0 9999px rgba(0,0,0,.45)}
+.scancls{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;border:none;padding:4px 10px;cursor:pointer;font-family:var(--sans);font-size:.74rem}
 .pl{display:flex;flex-direction:column}
 .pi{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .pi:first-child{border-top:1px solid var(--line)}
@@ -683,7 +678,6 @@ function addToHistory(recipe) {
 function renderHistory() {
   var sec = document.getElementById('hist-section');
   var g = document.getElementById('hist-g');
-  if (!sec || !g) return;
   if (!HISTORY.length) { sec.style.display = 'none'; return; }
   sec.style.display = 'block';
   var EMMAP2 = {zupa:'🍲',obiad:'🍽️',sniadanie:'🌅',wegetarianskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',szybkie:'⚡',mieso:'🥩',ryba:'🐟'};
@@ -965,7 +959,6 @@ function openRecipe(id) {
 
   var html = '<div class="mh">';
   html += '<button class="mcl" id="mclosebtn">✕</button>';
-  html += '<button class="mshare" id="msharebtn" title="Udostępnij">🔗</button>';
   html += '<div class="mk">' + em + ' ' + r.tagi.join(' · ') + '</div>';
   html += '<div class="mt">' + r.nazwa + '</div>';
   html += '<div class="mm"><span>⏱ ' + r.czas + ' min</span><span>👥 ' + r.porcje + ' porcje</span><span>📊 ' + r.poziom + '</span></div>';
@@ -974,24 +967,13 @@ function openRecipe(id) {
   html += '<div class="ms"><div class="mst">Przygotowanie</div><ol class="sol">' + steps + '</ol></div>';
   html += tips + safe + '</div>';
 
+  addToHistory(r);
   document.getElementById('mc').innerHTML = html;
+  // Dodaj do historii
   addToHistory(r);
   document.getElementById('mclosebtn').addEventListener('click', function() {
     document.getElementById('ov').classList.remove('open');
   });
-  var shareBtn = document.getElementById('msharebtn');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', function() {
-      var url = window.location.origin + window.location.pathname + '?p=' + r.id;
-      if (navigator.share) {
-        navigator.share({ title: r.nazwa, text: 'Przepis: ' + r.nazwa, url: url });
-      } else {
-        navigator.clipboard.writeText(url).then(function() {
-          alert('Link skopiowany!');
-        }).catch(function() { prompt('Skopiuj link:', url); });
-      }
-    });
-  }
   document.getElementById('ov').classList.add('open');
 }
 
@@ -1171,7 +1153,7 @@ function cookFridge() {
 var codeReader = null;
 var scanInterval = null;
 
-async function startScan() {
+function startScan() {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     alert('Twoja przeglądarka nie obsługuje kamery. Wpisz kod ręcznie.');
     return;
@@ -1181,7 +1163,7 @@ async function startScan() {
     return;
   }
   stopScan();
-  document.getElementById('scanwrap').classList.add('open');
+  document.getElementById('scanwrap').style.display = 'block';
   try {
     var hints = new Map();
     hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
@@ -1194,21 +1176,7 @@ async function startScan() {
       ZXing.BarcodeFormat.CODE_39
     ]);
     codeReader = new ZXing.BrowserMultiFormatReader(hints);
-    // Na telefonie uzyj tylnej kamery
-    var deviceId = undefined;
-    if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
-      try {
-        var devices = await navigator.mediaDevices.enumerateDevices();
-        var cameras = devices.filter(function(d) { return d.kind === 'videoinput'; });
-        // Szukaj tylnej kamery
-        var back = cameras.find(function(c) {
-          return /back|rear|environment/i.test(c.label);
-        });
-        if (back) deviceId = back.deviceId;
-        else if (cameras.length > 1) deviceId = cameras[cameras.length - 1].deviceId;
-      } catch(e2) {}
-    }
-    codeReader.decodeFromVideoDevice(deviceId, 'scanvideo', function(result, err) {
+    codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
       if (result) {
         document.getElementById('bc').value = result.getText();
         stopScan();
@@ -1217,7 +1185,7 @@ async function startScan() {
     });
   } catch(e) {
     alert('Błąd skanera: ' + e.message);
-    document.getElementById('scanwrap').classList.remove('open');
+    document.getElementById('scanwrap').style.display = 'none';
   }
 }
 
@@ -1225,7 +1193,9 @@ function stopScan() {
   if (codeReader) { try { codeReader.reset(); } catch(e) {} codeReader = null; }
   var v = document.getElementById('scanvideo');
   if (v && v.srcObject) { v.srcObject.getTracks().forEach(function(t) { t.stop(); }); v.srcObject = null; }
-  document.getElementById('scanwrap').classList.remove('open');
+  var sw2 = document.getElementById('scanwrap');
+  sw2.style.display = 'none';
+  sw2.classList.remove('open');
 }
 
 async function lookupBC() {
