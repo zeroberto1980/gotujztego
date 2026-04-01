@@ -683,6 +683,7 @@ function addToHistory(recipe) {
 function renderHistory() {
   var sec = document.getElementById('hist-section');
   var g = document.getElementById('hist-g');
+  if (!sec || !g) return;
   if (!HISTORY.length) { sec.style.display = 'none'; return; }
   sec.style.display = 'block';
   var EMMAP2 = {zupa:'🍲',obiad:'🍽️',sniadanie:'🌅',wegetarianskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',szybkie:'⚡',mieso:'🥩',ryba:'🐟'};
@@ -973,9 +974,7 @@ function openRecipe(id) {
   html += '<div class="ms"><div class="mst">Przygotowanie</div><ol class="sol">' + steps + '</ol></div>';
   html += tips + safe + '</div>';
 
-  addToHistory(r);
   document.getElementById('mc').innerHTML = html;
-  // Dodaj do historii
   addToHistory(r);
   document.getElementById('mclosebtn').addEventListener('click', function() {
     document.getElementById('ov').classList.remove('open');
@@ -993,19 +992,6 @@ function openRecipe(id) {
       }
     });
   }
-  document.getElementById('msharebtn').addEventListener('click', function() {
-    var url = window.location.href.split('?')[0] + '?przepis=' + r.id;
-    var text = 'Sprawdz ten przepis: ' + r.nazwa + ' na GotujZtego.pl';
-    if (navigator.share) {
-      navigator.share({ title: r.nazwa, text: text, url: url });
-    } else {
-      navigator.clipboard.writeText(url).then(function() {
-        alert('Link do przepisu skopiowany!');
-      }).catch(function() {
-        prompt('Skopiuj link:', url);
-      });
-    }
-  });
   document.getElementById('ov').classList.add('open');
 }
 
@@ -1185,7 +1171,7 @@ function cookFridge() {
 var codeReader = null;
 var scanInterval = null;
 
-function startScan() {
+async function startScan() {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     alert('Twoja przeglądarka nie obsługuje kamery. Wpisz kod ręcznie.');
     return;
@@ -1208,7 +1194,21 @@ function startScan() {
       ZXing.BarcodeFormat.CODE_39
     ]);
     codeReader = new ZXing.BrowserMultiFormatReader(hints);
-    codeReader.decodeFromVideoDevice(undefined, 'scanvideo', function(result, err) {
+    // Na telefonie uzyj tylnej kamery
+    var deviceId = undefined;
+    if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+      try {
+        var devices = await navigator.mediaDevices.enumerateDevices();
+        var cameras = devices.filter(function(d) { return d.kind === 'videoinput'; });
+        // Szukaj tylnej kamery
+        var back = cameras.find(function(c) {
+          return /back|rear|environment/i.test(c.label);
+        });
+        if (back) deviceId = back.deviceId;
+        else if (cameras.length > 1) deviceId = cameras[cameras.length - 1].deviceId;
+      } catch(e2) {}
+    }
+    codeReader.decodeFromVideoDevice(deviceId, 'scanvideo', function(result, err) {
       if (result) {
         document.getElementById('bc').value = result.getText();
         stopScan();
@@ -1225,9 +1225,7 @@ function stopScan() {
   if (codeReader) { try { codeReader.reset(); } catch(e) {} codeReader = null; }
   var v = document.getElementById('scanvideo');
   if (v && v.srcObject) { v.srcObject.getTracks().forEach(function(t) { t.stop(); }); v.srcObject = null; }
-  var sw2 = document.getElementById('scanwrap');
-  sw2.style.display = 'none';
-  sw2.classList.remove('open');
+  document.getElementById('scanwrap').classList.remove('open');
 }
 
 async function lookupBC() {
