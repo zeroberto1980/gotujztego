@@ -7196,5 +7196,8738 @@
       "Gratin doskonale wygląda na stole – układaj plastry starannie."
     ],
     "safety": "Gorące naczynie – używaj rękawic."
+  },
+  {
+    "id": "ZP-016",
+    "nazwa": "Krem z Marchewki i Imbiru",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Imbir świeży",
+        "i": 3,
+        "u": "cm"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 800,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z limonki",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Marchew obierz i pokrój w kawałki.",
+      "Cebulę posiekaj, imbir zetrzyj.",
+      "Na oliwie podsmaż cebulę 4 minuty.",
+      "Dodaj imbir i marchew.",
+      "Wlej bulion i gotuj 20 minut.",
+      "Wlej mleko kokosowe i zmiksuj.",
+      "Dodaj sok z limonki i dopraw.",
+      "Podawaj gorącą."
+    ],
+    "tipy": [
+      "Imbir nadaje rozgrzewający smak.",
+      "Limonka ożywia smak zupy."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-017",
+    "nazwa": "Zupa Kalafiorowa z Serem",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kalafior",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Ser cheddar",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Bulion",
+        "i": 800,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Kalafior podziel na różyczki.",
+      "Cebulę i czosnek podsmaż na maśle.",
+      "Dodaj kalafior i bulion.",
+      "Gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj mleko i ser starty.",
+      "Mieszaj aż ser się roztopi.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Ser cheddar nadaje głęboki smak.",
+      "Zostaw kilka różyczek do dekoracji."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-018",
+    "nazwa": "Zupa Porowa z Ziemniakami",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Por",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Pora pokrój w krążki, ziemniaki w kostkę.",
+      "Na maśle podsmaż cebulę i pora 6 minut.",
+      "Dodaj ziemniaki i bulion.",
+      "Gotuj 20 minut.",
+      "Zmiksuj część zupy blenderem.",
+      "Dodaj śmietanę i wymieszaj.",
+      "Dopraw solą i pieprzem.",
+      "Posyp szczypiorkiem."
+    ],
+    "tipy": [
+      "Klasyk kuchni francuskiej.",
+      "Możesz podać na zimno jako Vichyssoise."
+    ],
+    "safety": "Zahartuj śmietanę przed dodaniem."
+  },
+  {
+    "id": "ZP-019",
+    "nazwa": "Zupa Grochowa bez Mięsa",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Groch łuskany żółty",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Seler",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Wędzona papryka",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Groch namocz 2 godziny.",
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj marchew i seler pokrojone.",
+      "Dodaj groch i 2 litry wody.",
+      "Gotuj 45 minut.",
+      "Dodaj wędzoną paprykę.",
+      "Zmiksuj część zupy.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Wędzona papryka zastępuje smak boczku.",
+      "Groch po namoczeniu gotuje się szybciej."
+    ],
+    "safety": "Groch musi być w pełni ugotowany."
+  },
+  {
+    "id": "ZP-020",
+    "nazwa": "Chłodnik z Ogórka",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ogórek świeży",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Jogurt naturalny",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Koperek",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Ogórka obierz i pokrój.",
+      "Zmiksuj z jogurtem, czosnkiem i koperkiem.",
+      "Dodaj sok z cytryny i oliwę.",
+      "Dopraw solą i pieprzem.",
+      "Schłodź 30 minut w lodówce.",
+      "Podawaj bardzo zimne z kostkami lodu."
+    ],
+    "tipy": [
+      "Musi być bardzo zimny – serwuj ze lodem.",
+      "Doskonały na upalne dni."
+    ],
+    "safety": "Przechowuj w lodówce, spożyj tego samego dnia."
+  },
+  {
+    "id": "ZP-021",
+    "nazwa": "Zupa Szpinakowa z Grzankami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Szpinak mrożony",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bulion",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Chleb",
+        "i": 3,
+        "u": "kromki"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki pokrój w kostkę.",
+      "Cebulę i czosnek podsmaż na maśle.",
+      "Dodaj ziemniaki i bulion, gotuj 15 minut.",
+      "Dodaj szpinak i gotuj 5 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Chleb pokrój i upraż w piekarniku."
+    ],
+    "tipy": [
+      "Mrożony szpinak jest równie dobry jak świeży.",
+      "Grzanki z czosnkiem to idealne uzupełnienie."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-022",
+    "nazwa": "Zupa Fasolowa po Bretońsku",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola biała z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion",
+        "i": 600,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj pomidory i rozmaryn.",
+      "Gotuj 10 minut.",
+      "Dodaj fasolę odsączoną i bulion.",
+      "Gotuj 20 minut.",
+      "Część fasoli rozgnieć widelcem.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Rozmaryn to kluczowa przyprawa w tej zupie.",
+      "Rozgniecenie fasoli zagęszcza zupę naturalnie."
+    ],
+    "safety": "Sprawdź datę puszek fasoli."
+  },
+  {
+    "id": "ZP-023",
+    "nazwa": "Zupa Koperkowa z Jajkiem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Koperek świeży",
+        "i": 2,
+        "u": "pęczki"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Jajka ugotowane",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki pokrój w kostkę i gotuj w bulionie 15 minut.",
+      "Na maśle podsmaż mąkę.",
+      "Dodaj do bulionu mieszając.",
+      "Zahartuj śmietanę i dodaj.",
+      "Dużą część koperku posiekaj i dodaj.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z połówkami jajek."
+    ],
+    "tipy": [
+      "Koperek dodaj pod koniec żeby zachował aromat.",
+      "Polska zupa letnia – idealna gdy koperek jest świeży."
+    ],
+    "safety": "Zahartuj śmietanę przed dodaniem."
+  },
+  {
+    "id": "ZP-024",
+    "nazwa": "Krem z Zielonego Groszku",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Groszek mrożony",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Mięta świeża",
+        "i": 10,
+        "u": "listków"
+      },
+      {
+        "p": "Bulion",
+        "i": 600,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż na maśle.",
+      "Dodaj groszek i bulion.",
+      "Gotuj 10 minut.",
+      "Dodaj miętę.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z grzankami."
+    ],
+    "tipy": [
+      "Mięta nadaje świeżość i orzeźwienie.",
+      "Gotowa w 20 minut – idealna na szybki obiad."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-025",
+    "nazwa": "Zupa Borowikowa",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Borowiki suszone",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki świeże",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Makaron",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 800,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Suszone grzyby namocz na 2 godziny.",
+      "Ugotuj w wodzie z moczenia 30 minut.",
+      "Grzyby wyjmij i pokrój, wywar zachowaj.",
+      "Świeże pieczarki i cebulę podsmaż na maśle.",
+      "Połącz wywar z bulionem i wszystkimi grzybami.",
+      "Zahartuj śmietanę i dodaj.",
+      "Dopraw solą i pieprzem.",
+      "Ugotuj makaron osobno i podawaj z zupą."
+    ],
+    "tipy": [
+      "Suszone borowiki mają intensywniejszy smak.",
+      "Wywar z moczenia grzybów to skarbnica smaku."
+    ],
+    "safety": "Sprawdź suszone grzyby przed użyciem."
+  },
+  {
+    "id": "KU-011",
+    "nazwa": "Kurczak po Prowansalsku",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Udka kurczaka",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Oliwki czarne",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Tymianek",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Udka dopraw solą i pieprzem.",
+      "Na oliwie obsmaż udka ze wszystkich stron.",
+      "Wyjmij kurczaka.",
+      "Podsmaż cebulę i czosnek.",
+      "Dodaj pomidory, tymianek i rozmaryn.",
+      "Włóż kurczaka do sosu.",
+      "Dodaj oliwki.",
+      "Duś pod przykryciem 35 minut."
+    ],
+    "tipy": [
+      "Oliwki dodaj na ostatnie 10 minut.",
+      "Prowansalski sos z ziołami to klasyk."
+    ],
+    "safety": "Temperatura wewnętrzna kurczaka 82°C."
+  },
+  {
+    "id": "KU-012",
+    "nazwa": "Kurczak Teriyaki z Ryżem",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Miód",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "cm"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Sezam",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 3,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Kurczaka pokrój w kawałki.",
+      "Wymieszaj sos sojowy, miód, czosnek i imbir.",
+      "Na patelni podsmaż kurczaka 5 minut.",
+      "Wlej sos teriyaki.",
+      "Gotuj 3-4 minuty aż sos zgęstnieje.",
+      "Posyp sezamem i dymką.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Sos teriyaki można zrobić zapas i trzymać w lodówce.",
+      "Glaze musi być gęsta i błyszcząca."
+    ],
+    "safety": "Kurczak musi być ugotowany do środka."
+  },
+  {
+    "id": "KU-013",
+    "nazwa": "Kurczak z Cytryną i Tymiankiem",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Ćwiartki kurczaka",
+        "i": 1200,
+        "u": "g"
+      },
+      {
+        "p": "Cytryna",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Tymianek świeży",
+        "i": 4,
+        "u": "gałązki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 5,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion",
+        "i": 150,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Kurczaka natrzyj solą i pieprzem.",
+      "Cytrynę pokrój w plastry.",
+      "Ułóż kurczaka w naczyniu żaroodpornym.",
+      "Dodaj cytrynę, tymianek i czosnek.",
+      "Skrop oliwą i wlej bulion.",
+      "Piecz w 190°C przez 40 minut.",
+      "Polewaj sosem co 15 minut.",
+      "Sprawdź temperaturę wewnętrzną."
+    ],
+    "tipy": [
+      "Cytryna podczas pieczenia daje piękny aromat.",
+      "Bulion sprawia że mięso pozostaje soczyste."
+    ],
+    "safety": "Temperatura wewnętrzna kurczaka 82°C."
+  },
+  {
+    "id": "KU-014",
+    "nazwa": "Sałatka z Kurczakiem i Awokado",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "sałatka",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka gotowana",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sałata mieszana",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Pomidorki koktajlowe",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z limonki",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ser feta",
+        "i": 60,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Kurczaka ugotowanego pokrój w paski.",
+      "Awokado pokrój w plastry.",
+      "Sałatę rozłóż na talerzu.",
+      "Ułóż kurczaka, awokado i pomidorki.",
+      "Pokrusz fetę na wierzchu.",
+      "Wymieszaj oliwę z sokiem z limonki.",
+      "Polej dressingiem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Kurczak z rosołu lub pieczony jest idealny.",
+      "Awokado skrop cytryną żeby nie ciemniało."
+    ],
+    "safety": "Sprawdź świeżość ugotowanego kurczaka."
+  },
+  {
+    "id": "KU-015",
+    "nazwa": "Kurczak Duszony z Warzywami",
+    "czas": 55,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Udka kurczaka",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Seler naciowy",
+        "i": 3,
+        "u": "łodygi"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 200,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Kurczaka pokrój i obsmaż na oleju.",
+      "Marchew pokrój w plasterki, seler w kawałki.",
+      "Podsmaż cebulę i czosnek.",
+      "Wszystko połącz w garnku.",
+      "Dodaj pomidory i bulion.",
+      "Duś pod przykryciem 40 minut.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z ryżem lub kluskami."
+    ],
+    "tipy": [
+      "Duszenie sprawia że kurczak jest bardzo miękki.",
+      "Seler naciowy nadaje zupowy charakter."
+    ],
+    "safety": "Kurczak musi być ugotowany do środka."
+  },
+  {
+    "id": "MK-011",
+    "nazwa": "Makaron z Łososiem i Szpinakiem",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron tagliatelle",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Łosoś wędzony",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 20,
+        "u": "g"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Na maśle podsmaż czosnek 1 minutę.",
+      "Dodaj szpinak i smaż 2 minuty.",
+      "Wlej śmietanę i zagotuj.",
+      "Łososia pokrój w kawałki i dodaj.",
+      "Dodaj sok z cytryny.",
+      "Wymieszaj z makaronem.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Łosoś wędzony jest słony – uważaj z dosalaniem.",
+      "Szpinak baby nie wymaga blanszowania."
+    ],
+    "safety": "Sprawdź świeżość łososia wędzonego."
+  },
+  {
+    "id": "MK-012",
+    "nazwa": "Spaghetti z Małżami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Spaghetti",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Małże w sosie własnym",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Wino białe",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Chili",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Na oliwie podsmaż czosnek i chili.",
+      "Wlej wino i gotuj 2 minuty.",
+      "Dodaj małże z sosem.",
+      "Gotuj 4 minuty.",
+      "Wymieszaj z makaronem.",
+      "Posyp natką pietruszki.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Małże w puszce są wygodne i dostępne cały rok.",
+      "Nie gotuj małży zbyt długo – staną się gumowate."
+    ],
+    "safety": "Sprawdź datę ważności małży."
+  },
+  {
+    "id": "MK-013",
+    "nazwa": "Makaron z Bakłażanem po Sycylijsku",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron penne",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Bakłażan",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ser ricotta",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Oliwa",
+        "i": 5,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Bakłażan pokrój w kostkę i posól, odstaw 15 minut.",
+      "Osusz i usmaż na oliwie do złota.",
+      "Podsmaż czosnek, dodaj pomidory.",
+      "Gotuj sos 10 minut.",
+      "Dodaj bakłażan do sosu.",
+      "Makaron ugotuj al dente.",
+      "Wymieszaj makaron z sosem.",
+      "Na talerzu dodaj kleks ricotty i bazylię."
+    ],
+    "tipy": [
+      "Pasta alla Norma to sycylijski klasyk.",
+      "Ricotta nadaje kremowości."
+    ],
+    "safety": "Sprawdź świeżość bakłażana."
+  },
+  {
+    "id": "MK-014",
+    "nazwa": "Makaron z Krewetkami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Spaghetti",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Krewetki obrane",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 5,
+        "u": "ząbki"
+      },
+      {
+        "p": "Wino białe",
+        "i": 80,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Na oliwie podsmaż czosnek 1 minutę.",
+      "Dodaj krewetki i smaż 2 minuty z każdej strony.",
+      "Wlej wino i gotuj 2 minuty.",
+      "Skrop sokiem z cytryny.",
+      "Wymieszaj z makaronem.",
+      "Posyp natką pietruszki.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Krewetki są gotowe gdy są różowe.",
+      "Wino i cytryna tworzą lekki sos."
+    ],
+    "safety": "Krewetki muszą być różowe i sprężyste."
+  },
+  {
+    "id": "MK-015",
+    "nazwa": "Penne z Kurczakiem i Suszonymi Pomidorami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "makaron"
+    ],
+    "skladniki": [
+      {
+        "p": "Penne",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Pierś kurczaka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Suszone pomidory w oleju",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Rukola",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Kurczaka pokrój w kostkę i podsmaż.",
+      "Suszone pomidory pokrój w paski.",
+      "Dodaj czosnek do kurczaka.",
+      "Dodaj suszone pomidory.",
+      "Wymieszaj z makaronem.",
+      "Dodaj rukolę i wymieszaj.",
+      "Posyp parmezanem."
+    ],
+    "tipy": [
+      "Suszone pomidory mają intensywny smak.",
+      "Rukola więdnie od ciepłego makaronu – dodaj na końcu."
+    ],
+    "safety": "Kurczak musi być ugotowany do końca."
+  },
+  {
+    "id": "WG-011",
+    "nazwa": "Tofu Scramble",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Tofu twarde",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Kurkuma",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Tofu osusz i pokrusz w dłoniach.",
+      "Paprykę pokrój drobno.",
+      "Na oliwie podsmaż paprykę 3 minuty.",
+      "Dodaj tofu i kurkumę.",
+      "Smaż 5 minut mieszając.",
+      "Dodaj sos sojowy i szpinak.",
+      "Smaż 2 minuty.",
+      "Posyp dymką i podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Kurkuma nadaje żółty kolor jak jajecznica.",
+      "Wegańska alternatywa dla jajecznicy."
+    ],
+    "safety": "Sprawdź datę ważności tofu."
+  },
+  {
+    "id": "WG-012",
+    "nazwa": "Buddha Bowl z Quinoa",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Quinoa",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Ciecierzyca z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Tahini",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Quinoa ugotuj według instrukcji.",
+      "Ciecierzycę upraż z przyprawami w 200°C przez 20 minut.",
+      "Marchew pokrój w słupki.",
+      "Ogórek pokrój w plasterki.",
+      "Awokado pokrój w plastry.",
+      "Wymieszaj tahini z cytryną i wodą.",
+      "W misce ułóż quinoa i wszystkie dodatki.",
+      "Polej sosem tahini."
+    ],
+    "tipy": [
+      "Prażona ciecierzyca dodaje chrupkości.",
+      "Możesz dostosować składniki do upodobań."
+    ],
+    "safety": "Sprawdź świeżość wszystkich składników."
+  },
+  {
+    "id": "WG-013",
+    "nazwa": "Naleśniki z Serem i Szpinakiem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Szpinak mrożony",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Ser ricotta",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 20,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Zrób ciasto naleśnikowe z mąki, mleka i jajek.",
+      "Smaż cienkie naleśniki.",
+      "Szpinak rozmroź i odciśnij.",
+      "Wymieszaj szpinak z ricottą i solą.",
+      "Na każdy naleśnik nałóż farsz.",
+      "Zwiń lub złóż w trójkąt.",
+      "Ułóż w naczyniu, posyp serem żółtym.",
+      "Zapiecz w 180°C przez 15 minut."
+    ],
+    "tipy": [
+      "Szpinak i ricotta to klasyczne włoskie nadzienie.",
+      "Zapiekanie sprawia że ser się topi."
+    ],
+    "safety": "Szpinak dobrze odciśnij – nadmiar wody rozmocze naleśniki."
+  },
+  {
+    "id": "WG-014",
+    "nazwa": "Curry z Batatów",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bataty",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Pasta curry czerwona",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Szpinak",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Bataty obierz i pokrój w kostkę.",
+      "Cebulę i czosnek podsmaż na oleju.",
+      "Dodaj pastę curry.",
+      "Dodaj bataty i pomidory.",
+      "Wlej mleko kokosowe i gotuj 20 minut.",
+      "Dodaj szpinak na ostatnie 3 minuty.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Bataty mają naturalną słodycz.",
+      "Szpinak dodaj na końcu żeby zachował kolor."
+    ],
+    "safety": "Bataty muszą być miękkie."
+  },
+  {
+    "id": "WG-015",
+    "nazwa": "Placek Ziemniaczany z Pieczarkami",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Śmietana",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki zetrzyj na tarce i odciśnij.",
+      "Pieczarki i cebulę podsmaż na maśle.",
+      "Wymieszaj ziemniaki z jajkami i mąką.",
+      "Dopraw solą i pieprzem.",
+      "Połowę ciasta wyłóż na natłuszczoną blachę.",
+      "Ułóż farsz pieczarkowy.",
+      "Przykryj resztą ciasta.",
+      "Piecz w 180°C przez 35 minut."
+    ],
+    "tipy": [
+      "Odciśnięcie ziemniaków jest kluczowe.",
+      "Śmietana do podania na wierzchu."
+    ],
+    "safety": "Piecz do złotego koloru."
+  },
+  {
+    "id": "RY-006",
+    "nazwa": "Pstrąg Smażony z Migdałami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pstrąg filet",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Migdały płatki",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Mąka",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Pstrąga osusz i obtocz w mące.",
+      "Na maśle smaż 4 minuty z każdej strony.",
+      "Wyjmij rybę.",
+      "Na tej patelni zrumień migdały.",
+      "Dodaj sok z cytryny.",
+      "Polej rybę migdałami.",
+      "Posyp natką pietruszki.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Brązowe masło z migdałami to klasyczny sos.",
+      "Mąka tworzy chrupiącą skorupkę."
+    ],
+    "safety": "Świeży pstrąg. Temperatura wewnętrzna 63°C."
+  },
+  {
+    "id": "RY-007",
+    "nazwa": "Łosoś z Pesto",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet łososia",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pesto bazyliowe",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Pomidorki koktajlowe",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cytryna",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 200°C.",
+      "Cukinię pokrój w plasterki.",
+      "W naczyniu ułóż cukinię i pomidorki.",
+      "Skrop oliwą i dopraw.",
+      "Połóż łososia na warzywach.",
+      "Posmaruj pesto.",
+      "Piecz 18 minut.",
+      "Skrop cytryną i podawaj."
+    ],
+    "tipy": [
+      "Pesto tworzy aromatyczną skórkę na łososiu.",
+      "Warzywa gotują się razem z rybą."
+    ],
+    "safety": "Łosoś – temperatura wewnętrzna 63°C."
+  },
+  {
+    "id": "RY-008",
+    "nazwa": "Dorsz z Warzywami w Paczuszce",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet dorsza",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Pomidorki koktajlowe",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwki",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Kapary",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 200°C.",
+      "Na folii aluminiowej ułóż warzywa.",
+      "Połóż filet dorsza na warzywach.",
+      "Dodaj oliwki i kapary.",
+      "Skrop oliwą i sokiem z cytryny.",
+      "Posyp tymiankiem.",
+      "Zawiń szczelnie w folię.",
+      "Piecz 20 minut. Otwórz ostrożnie."
+    ],
+    "tipy": [
+      "Folia zachowuje aromaty i wilgoć.",
+      "Kapary i oliwki to śródziemnomorski akcent."
+    ],
+    "safety": "Ostrożnie z gorącą parą przy otwieraniu folii."
+  },
+  {
+    "id": "RY-009",
+    "nazwa": "Ryba z Sosem Musztardowym",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filety rybne białe",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Musztarda Dijon",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Szalotka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Koper",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cytryna",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Rybę osusz i dopraw solą i pieprzem.",
+      "Na maśle smaż 4 minuty z każdej strony.",
+      "Wyjmij rybę.",
+      "Na tej patelni podsmaż posiekaną szalotkę.",
+      "Dodaj musztardę i śmietanę.",
+      "Gotuj 3 minuty.",
+      "Dodaj koperek i sok z cytryny.",
+      "Polej rybę sosem."
+    ],
+    "tipy": [
+      "Musztarda Dijon i koper to klasyczne połączenie.",
+      "Sos pasuje do każdej białej ryby."
+    ],
+    "safety": "Ryba temperatura wewnętrzna 63°C."
+  },
+  {
+    "id": "RY-010",
+    "nazwa": "Tuńczyk z Warzywami na Patelni",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Stek z tuńczyka",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Papryka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "cm"
+      },
+      {
+        "p": "Olej sezamowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Paprykę i cukinię pokrój w paski.",
+      "Na oliwie podsmaż warzywa 5 minut.",
+      "Dodaj imbir i sos sojowy.",
+      "Na osobnej patelni smaż tuńczyka 2-3 minuty z każdej strony.",
+      "Pokrój w plastry.",
+      "Podawaj z warzywami.",
+      "Skrop olejem sezamowym."
+    ],
+    "tipy": [
+      "Tuńczyk smaż na bardzo gorącej patelni – krótko.",
+      "Środek może być różowy – to normalne."
+    ],
+    "safety": "Świeży tuńczyk sushi grade jeśli chcesz różowego środka."
+  },
+  {
+    "id": "SN-001",
+    "nazwa": "Owsianka z Owocami",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Płatki owsiane",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Banan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jagody",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Miód",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 20,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Płatki zalej mlekiem w garnuszku.",
+      "Gotuj na małym ogniu 5 minut mieszając.",
+      "Przełóż do miski.",
+      "Pokrój banana i ułóż na owsiance.",
+      "Dodaj jagody i orzechy.",
+      "Skrop miodem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Gotowana na mleku jest bardziej kremowa.",
+      "Możesz przygotować na noc – overnight oats."
+    ],
+    "safety": "Sprawdź świeżość owoców."
+  },
+  {
+    "id": "SN-002",
+    "nazwa": "Pancakes Amerykańskie",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 250,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Syrop klonowy",
+        "i": 4,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Wymieszaj suche składniki.",
+      "Dodaj mleko, jajka i roztopione masło.",
+      "Mieszaj do połączenia – nie za długo.",
+      "Na patelni rozgrzej trochę masła.",
+      "Wlej porcje ciasta.",
+      "Smaż do pojawienia się bąbelków – 2-3 minuty.",
+      "Odwróć i smaż 1 minutę.",
+      "Podawaj z syropem klonowym i owocami."
+    ],
+    "tipy": [
+      "Grudki są OK – nie mieszaj za długo.",
+      "Bąbelki na powierzchni to znak że czas odwrócić."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "SN-003",
+    "nazwa": "Smoothie Bowl",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Banan mrożony",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jagody mrożone",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Mleko roślinne",
+        "i": 50,
+        "u": "ml"
+      },
+      {
+        "p": "Granola",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Świeże owoce",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Nasiona chia",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Zmrożone owoce wrzuć do blendera.",
+      "Dodaj mleko roślinne.",
+      "Blenduj na gładką gęstą masę.",
+      "Przelej do miski.",
+      "Ułóż granolę i świeże owoce.",
+      "Posyp nasionami chia.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Masa musi być gęsta – dodaj mleko oszczędnie.",
+      "Mrożone owoce tworzą kremową konsystencję."
+    ],
+    "safety": "Blender – uważaj na ostrza."
+  },
+  {
+    "id": "SN-004",
+    "nazwa": "Kanapki z Pastą Jajeczną",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Majonez",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Musztarda",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Chleb",
+        "i": 4,
+        "u": "kromki"
+      },
+      {
+        "p": "Sałata",
+        "i": 4,
+        "u": "liście"
+      }
+    ],
+    "kroki": [
+      "Jajka ugotuj na twardo 10 minut.",
+      "Obierz i posiekaj drobno.",
+      "Wymieszaj z majonezem i musztardą.",
+      "Dodaj szczypiorek.",
+      "Dopraw solą i pieprzem.",
+      "Na chleb połóż liść sałaty.",
+      "Nałóż pastę jajeczną.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Pasta smakuje lepiej gdy jajka są jeszcze ciepłe.",
+      "Możesz dodać odrobinę kwaśnej śmietany."
+    ],
+    "safety": "Pastę przechowuj w lodówce max 2 dni."
+  },
+  {
+    "id": "SN-005",
+    "nazwa": "Gofry Domowe",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "śniadanie",
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 300,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Bita śmietana",
+        "i": 150,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Roztop masło i ostudź.",
+      "Wymieszaj mąkę, cukier i proszek.",
+      "Dodaj mleko, jajka i masło.",
+      "Wymieszaj do gładkości.",
+      "Rozgrzej gofrownicę i natłuść.",
+      "Wlej porcję ciasta.",
+      "Piecz 4-5 minut do złota.",
+      "Podawaj z bitą śmietaną i owocami."
+    ],
+    "tipy": [
+      "Ciasto gofrowe powinno być gęstsze niż naleśnikowe.",
+      "Dobrze nagrzana gofrownica to klucz."
+    ],
+    "safety": "Gofrownica jest bardzo gorąca – uważaj na poparzenia."
+  },
+  {
+    "id": "DS-011",
+    "nazwa": "Szarlotka z Kruszonką",
+    "czas": 70,
+    "poziom": "łatwe",
+    "porcje": 8,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jabłka",
+        "i": 1200,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cynamon",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Jabłka obierz i pokrój, wymieszaj z cukrem i cynamonem.",
+      "Z mąki, masła, cukru i proszku zrób kruszonkę.",
+      "Dodaj jajko – 2/3 to ciasto, 1/3 kruszonka.",
+      "2/3 ciasta wyłóż na dno formy.",
+      "Ułóż jabłka.",
+      "Pokrusz resztę ciasta na wierzch.",
+      "Piecz w 180°C przez 45 minut.",
+      "Ostudź przed krojeniem."
+    ],
+    "tipy": [
+      "Kruszonka na wierzchu to polska wersja.",
+      "Jabłka powinny być kwaśne – Antonówka."
+    ],
+    "safety": "Piecz do złotego koloru kruszonki."
+  },
+  {
+    "id": "DS-012",
+    "nazwa": "Muffiny Czekoladowe",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 12,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Kakao",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cukier",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mleko",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Czekolada gorzka",
+        "i": 100,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 180°C.",
+      "Wymieszaj suche składniki.",
+      "Wymieszaj mokre składniki.",
+      "Połącz mokre z suchymi – mieszaj krótko.",
+      "Dodaj posiekaną czekoladę.",
+      "Napełnij foremki do 2/3.",
+      "Piecz 18-20 minut.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Nie mieszaj za długo – muffiny będą twarde.",
+      "Kawałki czekolady tworzą niespodzianki w środku."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-013",
+    "nazwa": "Ciasto Marchewkowe",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 10,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Olej",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukier",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Cynamon",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Ser śmietankowy",
+        "i": 200,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Marchew zetrzyj na tarce.",
+      "Jajka ubij z cukrem i olejem.",
+      "Dodaj mąkę, proszek i cynamon.",
+      "Dodaj marchew i wymieszaj.",
+      "Wylej do formy.",
+      "Piecz w 180°C przez 40 minut.",
+      "Ostudź całkowicie.",
+      "Posmaruj kremem z sera śmietankowego."
+    ],
+    "tipy": [
+      "Marchew sprawia że ciasto jest wilgotne.",
+      "Krem serowy to klasyczne wykończenie."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-014",
+    "nazwa": "Koktajl Truskawkowy",
+    "czas": 5,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "deser",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Truskawki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Jogurt naturalny",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Mleko",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Miód",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Truskawki umyj i odszypułkuj.",
+      "Wrzuć do blendera.",
+      "Dodaj jogurt, mleko i miód.",
+      "Dodaj sok z cytryny.",
+      "Blenduj do gładkości.",
+      "Przelej do szklanek.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Mrożone truskawki dają chłodniejszy koktajl.",
+      "Miód możesz zastąpić syropem klonowym."
+    ],
+    "safety": "Blender – uważaj na ostre ostrza."
+  },
+  {
+    "id": "DS-015",
+    "nazwa": "Racuchy z Jabłkiem",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "śniadanie",
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jabłka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Drożdże suszone",
+        "i": 7,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej do smażenia",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Drożdże wymieszaj z cukrem i ciepłym mlekiem.",
+      "Odstaw na 10 minut.",
+      "Mąkę wymieszaj z jajkami.",
+      "Dodaj wyrastające drożdże.",
+      "Odstaw na 15 minut.",
+      "Jabłka zetrzyj na tarce i dodaj.",
+      "Smaż placki na oleju 3-4 minuty z każdej strony.",
+      "Posyp cukrem pudrem."
+    ],
+    "tipy": [
+      "Ciasto z drożdżami jest puszystsze.",
+      "Jabłka możesz pokroić w plastry zamiast zetrzeć."
+    ],
+    "safety": "Uważaj na pryskający olej."
+  },
+  {
+    "id": "ZP-026",
+    "nazwa": "Zupa Gulaszowa Węgierska",
+    "czas": 70,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Wołowina łopatka",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka słodka mielona",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      },
+      {
+        "p": "Kminek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Wołowinę pokrój w kostkę i obsmaż partiami.",
+      "Cebulę podsmaż osobno.",
+      "Dodaj paprykę mieloną i kminek.",
+      "Dodaj mięso, pomidory i bulion.",
+      "Gotuj 40 minut.",
+      "Dodaj ziemniaki i paprykę świeżą.",
+      "Gotuj kolejne 20 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Papryka słodka mielona to podstawa.",
+      "Gęsta zupa – symbol kuchni węgierskiej."
+    ],
+    "safety": "Wołowina musi być w pełni ugotowana."
+  },
+  {
+    "id": "ZP-027",
+    "nazwa": "Zupa z Soczewicy Zielonej",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Soczewica zielona",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Seler naciowy",
+        "i": 2,
+        "u": "łodygi"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Soczewicę przepłucz pod zimną wodą.",
+      "Cebulę, marchew i seler pokrój i podsmaż.",
+      "Dodaj czosnek i smaż 1 minutę.",
+      "Dodaj soczewicę, pomidory i bulion.",
+      "Gotuj 30 minut.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Soczewica zielona nie wymaga moczenia.",
+      "Bogata w białko i bardzo sycąca."
+    ],
+    "safety": "Soczewica musi być ugotowana do miękkości."
+  },
+  {
+    "id": "ZP-028",
+    "nazwa": "Zupa Ziemniaczana z Kiełbasą",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa wędzona",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion",
+        "i": 1200,
+        "u": "ml"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Majeranek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Kiełbasę pokrój w plastry i podsmaż.",
+      "Cebulę i marchew dodaj i smaż 4 minuty.",
+      "Ziemniaki pokrój w kostkę.",
+      "Wszystko wrzuć do bulionu.",
+      "Gotuj 25 minut.",
+      "Dodaj majeranek.",
+      "Dopraw solą i pieprzem.",
+      "Posyp natką pietruszki."
+    ],
+    "tipy": [
+      "Kiełbasa wędzona nadaje wyrazisty smak.",
+      "Prosta i sycąca polska zupa."
+    ],
+    "safety": "Sprawdź świeżość kiełbasy."
+  },
+  {
+    "id": "ZP-029",
+    "nazwa": "Chłodnik Litewski",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kefir",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Maślanka",
+        "i": 300,
+        "u": "ml"
+      },
+      {
+        "p": "Botwinka",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Rzodkiewka",
+        "i": 8,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka ugotowane",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Koperek",
+        "i": 1,
+        "u": "pęczek"
+      }
+    ],
+    "kroki": [
+      "Botwinę umyj i posiekaj wraz z łodygami.",
+      "Ogórek i rzodkiewkę pokrój drobno.",
+      "Koperek posiekaj.",
+      "Wymieszaj kefir z maślanką.",
+      "Dodaj botwinę, ogórek, rzodkiewkę i koperek.",
+      "Dopraw solą i pieprzem.",
+      "Schłodź minimum 1 godzinę.",
+      "Podawaj z połówkami jajek."
+    ],
+    "tipy": [
+      "Chłodnik musi być bardzo zimny – serwuj ze lodem.",
+      "Botwinka nadaje piękny różowy kolor."
+    ],
+    "safety": "Przechowuj w lodówce, nie dłużej niż 2 dni."
+  },
+  {
+    "id": "ZP-030",
+    "nazwa": "Zupa Pomidorowa ze Świeżych Pomidorów",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pomidory świeże",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Mozzarella",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Bulion",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Pomidory blanszuj i obierz ze skórek.",
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj pomidory i bulion.",
+      "Gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dopraw solą i pieprzem.",
+      "Wlej do miseczek.",
+      "Dodaj kawałki mozzarelli i listki bazylii."
+    ],
+    "tipy": [
+      "Świeże pomidory w sezonie są najlepsze.",
+      "Mozzarella topi się od gorącej zupy."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "WO-016",
+    "nazwa": "Polędwiczki w Sosie Grzybowym",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Polędwiczki wieprzowe",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Polędwiczki pokrój w plastry 2 cm i dopraw.",
+      "Na maśle obsmaż z obu stron do złota.",
+      "Wyjmij mięso.",
+      "Na tym samym maśle podsmaż cebulę i pieczarki.",
+      "Dodaj czosnek i tymianek.",
+      "Wlej śmietanę i zagotuj.",
+      "Włóż polędwiczki do sosu i duś 8 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Polędwiczki są delikatne – nie przesmaż.",
+      "Śmietana 30% nie zwarzy się w sosie."
+    ],
+    "safety": "Temperatura wewnętrzna polędwiczek 71°C."
+  },
+  {
+    "id": "WO-017",
+    "nazwa": "Karkówka z Grilla",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Karkówka wieprzowa",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Miód",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Papryka słodka",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Karkówkę pokrój na plastry 1.5 cm.",
+      "Wymieszaj sos sojowy, miód, czosnek i paprykę.",
+      "Zamarynuj mięso minimum 2 godziny.",
+      "Cebulę pokrój w krążki.",
+      "Grilluj karkówkę 5-6 minut z każdej strony.",
+      "Pod koniec połóż cebulę na grill.",
+      "Podawaj z grillowaną cebulą i chlebem."
+    ],
+    "tipy": [
+      "Im dłużej marynujesz tym lepszy smak.",
+      "Karkówka marmurkowata nie wymaga dużo tłuszczu."
+    ],
+    "safety": "Temperatura wewnętrzna wieprzowiny 71°C."
+  },
+  {
+    "id": "WO-018",
+    "nazwa": "Wątróbka z Jabłkiem i Cebulą",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Wątróbka drobiowa",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Jabłko",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Cebulę pokrój w pół pierścienie i smaż na maśle 10 minut.",
+      "Jabłka obierz i pokrój w ćwiartki, dodaj do cebuli.",
+      "Smaż 5 minut.",
+      "Wątróbkę obtocz w mące i dopraw.",
+      "Podsmaż na osobnej patelni 3 minuty z każdej strony.",
+      "Wyłóż cebulę z jabłkiem na talerz.",
+      "Połóż wątróbkę na wierzchu.",
+      "Posyp tymiankiem."
+    ],
+    "tipy": [
+      "Jabłko i cebula to klasyczne połączenie z wątróbką.",
+      "Nie przesmażaj wątróbki – będzie twarda."
+    ],
+    "safety": "Wątróbka musi być ugotowana do końca."
+  },
+  {
+    "id": "WO-019",
+    "nazwa": "Gulasz Wieprzowy z Ziemniakami",
+    "czas": 80,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Łopatka wieprzowa",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka słodka",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Koncentrat pomidorowy",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Majeranek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Wieprzowinę pokrój w kostkę i obsmaż.",
+      "Cebulę i marchew dodaj, smaż 5 minut.",
+      "Dodaj paprykę słodką i koncentrat.",
+      "Wlej bulion i duś 45 minut.",
+      "Ziemniaki pokrój i dodaj.",
+      "Gotuj kolejne 25 minut.",
+      "Dodaj majeranek.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Majeranek to obowiązkowa przyprawa.",
+      "Im dłużej dusisz tym mięso bardziej miękkie."
+    ],
+    "safety": "Wieprzowina musi być ugotowana do 71°C."
+  },
+  {
+    "id": "WO-020",
+    "nazwa": "Stek z Antrykotu",
+    "czas": 15,
+    "poziom": "średnie",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Antrykot wołowy",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Sól morska",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Pieprz grubo mielony",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Mięso wyjmij z lodówki 30 minut wcześniej.",
+      "Natrzyj solą morską i pieprzem.",
+      "Rozgrzej patelnię żeliwną do maksimum.",
+      "Smaż 3 minuty z każdej strony.",
+      "Pod koniec dodaj masło, czosnek i rozmaryn.",
+      "Polewaj masłem smażący się stek.",
+      "Przełóż na deskę i odczekaj 5 minut.",
+      "Pokrój ukośnie i podawaj."
+    ],
+    "tipy": [
+      "Bardzo gorąca patelnia tworzy idealną skórkę.",
+      "Antrykot ma tłuste przerosty – to nadaje smak."
+    ],
+    "safety": "Temperatura: 55°C krwisty, 60°C różowy."
+  },
+  {
+    "id": "SA-011",
+    "nazwa": "Sałatka z Arbuzem i Fetą",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Arbuz",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Ser feta",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Mięta świeża",
+        "i": 10,
+        "u": "listków"
+      },
+      {
+        "p": "Oliwki czarne",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z limonki",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Arbuza pokrój w kostkę lub trójkąty.",
+      "Fetę pokrusz na kawałki.",
+      "Na talerzu rozłóż arbuza.",
+      "Posyp fetą i oliwkami.",
+      "Dodaj listki mięty.",
+      "Skrop oliwą i sokiem z limonki.",
+      "Podawaj bardzo schłodzone."
+    ],
+    "tipy": [
+      "Arbuz musi być bardzo dojrzały i słodki.",
+      "Letni klasyk śródziemnomorski."
+    ],
+    "safety": "Przechowuj w lodówce. Podawaj schłodzone."
+  },
+  {
+    "id": "SA-012",
+    "nazwa": "Sałatka Makaronowa z Warzywami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron świderki",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Papryka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Kukurydza z puszki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Majonez",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Jogurt naturalny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cebula czerwona",
+        "i": 0.5,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente i ostudź.",
+      "Paprykę i ogórek pokrój w kostkę.",
+      "Cebulę posiekaj drobno.",
+      "Kukurydzę odsącz.",
+      "Wymieszaj majonez z jogurtem.",
+      "Połącz makaron z warzywami i dressingiem.",
+      "Dopraw solą i pieprzem.",
+      "Schłodź i podawaj."
+    ],
+    "tipy": [
+      "Idealne danie na piknik.",
+      "Jogurt robi dressing lżejszym."
+    ],
+    "safety": "Przechowuj w lodówce. Spożyj w ciągu 2 dni."
+  },
+  {
+    "id": "SA-013",
+    "nazwa": "Sałatka Śledziowa",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "sałatka",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filety śledzia solonego",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki ugotowane",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Jabłko",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Majonez",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ogórek kiszony",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka ugotowane",
+        "i": 3,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Śledzie namocz w wodzie 2-3 godziny.",
+      "Osusz i pokrój w kawałki.",
+      "Ziemniaki, jabłka i ogórki pokrój w kostkę.",
+      "Cebulę posiekaj drobno.",
+      "Jajka pokrój.",
+      "Wymieszaj wszystko z majonezem.",
+      "Dopraw pieprzem.",
+      "Schłodź minimum 1 godzinę."
+    ],
+    "tipy": [
+      "Namaczanie śledzia usuwa nadmiar soli.",
+      "Smakuje lepiej po kilku godzinach."
+    ],
+    "safety": "Przechowuj w lodówce max 2 dni."
+  },
+  {
+    "id": "SA-014",
+    "nazwa": "Surówka z Białej Kapusty",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kapusta biała",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jabłko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Majonez",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ocet jabłkowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Cukier",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Kapustę poszatkuj cienko.",
+      "Marchew zetrzyj na tarce.",
+      "Jabłko obierz i zetrzyj.",
+      "Cebulę posiekaj drobno.",
+      "Wymieszaj majonez z octem i cukrem.",
+      "Połącz składniki z dressingiem.",
+      "Dopraw solą i pieprzem.",
+      "Schłodź 30 minut."
+    ],
+    "tipy": [
+      "Klasyczna polska surówka do kotleta.",
+      "Im cieniej poszatkujesz tym lepiej."
+    ],
+    "safety": "Świeże warzywa. Przechowuj w lodówce."
+  },
+  {
+    "id": "SW-007",
+    "nazwa": "Falafel z Sosem Jogurtowym",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ciecierzyca z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Kumin",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Mąka",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Jogurt grecki",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Ogórek",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Olej",
+        "i": 300,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Ciecierzycę odsącz i osusz.",
+      "Zblenduj z cebulą, czosnkiem i natką.",
+      "Dodaj kumin i mąkę.",
+      "Formuj kulki i schłodź 20 minut.",
+      "Ogórek zetrzyj i odciśnij – wymieszaj z jogurtem.",
+      "Smaż falafel w gorącym oleju 4-5 minut.",
+      "Podawaj z pitą i sosem jogurtowym."
+    ],
+    "tipy": [
+      "Schłodzenie w lodówce zapobiega rozpadaniu.",
+      "Sos jogurtowy możesz zrobić z koperkiem."
+    ],
+    "safety": "Olej do głębokiego smażenia – uważaj na temperaturę."
+  },
+  {
+    "id": "SW-008",
+    "nazwa": "Tabouleh",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza bulgur",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "pęczki"
+      },
+      {
+        "p": "Pomidory",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Mięta świeża",
+        "i": 10,
+        "u": "listków"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Kaszę bulgur zalej wrzątkiem i odstaw 15 minut.",
+      "Rozluźnij widelcem i ostudź.",
+      "Natkę i miętę posiekaj bardzo drobno.",
+      "Pomidory i ogórek pokrój w małą kostkę.",
+      "Wymieszaj wszystko z kaszą.",
+      "Polej oliwą i sokiem z cytryny.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj od razu lub schłodzone."
+    ],
+    "tipy": [
+      "Dużo natki to cecha charakterystyczna tabouleh.",
+      "Im drobniej posiekasz zioła tym lepiej."
+    ],
+    "safety": "Świeże warzywa i zioła."
+  },
+  {
+    "id": "SW-009",
+    "nazwa": "Moussaka Warzywna",
+    "czas": 70,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bakłażan",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Soczewica zielona",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Cynamon",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Mleko",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Bakłażany pokrój w plastry i posól.",
+      "Podduś soczewicę z cebulą, czosnkiem i pomidorami 20 minut.",
+      "Dodaj cynamon i dopraw.",
+      "Bakłażany osusz i usmaż.",
+      "Zrób béchamel z masła, mąki i mleka.",
+      "Układaj warstwy: bakłażan, soczewica.",
+      "Zalej béchamelem i posyp parmezanem.",
+      "Piecz w 180°C przez 40 minut."
+    ],
+    "tipy": [
+      "Soczewica zastępuje mięso mielone.",
+      "Cynamon to typowa grecka przyprawa."
+    ],
+    "safety": "Piecz do złotego koloru wierzchu."
+  },
+  {
+    "id": "SW-010",
+    "nazwa": "Pita z Gyrosem Warzywnym",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb pita",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula czerwona",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jogurt grecki",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Ogórek",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oregano",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Paprykę, cukinię i cebulę pokrój w paski.",
+      "Podsmaż na oliwie z oregano 8 minut.",
+      "Ogórek zetrzyj i odciśnij.",
+      "Wymieszaj z jogurtem i czosnkiem – tzatziki.",
+      "Pitę podgrzej na suchej patelni.",
+      "Wypełnij pitę warzywami.",
+      "Dodaj tzatziki.",
+      "Zawiń i podawaj od razu."
+    ],
+    "tipy": [
+      "Warzywa powinny być lekko chrupiące.",
+      "Tzatziki możesz zrobić dzień wcześniej."
+    ],
+    "safety": "Sprawdź świeżość warzyw."
+  },
+  {
+    "id": "MK-016",
+    "nazwa": "Makaron z Sosem Serowym",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron rigatoni",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ser gorgonzola",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 20,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 40,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Orzechy posiekaj i upraż.",
+      "Na maśle roztop gorgonzolę.",
+      "Wlej śmietanę i mieszaj aż ser się roztopi.",
+      "Gotuj 3 minuty.",
+      "Wymieszaj makaron z sosem.",
+      "Posyp parmezanem i orzechami.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Gorgonzola ma intensywny smak – nie dosalaj.",
+      "Orzechy włoskie świetnie pasują do niebieskiego sera."
+    ],
+    "safety": "Sprawdź datę ważności serów."
+  },
+  {
+    "id": "MK-017",
+    "nazwa": "Lasagne Warzywna",
+    "czas": 75,
+    "poziom": "średnie",
+    "porcje": 6,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Płaty lasagne",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Bakłażan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Mąka",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 700,
+        "u": "ml"
+      },
+      {
+        "p": "Mozzarella",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 60,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Warzywa pokrój i podsmaż partiami na oliwie.",
+      "Dodaj pomidory i gotuj sos 15 minut.",
+      "Zrób béchamel z masła, mąki i mleka.",
+      "W naczyniu układaj warstwy: béchamel, płaty, warzywa.",
+      "Powtórz kończąc na béchamelu.",
+      "Posyp mozzarellą i parmezanem.",
+      "Piecz w 180°C przez 40 minut.",
+      "Odczekaj 10 minut przed krojeniem."
+    ],
+    "tipy": [
+      "Warzywa podduś żeby oddały wodę.",
+      "Odczekanie przed krojeniem – lasagne będzie zwarta."
+    ],
+    "safety": "Piecz do złotego koloru wierzchu."
+  },
+  {
+    "id": "MK-018",
+    "nazwa": "Makaron z Wołowiną po Azjatycku",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron udon",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Wołowina",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Imbir",
+        "i": 2,
+        "u": "cm"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Olej sezamowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Skrobia",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Wołowinę pokrój w cienkie paski.",
+      "Obtocz w skrobi.",
+      "Makaron ugotuj i odcedź.",
+      "Na dużym ogniu podsmaż mięso 2-3 minuty.",
+      "Dodaj czosnek i imbir.",
+      "Wlej sos sojowy.",
+      "Dodaj makaron i wymieszaj.",
+      "Posyp dymką i olejem sezamowym."
+    ],
+    "tipy": [
+      "Skrobia sprawia że mięso jest chrupiące.",
+      "Duży ogień to klucz."
+    ],
+    "safety": "Wołowina musi być usmażona do środka."
+  },
+  {
+    "id": "JG-009",
+    "nazwa": "Potrawka z Kurczaka",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kurczak",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Pietruszka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Mąka",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Koperek",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Kurczaka ugotuj w bulionie z marchewką i pietruszką.",
+      "Wyjmij mięso i obierz z kości, pokrój.",
+      "Warzywa pokrój w plasterki.",
+      "Na maśle podsmaż mąkę.",
+      "Wlej bulion z gotowania mieszając.",
+      "Dodaj śmietanę i pieczarki.",
+      "Gotuj 10 minut.",
+      "Dodaj mięso, warzywa i koperek."
+    ],
+    "tipy": [
+      "Potrawka z kurczaka to klasyk polskiej kuchni.",
+      "Koperek dodaj na samym końcu."
+    ],
+    "safety": "Kurczak musi być w pełni ugotowany."
+  },
+  {
+    "id": "JG-010",
+    "nazwa": "Risotto z Brokułem i Boczkiem",
+    "czas": 40,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Brokuł",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Boczek wędzony",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 1200,
+        "u": "ml"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Wino białe",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Bulion podgrzej w osobnym garnku.",
+      "Brokuł podziel na różyczki i blanszuj 3 minuty.",
+      "Boczek podsmaż na suchej patelni.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj ryż i smaż 2 minuty.",
+      "Wlej wino i mieszaj aż wchłonie.",
+      "Dodawaj bulion chochelka po chochli 18 minut.",
+      "Dodaj brokuł, boczek, masło i parmezan."
+    ],
+    "tipy": [
+      "Ciągłe mieszanie tworzy kremową konsystencję.",
+      "Brokuł dodaj pod koniec żeby nie był rozgotowany."
+    ],
+    "safety": "Bulion musi być gorący."
+  },
+  {
+    "id": "JG-011",
+    "nazwa": "Zapiekanka Ryżowa z Kurczakiem",
+    "czas": 55,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Pierś kurczaka",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ryż ugotuj do połowy.",
+      "Kurczaka pokrój i podsmaż.",
+      "Pieczarki i cebulę podsmaż na maśle.",
+      "Wymieszaj ryż, kurczaka, pieczarki i śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Przełóż do naczynia żaroodpornego.",
+      "Posyp tartym serem.",
+      "Piecz w 180°C przez 30 minut."
+    ],
+    "tipy": [
+      "Ryż dokończy gotowanie w piekarniku.",
+      "Ser tworzy chrupiącą skórkę."
+    ],
+    "safety": "Kurczak musi być ugotowany przed zapiekaniem."
+  },
+  {
+    "id": "SN-006",
+    "nazwa": "Jajka po Florentyńsku",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Szpinak świeży",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Sos hollandaise",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Chleb tostowy",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 1,
+        "u": "ząbek"
+      }
+    ],
+    "kroki": [
+      "Szpinak podsmaż na maśle z czosnkiem 3 minuty.",
+      "Chleb opiecz.",
+      "Ugotuj jajka w koszulce.",
+      "Na grzankach ułóż szpinak.",
+      "Połóż jajka w koszulce.",
+      "Polej sosem hollandaise.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Klasyczne florentyńskie połączenie.",
+      "Sos hollandaise możesz kupić gotowy."
+    ],
+    "safety": "Białka jaj muszą być ścięte."
+  },
+  {
+    "id": "SN-007",
+    "nazwa": "Tost Francuski z Owocami",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb pszenny",
+        "i": 4,
+        "u": "kromki"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mleko",
+        "i": 50,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 20,
+        "u": "g"
+      },
+      {
+        "p": "Truskawki",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Banan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Syrop klonowy",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Roztrzep jajka z mlekiem.",
+      "Maczaj chleb w masie jajecznej.",
+      "Na maśle smaż 2-3 minuty z każdej strony.",
+      "Truskawki pokrój, banana w plasterki.",
+      "Ułóż owoce na toscie.",
+      "Polej syropem klonowym.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Użyj chleba z poprzedniego dnia.",
+      "Syrop klonowy możesz zastąpić miodem."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "SN-008",
+    "nazwa": "Kanapki z Pastą Awokado i Jajkiem",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb żytni",
+        "i": 4,
+        "u": "kromki"
+      },
+      {
+        "p": "Awokado",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka ugotowane",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Rzodkiewka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Awokado rozgnieć z sokiem z cytryny i solą.",
+      "Chleb opiecz w tosterze.",
+      "Posmaruj pastą awokado.",
+      "Jajka pokrój w plasterki.",
+      "Rzodkiewkę pokrój cienko.",
+      "Ułóż jajka i rzodkiewkę.",
+      "Posyp szczypiorkiem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Dojrzałe awokado jest kluczem do kremowej pasty.",
+      "Cytryna zapobiega ciemnieniu awokado."
+    ],
+    "safety": "Sprawdź dojrzałość awokado."
+  },
+  {
+    "id": "SN-009",
+    "nazwa": "Shakshuka Klasyczna",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Papryka słodka",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Cebulę i paprykę pokrój i podsmaż na oliwie.",
+      "Dodaj czosnek i paprykę słodką.",
+      "Dodaj pomidory i gotuj 10 minut.",
+      "Dopraw solą i pieprzem.",
+      "Zrób dołki i wbij jajka.",
+      "Przykryj i gotuj 6-8 minut.",
+      "Posyp natką pietruszki.",
+      "Podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Żółtka powinny pozostać płynne.",
+      "Podawaj bezpośrednio z patelni."
+    ],
+    "safety": "Białka jaj muszą być całkowicie ścięte."
+  },
+  {
+    "id": "SN-010",
+    "nazwa": "Owsianka z Bananem i Orzechami",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Płatki owsiane",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Banan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 20,
+        "u": "g"
+      },
+      {
+        "p": "Miód",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Cynamon",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Płatki zalej mlekiem w garnuszku.",
+      "Gotuj na małym ogniu 5 minut mieszając.",
+      "Przełóż do miski.",
+      "Pokrój banana i ułóż na owsiance.",
+      "Dodaj orzechy.",
+      "Skrop miodem i posyp cynamonem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Gotowana na mleku jest bardziej kremowa.",
+      "Możesz przygotować na noc – overnight oats."
+    ],
+    "safety": "Sprawdź świeżość składników."
+  },
+  {
+    "id": "DS-016",
+    "nazwa": "Muffiny Bananowe",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 12,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Banany dojrzałe",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Olej",
+        "i": 80,
+        "u": "ml"
+      },
+      {
+        "p": "Cukier brązowy",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Czekolada gorzka",
+        "i": 80,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 180°C.",
+      "Banany rozgnieć widelcem.",
+      "Wymieszaj z jajkami, olejem i cukrem.",
+      "Dodaj mąkę i proszek.",
+      "Czekoladę posiekaj i dodaj.",
+      "Napełnij foremki do 2/3.",
+      "Piecz 20-22 minuty.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Im dojrzalsze banany tym słodsze muffiny.",
+      "Czekolada tworzy przyjemne niespodzianki."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-017",
+    "nazwa": "Ciasto Marchewkowe",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 10,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Olej",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukier",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Cynamon",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Ser śmietankowy",
+        "i": 200,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Marchew zetrzyj na tarce.",
+      "Jajka ubij z cukrem i olejem.",
+      "Dodaj mąkę, proszek i cynamon.",
+      "Dodaj marchew i wymieszaj.",
+      "Wylej do formy.",
+      "Piecz w 180°C przez 40 minut.",
+      "Ostudź całkowicie.",
+      "Posmaruj kremem z sera śmietankowego."
+    ],
+    "tipy": [
+      "Marchew sprawia że ciasto jest wilgotne.",
+      "Krem serowy to klasyczne wykończenie."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-018",
+    "nazwa": "Murzynek Czekoladowy",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 10,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Czekolada gorzka",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Cukier",
+        "i": 180,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Kakao",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 175°C.",
+      "Czekoladę i masło roztop w kąpieli wodnej.",
+      "Ostudź i dodaj jajka i cukier.",
+      "Dodaj mąkę, kakao i proszek.",
+      "Wymieszaj do gładkości.",
+      "Wylej do formy wyłożonej papierem.",
+      "Piecz 35-40 minut.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Powinien być wilgotny w środku.",
+      "Nie otwieraj piekarnika przez pierwsze 25 minut."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wychodzić z małą ilością wilgotnych okruchów."
+  },
+  {
+    "id": "DS-019",
+    "nazwa": "Keks z Bakaliami",
+    "czas": 70,
+    "poziom": "łatwe",
+    "porcje": 12,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Rodzynki",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Suszone morele",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      }
+    ],
+    "kroki": [
+      "Masło utrzyj z cukrem na puszystą masę.",
+      "Dodawaj jajka po jednym.",
+      "Dodaj mąkę i proszek.",
+      "Rodzynki, morele i orzechy grubo posiekaj.",
+      "Dodaj bakalie do ciasta.",
+      "Wyłóż do keksówki.",
+      "Piecz w 165°C przez 55-60 minut.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Bakalie obtocz w mące – nie opadną na dno.",
+      "Keks najlepiej smakuje następnego dnia."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-020",
+    "nazwa": "Makowiec Świąteczny",
+    "czas": 120,
+    "poziom": "trudne",
+    "porcje": 12,
+    "tagi": [
+      "deser",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Drożdże świeże",
+        "i": 25,
+        "u": "g"
+      },
+      {
+        "p": "Mleko ciepłe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Mak mielony",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Miód",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Rodzynki",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Drożdże wymieszaj z mlekiem i łyżką cukru.",
+      "Zagnieć ciasto z mąki, jajek, masła i drożdży.",
+      "Odstaw na 1 godzinę do wyrośnięcia.",
+      "Mak wymieszaj z cukrem, miodem i rodzynkami.",
+      "Ciasto rozwałkuj na prostokąt.",
+      "Rozsmaruj nadzienie makowe.",
+      "Zwiń ciasno w rulon.",
+      "Piecz w 180°C przez 40 minut."
+    ],
+    "tipy": [
+      "Ciasto musi dobrze wyrosnąć.",
+      "Tradycyjne polskie ciasto świąteczne."
+    ],
+    "safety": "Upewnij się że drożdże są świeże i aktywne."
+  },
+  {
+    "id": "PL-011",
+    "nazwa": "Zrazy Zawijane z Ogórkiem",
+    "czas": 90,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "tradycyjne",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Wołowina zrazowa",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Ogórek kiszony",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Boczek wędzony",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Musztarda",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion wołowy",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Mąka",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Mięso pokrój na plastry i rozbij tłuczkiem.",
+      "Każdy plaster posmaruj musztardą.",
+      "Na mięso połóż boczek i pasek ogórka.",
+      "Zawiń ciasno i spnij wykałaczką.",
+      "Obtocz w mące i obsmaż na oleju.",
+      "Cebulę podsmaż i dodaj do zrazów.",
+      "Wlej bulion i duś pod przykryciem 60 minut.",
+      "Podawaj z kaszą gryczaną."
+    ],
+    "tipy": [
+      "Mocno zwiń zrazy żeby farsz nie wypadł.",
+      "Sos z duszenia jest wyśmienity."
+    ],
+    "safety": "Wołowina musi być w pełni ugotowana."
+  },
+  {
+    "id": "PL-012",
+    "nazwa": "Kluski Śląskie",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "polskie",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Mąka ziemniaczana",
+        "i": 120,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Bułka tarta",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sól",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki ugotuj i obierz.",
+      "Przepuść przez praskę i ostudź.",
+      "Dodaj mąkę ziemniaczaną, jajko i sól.",
+      "Zagnieć delikatnie.",
+      "Formuj kulki z wgłębieniem kciukiem.",
+      "Gotuj w osolonej wodzie do wypłynięcia plus 2 minuty.",
+      "Zrumień bułkę tartą na maśle.",
+      "Polej kluski zrumienionym masłem."
+    ],
+    "tipy": [
+      "Wgłębienie to znak rozpoznawczy klusek śląskich.",
+      "Nie zagniataj za długo."
+    ],
+    "safety": "Gotuj kluski natychmiast po uformowaniu."
+  },
+  {
+    "id": "PL-013",
+    "nazwa": "Kwaśnica Góralska",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "polskie",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Kapusta kiszona",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Żeberka wieprzowe",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa wędzona",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Kminek",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Majeranek",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Żeberka wrzuć do bulionu i gotuj 30 minut.",
+      "Kapustę odcedź i dodaj do zupy.",
+      "Cebulę posiekaj i dodaj.",
+      "Ziemniaki pokrój i dodaj.",
+      "Kiełbasę pokrój i dodaj.",
+      "Dodaj kminek i majeranek.",
+      "Gotuj 25 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Kwaśnica to tradycyjna zupa podhalańska.",
+      "Im kwaśniejsza kapusta tym lepsza zupa."
+    ],
+    "safety": "Żeberka muszą być ugotowane do miękkości."
+  },
+  {
+    "id": "PL-014",
+    "nazwa": "Zrazy Wołowe Nadziewane",
+    "czas": 90,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Wołowina zrazówka",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Boczek wędzony",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Mąka",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Mięso pokrój w plastry i rozbij.",
+      "Pieczarki pokrój i podsmaż z cebulą na maśle.",
+      "Na mięso nałóż boczek i farsz pieczarkowy.",
+      "Zawiń ciasno i spnij.",
+      "Obtocz w mące i obsmaż.",
+      "Wlej bulion i duś 70 minut.",
+      "Sos zagęść jeśli trzeba.",
+      "Podawaj z kluskami lub ziemniakami."
+    ],
+    "tipy": [
+      "Zrazy z pieczarkami są wyjątkowo smaczne.",
+      "Duś na małym ogniu żeby mięso nie twardniało."
+    ],
+    "safety": "Wołowina musi być w pełni ugotowana."
+  },
+  {
+    "id": "PL-015",
+    "nazwa": "Gęś Pieczona Świętomarcińska",
+    "czas": 180,
+    "poziom": "trudne",
+    "porcje": 6,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "polskie",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Gęś",
+        "i": 3000,
+        "u": "g"
+      },
+      {
+        "p": "Jabłka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Majeranek",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 6,
+        "u": "ząbków"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Sól i pieprz",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Miód",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Gęś natrzyj solą, pieprzem i majerankiem.",
+      "Naszpikuj czosnkiem.",
+      "Do środka włóż jabłka i cebulę.",
+      "Piecz w 160°C przez 2.5 godziny.",
+      "Co 30 minut polewaj sosem.",
+      "Pod koniec posmaruj miodem.",
+      "Piecz 20 minut w 200°C dla chrupiącej skórki.",
+      "Odczekaj 15 minut przed krojeniem."
+    ],
+    "tipy": [
+      "Gęś Świętomarcińska tradycyjnie pieczona 11 listopada.",
+      "Majeranek jest obowiązkowy."
+    ],
+    "safety": "Temperatura wewnętrzna gęsi 82°C."
+  },
+  {
+    "id": "ZP-031",
+    "nazwa": "Zupa Kasztanowa",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasztany jadalne ugotowane",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Seler naciowy",
+        "i": 2,
+        "u": "łodygi"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Cebulę i seler podsmaż na maśle 5 minut.",
+      "Dodaj kasztany i tymianek.",
+      "Wlej bulion i gotuj 20 minut.",
+      "Zmiksuj blenderem na gładki krem.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z grzankami."
+    ],
+    "tipy": [
+      "Kasztany ugotowane kupuj w słoiku.",
+      "Jesienno-zimowy rarytas."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-032",
+    "nazwa": "Zupa Grochówka Wojskowa",
+    "czas": 90,
+    "poziom": "łatwe",
+    "porcje": 8,
+    "tagi": [
+      "zupa",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Groch żółty łuskany",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Boczek wędzony",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Majeranek",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Liść laurowy",
+        "i": 3,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Groch namocz przez noc.",
+      "Boczek i cebulę podsmaż.",
+      "Groch odcedź i wrzuć do garnka z 3 litrami wody.",
+      "Dodaj boczek, cebulę i marchew.",
+      "Gotuj 60 minut.",
+      "Dodaj kiełbasę i majeranek.",
+      "Gotuj 15 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Grochówka wojskowa jest gęsta i sycąca.",
+      "Majeranek dodaj pod koniec."
+    ],
+    "safety": "Groch musi być w pełni ugotowany."
+  },
+  {
+    "id": "ZP-033",
+    "nazwa": "Zupa z Pieczonej Papryki",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Papryka czerwona",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bulion",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Paprykę i pomidory piecz w 220°C przez 30 minut.",
+      "Obierz paprykę ze skórek.",
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj pieczone warzywa.",
+      "Wlej bulion i gotuj 10 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę i bazylię.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Pieczenie warzyw wzbogaca smak.",
+      "Obieranie papryki jest łatwe po pieczeniu."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-034",
+    "nazwa": "Zupa Kapuśniak z Kiełbasą",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 6,
+    "tagi": [
+      "zupa",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kapusta kiszona",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Kiełbasa wędzona",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion",
+        "i": 1500,
+        "u": "ml"
+      },
+      {
+        "p": "Majeranek",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Kminek",
+        "i": 0.5,
+        "u": "łyżeczki"
+      }
+    ],
+    "kroki": [
+      "Kapustę odcedź i posiekaj.",
+      "Kiełbasę pokrój i podsmaż.",
+      "Cebulę i marchew dodaj i smaż.",
+      "Wszystko wrzuć do bulionu.",
+      "Dodaj kapustę, ziemniaki i przyprawy.",
+      "Gotuj 35 minut.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj gorącą z pieczywem."
+    ],
+    "tipy": [
+      "Kapuśniak smakuje lepiej następnego dnia.",
+      "Kminek jest tu obowiązkowy."
+    ],
+    "safety": "Sprawdź świeżość kiełbasy."
+  },
+  {
+    "id": "ZP-035",
+    "nazwa": "Krem z Topinamburu",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Topinambur",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Bulion",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Topinambur i ziemniaki obierz i pokrój.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj warzywa i tymianek.",
+      "Wlej bulion i gotuj 25 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z prażonymi migdałami."
+    ],
+    "tipy": [
+      "Topinambur ma orzechowy smak.",
+      "Sezonowe warzywo dostępne jesienią."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "ZP-036",
+    "nazwa": "Zupa z Pieczonego Czosnku",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "główki"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Tymianek",
+        "i": 2,
+        "u": "gałązki"
+      }
+    ],
+    "kroki": [
+      "Główki czosnku przekrój i skrop oliwą.",
+      "Piecz owinięte folią w 200°C przez 40 minut.",
+      "Wyciśnij czosnek z łupinek.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj ziemniaki i czosnek.",
+      "Wlej bulion i gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę i tymianek."
+    ],
+    "tipy": [
+      "Pieczony czosnek jest słodki i delikatny.",
+      "Nie ostry jak surowy czosnek."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "MK-019",
+    "nazwa": "Pasta e Fagioli",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola cannellini z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Makaron ditalini",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj pomidory i rozmaryn.",
+      "Gotuj 10 minut.",
+      "Dodaj fasolę i 600ml wody.",
+      "Część fasoli rozgnieć dla kremowej konsystencji.",
+      "Dodaj makaron i gotuj al dente.",
+      "Posyp parmezanem.",
+      "Skrop oliwą i podawaj."
+    ],
+    "tipy": [
+      "Włoska zupa makaronowa z fasolą.",
+      "Rozgnieciona fasola zagęszcza sos naturalnie."
+    ],
+    "safety": "Sprawdź datę puszek fasoli."
+  },
+  {
+    "id": "MK-020",
+    "nazwa": "Makaron z Pieczoną Dynią i Szałwią",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Dynia Hokkaido",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Makaron rigatoni",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Szałwia świeża",
+        "i": 10,
+        "u": "listków"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Dynię pokrój i piecz z oliwą w 200°C przez 25 minut.",
+      "Makaron ugotuj al dente.",
+      "Na maśle usmaż szałwię do chrupkości i wyjmij.",
+      "Na tym maśle podsmaż czosnek.",
+      "Część dyni zmiksuj z wodą z makaronu na sos.",
+      "Wymieszaj makaron z sosem i resztą dyni.",
+      "Posyp szałwią i parmezanem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Pieczona dynia ma intensywniejszy smak.",
+      "Chrupiąca szałwia to wyjątkowa dekoracja."
+    ],
+    "safety": "Sprawdź świeżość dyni."
+  },
+  {
+    "id": "MK-021",
+    "nazwa": "Makaron Orzechowy po Syczuańsku",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron jajeczny chiński",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Masło orzechowe",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ocet ryżowy",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej sezamowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "cm"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 4,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj według instrukcji.",
+      "Wymieszaj masło orzechowe z sosem sojowym i octem.",
+      "Dodaj czosnek, imbir i olej sezamowy.",
+      "Rozcieńcz wodą do konsystencji sosu.",
+      "Odcedź makaron.",
+      "Wymieszaj z sosem orzechowym.",
+      "Posyp dymką i sezamem.",
+      "Podawaj ciepłe lub chłodne."
+    ],
+    "tipy": [
+      "Dan Dan noodles – klasyk kuchni syczuańskiej.",
+      "Sos możesz zrobić pikantniejszy dodając chili."
+    ],
+    "safety": "Sprawdź alergię na orzeszki ziemne."
+  },
+  {
+    "id": "KU-016",
+    "nazwa": "Kurczak w Sosie Orzechowym",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Masło orzechowe",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Limonka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "cm"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Kurczaka pokrój w paski i podsmaż.",
+      "Czosnek i imbir zetrzyj i dodaj.",
+      "Wymieszaj masło orzechowe z mlekiem kokosowym i sosem sojowym.",
+      "Wlej sos do kurczaka.",
+      "Gotuj 5 minut aż sos zgęstnieje.",
+      "Dodaj sok z limonki.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Satay – indonezyjski sos orzechowy.",
+      "Limonka balansuje tłustość sosu."
+    ],
+    "safety": "Kurczak musi być w pełni ugotowany."
+  },
+  {
+    "id": "KU-017",
+    "nazwa": "Kurczak Paprikash",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Udka kurczaka",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Papryka słodka mielona",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bulion",
+        "i": 200,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Udka dopraw i obsmaż.",
+      "Cebulę i paprykę pokrój i podsmaż.",
+      "Dodaj paprykę słodką mieloną.",
+      "Dodaj kurczaka i bulion.",
+      "Duś pod przykryciem 35 minut.",
+      "Zahartuj śmietanę i dodaj.",
+      "Gotuj 5 minut.",
+      "Podawaj z ryżem lub kluskami."
+    ],
+    "tipy": [
+      "Paprykasz – polsko-węgierskie danie.",
+      "Śmietana nadaje kremowości sosowi."
+    ],
+    "safety": "Kurczak musi być ugotowany do 82°C."
+  },
+  {
+    "id": "KU-018",
+    "nazwa": "Kurczak z Brokułem i Serem",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "mięso"
+    ],
+    "skladniki": [
+      {
+        "p": "Pierś kurczaka",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Brokuł",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Kurczaka pokrój w kostkę i podsmaż.",
+      "Brokuł podziel i blanszuj 4 minuty.",
+      "Na maśle podsmaż czosnek.",
+      "Wlej śmietanę i zagotuj.",
+      "Dodaj kurczaka i brokuł.",
+      "Dodaj ser żółty i mieszaj aż się roztopi.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Ser musi być starty – szybciej się rozpuszcza.",
+      "Brokuł powinien być al dente."
+    ],
+    "safety": "Kurczak musi być ugotowany do środka."
+  },
+  {
+    "id": "WG-016",
+    "nazwa": "Zapiekanka Warzywna z Quinoa",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Quinoa",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Quinoa ugotuj.",
+      "Warzywa pokrój i podsmaż na oliwie.",
+      "Wymieszaj quinoa z warzywami.",
+      "Jajka roztrzep z śmietaną.",
+      "Przełóż do naczynia żaroodpornego.",
+      "Zalej masą jajeczną.",
+      "Posyp tartym serem.",
+      "Piecz w 180°C przez 25 minut."
+    ],
+    "tipy": [
+      "Zdrowy i sycący obiad.",
+      "Możesz dodać dowolne warzywa sezonowe."
+    ],
+    "safety": "Masa jajeczna musi być w pełni ścięta."
+  },
+  {
+    "id": "WG-017",
+    "nazwa": "Kotlety z Kaszy Gryczanej",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza gryczana ugotowana",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Bułka tarta",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Olej",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż.",
+      "Wymieszaj kaszę z cebulą, jajkami i mąką.",
+      "Dopraw solą, pieprzem i majerankiem.",
+      "Formuj kotlety wilgotnymi rękami.",
+      "Obtocz w bułce tartej.",
+      "Smaż na oleju 4 minuty z każdej strony.",
+      "Odsącz na papierowym ręczniku.",
+      "Podawaj z surówką."
+    ],
+    "tipy": [
+      "Kasza musi być ugotowana i ostudzona.",
+      "Wilgotne ręce ułatwiają formowanie."
+    ],
+    "safety": "Jajka muszą być ugotowane podczas smażenia."
+  },
+  {
+    "id": "WG-018",
+    "nazwa": "Risotto z Czerwoną Cebulą i Kozim Serem",
+    "czas": 45,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula czerwona",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Ser kozi",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Wino czerwone",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 1200,
+        "u": "ml"
+      },
+      {
+        "p": "Ocet balsamiczny",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Bulion podgrzej w osobnym garnku.",
+      "Cebulę karmelizuj na maśle 15 minut.",
+      "Dodaj ocet balsamiczny.",
+      "Dodaj ryż i smaż 2 minuty.",
+      "Wlej wino i mieszaj aż wchłonie.",
+      "Dodawaj bulion chochelka po chochli 18 minut.",
+      "Dodaj masło i parmezan.",
+      "Podawaj z kozim serem."
+    ],
+    "tipy": [
+      "Karmelizowana cebula nadaje słodycz.",
+      "Kozi ser i ocet balsamiczny – świetne połączenie."
+    ],
+    "safety": "Bulion musi być gorący."
+  },
+  {
+    "id": "RY-011",
+    "nazwa": "Mintaj z Warzywami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filet z mintaja",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Imbir",
+        "i": 1,
+        "u": "cm"
+      },
+      {
+        "p": "Olej",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Mintaja dopraw i pokrój na porcje.",
+      "Marchew i cukinię pokrój w julienne.",
+      "Na oleju podsmaż warzywa 4 minuty.",
+      "Dodaj imbir i sos sojowy.",
+      "Na osobnej patelni usmaż mintaja 3-4 minuty.",
+      "Podawaj rybę na warzywach.",
+      "Skrop sokiem z cytryny."
+    ],
+    "tipy": [
+      "Mintaj jest tani i delikatny w smaku.",
+      "Julienne gotuje się szybko."
+    ],
+    "safety": "Ryba temperatura wewnętrzna 63°C."
+  },
+  {
+    "id": "RY-012",
+    "nazwa": "Pieczona Ryba z Cytrusami",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "ryba"
+    ],
+    "skladniki": [
+      {
+        "p": "Sandacz lub okoń",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Pomarańcza",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Tymianek",
+        "i": 3,
+        "u": "gałązki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Rybę oczyść i natnij skórę.",
+      "Do nacięć wsuń czosnek.",
+      "Wewnątrz ułóż zioła i plastry cytryny.",
+      "Na rybę połóż plastry pomarańczy.",
+      "Skrop oliwą i dopraw.",
+      "Piecz w 200°C przez 22-25 minut.",
+      "Sprawdź czy mięso łatwo odchodzi od kości.",
+      "Podawaj z sałatką."
+    ],
+    "tipy": [
+      "Cytrusy i ryba to śródziemnomorskie połączenie.",
+      "Sandacz ma mało ości."
+    ],
+    "safety": "Ryba temperatura wewnętrzna 63°C."
+  },
+  {
+    "id": "RY-013",
+    "nazwa": "Śledź po Kaszubsku",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "ryba",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Filety śledzia solonego",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Jabłko",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Musztarda",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Ocet jabłkowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Koperek",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Śledzie namocz w wodzie 3 godziny.",
+      "Osusz i pokrój w kawałki.",
+      "Cebulę i jabłko pokrój cienko.",
+      "Wymieszaj śmietanę z musztardą i octem.",
+      "Układaj warstwy: śledź, cebula, jabłko.",
+      "Zalej sosem śmietanowym.",
+      "Posyp koperkiem.",
+      "Schłodź minimum 2 godziny."
+    ],
+    "tipy": [
+      "Namaczanie usuwa nadmiar soli.",
+      "Najlepszy po całej nocy w lodówce."
+    ],
+    "safety": "Przechowuj w lodówce. Spożyj w ciągu 3 dni."
+  },
+  {
+    "id": "SZ-021",
+    "nazwa": "Zapiekanka na Bagietce",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bagietka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 20,
+        "u": "g"
+      },
+      {
+        "p": "Ketchup",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Bagietkę przekrój wzdłuż.",
+      "Pieczarki i cebulę podsmaż na maśle.",
+      "Posmaruj bagietkę ketchupem.",
+      "Nałóż pieczarki z cebulą.",
+      "Posyp tartym serem.",
+      "Zapiecz w 200°C przez 8-10 minut.",
+      "Podawaj gorącą."
+    ],
+    "tipy": [
+      "Klasyczna polska zapiekanka z kiosku.",
+      "Możesz dodać dowolne nadzienie."
+    ],
+    "safety": "Gorąca blacha – używaj rękawic."
+  },
+  {
+    "id": "SZ-022",
+    "nazwa": "Chimichanga",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Tortille pszenne",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mięso mielone",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ser cheddar",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Fasola czarna z puszki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Papryka wędzona",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Chili",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Olej",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Mięso podsmaż z papryką i chili.",
+      "Dodaj odsączoną fasolę i wymieszaj.",
+      "Na tortillę nałóż farsz mięsny.",
+      "Posyp serem.",
+      "Zawiń szczelnie.",
+      "Na oleju usmaż z każdej strony do złota.",
+      "Podawaj ze śmietaną i salsą."
+    ],
+    "tipy": [
+      "Meksykański smażony burrito.",
+      "Szczelne zawinięcie zapobiega rozpadaniu."
+    ],
+    "safety": "Mięso musi być ugotowane. Uważaj na gorący olej."
+  },
+  {
+    "id": "SZ-023",
+    "nazwa": "Pita z Pieczonym Bakłażanem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb pita",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Bakłażan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Tahini",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Pomidor",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Bakłażana piecz bezpośrednio na gazie lub w 230°C przez 30 minut.",
+      "Obierz ze skóry i odsącz.",
+      "Zmiksuj z tahini, czosnkiem i cytryną.",
+      "Pitę podgrzej.",
+      "Wypełnij baba ghanoush.",
+      "Dodaj pokrojony pomidor.",
+      "Posyp natką pietruszki.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Pieczenie na gazie nadaje dymny smak.",
+      "Baba ghanoush – bliskowschodnia pasta."
+    ],
+    "safety": "Sprawdź czy bakłażan jest miękki po pieczeniu."
+  },
+  {
+    "id": "DS-021",
+    "nazwa": "Kopytka z Serem",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "deser",
+      "wegetariańskie",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Twaróg",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cukier",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana",
+        "i": 4,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki ugotuj i przepuść przez praskę.",
+      "Ostudź i dodaj mąkę, jajko i sól.",
+      "Zagnieć ciasto.",
+      "Formuj wałki i krój ukośnie.",
+      "Gotuj w osolonej wodzie do wypłynięcia plus 2 minuty.",
+      "Twaróg wymieszaj z cukrem.",
+      "Podawaj kopytka z twarogiem i śmietaną."
+    ],
+    "tipy": [
+      "Kopytka z twarogiem to tradycyjny polski deser.",
+      "Możesz też podać na słono z boczkiem."
+    ],
+    "safety": "Gotuj kopytka od razu po uformowaniu."
+  },
+  {
+    "id": "DS-022",
+    "nazwa": "Pierniki Staropolskie",
+    "czas": 120,
+    "poziom": "średnie",
+    "porcje": 30,
+    "tagi": [
+      "deser",
+      "polskie",
+      "tradycyjne"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Miód",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Przyprawa do piernika",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Cukier puder",
+        "i": 150,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Miód podgrzej i wymieszaj z masłem.",
+      "Ostudź i dodaj jajka.",
+      "Wymieszaj z mąką, przyprawą i proszkiem.",
+      "Zagnieć twarde ciasto i odstaw na noc do lodówki.",
+      "Rozwałkuj cienko i wycinaj formy.",
+      "Piecz w 180°C przez 10-12 minut.",
+      "Z cukru pudru i wody zrób lukier.",
+      "Dekoruj pierniki po wystygnięciu."
+    ],
+    "tipy": [
+      "Ciasto po nocnym leżakowaniu jest lepsze.",
+      "Im dłużej leżakują tym smaczniejsze."
+    ],
+    "safety": "Pilnuj czasu pieczenia – łatwo przypalić."
+  },
+  {
+    "id": "DS-023",
+    "nazwa": "Muffiny Bananowe",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 12,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Banany dojrzałe",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Olej",
+        "i": 80,
+        "u": "ml"
+      },
+      {
+        "p": "Cukier brązowy",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Czekolada gorzka",
+        "i": 80,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 180°C.",
+      "Banany rozgnieć widelcem.",
+      "Wymieszaj z jajkami, olejem i cukrem.",
+      "Dodaj mąkę i proszek.",
+      "Czekoladę posiekaj i dodaj.",
+      "Napełnij foremki do 2/3.",
+      "Piecz 20-22 minuty.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Im dojrzalsze banany tym słodsze.",
+      "Czekolada tworzy niespodzianki."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-024",
+    "nazwa": "Ciasto Marchewkowe",
+    "czas": 60,
+    "poziom": "łatwe",
+    "porcje": 10,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 250,
+        "u": "g"
+      },
+      {
+        "p": "Olej",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukier",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Cynamon",
+        "i": 2,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Ser śmietankowy",
+        "i": 200,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Marchew zetrzyj na tarce.",
+      "Jajka ubij z cukrem i olejem.",
+      "Dodaj mąkę, proszek i cynamon.",
+      "Dodaj marchew i wymieszaj.",
+      "Wylej do formy.",
+      "Piecz w 180°C przez 40 minut.",
+      "Ostudź całkowicie.",
+      "Posmaruj kremem z sera śmietankowego."
+    ],
+    "tipy": [
+      "Marchew sprawia że ciasto jest wilgotne.",
+      "Krem serowy to klasyczne wykończenie."
+    ],
+    "safety": "Sprawdź patyczkiem – powinien wyjść suchy."
+  },
+  {
+    "id": "DS-025",
+    "nazwa": "Murzynek Czekoladowy",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 10,
+    "tagi": [
+      "deser",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Czekolada gorzka",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Cukier",
+        "i": 180,
+        "u": "g"
+      },
+      {
+        "p": "Mąka pszenna",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Kakao",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Proszek do pieczenia",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 175°C.",
+      "Czekoladę i masło roztop w kąpieli wodnej.",
+      "Ostudź i dodaj jajka i cukier.",
+      "Dodaj mąkę, kakao i proszek.",
+      "Wymieszaj do gładkości.",
+      "Wylej do formy wyłożonej papierem.",
+      "Piecz 35-40 minut.",
+      "Sprawdź patyczkiem."
+    ],
+    "tipy": [
+      "Powinien być wilgotny w środku.",
+      "Nie otwieraj piekarnika przez pierwsze 25 minut."
+    ],
+    "safety": "Sprawdź patyczkiem – wychodzi z wilgotnymi okruchami."
+  },
+  {
+    "id": "VG-001",
+    "nazwa": "Shakshuka z Fetą i Oliwkami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Ser feta",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Oliwki czarne",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Papryka czerwona",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Cebulę i paprykę pokrój i podsmaż na oliwie.",
+      "Dodaj czosnek i smaż 1 minutę.",
+      "Wlej pomidory i gotuj 10 minut.",
+      "Dodaj oliwki i dopraw.",
+      "Zrób dołki i wbij jajka.",
+      "Pokrusz fetę na wierzchu.",
+      "Przykryj i gotuj 6-8 minut.",
+      "Podawaj z chlebem pitą."
+    ],
+    "tipy": [
+      "Feta i oliwki nadają śródziemnomorski charakter.",
+      "Żółtka powinny pozostać płynne."
+    ],
+    "safety": "Białka jaj muszą być całkowicie ścięte."
+  },
+  {
+    "id": "VG-002",
+    "nazwa": "Zupa Minestrone z Makaronem",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola biała z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Seler naciowy",
+        "i": 2,
+        "u": "łodygi"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Makaron drobny",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Cebulę, marchew i seler pokrój i podsmaż na oliwie.",
+      "Dodaj czosnek i cukinię pokrojoną.",
+      "Dodaj pomidory i 1 litr wody.",
+      "Gotuj 15 minut.",
+      "Dodaj fasolę i makaron.",
+      "Gotuj 10 minut.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z parmezanem i oliwą."
+    ],
+    "tipy": [
+      "Minestrone możesz robić z dowolnych warzyw sezonowych.",
+      "Parmezan to obowiązkowy dodatek."
+    ],
+    "safety": "Sprawdź datę puszek."
+  },
+  {
+    "id": "VG-003",
+    "nazwa": "Placki Batatowe z Jogurtem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bataty",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Jogurt grecki",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 1,
+        "u": "ząbek"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Kolendra",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Bataty obierz i zetrzyj na tarce.",
+      "Odciśnij nadmiar wody.",
+      "Wymieszaj z jajkami, mąką i dymką.",
+      "Dopraw solą i pieprzem.",
+      "Smaż placki na oliwie 4 minuty z każdej strony.",
+      "Jogurt wymieszaj z czosnkiem.",
+      "Podawaj placki z jogurtem i kolendrą."
+    ],
+    "tipy": [
+      "Bataty są słodsze – pasują do kwaśnego jogurtu.",
+      "Odciśnięcie wody jest kluczowe."
+    ],
+    "safety": "Uważaj na gorący olej."
+  },
+  {
+    "id": "VG-004",
+    "nazwa": "Makaron z Cukinią i Cytryną",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Spaghetti",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cytryna",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Mięta świeża",
+        "i": 10,
+        "u": "listków"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Cukinię zetrzyj lub pokrój w wstążki.",
+      "Na oliwie podsmaż czosnek 1 minutę.",
+      "Dodaj cukinię i smaż 4 minuty.",
+      "Odcedź makaron zachowując wodę.",
+      "Wymieszaj makaron z cukinią.",
+      "Dodaj sok i skórkę z cytryny.",
+      "Posyp parmezanem i miętą."
+    ],
+    "tipy": [
+      "Skórka cytryny jest kluczowa dla smaku.",
+      "Mięta i cytryna to odświeżające połączenie."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "VG-005",
+    "nazwa": "Gratin Ziemniaczany z Serem",
+    "czas": 65,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 1000,
+        "u": "g"
+      },
+      {
+        "p": "Ser gruyere lub żółty",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 300,
+        "u": "ml"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Gałka muszkatołowa",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Ziemniaki obierz i pokrój w bardzo cienkie plastry.",
+      "Naczynie posmaruj masłem i natrzyj czosnkiem.",
+      "Wymieszaj śmietanę z gałką i tymiankiem.",
+      "Układaj warstwy ziemniaków zalewając śmietaną.",
+      "Posypuj serem między warstwami.",
+      "Zakończ warstwą sera.",
+      "Przykryj folią i piecz w 180°C przez 45 minut.",
+      "Zdejmij folię i piecz 15 minut do złota."
+    ],
+    "tipy": [
+      "Im cieńsze plastry tym szybciej się upieką.",
+      "Gratin Dauphinois to klasyk kuchni francuskiej."
+    ],
+    "safety": "Gorące naczynie – używaj rękawic."
+  },
+  {
+    "id": "VG-006",
+    "nazwa": "Curry z Orzechami Nerkowca",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ciecierzyca z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy nerkowca",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Pasta curry żółta",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Szpinak",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Na oleju podsmaż pastę curry.",
+      "Dodaj cebulę i czosnek.",
+      "Dodaj pomidory i mleko kokosowe.",
+      "Gotuj 10 minut.",
+      "Dodaj ciecierzycę i orzechy.",
+      "Gotuj 10 minut.",
+      "Dodaj szpinak na ostatnie 3 minuty."
+    ],
+    "tipy": [
+      "Orzechy nerkowca dodają chrupkości.",
+      "Upraż orzechy przed dodaniem."
+    ],
+    "safety": "Sprawdź alergię na orzechy nerkowca."
+  },
+  {
+    "id": "VG-007",
+    "nazwa": "Pierogi z Soczewicą i Warzywami",
+    "czas": 90,
+    "poziom": "średnie",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Woda ciepła",
+        "i": 250,
+        "u": "ml"
+      },
+      {
+        "p": "Soczewica zielona",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Soczewicę ugotuj 20 minut i odcedź.",
+      "Marchew ugotuj i pokrój drobno.",
+      "Cebulę podsmaż na maśle do złota.",
+      "Wymieszaj soczewicę z marchewką i cebulą.",
+      "Dodaj czosnek i tymianek, dopraw.",
+      "Zagnieć ciasto i odstaw 15 minut.",
+      "Wycinaj krążki, nakładaj farsz i zlepiaj.",
+      "Gotuj w osolonej wodzie do wypłynięcia plus 3 minuty."
+    ],
+    "tipy": [
+      "Soczewica to zdrowa alternatywa dla twarogu.",
+      "Podawaj z podsmażoną cebulką."
+    ],
+    "safety": "Soczewica musi być ugotowana. Dobrze sklej brzegi."
+  },
+  {
+    "id": "VG-008",
+    "nazwa": "Zapiekanka z Bakłażana i Mozzarelli",
+    "czas": 55,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bakłażan",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Mozzarella",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 50,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Bakłażany pokrój w plastry i posól, odstaw 15 minut.",
+      "Osusz i podsmaż na oliwie.",
+      "Pomidory pokrój w plastry.",
+      "Mozzarellę pokrój w plastry.",
+      "Układaj warstwy: bakłażan, pomidor, mozzarella.",
+      "Posyp czosnkiem i bazylią.",
+      "Skrop oliwą i posyp parmezanem.",
+      "Piecz w 190°C przez 30 minut."
+    ],
+    "tipy": [
+      "Solenie bakłażana usuwa goryczkę.",
+      "Grillowanie bakłażana daje lepszy smak."
+    ],
+    "safety": "Gorące naczynie – używaj rękawic."
+  },
+  {
+    "id": "VG-009",
+    "nazwa": "Stir-fry z Brokułem i Orzechami",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Brokuł",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Orzechy nerkowca",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Imbir",
+        "i": 2,
+        "u": "cm"
+      },
+      {
+        "p": "Olej sezamowy",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Ryż",
+        "i": 200,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Brokuł podziel na różyczki, marchew pokrój w julienne.",
+      "Rozgrzej wok na dużym ogniu.",
+      "Podsmaż czosnek i imbir 30 sekund.",
+      "Dodaj marchew i smaż 2 minuty.",
+      "Dodaj brokuł i smaż 3 minuty.",
+      "Wlej sos sojowy i olej sezamowy.",
+      "Dodaj orzechy i wymieszaj."
+    ],
+    "tipy": [
+      "Duży ogień to klucz do dobrego stir-fry.",
+      "Warzywa powinny być chrupiące."
+    ],
+    "safety": "Sprawdź alergię na orzechy."
+  },
+  {
+    "id": "VG-010",
+    "nazwa": "Frittata z Brokułem i Serem",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 6,
+        "u": "szt"
+      },
+      {
+        "p": "Brokuł",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ser cheddar",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Mleko",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 200°C.",
+      "Brokuł podziel i blanszuj 3 minuty.",
+      "Na żaroodpornej patelni podsmaż dymkę.",
+      "Dodaj brokuł.",
+      "Roztrzep jajka z mlekiem, solą i pieprzem.",
+      "Wlej na patelnię.",
+      "Posyp tartym serem.",
+      "Piecz 12-15 minut aż masa będzie ścięta."
+    ],
+    "tipy": [
+      "Frittata to włoski omlet pieczony w piekarniku.",
+      "Jest gotowa gdy środek nie drży."
+    ],
+    "safety": "Patelnia żaroodporna. Masa musi być ścięta."
+  },
+  {
+    "id": "VG-011",
+    "nazwa": "Sałatka z Pieczonej Dyni i Rukoli",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Dynia Hokkaido",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Rukola",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Ser kozi",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Żurawina suszona",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ocet balsamiczny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Miód",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Dynię pokrój i piecz w 200°C przez 25 minut.",
+      "Orzechy upraż na suchej patelni.",
+      "Wymieszaj oliwę z octem i miodem.",
+      "Na talerzu rozłóż rukolę.",
+      "Ułóż pieczoną dynię.",
+      "Pokrusz kozi ser.",
+      "Posyp orzechami i żurawiną.",
+      "Polej dressingiem."
+    ],
+    "tipy": [
+      "Dynia Hokkaido ma jadalną skórkę.",
+      "Żurawina i kozi ser to klasyczne połączenie."
+    ],
+    "safety": "Gorąca dynia – ostudź przed ułożeniem."
+  },
+  {
+    "id": "VG-012",
+    "nazwa": "Makaron z Ricottą i Szpinakiem",
+    "czas": 20,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron rigatoni",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Ricotta",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Parmezan",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Gałka muszkatołowa",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Na oliwie podsmaż czosnek.",
+      "Dodaj szpinak i smaż 2 minuty.",
+      "Odcedź makaron zachowując szklankę wody.",
+      "Do gorącego makaronu dodaj ricottę.",
+      "Dodaj szpinak z czosnkiem.",
+      "Wymieszaj dodając wodę jeśli za gęste.",
+      "Posyp parmezanem i gałką muszkatołową."
+    ],
+    "tipy": [
+      "Ricotta tworzy kremowy sos bez gotowania.",
+      "Gałka muszkatołowa podkreśla smak szpinaku."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "VG-013",
+    "nazwa": "Ryżotto z Groszkiem i Miętą",
+    "czas": 40,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Groszek mrożony",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Mięta świeża",
+        "i": 15,
+        "u": "listków"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 1200,
+        "u": "ml"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Wino białe",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Bulion podgrzej w osobnym garnku.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj ryż i smaż 2 minuty.",
+      "Wlej wino i mieszaj aż wchłonie.",
+      "Dodawaj bulion chochelka po chochli 18 minut.",
+      "Groszek blanszuj 3 minuty osobno.",
+      "Dodaj groszek, masło i parmezan.",
+      "Posyp miętą i podawaj."
+    ],
+    "tipy": [
+      "Mięta i groszek to wiosenne połączenie.",
+      "Nie dodawaj groszku za wcześnie – straci kolor."
+    ],
+    "safety": "Bulion musi być gorący."
+  },
+  {
+    "id": "VG-014",
+    "nazwa": "Warzywny Gulasz Bałkański",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Bakłażan",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oregano",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Bakłażan pokrój i posól, odstaw 15 minut.",
+      "Osusz i podsmaż na oliwie.",
+      "Paprykę i cukinię pokrój i dodaj.",
+      "Cebulę i czosnek podsmaż osobno.",
+      "Połącz wszystko w garnku.",
+      "Dodaj pomidory i oregano.",
+      "Duś 25 minut.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Gjuvech – bałkański warzywny gulasz.",
+      "Doskonały z pieczywem lub ryżem."
+    ],
+    "safety": "Sprawdź świeżość warzyw."
+  },
+  {
+    "id": "VG-015",
+    "nazwa": "Pieczone Warzywa Korzeniowe",
+    "czas": 50,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Burak",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula czerwona",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 4,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 5,
+        "u": "łyżki"
+      },
+      {
+        "p": "Tymianek",
+        "i": 3,
+        "u": "gałązki"
+      },
+      {
+        "p": "Rozmaryn",
+        "i": 2,
+        "u": "gałązki"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 200°C.",
+      "Wszystkie warzywa obierz i pokrój równomiernie.",
+      "Wymieszaj z oliwą i ziołami.",
+      "Dopraw solą i pieprzem.",
+      "Rozłóż na dużej blasze.",
+      "Piecz 35-40 minut.",
+      "W połowie czasu wymieszaj.",
+      "Warzywa powinny być miękkie i zarumienione."
+    ],
+    "tipy": [
+      "Warzywa korzeniowe słodnieją podczas pieczenia.",
+      "Nie przepełniaj blachy."
+    ],
+    "safety": "Gorąca blacha – używaj rękawic."
+  },
+  {
+    "id": "VG-016",
+    "nazwa": "Zupa Krem z Czerwonej Fasoli",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola kidney z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Papryka wędzona",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Dodaj paprykę wędzoną.",
+      "Dodaj fasolę i pomidory.",
+      "Wlej bulion i gotuj 15 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z grzankami."
+    ],
+    "tipy": [
+      "Papryka wędzona nadaje głęboki smak.",
+      "Fasola kidney ma intensywniejszy smak."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-017",
+    "nazwa": "Granola Domowa",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 8,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Płatki owsiane",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Miód",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Olej kokosowy",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Orzechy mieszane",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Nasiona słonecznika",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Rodzynki",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Cynamon",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 160°C.",
+      "Wymieszaj miód z olejem kokosowym i cynamonem.",
+      "Dodaj płatki i wymieszaj.",
+      "Dodaj orzechy i nasiona.",
+      "Rozłóż na blasze wyłożonej papierem.",
+      "Piecz 20-25 minut mieszając co 10 minut.",
+      "Po wystygnięciu dodaj rodzynki.",
+      "Przechowuj w szczelnym pojemniku do 2 tygodni."
+    ],
+    "tipy": [
+      "Domowa granola jest zdrowsza od sklepowej.",
+      "Pilnuj żeby nie przypalić."
+    ],
+    "safety": "Gorąca blacha – używaj rękawic."
+  },
+  {
+    "id": "VG-018",
+    "nazwa": "Pudding Chia z Owocami",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Nasiona chia",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Mleko roślinne",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Miód",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Wanilia",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Maliny",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Banan",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Granola",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Nasiona chia wymieszaj z mlekiem, miodem i wanilią.",
+      "Wymieszaj dobrze żeby nie było grudek.",
+      "Odstaw na 5 minut i wymieszaj ponownie.",
+      "Wstaw do lodówki na minimum 4 godziny lub na noc.",
+      "Wyłóż do szklanek.",
+      "Ułóż owoce na wierzchu.",
+      "Posyp granolą.",
+      "Podawaj schłodzone."
+    ],
+    "tipy": [
+      "Pudding chia można przygotować wieczorem na rano.",
+      "Im dłużej stoi tym gęstszy."
+    ],
+    "safety": "Przechowuj w lodówce do 3 dni."
+  },
+  {
+    "id": "VG-019",
+    "nazwa": "Makaron z Burakiem i Kozim Serem",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "makaron",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Makaron",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Burak ugotowany",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Ser kozi",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ocet balsamiczny",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Rukola",
+        "i": 40,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Makaron ugotuj al dente.",
+      "Burak pokrój w kostkę.",
+      "Na oliwie podsmaż burak 3 minuty.",
+      "Dodaj ocet balsamiczny.",
+      "Wymieszaj makaron z burakiem.",
+      "Zdejmij z ognia.",
+      "Dodaj rukolę i wymieszaj.",
+      "Pokrusz kozi ser i posyp orzechami."
+    ],
+    "tipy": [
+      "Burak farbuje – użyj rękawic.",
+      "Kozi ser i burak to klasyczne połączenie."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "VG-020",
+    "nazwa": "Zupa Imbirowa z Dynią",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Dynia piżmowa",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Imbir świeży",
+        "i": 4,
+        "u": "cm"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z limonki",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Dynię obierz i pokrój w kostkę.",
+      "Cebulę, czosnek i imbir podsmaż na oliwie.",
+      "Dodaj dynię i smaż 3 minuty.",
+      "Wlej bulion i mleko kokosowe.",
+      "Gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj sok z limonki.",
+      "Dopraw solą i podawaj."
+    ],
+    "tipy": [
+      "Imbir i dynia – rozgrzewające połączenie na zimę.",
+      "Limonka na końcu ożywia smak."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-021",
+    "nazwa": "Gnocchi z Pesto i Pomidorkami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Gnocchi gotowe",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pesto bazyliowe",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Pomidorki koktajlowe",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 1,
+        "u": "ząbek"
+      }
+    ],
+    "kroki": [
+      "Gnocchi ugotuj według instrukcji.",
+      "Na oliwie podsmaż czosnek.",
+      "Dodaj pomidorki i smaż 3 minuty.",
+      "Odcedź gnocchi.",
+      "Wymieszaj z pesto.",
+      "Dodaj pomidorki z czosnkiem.",
+      "Posyp parmezanem.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Gotowe gnocchi to szybkie danie.",
+      "Pesto ze świeżą bazylią jest najlepsze."
+    ],
+    "safety": "Sprawdź datę ważności gnocchi."
+  },
+  {
+    "id": "VG-022",
+    "nazwa": "Zupa z Zielonej Fasolki",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasolka szparagowa",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Bulion",
+        "i": 1000,
+        "u": "ml"
+      },
+      {
+        "p": "Koperek",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Cebulę podsmaż na maśle.",
+      "Marchew i ziemniaki pokrój i dodaj.",
+      "Wlej bulion i gotuj 15 minut.",
+      "Fasolkę pokrój na kawałki i dodaj.",
+      "Gotuj 10 minut.",
+      "Zahartuj śmietanę i dodaj.",
+      "Posyp koperkiem.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Fasolka powinna być al dente.",
+      "Koperek dodaj na samym końcu."
+    ],
+    "safety": "Zahartuj śmietanę przed dodaniem."
+  },
+  {
+    "id": "VG-023",
+    "nazwa": "Kalafior Pieczony z Kurkumą",
+    "czas": 40,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kalafior",
+        "i": 1,
+        "u": "główka"
+      },
+      {
+        "p": "Kurkuma",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Czosnek granulowany",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Tahini",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 220°C.",
+      "Kalafior podziel na różyczki.",
+      "Wymieszaj z oliwą, kurkumą i czosnkiem.",
+      "Rozłóż na blasze.",
+      "Piecz 30-35 minut aż będą złote.",
+      "Wymieszaj tahini z cytryną i wodą.",
+      "Ułóż kalafior na talerzu.",
+      "Polej sosem i posyp natką."
+    ],
+    "tipy": [
+      "Kurkuma nadaje piękny złoty kolor.",
+      "Pieczone różyczki są słodsze i chrupiące."
+    ],
+    "safety": "Gorąca blacha – używaj rękawic."
+  },
+  {
+    "id": "VG-024",
+    "nazwa": "Bowl z Soczewicą i Batatami",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Soczewica czerwona",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Bataty",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Tahini",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Kumin",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Soczewicę ugotuj z kuminem 15 minut.",
+      "Bataty pokrój i piecz w 200°C przez 25 minut.",
+      "Wymieszaj tahini z cytryną i wodą.",
+      "Awokado pokrój w plastry.",
+      "W misce ułóż soczewicę.",
+      "Dodaj bataty i szpinak.",
+      "Ułóż awokado.",
+      "Polej sosem tahini."
+    ],
+    "tipy": [
+      "Pełnowartościowy posiłek w jednej misce.",
+      "Soczewica czerwona gotuje się szybko."
+    ],
+    "safety": "Soczewica musi być ugotowana."
+  },
+  {
+    "id": "VG-025",
+    "nazwa": "Omlet ze Szparagami i Kozim Serem",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Szparagi",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Ser kozi",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 15,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Szparagi odetnij twarde końce i blanszuj 3 minuty.",
+      "Roztrzep jajka z mlekiem, solą i pieprzem.",
+      "Na maśle wlej masę jajeczną.",
+      "Gdy brzegi się ścinają podnoś je łopatką.",
+      "Na połowie omletu ułóż szparagi.",
+      "Pokrusz kozi ser.",
+      "Złóż omlet na pół.",
+      "Posyp szczypiorkiem i podawaj."
+    ],
+    "tipy": [
+      "Szparagi i kozi ser to eleganckie śniadanie.",
+      "Sezon na szparagi – kwiecień-czerwiec."
+    ],
+    "safety": "Jajka muszą być ugotowane."
+  },
+  {
+    "id": "VG-026",
+    "nazwa": "Zupa Krem z Białych Warzyw",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kalafior",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Por",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Gałka muszkatołowa",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Wszystkie warzywa pokrój.",
+      "Cebulę i pora podsmaż na maśle 5 minut.",
+      "Dodaj kalafior i ziemniaki.",
+      "Wlej bulion i gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę i gałkę muszkatołową.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z grzankami."
+    ],
+    "tipy": [
+      "Biały krem z białych warzyw jest elegancki.",
+      "Gałka muszkatołowa podkreśla smak kalafiora."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-027",
+    "nazwa": "Tarta z Warzywami Prowansalskimi",
+    "czas": 60,
+    "poziom": "średnie",
+    "porcje": 6,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ciasto kruche gotowe",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Ser feta",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Ciasto wyłóż w formie i podpiecz 10 minut w 180°C.",
+      "Warzywa pokrój w plastry i podsmaż na oliwie.",
+      "Ułóż na podpieczonym cieście.",
+      "Pokrusz fetę na warzywach.",
+      "Jajka roztrzep ze śmietaną i tymiankiem.",
+      "Wlej masę na warzywa.",
+      "Piecz 30-35 minut.",
+      "Podawaj ciepłą lub zimną."
+    ],
+    "tipy": [
+      "Doskonała na zimno – idealna na piknik.",
+      "Podpiekanie ciasta zapobiega namakaniu."
+    ],
+    "safety": "Masa jajeczna musi być ścięta."
+  },
+  {
+    "id": "VG-028",
+    "nazwa": "Placki z Marchewki i Owsa",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Płatki owsiane",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cynamon",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Miód",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Jogurt naturalny",
+        "i": 4,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Marchew zetrzyj na tarce.",
+      "Wymieszaj z płatkami, mąką, jajkami i cynamonem.",
+      "Odstaw na 10 minut żeby płatki namiękły.",
+      "Na oleju smaż placki 3-4 minuty z każdej strony.",
+      "Wymieszaj jogurt z miodem.",
+      "Podawaj placki z jogurtem."
+    ],
+    "tipy": [
+      "Płatki owsiane dają puszystą konsystencję.",
+      "Zdrowe śniadanie gotowe w 25 minut."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "VG-029",
+    "nazwa": "Pieczone Pieczarki Portobello z Jajkiem",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pieczarki Portobello",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Tymianek",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Rozgrzej piekarnik do 200°C.",
+      "Pieczarki wyczyść i usuń nóżki.",
+      "Skrop oliwą i posyp czosnkiem i tymiankiem.",
+      "Piecz 10 minut.",
+      "Na każdą pieczarkę nałóż szpinak.",
+      "Wbij jajko do środka pieczarki.",
+      "Posyp tartym serem.",
+      "Piecz kolejne 10-12 minut."
+    ],
+    "tipy": [
+      "Portobello to idealne naturalne naczynie.",
+      "Czas pieczenia zależy od twardości żółtka."
+    ],
+    "safety": "Białka jaj muszą być ścięte."
+  },
+  {
+    "id": "VG-030",
+    "nazwa": "Krem z Awokado i Groszku",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Groszek mrożony",
+        "i": 500,
+        "u": "g"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 500,
+        "u": "ml"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Mięta",
+        "i": 10,
+        "u": "listków"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Groszek wrzuć do wrzącego bulionu.",
+      "Gotuj 5 minut.",
+      "Dodaj awokado, miętę i dymkę.",
+      "Zmiksuj blenderem.",
+      "Dodaj sok z cytryny.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj ciepły lub zimny.",
+      "Skrop oliwą."
+    ],
+    "tipy": [
+      "Awokado nadaje kremowość bez śmietany.",
+      "Podawany zimno to letni chłodnik."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
   }
 ]
