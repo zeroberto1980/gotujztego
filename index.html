@@ -4,6 +4,11 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>GotujZtego - Gotuj z tego co masz w lodowce</title>
+<meta property="og:title" content="GotujZtego – Gotuj z tego co masz w lodówce"/>
+<meta property="og:description" content="Wpisz składniki z lodówki – znajdziemy przepis. Ponad 200 polskich przepisów."/>
+<meta property="og:url" content="https://gotujztego.pl"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pl_PL"/>
 <meta name="google-site-verification" content="ZLRA0Te5WD7PHV0Tzs6ghhlFGX4MVoo4nTgwlbDZJ54" />
 <meta name="description" content="Wpisz skladniki - znajdziemy przepis na obiad. 50+ polskich przepisow."/>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -36,10 +41,19 @@ nav{
 .ntab{
   font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
   color:var(--mid);cursor:pointer;border:none;background:none;
-  font-family:var(--sans);padding:8px 18px;transition:all .2s;border-radius:2px;
+  font-family:var(--sans);padding:10px 22px;transition:all .25s;border-radius:4px;
+  position:relative;
 }
-.ntab:hover{color:var(--dark);background:var(--off)}
-.ntab.on{background:var(--red);color:#fff}
+.ntab:hover{color:var(--dark);background:var(--off);transform:translateY(-1px)}
+.ntab.on{
+  background:var(--red);color:#fff;
+  box-shadow:0 4px 14px rgba(192,57,43,.35);
+  transform:translateY(-1px);
+}
+.ntab.on::after{
+  content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);
+  width:60%;height:2px;background:var(--redd);border-radius:2px;
+}
 
 /* PANELE - kluczowe */
 #panel-s{display:block}
@@ -139,8 +153,21 @@ textarea::placeholder{color:var(--line)}
 .rcnt{font-size:.78rem;color:var(--mid)}
 .adi{border:1px dashed var(--line);padding:16px;text-align:center;font-size:.67rem;color:var(--line);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;min-height:70px;display:flex;align-items:center;justify-content:center}
 .rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--line)}
-.rc{background:var(--w);cursor:pointer;padding:26px 22px;transition:background .2s}
-.rc:hover{background:var(--off)}
+.rc{
+  background:var(--w);cursor:pointer;padding:26px 22px;
+  transition:all .25s;position:relative;overflow:hidden;
+}
+.rc::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(192,57,43,.04),transparent);
+  opacity:0;transition:opacity .25s;
+}
+.rc:hover{
+  background:var(--off);
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+.rc:hover::before{opacity:1}
 .rce{font-size:2.2rem;margin-bottom:14px;display:block}
 .rct{font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:8px;line-height:1.2}
 .rcp{display:flex;gap:5px;flex-wrap:wrap}
@@ -157,6 +184,8 @@ textarea::placeholder{color:var(--line)}
 .mt{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1.1;margin-bottom:18px}
 .mm{display:flex;gap:20px;font-size:.78rem;color:var(--mid)}
 .mcl{position:absolute;top:16px;right:16px;background:none;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:.85rem;color:var(--mid);display:flex;align-items:center;justify-content:center}
+.mshare{position:absolute;top:16px;right:58px;background:none;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:.85rem;color:var(--mid);display:flex;align-items:center;justify-content:center}
+.mshare:hover{background:var(--dark);color:#fff}
 .mcl:hover{background:var(--dark);color:#fff}
 .mb{padding:36px 44px}
 .ms{margin-bottom:32px}
@@ -193,11 +222,14 @@ textarea::placeholder{color:var(--line)}
 .inprow{display:grid;grid-template-columns:1fr 75px 88px;gap:7px;margin-bottom:10px}
 .bcrow{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
 .bcrow .inp{flex:1;min-width:100px}
-#scanwrap{display:none;margin:10px 0;position:relative;overflow:hidden}
-#scanvideo{width:100%;max-height:220px;object-fit:cover;display:block}
+#scanwrap{display:none;position:fixed;inset:0;z-index:1000;background:#000;flex-direction:column;align-items:center;justify-content:center}
+#scanwrap.open{display:flex}
+#scanvideo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 #scanline{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-#scanline::before{content:'';width:65%;height:35%;border:2px solid var(--red);box-shadow:0 0 0 9999px rgba(0,0,0,.45)}
-.scancls{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;border:none;padding:4px 10px;cursor:pointer;font-family:var(--sans);font-size:.74rem}
+#scanline::before{content:'';width:70%;max-width:300px;height:200px;border:3px solid var(--red);box-shadow:0 0 0 9999px rgba(0,0,0,.55);border-radius:8px}
+#scaninfo{position:absolute;top:50%;left:50%;transform:translate(-50%,80px);color:#fff;font-size:.85rem;letter-spacing:.05em;text-align:center;z-index:2}
+.scancls{position:absolute;top:20px;right:20px;background:rgba(0,0,0,.7);color:#fff;border:2px solid rgba(255,255,255,.4);padding:10px 18px;cursor:pointer;font-family:var(--sans);font-size:.82rem;border-radius:4px;z-index:2}
+.scancls:hover{background:rgba(255,255,255,.2)}
 .pl{display:flex;flex-direction:column}
 .pi{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .pi:first-child{border-top:1px solid var(--line)}
@@ -255,7 +287,157 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
   .hbtns{flex-direction:column}
   .hbtns button{width:100%}
 }
+
+.diff-bar{height:3px;border-radius:2px;margin-top:8px;width:100%;background:var(--line)}
+.diff-bar-fill{height:100%;border-radius:2px;transition:width .3s}
+.diff-easy .diff-bar-fill{width:33%;background:#27ae60}
+.diff-medium .diff-bar-fill{width:66%;background:#e67e22}
+.diff-hard .diff-bar-fill{width:100%;background:var(--red)}
+@keyframes pulse-warn{
+  0%,100%{border-color:var(--line);color:var(--mid)}
+  50%{border-color:#e67e22;color:#e67e22;box-shadow:0 0 0 3px rgba(230,126,34,.2)}
+}
+.qb.warn{animation:pulse-warn 1.5s ease-in-out infinite}
+@media(max-width:768px){
+  #scanwrap{
+    position:fixed;inset:0;z-index:400;
+    background:#000;margin:0;
+  }
+  #scanvideo{width:100%;height:100%;max-height:none;object-fit:cover}
+  .scancls{top:20px;right:20px;padding:12px 20px;font-size:.9rem;border-radius:4px}
+  #scanline::before{width:70%;height:25%}
+}
+.hist-wrap{padding-top:32px;border-top:1px solid var(--line);margin-top:40px}
+.hist-lbl{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.hist-lbl::after{content:'';flex:1;height:1px;background:var(--line)}
+.hist-g{display:flex;gap:10px;flex-wrap:wrap}
+.hist-item{padding:6px 14px;background:var(--off);border:1px solid var(--line);font-size:.78rem;cursor:pointer;transition:all .2s;color:var(--dark)}
+.hist-item:hover{border-color:var(--red);color:var(--red)}
+.time-filters{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.tf{font-size:.72rem;font-weight:600;padding:5px 12px;border:1px solid var(--line);
+  background:transparent;font-family:var(--sans);cursor:pointer;color:var(--mid);
+  transition:all .2s;border-radius:100px}
+.tf:hover{border-color:var(--red);color:var(--red)}
+.tf.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:768px){
+  nav{padding:0 12px;height:56px}
+  .ntabs{gap:4px}
+  .ntab{padding:10px 14px;font-size:.7rem;letter-spacing:.05em}
+}
+
+/* ZAKŁADKI - thumb-friendly + cień aktywnej */
+.ntab {
+  font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--mid);cursor:pointer;border:none;background:none;
+  font-family:var(--sans);padding:10px 20px;transition:all .2s;border-radius:4px;
+  min-height:44px;display:flex;align-items:center;gap:6px;
+}
+.ntab:hover{color:var(--dark);background:var(--off)}
+.ntab.on{
+  background:var(--red);color:#fff;
+  box-shadow:0 4px 14px rgba(192,57,43,.35);
+  transform:translateY(-1px);
+}
+
+/* KARTY PRZEPISÓW - animacja hover */
+.rc{
+  background:var(--w);cursor:pointer;padding:26px 22px;
+  transition:all .25s ease;position:relative;overflow:hidden;
+}
+.rc::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(192,57,43,.06),transparent);
+  opacity:0;transition:opacity .25s;
+}
+.rc:hover{
+  background:var(--off);
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.1);
+  z-index:1;
+}
+.rc:hover::before{opacity:1}
+
+/* PASEK TRUDNOŚCI */
+.diff-bar{display:flex;align-items:center;gap:6px;margin-top:8px}
+.diff-dots{display:flex;gap:3px}
+.diff-dot{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.diff-dot.on.easy{background:#27ae60}
+.diff-dot.on.medium{background:#e67e22}
+.diff-dot.on.hard{background:var(--red)}
+.diff-lbl{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mid)}
+
+/* FILTR CZASU */
+.time-filters{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;margin-bottom:4px}
+.tfilt{
+  font-size:.71rem;padding:5px 12px;border:1.5px solid var(--line);
+  color:var(--mid);cursor:pointer;background:transparent;
+  font-family:var(--sans);font-weight:600;transition:all .2s;border-radius:100px;
+}
+.tfilt:hover{border-color:var(--red);color:var(--red)}
+.tfilt.on{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* HISTORIA */
+.hist-wrap{margin-top:12px;display:none}
+.hist-lbl{font-size:.66rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
+.hist-list{display:flex;gap:7px;flex-wrap:wrap}
+.hist-item{
+  font-size:.72rem;padding:4px 10px;background:var(--off);
+  border:1px solid var(--line);cursor:pointer;transition:all .2s;border-radius:2px;
+  color:var(--dark);font-family:var(--sans);
+}
+.hist-item:hover{border-color:var(--red);color:var(--red);background:#fff}
+
+/* PULSOWANIE lodówka - niski stan */
+@keyframes pulse-low {
+  0%,100%{box-shadow:0 0 0 0 rgba(230,126,34,.4)}
+  50%{box-shadow:0 0 0 6px rgba(230,126,34,.0)}
+}
+.qb.pulse{animation:pulse-low 1.5s infinite}
+
+/* SKANER - fullscreen mobile */
+#scanwrap{display:none;margin:10px 0;position:relative;overflow:hidden}
+@media(max-width:768px){
+  #scanwrap.open{
+    position:fixed;inset:0;z-index:400;background:#000;margin:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  #scanwrap.open #scanvideo{width:100%;max-height:70vh;object-fit:cover}
+  #scanwrap.open #scanline::before{width:70%;height:40%}
+  #scanwrap.open .scancls{
+    position:fixed;bottom:40px;left:50%;transform:translateX(-50%);
+    background:rgba(0,0,0,.8);color:#fff;border:2px solid rgba(255,255,255,.3);
+    padding:12px 32px;font-size:.9rem;border-radius:100px;
+  }
+}
+
+/* MOBILE THUMB-FRIENDLY */
+@media(max-width:768px){
+  .ntabs{gap:4px;flex:1;justify-content:stretch}
+  .ntab{
+    flex:1;justify-content:center;font-size:.7rem;
+    padding:12px 8px;min-height:48px;border-radius:6px;
+  }
+  nav{padding:0 10px;gap:10px}
+  .logo{font-size:1.3rem}
+  .qb{width:36px;height:36px;font-size:1.1rem}
+  .db{width:32px;height:32px}
+}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GotujZtego",
+  "url": "https://gotujztego.pl",
+  "description": "Wpisz składniki z lodówki – znajdziemy przepis na obiad. Ponad 200 sprawdzonych polskich przepisów.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://gotujztego.pl/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -306,6 +488,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
             <button class="etag" onclick="setIng('makaron, mieso mielone')">makaron, mi&#281;so</button>
             <button class="etag" onclick="setIng('ryz, marchew')">ry&#380;, marchew</button>
           </div>
+          <div class="time-filters">
+            <span style="font-size:.67rem;color:var(--line);letter-spacing:.08em;text-transform:uppercase;align-self:center">Czas:</span>
+            <button class="tf" id="tf15" onclick="setTimeFilter(15,this)">&#9889; do 15 min</button>
+            <button class="tf" id="tf30" onclick="setTimeFilter(30,this)">&#8987; do 30 min</button>
+            <button class="tf" id="tf60" onclick="setTimeFilter(60,this)">&#128336; do 60 min</button>
+            <button class="tf" id="tf0" onclick="setTimeFilter(0,this)">Wszystkie</button>
+          </div>
           <div class="sact">
             <button class="bp" onclick="doSearch()">Szukaj przepis&#243;w</button>
             <button class="bs" onclick="clearSrch()">Wyczy&#347;&#263;</button>
@@ -331,6 +520,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
       </div>
       <div class="adi">Reklama AdSense</div>
       <div class="rg" id="rg"></div>
+    </div>
+  </div>
+
+  <div id="hist-section" class="main" style="display:none;padding-top:0;padding-bottom:20px">
+    <div class="hist-wrap">
+      <div class="hist-lbl">&#128065; Ostatnio ogl&#261;dane</div>
+      <div class="hist-g" id="hist-g"></div>
     </div>
   </div>
 
@@ -456,6 +652,8 @@ function showTab(name) {
 // ═══════════════════════════════
 var RECIPES = [];
 var AF = [];
+var maxTime = 0;
+var HISTORY = JSON.parse(localStorage.getItem('recipe_history') || '[]');
 var EMMAP = {
   zupa:'🍲', obiad:'🍽️', sniadanie:'🌅', mieso:'🥩',
   ryba:'🐟', wegetarianskie:'🌿', makaron:'🍝',
@@ -466,6 +664,76 @@ fetch('przepisy.json')
   .then(function(r) { return r.json(); })
   .then(function(d) { RECIPES = d; })
   .catch(function(e) { console.error('Blad ladowania przepisow:', e); });
+
+function setTimeFilter(minutes, el) {
+  maxTime = minutes;
+  document.querySelectorAll('.tf').forEach(function(t){ t.classList.remove('on'); });
+  el.classList.add('on');
+  if (document.getElementById('ing').value.trim() || AF.length > 0) doSearch();
+}
+
+function addToHistory(recipe) {
+  HISTORY = HISTORY.filter(function(h){ return h.id !== recipe.id; });
+  HISTORY.unshift({id: recipe.id, nazwa: recipe.nazwa, tagi: recipe.tagi});
+  if (HISTORY.length > 8) HISTORY = HISTORY.slice(0, 8);
+  localStorage.setItem('recipe_history', JSON.stringify(HISTORY));
+  renderHistory();
+}
+
+function renderHistory() {
+  var sec = document.getElementById('hist-section');
+  var g = document.getElementById('hist-g');
+  if (!HISTORY.length) { sec.style.display = 'none'; return; }
+  sec.style.display = 'block';
+  var EMMAP2 = {zupa:'🍲',obiad:'🍽️',sniadanie:'🌅',wegetarianskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',szybkie:'⚡',mieso:'🥩',ryba:'🐟'};
+  g.innerHTML = HISTORY.map(function(h) {
+    var tag = h.tagi && h.tagi[0] ? h.tagi[0].toLowerCase() : 'obiad';
+    var em = EMMAP2[tag] || '🍽️';
+    return '<button class="hist-item" data-id="' + h.id + '">' + em + ' ' + h.nazwa + '</button>';
+  }).join('');
+  g.querySelectorAll('.hist-item').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      openRecipe(this.getAttribute('data-id'));
+    });
+  });
+}
+
+// FILTR CZASU
+var maxTime = 0;
+
+function setTimeFilter(mins, el) {
+  maxTime = mins;
+  document.querySelectorAll('.tfilt').forEach(function(b){ b.classList.remove('on'); });
+  el.classList.add('on');
+  if (document.getElementById('ing').value.trim() || AF.length > 0 || maxTime > 0) doSearch();
+}
+
+// HISTORIA
+var history_list = JSON.parse(localStorage.getItem('gzt_history') || '[]');
+
+function addToHistory(recipe) {
+  history_list = history_list.filter(function(r){ return r.id !== recipe.id; });
+  history_list.unshift({id: recipe.id, nazwa: recipe.nazwa});
+  if (history_list.length > 8) history_list = history_list.slice(0, 8);
+  localStorage.setItem('gzt_history', JSON.stringify(history_list));
+  renderHistory();
+}
+
+function renderHistory() {
+  var wrap = document.getElementById('hist-wrap');
+  var list = document.getElementById('hist-list');
+  if (!history_list.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  list.innerHTML = history_list.map(function(r) {
+    return '<button class="hist-item" data-id="' + r.id + '">' + r.nazwa + '</button>';
+  }).join('');
+  list.querySelectorAll('.hist-item').forEach(function(el) {
+    el.addEventListener('click', function() { openRecipe(this.getAttribute('data-id')); });
+  });
+}
+
+// Inicjalizuj historię przy starcie
+renderHistory();
 
 function doSearch() {
   var raw = document.getElementById('ing').value.trim().toLowerCase();
@@ -509,6 +777,11 @@ function doSearch() {
         return r.tagi.some(function(t) { return t.toLowerCase().indexOf(f) >= 0; });
       });
     });
+  }
+
+  // Filtr czasu
+  if (maxTime > 0) {
+    results = results.filter(function(r){ return r.czas <= maxTime; });
   }
 
   if (kw.length > 0) {
@@ -606,13 +879,21 @@ function renderResults(results, slowa, tryb) {
     var tspan = r.czas <= 20
       ? '<span class="rpp r">⚡ ' + r.czas + ' min</span>'
       : '<span class="rpp">⏱ ' + r.czas + ' min</span>';
-    html += '<div class="rc" data-id="' + r.id + '">';
+    var diffClass = r.poziom === 'łatwe' ? 'diff-easy' : r.poziom === 'średnie' ? 'diff-medium' : 'diff-hard';
+    html += '<div class="rc ' + diffClass + '" data-id="' + r.id + '">';
     html += '<span class="rce">' + em + '</span>';
     html += '<div class="rct">' + r.nazwa + '</div>';
+    var diffLevel = r.poziom === 'łatwe' ? 1 : (r.poziom === 'średnie' ? 2 : 3);
+    var diffColor = r.poziom === 'łatwe' ? 'easy' : (r.poziom === 'średnie' ? 'medium' : 'hard');
+    var dots = '<div class="diff-dot' + (1 <= diffLevel ? ' on ' + diffColor : '') + '"></div>';
+    dots += '<div class="diff-dot' + (2 <= diffLevel ? ' on ' + diffColor : '') + '"></div>';
+    dots += '<div class="diff-dot' + (3 <= diffLevel ? ' on ' + diffColor : '') + '"></div>';
     html += '<div class="rcp">' + tspan;
-    html += '<span class="rpp">' + r.poziom + '</span>';
     html += '<span class="rpp">' + r.porcje + ' porcje</span>';
-    html += '</div></div>';
+    html += '</div>';
+    html += '<div class="diff-bar"><div class="diff-dots">' + dots + '</div><span class="diff-lbl">' + r.poziom + '</span></div>';
+    html += '<div class="diff-bar"><div class="diff-bar-fill"></div></div>';
+    html += '</div>';
   }
   grid.innerHTML = html;
 
@@ -631,7 +912,10 @@ function clearSrch() {
   document.getElementById('ing').value = '';
   document.getElementById('reswrap').style.display = 'none';
   AF = [];
+  maxTime = 0;
   document.querySelectorAll('.fi').forEach(function(el) { el.classList.remove('on'); });
+  document.querySelectorAll('.tf').forEach(function(el) { el.classList.remove('on'); });
+  document.getElementById('tf0').classList.add('on');
 }
 
 function setIng(t) { document.getElementById('ing').value = t; }
@@ -680,6 +964,7 @@ function openRecipe(id) {
 
   var html = '<div class="mh">';
   html += '<button class="mcl" id="mclosebtn">✕</button>';
+  html += '<button class="mshare" id="msharebtn" title="Udostępnij">🔗</button>';
   html += '<div class="mk">' + em + ' ' + r.tagi.join(' · ') + '</div>';
   html += '<div class="mt">' + r.nazwa + '</div>';
   html += '<div class="mm"><span>⏱ ' + r.czas + ' min</span><span>👥 ' + r.porcje + ' porcje</span><span>📊 ' + r.poziom + '</span></div>';
@@ -688,9 +973,38 @@ function openRecipe(id) {
   html += '<div class="ms"><div class="mst">Przygotowanie</div><ol class="sol">' + steps + '</ol></div>';
   html += tips + safe + '</div>';
 
+  addToHistory(r);
   document.getElementById('mc').innerHTML = html;
+  // Dodaj do historii
+  addToHistory(r);
   document.getElementById('mclosebtn').addEventListener('click', function() {
     document.getElementById('ov').classList.remove('open');
+  });
+  var shareBtn = document.getElementById('msharebtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', function() {
+      var url = window.location.origin + window.location.pathname + '?p=' + r.id;
+      if (navigator.share) {
+        navigator.share({ title: r.nazwa, text: 'Przepis: ' + r.nazwa, url: url });
+      } else {
+        navigator.clipboard.writeText(url).then(function() {
+          alert('Link skopiowany!');
+        }).catch(function() { prompt('Skopiuj link:', url); });
+      }
+    });
+  }
+  document.getElementById('msharebtn').addEventListener('click', function() {
+    var url = window.location.href.split('?')[0] + '?przepis=' + r.id;
+    var text = 'Sprawdz ten przepis: ' + r.nazwa + ' na GotujZtego.pl';
+    if (navigator.share) {
+      navigator.share({ title: r.nazwa, text: text, url: url });
+    } else {
+      navigator.clipboard.writeText(url).then(function() {
+        alert('Link do przepisu skopiowany!');
+      }).catch(function() {
+        prompt('Skopiuj link:', url);
+      });
+    }
   });
   document.getElementById('ov').classList.add('open');
 }
@@ -817,7 +1131,9 @@ function renderFridge(prods) {
     html += '<div class="pn2"><div class="pnm">' + p.name + warn + '</div>';
     html += '<div class="psb">Min: ' + (p.minQty || '—') + ' ' + p.unit + '</div></div>';
     html += '<div class="pct">';
-    html += '<button class="qb" data-action="minus" data-id="' + p.id + '" data-qty="' + p.qty + '" data-step="' + step + '">−</button>';
+    var warnCls = isLow ? ' warn' : '';
+    var pulseClass = isLow ? ' pulse' : '';
+    html += '<button class="qb' + pulseClass + '" data-action="minus" data-id="' + p.id + '" data-qty="' + p.qty + '" data-step="' + step + '">−</button>';
     html += '<input class="qinp" type="number" value="' + p.qty + '" min="0" step="1" data-action="set" data-id="' + p.id + '" title="Wpisz ilość ręcznie"/>';
     html += '<span style="font-size:.72rem;color:var(--mid);min-width:24px">' + p.unit + '</span>';
     html += '<button class="qb" data-action="plus" data-id="' + p.id + '" data-qty="' + p.qty + '" data-step="' + step + '">+</button>';
@@ -879,7 +1195,7 @@ function startScan() {
     return;
   }
   stopScan();
-  document.getElementById('scanwrap').style.display = 'block';
+  document.getElementById('scanwrap').classList.add('open');
   try {
     var hints = new Map();
     hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
@@ -901,7 +1217,7 @@ function startScan() {
     });
   } catch(e) {
     alert('Błąd skanera: ' + e.message);
-    document.getElementById('scanwrap').style.display = 'none';
+    document.getElementById('scanwrap').classList.remove('open');
   }
 }
 
@@ -909,7 +1225,9 @@ function stopScan() {
   if (codeReader) { try { codeReader.reset(); } catch(e) {} codeReader = null; }
   var v = document.getElementById('scanvideo');
   if (v && v.srcObject) { v.srcObject.getTracks().forEach(function(t) { t.stop(); }); v.srcObject = null; }
-  document.getElementById('scanwrap').style.display = 'none';
+  var sw2 = document.getElementById('scanwrap');
+  sw2.style.display = 'none';
+  sw2.classList.remove('open');
 }
 
 async function lookupBC() {
