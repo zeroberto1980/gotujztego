@@ -678,6 +678,7 @@ function addToHistory(recipe) {
 function renderHistory() {
   var sec = document.getElementById('hist-section');
   var g = document.getElementById('hist-g');
+  if (!sec || !g) return;
   if (!HISTORY.length) { sec.style.display = 'none'; return; }
   sec.style.display = 'block';
   var EMMAP2 = {zupa:'🍲',obiad:'🍽️',sniadanie:'🌅',wegetarianskie:'🌿',makaron:'🍝',tradycyjne:'🇵🇱',szybkie:'⚡',mieso:'🥩',ryba:'🐟'};
@@ -967,10 +968,7 @@ function openRecipe(id) {
   html += '<div class="ms"><div class="mst">Przygotowanie</div><ol class="sol">' + steps + '</ol></div>';
   html += tips + safe + '</div>';
 
-  addToHistory(r);
   document.getElementById('mc').innerHTML = html;
-  // Dodaj do historii
-  addToHistory(r);
   document.getElementById('mclosebtn').addEventListener('click', function() {
     document.getElementById('ov').classList.remove('open');
   });
