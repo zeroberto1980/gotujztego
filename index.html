@@ -204,16 +204,31 @@ textarea::placeholder{color:var(--line)}
 #scanvideo{width:100%;max-height:260px;object-fit:cover;display:block}
 #scanline{
   position:absolute;inset:0;
-  display:flex;align-items:center;justify-content:center;
+  display:grid;
+  grid-template-columns:1fr 280px 1fr;
+  grid-template-rows:1fr 180px 1fr;
   pointer-events:none;
 }
-#scanline::before{
-  content:'';
-  width:65%;height:50%;
-  border:2px solid var(--red);
-  box-shadow:0 0 0 9999px rgba(0,0,0,.5);
-  border-radius:6px;
+#scanline::before{display:none}
+#scanline-box{
+  grid-column:2;grid-row:2;
+  border:3px solid var(--red);
+  position:relative;
 }
+#scanline-box::before,#scanline-box::after{
+  content:'';position:absolute;
+  background:var(--red);
+}
+#scanline-box::before{top:-3px;left:-3px;right:-3px;height:3px}
+#scanline-box::after{bottom:-3px;left:-3px;right:-3px;height:3px}
+#scanline-tl,#scanline-tr,#scanline-bl,#scanline-br{
+  position:absolute;background:var(--red);
+}
+/* Ciemne tlo wokol ramki */
+#scanline-top{grid-column:1/-1;grid-row:1;background:rgba(0,0,0,.6)}
+#scanline-bot{grid-column:1/-1;grid-row:3;background:rgba(0,0,0,.6)}
+#scanline-left{grid-column:1;grid-row:2;background:rgba(0,0,0,.6)}
+#scanline-right{grid-column:3;grid-row:2;background:rgba(0,0,0,.6)}
 #scaninfo{
   position:absolute;bottom:16px;width:100%;
   text-align:center;color:#fff;
@@ -244,7 +259,11 @@ textarea::placeholder{color:var(--line)}
     object-fit:cover;
   }
   #scanwrap.open #scanline{position:absolute;inset:0}
-  #scanwrap.open #scanline::before{width:75%;height:30%;border:3px solid var(--red)}
+  #scanwrap.open #scanline{
+    grid-template-columns:1fr 75vw 1fr;
+    grid-template-rows:1fr 200px 1fr;
+  }
+  #scanwrap.open #scanline-box{border:3px solid var(--red)}
   #scanwrap.open #scaninfo{
     position:absolute;bottom:120px;
     font-size:.9rem;
@@ -443,7 +462,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.38);padding:36px 40px 28px
           </div>
           <div id="scanwrap">
             <video id="scanvideo" autoplay playsinline muted></video>
-            <div id="scanline"></div>
+            <div id="scanline">
+              <div id="scanline-top"></div>
+              <div id="scanline-left"></div>
+              <div id="scanline-box"></div>
+              <div id="scanline-right"></div>
+              <div id="scanline-bot"></div>
+            </div>
             <div id="scaninfo">Skieruj kamer&#281; na kod kreskowy</div>
             <button class="scancls" onclick="stopScan()">&#10005; Zamknij</button>
           </div>
