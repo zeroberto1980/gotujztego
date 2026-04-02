@@ -192,86 +192,159 @@ textarea::placeholder{color:var(--line)}
 .bcrow{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
 .bcrow .inp{flex:1;min-width:100px}
 
-/* SKANER – desktop */
+/* ═══ SKANER ═══ */
+/* Desktop */
 #scanwrap{
   display:none;
   margin:10px 0;
   position:relative;
-  overflow:hidden;
   background:#000;
 }
-#scanwrap.open{display:block}
-#scanvideo{width:100%;max-height:260px;object-fit:cover;display:block}
+#scanwrap.open{ display:block; }
+#scanvideo{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+  border-radius:0 !important;
+  -webkit-border-radius:0 !important;
+}
+/* Ramka skanera - desktop */
 #scanline{
-  position:absolute;inset:0;
-  display:grid;
-  grid-template-columns:1fr 280px 1fr;
-  grid-template-rows:1fr 180px 1fr;
+  position:absolute;
+  inset:0;
   pointer-events:none;
 }
-#scanline::before{display:none}
+/* 4 ciemne pasy wokol prostokąta - CSS clip trick */
+#scanline-top{
+  position:absolute;top:0;left:0;right:0;
+  height:calc(50% - 90px);
+  background:rgba(0,0,0,.55);
+}
+#scanline-bot{
+  position:absolute;bottom:0;left:0;right:0;
+  height:calc(50% - 90px);
+  background:rgba(0,0,0,.55);
+}
+#scanline-left{
+  position:absolute;
+  top:calc(50% - 90px);
+  bottom:calc(50% - 90px);
+  left:0;width:calc(50% - 140px);
+  background:rgba(0,0,0,.55);
+}
+#scanline-right{
+  position:absolute;
+  top:calc(50% - 90px);
+  bottom:calc(50% - 90px);
+  right:0;width:calc(50% - 140px);
+  background:rgba(0,0,0,.55);
+}
+/* Czerwony prostokąt celownika */
 #scanline-box{
-  grid-column:2;grid-row:2;
+  position:absolute;
+  top:calc(50% - 90px);
+  left:calc(50% - 140px);
+  width:280px;
+  height:180px;
   border:3px solid var(--red);
-  position:relative;
+  box-shadow:none;
+  border-radius:0;
 }
-#scanline-box::before,#scanline-box::after{
-  content:'';position:absolute;
-  background:var(--red);
+/* Rogi celownika */
+#scanline-box::before{
+  content:'';
+  position:absolute;
+  inset:-3px;
+  border:3px solid transparent;
+  border-top-color:var(--red);
+  border-left-color:var(--red);
 }
-#scanline-box::before{top:-3px;left:-3px;right:-3px;height:3px}
-#scanline-box::after{bottom:-3px;left:-3px;right:-3px;height:3px}
-#scanline-tl,#scanline-tr,#scanline-bl,#scanline-br{
-  position:absolute;background:var(--red);
-}
-/* Ciemne tlo wokol ramki */
-#scanline-top{grid-column:1/-1;grid-row:1;background:rgba(0,0,0,.6)}
-#scanline-bot{grid-column:1/-1;grid-row:3;background:rgba(0,0,0,.6)}
-#scanline-left{grid-column:1;grid-row:2;background:rgba(0,0,0,.6)}
-#scanline-right{grid-column:3;grid-row:2;background:rgba(0,0,0,.6)}
 #scaninfo{
-  position:absolute;bottom:16px;width:100%;
-  text-align:center;color:#fff;
-  font-size:.8rem;letter-spacing:.05em;
+  position:absolute;
+  bottom:12px;left:0;right:0;
+  text-align:center;
+  color:#fff;
+  font-size:.78rem;
+  letter-spacing:.05em;
   pointer-events:none;
+  text-shadow:0 1px 3px rgba(0,0,0,.8);
 }
 .scancls{
-  position:absolute;top:10px;right:10px;
-  background:rgba(0,0,0,.7);color:#fff;
-  border:1px solid rgba(255,255,255,.3);
-  padding:6px 14px;cursor:pointer;
-  font-family:var(--sans);font-size:.78rem;
-  border-radius:4px;
+  position:absolute;
+  top:8px;right:8px;
+  background:rgba(0,0,0,.75);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 16px;
+  cursor:pointer;
+  font-family:var(--sans);
+  font-size:.78rem;
+  border-radius:3px;
 }
+.scancls:hover{ background:rgba(255,255,255,.15); }
 
-/* SKANER – mobile fullscreen */
+/* Mobile – PEŁNY EKRAN */
 @media(max-width:768px){
   #scanwrap.open{
-    position:fixed;inset:0;z-index:1000;
-    margin:0;max-height:none;
-    display:flex;flex-direction:column;
-    align-items:center;justify-content:center;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    margin:0;
+    display:block;
   }
   #scanwrap.open #scanvideo{
-    width:100%;height:100%;
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
     max-height:none;
-    position:absolute;inset:0;
     object-fit:cover;
+    border-radius:0 !important;
+    -webkit-border-radius:0 !important;
   }
-  #scanwrap.open #scanline{position:absolute;inset:0}
   #scanwrap.open #scanline{
-    grid-template-columns:1fr 75vw 1fr;
-    grid-template-rows:1fr 200px 1fr;
+    position:absolute;
+    inset:0;
   }
-  #scanwrap.open #scanline-box{border:3px solid var(--red)}
+  /* Pasy na mobile */
+  #scanwrap.open #scanline-top{
+    height:calc(50% - 120px);
+  }
+  #scanwrap.open #scanline-bot{
+    height:calc(50% - 120px);
+  }
+  #scanwrap.open #scanline-left{
+    top:calc(50% - 120px);
+    bottom:calc(50% - 120px);
+    width:calc(50% - 37vw);
+  }
+  #scanwrap.open #scanline-right{
+    top:calc(50% - 120px);
+    bottom:calc(50% - 120px);
+    width:calc(50% - 37vw);
+  }
+  /* Prostokąt na mobile */
+  #scanwrap.open #scanline-box{
+    top:calc(50% - 120px);
+    left:calc(50% - 37vw);
+    width:74vw;
+    height:240px;
+    border:3px solid var(--red);
+    border-radius:0;
+  }
   #scanwrap.open #scaninfo{
-    position:absolute;bottom:120px;
-    font-size:.9rem;
-    text-shadow:0 1px 4px rgba(0,0,0,.8);
+    bottom:130px;
+    font-size:.92rem;
   }
   #scanwrap.open .scancls{
-    position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
-    padding:14px 40px;font-size:1rem;
+    top:auto;
+    bottom:40px;
+    right:auto;
+    left:50%;
+    transform:translateX(-50%);
+    padding:14px 44px;
+    font-size:1rem;
     border-radius:100px;
     background:rgba(0,0,0,.85);
     border:2px solid rgba(255,255,255,.4);
@@ -1014,6 +1087,17 @@ function startScan(){
   var wrap=document.getElementById('scanwrap');
   wrap.classList.add('open');
 
+  // Najpierw uruchom kamere bezposrednio
+  var video=document.getElementById('scanvideo');
+  navigator.mediaDevices.getUserMedia({
+    video:{facingMode:'environment',width:{ideal:1280},height:{ideal:720}}
+  }).then(function(stream){
+    video.srcObject=stream;
+    video.play();
+  }).catch(function(e){
+    console.warn('getUserMedia error:', e);
+  });
+
   try{
     var hints=new Map();
     hints.set(ZXing.DecodeHintType.TRY_HARDER,true);
@@ -1039,7 +1123,10 @@ function startScan(){
 function stopScan(){
   if(codeReader){try{codeReader.reset();}catch(e){}codeReader=null;}
   var v=document.getElementById('scanvideo');
-  if(v&&v.srcObject){v.srcObject.getTracks().forEach(function(t){t.stop();});v.srcObject=null;}
+  if(v&&v.srcObject){
+    v.srcObject.getTracks().forEach(function(t){t.stop();});
+    v.srcObject=null;
+  }
   var wrap=document.getElementById('scanwrap');
   wrap.classList.remove('open');
 }
