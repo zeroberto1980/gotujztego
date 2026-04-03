@@ -15929,5 +15929,1299 @@
       "Podawany zimno to letni chłodnik."
     ],
     "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-031",
+    "nazwa": "Zupa Krem z Brokułu",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Brokuł",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 18%",
+        "i": 150,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 60,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Brokuł podziel na różyczki.",
+      "Cebulę i czosnek podsmaż na maśle.",
+      "Dodaj brokuł i bulion.",
+      "Gotuj 15 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę.",
+      "Posyp tartym serem.",
+      "Podawaj gorącą."
+    ],
+    "tipy": [
+      "Kilka różyczek zostaw do dekoracji.",
+      "Ser doda kremowości."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-032",
+    "nazwa": "Naleśniki z Jabłkiem i Cynamonem",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Mąka pszenna",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 400,
+        "u": "ml"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Jabłka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cynamon",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Cukier",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Zrób ciasto naleśnikowe.",
+      "Jabłka obierz i pokrój w kostkę.",
+      "Podsmaż jabłka z cukrem i cynamonem 5 minut.",
+      "Smaż cienkie naleśniki.",
+      "Nakładaj farsz jabłkowy.",
+      "Zawiń lub złóż.",
+      "Posyp cukrem pudrem.",
+      "Podawaj ciepłe."
+    ],
+    "tipy": [
+      "Jabłka powinny być lekko miękkie.",
+      "Dodaj łyżkę śmietany do podania."
+    ],
+    "safety": "Uważaj na gorącą patelnię."
+  },
+  {
+    "id": "VG-033",
+    "nazwa": "Pasta z Czerwonej Fasoli",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Fasola czerwona z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Kumin",
+        "i": 0.5,
+        "u": "łyżeczki"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Fasolę odsącz i przepłucz.",
+      "Wrzuć do blendera z czosnkiem.",
+      "Dodaj sok z cytryny, oliwę i kumin.",
+      "Blenduj na gładką pastę.",
+      "Dopraw solą i pieprzem.",
+      "Posyp natką pietruszki.",
+      "Podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Gotowa w 10 minut.",
+      "Przechowuj w lodówce do 3 dni."
+    ],
+    "safety": "Sprawdź datę puszki."
+  },
+  {
+    "id": "VG-034",
+    "nazwa": "Leczo Warzywne",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Papryka czerwona",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Papryka słodka mielona",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż na oliwie.",
+      "Paprykę pokrój w paski i dodaj.",
+      "Smaż 5 minut.",
+      "Dodaj cukinię.",
+      "Wlej pomidory i dodaj paprykę mieloną.",
+      "Duś 20 minut.",
+      "Dodaj bazylię i dopraw.",
+      "Podawaj z ryżem lub pieczywem."
+    ],
+    "tipy": [
+      "Leczo smakuje lepiej następnego dnia.",
+      "Możesz dodać jajka sadzone."
+    ],
+    "safety": "Sprawdź świeżość warzyw."
+  },
+  {
+    "id": "VG-035",
+    "nazwa": "Risotto z Grzybami Leśnymi",
+    "czas": 45,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Grzyby suszone",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 1200,
+        "u": "ml"
+      },
+      {
+        "p": "Wino białe",
+        "i": 100,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Suszone grzyby namocz i ugotuj.",
+      "Pieczarki pokrój i podsmaż.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj ryż i smaż 2 minuty.",
+      "Wlej wino i mieszaj.",
+      "Dodawaj bulion chochelka po chochli 18 minut.",
+      "Dodaj wszystkie grzyby.",
+      "Na końcu masło i parmezan."
+    ],
+    "tipy": [
+      "Wywar z grzybów dodaj do bulionu.",
+      "Ciągłe mieszanie to sekret kremowego risotto."
+    ],
+    "safety": "Bulion musi być gorący."
+  },
+  {
+    "id": "VG-036",
+    "nazwa": "Zupa Krem z Soczewicy",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Soczewica czerwona",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Curry",
+        "i": 1,
+        "u": "łyżeczka"
+      },
+      {
+        "p": "Bulion",
+        "i": 800,
+        "u": "ml"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Cebulę, czosnek i marchew podsmaż.",
+      "Dodaj curry i smaż 1 minutę.",
+      "Dodaj soczewicę i bulion.",
+      "Gotuj 20 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj mleko kokosowe.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z grzankami."
+    ],
+    "tipy": [
+      "Soczewica nie wymaga moczenia.",
+      "Mleko kokosowe nadaje kremowości."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-037",
+    "nazwa": "Placki z Cukinii i Fety",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Cukinia",
+        "i": 600,
+        "u": "g"
+      },
+      {
+        "p": "Ser feta",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Mąka",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Koper",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Cebula dymka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Cukinię zetrzyj i odciśnij wodę.",
+      "Wymieszaj z fetą, jajkami i mąką.",
+      "Dodaj koper i dymkę.",
+      "Smaż placki na oliwie 3-4 minuty z każdej strony.",
+      "Odsącz na ręczniku.",
+      "Podawaj ze śmietaną lub jogurtem."
+    ],
+    "tipy": [
+      "Feta jest słona – nie dosalaj.",
+      "Odciśnięcie wody z cukinii to klucz."
+    ],
+    "safety": "Uważaj na gorący olej."
+  },
+  {
+    "id": "VG-038",
+    "nazwa": "Kasza Gryczana z Warzywami",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza gryczana",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jajka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Natka pietruszki",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sos sojowy",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Kaszę ugotuj według instrukcji.",
+      "Marchew zetrzyj, cebulę posiekaj.",
+      "Podsmaż cebulę na maśle.",
+      "Dodaj marchew i smaż 5 minut.",
+      "Wymieszaj z kaszą i sosem sojowym.",
+      "Jajka usmaż sadzone.",
+      "Podawaj kaszę z jajkiem.",
+      "Posyp natką."
+    ],
+    "tipy": [
+      "Kasza gryczana to pełnowartościowe białko.",
+      "Sos sojowy zastępuje sól."
+    ],
+    "safety": "Świeże jajka."
+  },
+  {
+    "id": "VG-039",
+    "nazwa": "Tost z Jajkiem i Awokado",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb pełnoziarnisty",
+        "i": 2,
+        "u": "kromki"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Jajko",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Płatki chili",
+        "i": 1,
+        "u": "szczypta"
+      },
+      {
+        "p": "Sól morska",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Chleb opiecz.",
+      "Awokado rozgnieć z cytryną i solą.",
+      "Posmaruj chleb awokado.",
+      "Jajko usmaż sadzone.",
+      "Połóż jajko na awokado.",
+      "Posyp płatkami chili i solą morską.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Dojrzałe awokado jest kluczem.",
+      "Jajko w koszulce jest bardziej eleganckie."
+    ],
+    "safety": "Świeże jajko."
+  },
+  {
+    "id": "VG-040",
+    "nazwa": "Burrito Warzywne",
+    "czas": 25,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Tortille pszenne",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Fasola czarna z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Ryż gotowany",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Papryka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Kukurydza z puszki",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Ser cheddar",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Awokado",
+        "i": 1,
+        "u": "szt"
+      }
+    ],
+    "kroki": [
+      "Fasolę podgrzej z przyprawami.",
+      "Paprykę pokrój i podsmaż.",
+      "Awokado rozgnieć z cytryną.",
+      "Tortillę podgrzej na patelni.",
+      "Nałóż ryż, fasolę, paprykę i kukurydzę.",
+      "Dodaj ser i awokado.",
+      "Zawiń ciasno.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Zawiń ciasno żeby składniki nie wypadały.",
+      "Możesz zapiec burrito dla chrupkości."
+    ],
+    "safety": "Sprawdź datę puszek."
+  },
+  {
+    "id": "VG-041",
+    "nazwa": "Krupnik Warzywny",
+    "czas": 45,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie",
+      "polskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Kasza pęczak",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Marchew",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Pietruszka",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Seler",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Ziemniaki",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Por",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 1500,
+        "u": "ml"
+      },
+      {
+        "p": "Koperek",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Kaszę ugotuj do półmiękkości.",
+      "Warzywa pokrój w kostkę.",
+      "Gotuj marchew, pietruszkę i seler w bulionie 10 minut.",
+      "Dodaj ziemniaki i pora.",
+      "Gotuj 15 minut.",
+      "Dodaj kaszę i masło.",
+      "Gotuj 5 minut.",
+      "Posyp koperkiem."
+    ],
+    "tipy": [
+      "Klasyczna polska zupa domowa.",
+      "Kasza musi być ugotowana przed dodaniem."
+    ],
+    "safety": "Sprawdź świeżość warzyw."
+  },
+  {
+    "id": "VG-042",
+    "nazwa": "Sałatka Grecka",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Pomidory",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Ogórek",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Ser feta",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Oliwki kalamata",
+        "i": 80,
+        "u": "g"
+      },
+      {
+        "p": "Cebula czerwona",
+        "i": 0.5,
+        "u": "szt"
+      },
+      {
+        "p": "Papryka",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Oliwa",
+        "i": 4,
+        "u": "łyżki"
+      },
+      {
+        "p": "Oregano",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Pomidory pokrój w ósemki.",
+      "Ogórek pokrój w półplasterki.",
+      "Cebulę pokrój w cienkie pierścienie.",
+      "Paprykę pokrój w paski.",
+      "Ułóż warzywa na talerzu.",
+      "Połóż fetę w bloku.",
+      "Dodaj oliwki.",
+      "Skrop oliwą i posyp oregano."
+    ],
+    "tipy": [
+      "Feta w jednym kawałku – nie pokruszona.",
+      "Nie mieszaj – piękniej wygląda."
+    ],
+    "safety": "Świeże warzywa."
+  },
+  {
+    "id": "VG-043",
+    "nazwa": "Zupa Szparagowa",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Szparagi zielone",
+        "i": 700,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 40,
+        "u": "g"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 900,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana 30%",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Sok z cytryny",
+        "i": 1,
+        "u": "łyżka"
+      },
+      {
+        "p": "Szczypiorek",
+        "i": 2,
+        "u": "łyżki"
+      }
+    ],
+    "kroki": [
+      "Szparagi odetnij twarde końce. Kilka główek zostaw.",
+      "Resztę pokrój i podsmaż z cebulą na maśle.",
+      "Wlej bulion i gotuj 15 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj śmietanę i cytrynę.",
+      "Główki blanszuj 3 minuty.",
+      "Podawaj z główkami szparagów.",
+      "Posyp szczypiorkiem."
+    ],
+    "tipy": [
+      "Sezon na szparagi: kwiecień-czerwiec.",
+      "Śmietana 30% nie zwarzy się."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-044",
+    "nazwa": "Tosty z Ricottą i Pomidorami",
+    "czas": 10,
+    "poziom": "łatwe",
+    "porcje": 2,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Chleb tostowy",
+        "i": 4,
+        "u": "kromki"
+      },
+      {
+        "p": "Ricotta",
+        "i": 200,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory",
+        "i": 2,
+        "u": "szt"
+      },
+      {
+        "p": "Bazylia",
+        "i": 8,
+        "u": "listków"
+      },
+      {
+        "p": "Oliwa",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Sól morska",
+        "i": 1,
+        "u": "szczypta"
+      }
+    ],
+    "kroki": [
+      "Chleb opiecz.",
+      "Posmaruj ricottą.",
+      "Pomidory pokrój w plasterki.",
+      "Ułóż na ricotcie.",
+      "Posyp bazylią.",
+      "Skrop oliwą.",
+      "Posyp solą morską.",
+      "Podawaj natychmiast."
+    ],
+    "tipy": [
+      "Włoskie śniadanie gotowe w 10 minut.",
+      "Użyj dojrzałych pomidorów."
+    ],
+    "safety": "Sprawdź świeżość ricotty."
+  },
+  {
+    "id": "VG-045",
+    "nazwa": "Curry Ziemniaczane z Ciecierzycą",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ziemniaki",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Ciecierzyca z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Mleko kokosowe",
+        "i": 200,
+        "u": "ml"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Curry",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Czosnek",
+        "i": 3,
+        "u": "ząbki"
+      },
+      {
+        "p": "Ryż",
+        "i": 250,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Ugotuj ryż.",
+      "Ziemniaki pokrój w kostkę.",
+      "Cebulę i czosnek podsmaż.",
+      "Dodaj curry i smaż 1 minutę.",
+      "Dodaj ziemniaki i pomidory.",
+      "Wlej mleko kokosowe i gotuj 20 minut.",
+      "Dodaj ciecierzycę i gotuj 5 minut.",
+      "Podawaj z ryżem."
+    ],
+    "tipy": [
+      "Ziemniaki muszą być miękkie.",
+      "Ciecierzyca z puszki – szybko i wygodnie."
+    ],
+    "safety": "Ziemniaki muszą być ugotowane."
+  },
+  {
+    "id": "VG-046",
+    "nazwa": "Sałatka z Burakiem i Kozim Serem",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "sałatka",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Burak ugotowany",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Orzechy włoskie",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Ser kozi",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Rukola",
+        "i": 60,
+        "u": "g"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ocet balsamiczny",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Miód",
+        "i": 1,
+        "u": "łyżka"
+      }
+    ],
+    "kroki": [
+      "Burak pokrój w plasterki.",
+      "Orzechy upraż na suchej patelni.",
+      "Rozłóż rukolę.",
+      "Ułóż burak.",
+      "Pokrusz kozi ser.",
+      "Posyp orzechami.",
+      "Wymieszaj oliwę z octem i miodem.",
+      "Polej dressingiem."
+    ],
+    "tipy": [
+      "Burak farbuje – użyj rękawic.",
+      "Kozi ser i burak to klasyk."
+    ],
+    "safety": "Świeże składniki."
+  },
+  {
+    "id": "VG-047",
+    "nazwa": "Omlet z Pieczarkami i Szpinakiem",
+    "czas": 15,
+    "poziom": "łatwe",
+    "porcje": 1,
+    "tagi": [
+      "śniadanie",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Jajka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Pieczarki",
+        "i": 100,
+        "u": "g"
+      },
+      {
+        "p": "Szpinak baby",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Masło",
+        "i": 15,
+        "u": "g"
+      },
+      {
+        "p": "Mleko",
+        "i": 2,
+        "u": "łyżki"
+      },
+      {
+        "p": "Ser żółty",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Pieczarki pokrój i podsmaż na maśle 4 minuty.",
+      "Dodaj szpinak i smaż 2 minuty. Wyjmij.",
+      "Jajka roztrzep z mlekiem.",
+      "Na maśle wlej jajka.",
+      "Gdy brzegi się ścinają podnoś łopatką.",
+      "Na połowie ułóż farsz i ser.",
+      "Złóż na pół.",
+      "Podawaj od razu."
+    ],
+    "tipy": [
+      "Pieczarki smaż na dużym ogniu.",
+      "Ser topi się od ciepłego omletu."
+    ],
+    "safety": "Jajka muszą być ugotowane."
+  },
+  {
+    "id": "VG-048",
+    "nazwa": "Krem z Marchewki z Pomarańczą",
+    "czas": 35,
+    "poziom": "łatwe",
+    "porcje": 4,
+    "tagi": [
+      "zupa",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Marchew",
+        "i": 800,
+        "u": "g"
+      },
+      {
+        "p": "Pomarańcza",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Imbir",
+        "i": 2,
+        "u": "cm"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 800,
+        "u": "ml"
+      },
+      {
+        "p": "Śmietana",
+        "i": 100,
+        "u": "ml"
+      },
+      {
+        "p": "Masło",
+        "i": 30,
+        "u": "g"
+      }
+    ],
+    "kroki": [
+      "Marchew obierz i pokrój.",
+      "Cebulę i imbir podsmaż na maśle.",
+      "Dodaj marchew i bulion.",
+      "Gotuj 25 minut.",
+      "Zmiksuj blenderem.",
+      "Dodaj sok i skórkę z pomarańczy.",
+      "Dodaj śmietanę.",
+      "Dopraw solą i pieprzem."
+    ],
+    "tipy": [
+      "Pomarańcza i marchew – klasyczne połączenie.",
+      "Skórka intensyfikuje smak."
+    ],
+    "safety": "Ostrożnie przy miksowaniu gorącej zupy."
+  },
+  {
+    "id": "VG-049",
+    "nazwa": "Risotto z Pomidorami i Bazylią",
+    "czas": 40,
+    "poziom": "średnie",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie"
+    ],
+    "skladniki": [
+      {
+        "p": "Ryż arborio",
+        "i": 300,
+        "u": "g"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Pomidorki koktajlowe",
+        "i": 150,
+        "u": "g"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Masło",
+        "i": 50,
+        "u": "g"
+      },
+      {
+        "p": "Parmezan",
+        "i": 70,
+        "u": "g"
+      },
+      {
+        "p": "Bazylia",
+        "i": 1,
+        "u": "pęczek"
+      },
+      {
+        "p": "Bulion warzywny",
+        "i": 1000,
+        "u": "ml"
+      }
+    ],
+    "kroki": [
+      "Bulion podgrzej.",
+      "Cebulę podsmaż na maśle.",
+      "Dodaj ryż i smaż 2 minuty.",
+      "Dodaj pomidory z puszki.",
+      "Dodawaj bulion chochelka po chochli 18 minut.",
+      "Dodaj pomidorki koktajlowe.",
+      "Na końcu masło i parmezan.",
+      "Posyp bazylią i podawaj."
+    ],
+    "tipy": [
+      "Bazylia tylko na końcu – zachowa aromat.",
+      "Pomidory dają kwasowość i kolor."
+    ],
+    "safety": "Bulion musi być gorący."
+  },
+  {
+    "id": "VG-050",
+    "nazwa": "Leczo z Jajkami",
+    "czas": 30,
+    "poziom": "łatwe",
+    "porcje": 3,
+    "tagi": [
+      "obiad",
+      "wegetariańskie",
+      "szybkie"
+    ],
+    "skladniki": [
+      {
+        "p": "Papryka",
+        "i": 3,
+        "u": "szt"
+      },
+      {
+        "p": "Cukinia",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Pomidory z puszki",
+        "i": 400,
+        "u": "g"
+      },
+      {
+        "p": "Jajka",
+        "i": 4,
+        "u": "szt"
+      },
+      {
+        "p": "Cebula",
+        "i": 1,
+        "u": "szt"
+      },
+      {
+        "p": "Czosnek",
+        "i": 2,
+        "u": "ząbki"
+      },
+      {
+        "p": "Oliwa",
+        "i": 3,
+        "u": "łyżki"
+      },
+      {
+        "p": "Papryka słodka",
+        "i": 1,
+        "u": "łyżeczka"
+      }
+    ],
+    "kroki": [
+      "Cebulę i czosnek podsmaż.",
+      "Paprykę i cukinię dodaj i smaż 5 minut.",
+      "Wlej pomidory i dodaj paprykę słodką.",
+      "Duś 15 minut.",
+      "Zrób dołki i wbij jajka.",
+      "Przykryj i gotuj 6-8 minut.",
+      "Dopraw solą i pieprzem.",
+      "Podawaj z pieczywem."
+    ],
+    "tipy": [
+      "Jajka wbij na samym końcu.",
+      "Żółtka powinny być płynne."
+    ],
+    "safety": "Białka jaj muszą być ścięte."
   }
 ]
